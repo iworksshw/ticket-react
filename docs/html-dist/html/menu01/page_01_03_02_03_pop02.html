@@ -1,0 +1,276 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">할인선택</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comDiscount">
+
+                            <div class="ticketInfo">
+                                <div class="frmGroup">
+                                    <select title="내 티켓의 호차와 자리 선택" class="iptSlt frmHalf">
+                                        <option value="">5호차 5D</option>
+                                        <option value="">5호차 5C</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="comTableForm">
+                                <table class="formTable">
+                                    <caption>
+                                        할인선택 목록_어른(할인없음), 어린이, 경로, 장애인, 국가유공자, 교환번호, 할인쿠폰(회원), 할인쿠폰, 제휴카드로 구성된 표
+                                    </caption><!-- 20251217 수정 -->
+                                    <!-- 20251217 수정 -->
+                                    <colgroup>
+                                        <col style="width:200px;">
+                                        <col>
+                                    </colgroup>
+                                    <!-- 20251217 수정 -->
+                                    <tbody>
+                                        <!-- thead 있을때 -->
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc01" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc01" class="iptLbl lblBold">어른(할인 없음)</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc02" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc02" class="iptLbl lblBold">어린이</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                탑승일 기준 만 6세 ~ 만 12세
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc03" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc03" class="iptLbl lblBold">경로</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                신분증
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc04" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc04" class="iptLbl lblBold">장애인</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                시·군·구청장 발행 복지카드<br>국가·지방자치단체가 발급한 장애인등록증/장애인증명서
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc05" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc05" class="iptLbl lblBold">국가유공자</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                국가보훈처 발행 유공자증<br>국가보훈처 발행 5.18 민주유공자
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc06" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc06" class="iptLbl lblBold">교환번호</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" title="교환번호" placeholder="교환번호 13자리를 입력해 주세요.">
+                                                    <button type="button" class="fncBtn">인증</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc07" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc07" class="iptLbl lblBold">교환번호</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" title="교환번호" placeholder="교환번호 13자리를 입력해 주세요." value="1234567890123">
+                                                    <button type="button" class="fncBtn">취소</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc08" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc08" class="iptLbl lblBold">할인쿠폰(회원)</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <select title="쿠폰 선택" class="iptSlt">
+                                                        <option value="">쿠폰 선택</option>
+                                                        <option value="">옵션1</option>
+                                                    </select>
+                                                </div>
+                                                <!--20251028 직접 입력 선택시 표출 그 외 항상 숨김 처리-->
+                                                <div class="frmGroup" style="display:none;">
+                                                    <input type="text" class="iptText" title="교환번호" placeholder="교환번호 8자리를 입력해 주세요.">
+                                                    <button type="button" class="fncBtn">인증</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc09" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc09" class="iptLbl lblBold">할인쿠폰</label>
+                                                </div>
+                                            </th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" title="교환번호" placeholder="교환번호 8자리를 입력해 주세요.">
+                                                    <button type="button" class="fncBtn">인증</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc10" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc10" class="iptLbl lblBold">제휴카드</label>
+                                                </div>
+                                                <button type="button" class="affList">제휴카드목록</button>
+                                            </th>
+                                            <td class="left">
+                                                <!-- 20251121 삭제 <div class="moLabel flex">
+                                                    <div>
+                                                        <input id="dc10" type="radio" class="iptChk" name="discount">
+                                                        <label for="dc10" class="iptLbl lblBold">제휴카드</label>
+                                                    </div>
+                                                    <button type="button" class="affList">제휴카드목록</button>
+                                                </div> -->
+                                                <div class="frmGroup">
+                                                    <button type="button" class="affCardInfo">제휴카드 정보 입력</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">
+                                                <div>
+                                                    <input id="dc11" type="radio" class="iptChk" name="discount">
+                                                    <label for="dc11" class="iptLbl lblBold">제휴카드</label>
+                                                </div>
+                                                <button type="button" class="affList">제휴카드목록</button>
+                                            </th>
+                                            <td class="left">
+                                                <!-- 20251121 삭제 <div class="moLabel flex">
+                                                    <div>
+                                                        <input id="dc11" type="radio" class="iptChk" name="discount">
+                                                        <label for="dc11" class="iptLbl lblBold">제휴카드</label>
+                                                    </div>
+                                                    <button type="button" class="affList">제휴카드목록</button>
+                                                </div> -->
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" title="카드번호" placeholder="" value="000-****-****-0000 (MM/YY)">
+                                                    <button type="button" class="fncBtn">인증</button>
+                                                </div>
+                                            </td>
+                                        </tr>                                       
+                                    </tbody>
+                                </table>                                                
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

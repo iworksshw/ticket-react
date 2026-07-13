@@ -1,0 +1,23 @@
+//좌측 : 텍스트, 우측 : - 숫자 +
+.pubIncDec {
+    width: max-content; display: flex; align-items: center;
+    .btnNum {
+        width: 32px; height: 32px; font-size: 0; border-radius: 50%; border: 1px solid var(--border-color-G400, #B9C1C9); background: #fff;
+        &:disabled {opacity: 0.3; cursor: auto;}
+        &.minus {
+            background: url(/common/images/common/ic_24_minus.svg) center no-repeat;
+            &:disabled {background: var(--bg-color-G400) url(/common/images/common/ic_24_minus.svg) center no-repeat;}
+        }
+        &.plus {
+            background: url(/common/images/common/ic_24_plus.svg) center no-repeat;
+            &:disabled {background: var(--bg-color-G400) url(/common/images/common/ic_24_plus.svg) center no-repeat;}
+        }
+    }
+    .textNum {
+        min-width: 24px; margin: 0 16px; color: var(--text-color-G900, #111); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+
+        @include media ('mobile') {
+            font-size: rem(17px);
+        }
+    }
+}

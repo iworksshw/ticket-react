@@ -1,0 +1,311 @@
+//실시간 열차 정보
+.comRealTime {
+    width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: start; justify-content: flex-start; gap:60px; margin-top:60px;
+    @include media ('tablet') {
+        flex-flow:column;
+    }
+    .trainTrack {
+        width:calc(100% - 540px); position:relative;
+
+        @include media ('tablet') {
+            width:100%;
+        }
+
+        .tracker {
+            width:100%; border-radius:12px; overflow:hidden; border:1px solid var(--border-color-G300);
+
+            .topCont {
+                padding:20px 0; width:100%; background:var(--bg-color-G100); border-bottom:1px solid var(--border-color-G300);
+                @include media ('mobile') {
+                    padding:12px 0;
+                }
+                ul {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:40px;
+
+                    li {
+                        position:relative; padding-left:32px; font-size:rem(22px); font-weight:600; line-height:150%; color:var(--text-color-G900);
+
+                        @include media ('mobile') {
+                            font-size:rem(15px); padding-left: 27px;
+                        }
+
+                        &.express {
+                            &::before {
+                                content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:24px; height:28px; background:url(/common/images/common/ic_24_ex_track.svg)0 0 no-repeat;
+
+                                @include media ('mobile') {
+                                    width:17px; height:20px; background-size:contain;
+                                }
+                            }
+                        }
+                        &.standard {
+                            &::before {
+                                content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:24px; height:28px; background:url(/common/images/common/ic_24_std_track.svg)0 0 no-repeat;
+                                
+                                @include media ('mobile') {
+                                    width:17px; height:20px; background-size:contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottomCont {
+                 
+                ul {
+                    display:flex; flex-flow:column; align-items: center; justify-content: center;
+
+                    li {
+                        width:100%; border-bottom:1px solid var(--border-color-G300);
+                        .stn {
+                            width:452px; margin:0 auto; position:relative; border-left:12px solid var(--border-color-G400); border-right:12px solid var(--border-color-G400); padding:23px 0;
+
+                            @include media ('pcs') {
+                                width: 60%;
+                            }
+
+                            @include media ('mobile') {
+                                border-left:2px solid var(--border-color-G400);
+                                border-right:2px solid var(--border-color-G400);
+                                padding:9px 0;
+                            }
+
+                            &::before {
+                                content:''; position:absolute; width:14px; height:6px; top:100%; left:-12px; transform:translateY(-50%) rotate(180deg); background:url(/common/images/common/ic_14_train_arr.svg)100% 100% no-repeat;
+                                animation: trainAniBefore 1s linear infinite;
+                                @include media ('mobile') {
+                                    width:14px; height:14px; background-size:contain; left:-8px;
+                                }
+                            }
+                            &::after {
+                                content:''; position:absolute; width:14px; height:6px; top:0%; right:-12px; transform:translateY(-50%); background:url(/common/images/common/ic_14_train_arr.svg)100% 100% no-repeat;
+                                animation: trainAniAfter 1s linear infinite;
+                                @include media ('mobile') {
+                                    width:14px; height:14px; background-size:contain; right:-8px;
+                                }
+                            }
+                            @keyframes trainAniBefore{
+                                0% {
+                                    top:100%;
+                                }
+                                100% {
+                                    top:0%;
+                                }
+                            }
+                            @keyframes trainAniAfter {
+                                0% {
+                                    top:0%;
+                                }
+                                100% {
+                                    top:100%;
+                                }
+                            }
+                            span {
+                                position:absolute; z-index:9;
+                                &.ex {
+                                    width:24px; height:28px; background:url(/common/images/common/ic_24_ex_track.svg)50% 50% no-repeat; font-size:0;
+                                    z-index:10;
+                                    @include media ('mobile') {
+                                        width:17px; height:20px; background-size:contain;
+                                    }
+                                }
+
+                                &.std {
+                                    width:24px; height:28px; background:url(/common/images/common/ic_24_std_track.svg)50% 50% no-repeat; font-size:0;
+                                    @include media ('mobile') {
+                                        width:17px; height:20px; background-size:contain;
+                                    }
+                                }
+
+                                &.up {
+                                    right:-18px; 
+
+                                    @include media ('mobile') {
+                                        right:-10px;
+                                    }
+
+                                    &.ing {
+                                        bottom:-14px;
+                                        @include media ('mobile') {
+                                            bottom:-10px;
+                                        }
+                                    }
+                                }
+
+                                &.down {
+                                    left:-18px;
+
+                                    @include media ('mobile') {
+                                        left:-10px;
+                                    }
+
+                                    &.ing {
+                                        top:-14px;
+
+                                        @include media ('mobile') {
+                                            top:-10px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            p {
+                                font-size:rem(22px); font-weight:600; line-height:150%; text-align:center; color:var(--text-color-G900);
+                                @include media ('mobile') {
+                                    font-size:rem(15px);
+                                }
+                            }
+                        }
+
+                        &:last-of-type {
+                            border-bottom:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .trainInfo {
+        width:480px;
+
+        @include media ('pcs') {
+            width:100%;
+        }
+
+        .topCont {
+            width:100%; position:relative; background:var(--bg-color-G100); border-radius:12px; padding:28px 24px;
+
+            @include media ('mobile') {
+                padding:20px 16px;
+            }
+
+            .stnSchedInfo {
+                margin-top:28px;
+
+                @include media ('mobile') {
+                    margin-top:20px;
+                }
+
+                ul {
+                    display:flex; flex-flow: column; align-items: center; justify-content: center; gap:8px;
+
+                    li {
+                        position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:16px;
+
+                        span {
+                            font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G800);
+                            @include media ('mobile') {
+                                font-size:rem(15px);
+                            }
+                            &.type {
+                                font-size:rem(16px); font-weight:600; line-height:28px; text-align:center; padding: 0 12px; color:var(--text-color-B500); border:1px solid var(--color-primary-blue-300); border-radius:4px;
+
+                                @include media ('mobile') {
+                                    font-size:rem(15px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .infoText {
+                padding-left:28px; position:relative; width: 100%; margin:28px auto 0; word-break: keep-all;
+
+                @include media ('mobile') {
+                    font-size:rem(15px); margin:20px auto 0;
+                }
+                @include media (375px) {
+                    width:auto;
+                }
+
+                &::before {
+                    content:''; position:absolute; top:50%; left:0; width:24px; height:24px; transform:translateY(-50%); background:url(/common/images/common/ic_24_help.svg)50% 50% no-repeat;
+                    @include media ('mobile') {
+                        transform:none; top:-2px;
+                    }
+                }
+            }
+        }
+
+        .bottomCont {
+            width:100%; position:relative;
+
+            .tit {
+                font-size:rem(24px); font-weight:600; line-height:150%; color:var(--color-primary-blue-900); margin-top:40px;
+                @include media ('mobile') {
+                    font-size:rem(22px);
+                }
+            }
+
+            ul {
+                display:flex; flex-flow:column; align-items: flex-start; justify-content: flex-start; border-top:1px solid var(--text-color-G900); margin-top:12px;
+
+                li {
+                    width:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; padding:12px 16px; gap:32px; border-bottom:1px solid var(--border-color-G300);
+                    @include media ('mobile') {
+                        gap:24px; padding: 12px;
+                    }
+
+                    .trainType {
+                        display:inline-block; padding-left:32px; position:relative; width:60px;
+
+                        &::before {
+                            content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:24px; height:28px;
+                        }
+
+                        @include media ('mobile') {
+                            font-size: rem(15px);
+                        }
+                    }
+
+                    &.express {
+                        .trainType {
+                            &::before {
+                                background:url(/common/images/common/ic_24_ex_track.svg)0 0 no-repeat;
+                            }
+                        }
+                    }
+
+                    &.standard {
+                        .trainType {
+                            &::before {
+                                background:url(/common/images/common/ic_24_std_track.svg)0 0 no-repeat;
+                            }
+                        }
+                    }
+                    .trainLocation {
+                        width:calc(100% - 92px); display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+                        @include media ('mobile') {
+                            display:block; position:relative; width:185px;
+                        }
+
+                        .detail {
+                            display:flex; flex-flow:column; align-items: flex-start; justify-content: flex-start;
+
+                            .eta {
+                                font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900);
+                                @include media ('mobile') {
+                                    font-size:17px;
+                                }
+                            }
+
+                            .depInfo {
+                                font-size:rem(14px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+                            }
+                        }
+
+                        .remainCnt {
+                            font-size:rem(16px); font-weight:500; line-height:34px; color:var(--text-color-G600); border:1px solid var(--border-color-G400); border-radius:8px; padding: 0 12px; width:max-content;
+                            @include media ('mobile') {
+                                position:absolute; top:1px; right:1px; line-height:22px; padding: 0 6px; font-size:rem(14px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

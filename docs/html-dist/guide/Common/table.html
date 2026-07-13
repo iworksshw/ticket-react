@@ -1,0 +1,87 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">Table</div>
+<div class="guideCont">
+<div class="gText">
+    테이블 내부에 무엇이 들어갈 수 있는지를 정의합니다.
+    <br>input, select 버튼 등 각종 Form은 Form가이드에 있는 그대로 들어갑니다.
+    <br>*테이블 th, td에 사용하는 정렬 클래스
+    <br>left : 좌측정렬
+    <br>center : 가운데정렬
+    <br>right : 우측정렬
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<div class="comDataTable">
+    <table class="basic">
+        <caption>승차권 좌석 변경 전과 변경 후를 포함한 표</caption>
+        <colgroup>
+            <col style="width:auto;">
+            <col style="width:auto;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>변경 전</th>
+                <th>변경 후</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2호차 8A</td>
+                <td>2호차 8A</td>
+            </tr>       
+            <tr>
+                <td>2호차 8B</td>
+                <td>2호차 8B</td>
+            </tr>      
+            <tr>
+                <td>2호차 8C</td>
+                <td>2호차 9C</td>
+            </tr>  
+            <tr>
+                <td>2호차 8D</td>
+                <td>2호차 9D</td>
+            </tr>                                                                                                                                                               
+        </tbody>
+    </table>                                                
+</div>
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        

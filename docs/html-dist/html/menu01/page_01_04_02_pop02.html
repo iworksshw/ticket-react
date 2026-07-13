@@ -1,0 +1,188 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">상품 반품신청</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comReturn">
+                            <div class="txtBox">
+                                <p class="tit">사용흔적이 없는 상품만 <em>교환/반품</em>이 가능합니다.</p>
+                                <p class="subTit">회수된 상품을 검수한 후 문제가 발견되면 고객님께 연락을 드립니다.</p>
+                            </div>
+                            <div class="contBox">
+                                <p class="topTit">반품신청 상품 및 수량선택</p>
+                                <div class="comTicketGoods">
+                                    <ul class="goodsList">
+                                        <li class="item">
+                                            <dl class="info">
+                                                <dt class="tit"><span>5,000원 충전된 교통카드 / </span> <span class="colorBlue">긴 옵션 내용1, 긴 옵션 내용2</span><button type="button" class="btnDel">상품삭제</button></dt>
+                                                <dd class="desc">
+                                                    <div class="pubIncDec">
+                                                        <button type="button" class="btnNum minus" disabled="">-1</button>
+                                                        <span class="textNum">0<span class="blind">개</span></span>
+                                                        <button type="button" class="btnNum plus">+1</button>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="item">
+                                            <dl class="info">
+                                                <dt class="tit"><span>10,000원 충전된 교통카드 / </span> <span class="colorBlue">옵션1, 옵션2</span><button type="button" class="btnDel">상품삭제</button></dt>
+                                                <dd class="desc">
+                                                    <div class="pubIncDec">
+                                                        <button type="button" class="btnNum minus">-1</button>
+                                                        <span class="textNum">1<span class="blind">개</span></span>
+                                                        <button type="button" class="btnNum plus">+1</button>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contBox">
+                                <p class="topTit">반품사유</p>
+                                <div class="comTicketDiscount">
+                                    <ul class="discountList">
+                                        <li class="discItem">
+                                            <div class="fnChoGroup"> <!-- 20251217 속성 삭제 -->
+                                                <div class="frmChoBox">
+                                                    <input id="rdo301" type="radio" class="iptRdo" name="rdo301">
+                                                    <label for="rdo301" class="iptLbl bold">단순 변심</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="discItem">
+                                            <div class="fnChoGroup"> <!-- 20251217 속성 삭제 -->
+                                                <div class="frmChoBox">
+                                                    <input id="rdo302" type="radio" class="iptRdo" name="rdo301">
+                                                    <label for="rdo302" class="iptLbl bold">다른 상품을 받음</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="discItem">
+                                            <div class="fnChoGroup"> <!-- 20251217 속성 삭제 -->
+                                                <div class="frmChoBox">
+                                                    <input id="rdo303" type="radio" class="iptRdo" name="rdo301">
+                                                    <label for="rdo303" class="iptLbl bold">상품불량 (고장/파손/구성품 누락)</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="discItem">
+                                            <div class="fnChoGroup"> <!-- 20251217 속성 삭제 -->
+                                                <div class="frmChoBox">
+                                                    <input id="rdo304" type="radio" class="iptRdo" name="rdo301">
+                                                    <label for="rdo304" class="iptLbl bold">기타사유</label>
+                                                    <div class="etcWrap">
+                                                        <label for="etcReason" class="blind">기타 사유 입력</label>
+                                                        <textarea id="etcReason" class="etcReason" name="etcReason" placeholder="반품 사유를 입력하세요."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>                                                                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contBox">
+                                <p class="topTit">반품처</p>
+                                <div class="comTicketDiscount">
+                                    <ul class="discountList">
+                                        <li class="discItem">
+                                            <div class="fnGroup">
+                                                <div class="labelBox">
+                                                    <label for="returnSlt" class="blind">반품처선택</label>
+                                                </div>
+                                                <div class="frmGroup">
+                                                    <select name="returnSlt" id="returnSlt" class="iptSlt md">
+                                                        <option value="">선택</option>
+                                                        <option value="">선택</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>                                                                                      
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

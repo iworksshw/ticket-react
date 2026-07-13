@@ -1,0 +1,54 @@
+//만족도
+.comSurvey {
+    margin-top:120px; width:100%; position:relative; padding: 40px; background:var(--bg-color-G200); border-radius:8px;
+
+    @include media ('mobile') {
+        padding:32px 24px;
+    }
+
+    p.title {
+        padding-left:32px; position:relative; font-size:rem(22px); font-weight:600; line-height:150%; color:var(--text-color-G800);
+
+        &::before {
+            content:''; position:absolute; top:50% ;left:0; width:24px; height:24px; transform:translateY(-50%); background:url(/common/images/common/ic_24_survey.svg)0 0 no-repeat;
+        }
+    }
+
+    .rate {
+        margin:20px 0; 
+
+        .frmGroup {
+            gap:32px;
+
+            .iptLbl {cursor: pointer;}
+            @include media ('mobile') {
+                flex-flow:row wrap; gap: 16px;
+            }
+
+        }
+    }
+
+    .typeWrite {
+        display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px;
+        @include media ('mobile') {
+            flex-flow: column; 
+        }
+        textarea {
+            padding:20px 16px; width:calc(100% - 112px); background:#fff; border:1px solid var(--border-color-G300); border-radius:4px; resize:none; height:100px;
+            font-size:rem(16px);
+
+            @include media ('mobile') {
+                width:100%; font-size:rem(15px);
+            }
+        }
+
+        .btnSubmit {
+            width:100px; height:100px; line-height:100px; background:var(--bg-color-DB500); border-radius:8px; color:#fff; 
+            font-size:rem(18px); font-weight:400; line-height:160%;
+
+            @include media ('mobile') {
+                width:100%; height:60px; line-height:60px;
+            }
+        }
+    }
+}

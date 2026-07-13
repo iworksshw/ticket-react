@@ -1,0 +1,32 @@
+//답글
+.comReply {
+    width:100%; position:relative; margin-top:40px;
+
+    .repTit {
+        display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+
+        .tit {
+            font-size:rem(22px); font-weight:600; line-height:150%; color:var(--text-color-B500);
+            @include media ('mobile') {
+                font-size:rem(21px);
+            }
+        }
+
+        .date {
+            font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+            @include media ('mobile') {
+                font-size:rem(15px);
+            }
+        }
+    }
+
+    .repCont {
+        width:100%; padding:40px; position:relative; background:var(--bg-color-G200); border-radius:8px; font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G800); margin-top:8px;
+        @include media ('mobile') {
+            font-size:rem(17px); padding:24px;
+        }
+    }
+    & + .comBtnGroup {
+        margin-top: 40px;
+    }
+}

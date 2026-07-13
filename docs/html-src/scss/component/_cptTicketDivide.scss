@@ -1,0 +1,34 @@
+//승차권 예약 분할 콤포넌트
+.cptTicketDivide {
+    width: 100%; 
+    .divideArea {
+        width: 100%; display: flex; gap: 0 40px;
+        .divideL {
+            width: calc(100% - 400px);
+            .divideGroup {
+                margin-top: 40px;
+                &:first-child {margin-top: 0;}
+            }
+        }
+        .divideR {
+            width: 360px; position: relative;
+            .divideGroup {
+                position: sticky; left: 0; top: 40px;
+            }
+        }
+    }
+    @include media('pcs') {
+        .divideArea {
+            flex-wrap: wrap;
+            .divideL {
+                width: 100%;
+            }
+            .divideR {
+                width: 100%;
+                .divideGroup {
+                    .comTicketH3 {display: none;}
+                }
+            }
+        }
+    }
+}

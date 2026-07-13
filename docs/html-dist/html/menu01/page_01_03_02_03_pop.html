@@ -1,0 +1,127 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup tini on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">승차권 변경 확인</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comTitH4">
+                            <h4>좌석변경</h4>
+                        </div>
+                        
+                        <div class="comDataTable">
+                            <table class="basic">
+                                <caption>승차권 변경 확인_승차권 좌석 변경 전과 변경 후를 포함한 표</caption><!-- 20251217 수정 -->
+                                <!-- 20251217 수정 -->
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <!--// 20251217 수정 -->
+                                <thead>
+                                    <tr>
+                                        <th>변경 전</th>
+                                        <th>변경 후</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2호차 8A</td>
+                                        <td>2호차 8A</td>
+                                    </tr>       
+                                    <tr>
+                                        <td>2호차 8B</td>
+                                        <td>2호차 8B</td>
+                                    </tr>      
+                                    <tr>
+                                        <td>2호차 8C</td>
+                                        <td>2호차 9C</td>
+                                    </tr>  
+                                    <tr>
+                                        <td>2호차 8D</td>
+                                        <td>2호차 9D</td>
+                                    </tr>                                                                                                                                                               
+                                </tbody>
+                            </table>                                                
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

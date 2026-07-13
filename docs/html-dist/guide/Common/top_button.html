@@ -1,0 +1,98 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">탑버튼</div>
+<div class="guideCont">
+<div class="gText">
+        탑버튼 입니다.
+    <br>css는 _cptTop.scss를 참고바랍니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+    <!-- 탑버튼 공통 -->
+    <div class="comTop" aria-label="탑버튼">
+        <div class="topArea">
+            <button class="btnTopOnly" type="button">TOP</button>
+        </div>
+    </div>
+    <!--// 탑버튼 공통 -->
+
+    <div class="layoutContainer">
+        <div class="layoutCont">
+            임시 중간 컨텐츠 영역입니다.
+        </div>
+    </div>
+
+    <div class="layoutFooter">
+        <div class="cptFooter">
+            임시 하단 컨텐츠 영역입니다.
+        </div>
+    </div>
+        
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+
+    
+</div>
+</div>
+
+    
+<script>
+    run();
+
+    /* top버튼 클릭 시 최상단으로 이동 (탑버튼 only) */
+    const topBtn = document.querySelector('.comTop');
+    const footer = document.querySelector('.layoutFooter');
+
+    // TOP 버튼 클릭
+    document.querySelector('.btnTopOnly').onclick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // 스크롤 이벤트
+    window.onscroll = () => {
+        const footerTop = footer.offsetTop;
+        const footerFix = window.scrollY + window.innerHeight;
+        
+        if (footerFix + 80 > footerTop) {
+            // Footer 위에 고정
+            topBtn.style.position = 'absolute';
+            topBtn.style.top = footerTop - 80 + 'px';
+            topBtn.style.bottom = 'auto';
+        } else {
+            // 화면 하단 고정
+            topBtn.style.position = 'fixed';
+            topBtn.style.top = 'auto';
+            topBtn.style.bottom = '20px';
+        }
+    };
+
+</script>
+    
+        

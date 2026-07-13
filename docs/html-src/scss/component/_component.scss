@@ -1,0 +1,16 @@
+@import 'cptGnb';         //글로벌 네비게이션
+@import 'cptSubTop';      //서브 탑
+@import 'cptFooter';      //푸터
+
+@import 'cptLogin';       //로그인
+
+@import 'cptTicket';            //승차권 예약 콤포넌트
+@import 'cptTicketDivide';      //승차권 예약 분할 콤포넌트
+
+@import 'cptProduct';      //추천상품 상세
+@import 'cptPopCerti';     //간편지연증명서
+@import 'cptComplain';     //냉난방 간편접수
+@import 'cptMypage';       //마이페이지 대시보드
+
+//컨텐츠
+@import 'cptCustomer';    //소비자중심경영

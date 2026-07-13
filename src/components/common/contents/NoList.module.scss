@@ -1,0 +1,32 @@
+@use "@/styles/etc/mixin" as *;
+
+//리스트,내역 없음 
+.comNoList {
+    width: 100%; margin-top: 20px; padding: 140px 60px; border-top: 1px solid var(--border-color-G900, #111); background: url(/images/common/ic_90_nolist.png) center 50px no-repeat;
+    .listText {
+        width: 100%; padding-top: 20px; color: var(--text-color-G700, #3A3F49); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+
+        .bold {
+            font-weight: 600; 
+        }
+    }
+
+    &.ticket {
+        border-top:0; padding-top:90px; padding-bottom:0; margin-top:0; background-position:center top;
+
+        .listText {
+
+            &+.listText {
+                padding-top:0;
+            }
+
+            &:first-of-type {
+                font-weight:700;
+            }
+        }
+    }
+
+    &.history {
+        padding: 140px 60px 0 60px; border-top: 0;
+    }
+}

@@ -1,0 +1,59 @@
+//결제정보
+.comTicketPriceInfo {
+    width: 100%; padding: 28px; border-radius: 12px; border: 1px solid var(--border-color-G400, #B9C1C9); background: #fff;
+    .info {
+        width: 100%; margin-top: 12px; display: flex; justify-content: space-between; 
+        &:first-child {margin-top: 0;}
+        .tit {
+            width: 100%; color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-start;
+        }
+        .desc {
+            width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-end; align-items: center; white-space: nowrap;
+            .won {margin-left: 4px; color: var(--text-color-G600, #565B64); font-size: rem(14px); font-style: normal; font-weight: 400; line-height: 160%;}
+        }
+        .colorBlue {color: var(--color-primary-blue-500,#107AF2);}
+
+        &.divLine {
+            
+        }
+        &.total {
+            .tit {
+
+            }
+            .desc {
+                color: var(--text-color-G900, #111); font-size: rem(22px); font-weight: 600; line-height: 150%; align-items: baseline;
+                .won {font-size: rem(12px);}
+            }
+        }
+
+        & + .total {
+            margin-top: 20px; padding-top: 20px; border-top: 1px dashed var(--border-color-G400, #B9C1C9);
+        }
+    }
+    .comBtnGroup {
+        margin-top: 32px;
+        .cta .btn {width: 100%; flex-shrink: 1;}
+    }
+    @include media("pcs") {
+        width: calc(100% + 40px); margin-top: 32px; margin-left: -20px; padding: 32px 20px 0; border: 0; border-top: 12px solid var(--border-color-G200, #F3F6FB); border-radius: 0;
+        .info {
+            padding: 0 8px; margin-top: 8px;
+            &:first-child {margin-top: 0;}
+            .tit {font-size: rem(15px);}
+            .desc {font-size: rem(15px);}
+            &.total {
+                margin-top: 16px; padding-top: 16px;
+                .desc {
+                    font-size: rem(20px);
+                }
+            }
+        }
+        .comBtnGroup {
+            margin-top: 20px;
+            //.btnBox.cta .btn {width: calc(50% - 4px);}
+        }
+    }
+    @include media("mobile") {
+        width: calc(100% + 32px); margin-top: 32px; margin-left: -16px; padding: 32px 16px 0;
+    }
+}

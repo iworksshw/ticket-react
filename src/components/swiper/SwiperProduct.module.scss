@@ -1,0 +1,27 @@
+@use "@/styles/etc/mixin" as *;
+
+.productSlide {
+    position: relative; min-width: 0; width: 100%;
+
+    .arrowBox {
+        .btnArrow {
+            position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; font-size: 0; border: 0; padding: 0; background-color: transparent; cursor: pointer;
+
+            &.prev {
+                background-image: url(/images/common/ic_30_cir_arr_l.png); background-position: center; background-repeat: no-repeat; vertical-align: middle; width: 30px; height: 30px; left: 8px;
+            }
+            &.next {
+                background-image: url(/images/common/ic_30_cir_arr_r.png); background-position: center; background-repeat: no-repeat; vertical-align: middle; width: 30px; height: 30px; right: 8px;
+            }
+        }
+    }
+
+    // swiper-wrapper/swiper-slide는 swiper 라이브러리가 그대로 붙이는 전역 클래스라 :global()로 감싼다
+    :global(.swiper-wrapper) {
+        :global(.swiper-slide) {
+            img {
+                border-radius: 20px; width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+//프린트 시
+
+@media print {
+    .lytLayout {
+        .layoutArea{
+            .layoutTop {display: none;}
+            .layoutFooter{display: none;}
+        }
+    }
+    @include media ('mobile') {
+        .modPopup {
+            &.on {
+                .popupArea {
+                    animation: none !important; bottom: 0 !important;
+                    .popupInMotion {
+                        animation: none !important; transform: scale(1) !important; opacity: 1 !important;
+                    }
+                }
+            }
+        }
+    }
+}

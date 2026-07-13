@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>역 위치 탭 (역간 이동)</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comLocaTab.scss
+    -->
+
+    <!-- 좌측 정차역만 있을 경우 (.jsStart) -->
+    <div class="comLocaTab">
+        <div class="present">
+            <a href="javascript:void(0)">
+                <span class="stnNum">A01</span>
+                <span class="stnNm">서울역</span>
+            </a>
+        </div>
+        <div class="stnLink jsStart">
+            <a href="javascript:void(0)" class="prev">공덕</a>
+        </div>
+    </div>
+
+    <!-- 좌우 정차역 모두 있을 경우 -->
+    <div class="comLocaTab">
+        <div class="present">
+            <a href="javascript:void(0)">
+                <span class="stnNum">A05</span>
+                <span class="stnNm">김포공항</span>
+            </a>
+        </div>
+        <div class="stnLink">
+            <a href="javascript:void(0)" class="prev">계양</a>
+            <a href="javascript:void(0)" class="next">마곡나루</a>
+        </div>
+    </div>
+
+    <!-- 우측 정차역만 있을 경우 (.jsEnd) -->
+    <div class="comLocaTab">
+        <div class="present">
+            <a href="javascript:void(0)">
+                <span class="stnNum">A14</span>
+                <span class="stnNm">인천공항2터미널</span>
+            </a>
+        </div>
+        <div class="stnLink jsEnd">
+            <a href="javascript:void(0)" class="next">인천공항1터미널</a>
+        </div>
+    </div>
+</body>
+</html>

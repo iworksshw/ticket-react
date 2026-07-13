@@ -1,0 +1,181 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">제휴카드 정보 입력</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comTicketBox type02">
+                            <div class="boxArea">
+                                <ul class="boxList">
+                                    <li class="item">제휴카드 할인은 온라인을 통해서만 가능합니다.</li>
+                                    <li class="item">카드 별 이용조건 충족 시 적용되며, 카드 별 이용조건 등 자세한 사항은 해당 카드사로 문의 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comTableForm">
+                            <table class="formTable">
+                                <caption>
+                                    제휴카드 정보 입력_카드번호, 유효기간으로 구성된 표
+                                </caption><!-- 20251217 수정 -->
+                                <!-- 20251217 수정 -->
+                                <colgroup>
+                                    <col style="width:200px;">
+                                    <col>
+                                </colgroup>
+                                <!--// 20251217 수정 -->
+                                <tbody>
+                                    <!-- thead 있을때 -->
+                                    <tr>
+                                        <th class="left">카드번호</th>
+                                        <td class="left"><!-- 20251128 수정 -->
+                                            <div class="frmGroup gap04">
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" title="카드번호 첫번째 네자리 입력">
+                                                </div>
+                                                <span>-</span>
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" title="카드번호 두번째 네자리 입력">
+                                                </div>
+                                                <span>-</span>
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" title="카드번호 세번째 네자리 입력">
+                                                </div>
+                                                <span>-</span>
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" title="카드번호 마지막 네자리 입력">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">유효기간</th>
+                                        <td class="left"><!-- 20251128 수정 -->
+                                            <div class="frmGroup">
+                                                <div class="frmBox frmTini">
+                                                    <input type="text" class="iptText" title="월 입력">
+                                                    <span>월</span>
+                                                </div>
+                                                <div class="frmBox frmTini">
+                                                    <input type="text" class="iptText" title="연 입력">
+                                                    <span>년</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>                                   
+                                </tbody>
+                            </table>                                                
+                        </div>
+
+                        <!-- 약관 동의 -->
+                        <div class="comAgreement">
+                            <div class="agreeInner">
+                                <div class="checkArea">
+                                    <div class="frmGroup">
+                                        <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">개인정보 수집/이용 동의</label></div>
+                                    </div>
+                                </div>
+                                <div class="descArea">
+                                    <div class="descBox">
+                                        [개인정보의 수집 및 이용 목적]<br>
+                                        승차권 예약발매서비스 이용​<br><br>
+
+                                        [개인정보 수집 항목]<br>
+                                        카드번호, 유효기간​<br><br>
+
+                                        [개인정보의 보유 및 이용기간]<br>
+                                        계약 또는 청약철회 등에 관한 기록 (보존기간 : 5년) : 전자상거래 등에서의 소비자 보호에 관한 법률​<br>
+
+                                        대금결제 및 재화 등의 공급에 관한 기록 (보존기간 : 5년) : 전자상거래 등에서의 소비자 보호에 관한 법률​<br>
+
+                                        소비자의 불만 또는 분쟁처리에 관한 기록 (보존기간 : 3년) : 전자상거래 등에서의 소비자 보호에 관한 법률​<br><br>
+
+                                        ▶개인정보 수집 및 이용 동의 거부​<br>
+
+                                        개인정보 수집 및 이용 동의를 거부하실 수 있습니다. 다만, 이 경우 승차권 예약 서비스 이용이 제한될 수 있습니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

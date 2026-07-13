@@ -1,0 +1,18 @@
+/* frmCheckList */
+.frmCheckList {
+    display: flex; flex-wrap: wrap; flex-direction: column; gap: 24px; margin-top: 32px;
+    > div {
+        flex-direction: column; margin-top: 0;
+    }
+    .frmBox {
+        .byte {width: 100%; margin-top: 4px; color: var(--Gray-300); font-size: rem(15px); font-weight: 500; line-height: 1.6; text-align: right; display: block;
+            b {color: #333; font-weight: 500;}
+        }
+        .iptTextArea {
+            min-height: 160px;
+        }
+        label + .frmBox {
+            margin-top: 24px;
+        }
+    }
+}

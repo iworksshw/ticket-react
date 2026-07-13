@@ -1,0 +1,144 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">비회원 승차권예약 확인</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comCoupon">
+                            <!-- 보유쿠폰 -->
+                            <div class="couponBox couponTxt">
+                                <div class="imgWrap">
+                                    <span class="img" aria-hidden="true"></span>
+                                    <span class="blind">쿠폰 arex</span>
+                                </div>
+                                <div class="txt">
+                                    <p class="tit">2025년 도심공항터미널 우수 이용고객 리워드</p>
+                                    <!-- <p class="discount">10,000원 할인</p> -->
+                                    <p class="discount">US $7.56 <span class="won">(₩10,000)</span> 할인</p> <!-- 해외통화일때 -->
+                                    <div class="date">
+                                        <p class="dateTxt">
+                                            유효기간 <span class="dateNum">2025-11-01 까지</span>
+                                        </p>                                            
+                                    </div>
+                                </div>
+                            </div>                                
+                        </div>
+                        <div class="comTableForm">
+                            <table class="formTable">
+                                <caption>보유쿠폰 선물하기_쿠폰 받는사람, 이메일 확인버튼, 전할 내용을 포함한 표</caption><!-- 20251217 수정 -->   
+                                <!-- 20251217 수정 -->                                      
+                                <colgroup>
+                                    <col style="width:160px;">
+                                    <col>
+                                </colgroup>
+                                <!--// 20251217 수정 -->     
+                                <tbody>
+                                    <tr>
+                                        <th class="left border"><em>받는 사람</em></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" placeholder="이메일 주소를 입력해주세요." title="이메일 주소">
+                                                </div>
+                                                <button type="button" class="btn gLine">이메일 확인</button>
+                                            </div>
+                                        </td>
+                                    </tr><tr>
+                                        <th class="left border"><em>전할 내용</em></th>
+                                        <td class="left">
+                                            <textarea class="iptTextArea" placeholder="공항철도 할인쿠폰을 선물로 보내드립니다." title="할인쿠폰 선물 입력"></textarea>
+                                        </td>
+                                    </tr>                                            
+                                    <!-- </tr> --><!-- 20251217 수정 -->
+                                </tbody>
+                            </table>
+                        </div>               
+                        <div class="comTicketBox">
+                            <div class="boxArea">
+                                <ul class="boxList">
+                                    <li class="item">보유하신 쿠폰을 공항철도 회원에게 선물로 보낼 수 있습니다.</li>
+                                    <li class="item">선물로 받은 쿠폰은 받는 사람의 <em>[나의 쿠폰함]</em> 에 자동으로 등록됩니다</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn blue">선물 보내기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

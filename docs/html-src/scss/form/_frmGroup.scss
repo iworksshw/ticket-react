@@ -1,0 +1,56 @@
+/* ----- 폼 그룹 ----- */
+.frmGroup {
+    margin-top:12px; display:flex; align-items:flex-start; gap: 12px;
+    &:first-child {margin-top:0;}
+    &.full {flex-wrap: wrap;}
+    &.gap40 {gap: 40px}
+    &.error, .error {
+        .iptText {border: 1px solid var(--color-danger-500, #EF2B2A);}
+        .iptSlt {border: 1px solid var(--color-danger-500, #EF2B2A);}
+        .errMsg {
+            display: block;
+            &.line {
+                white-space: nowrap;
+
+                @include media('mobile') {
+                    white-space: wrap;
+                }
+            }
+        }
+    }
+    &.error {
+        flex-direction: column;
+        > .errMsg { margin-top: 0; }
+        > .errMsg.line {
+            margin-left: 0;
+            height: auto;
+            align-content: normal;
+            background-position: left 1px;
+        }
+    }
+    .frmGroupRow {
+        display: flex; align-items: flex-start; gap: 12px; width: 100%;
+    }
+    .errMsg {
+        width: 100%; margin-top:8px; padding-left: 24px; color: var(--color-danger-500, #EF2B2A); font-size: rem(15px); font-weight: 400; line-height: 1.5; 
+        background: url(/common/images/common/ic_20_danger.svg) left 1px no-repeat; display: none;
+        &.line {
+            margin-left: 5px; margin-top:0; height: 48px; align-content: center; background: url(/common/images/common/ic_20_danger.svg) left 13px no-repeat;
+            &:first-child {margin-left: 0;}
+        }
+        &.inline {width: auto;display: none;background: none;padding-left: 0;margin-top: 0;align-self: center;}
+    }
+    .helpMsg {margin-top:12px;color: var(--Gray-600, #58595F);font-size: rem(15px);font-weight: 400;line-height: 150%; /* 22.5px */}
+    .textBox {height: 48px; align-content: center; white-space: nowrap;}
+    @include media('mobile') {
+        // &.email {
+        //     flex-wrap: wrap;
+        //     .frmBox:nth-child(1),.frmBox:nth-child(2) {width: calc(50% - 6px); min-width: none;}
+        //     .frmBox:nth-child(3) {width: 100%; min-width: none;}
+        // }
+    }
+}
+
+.frmChoBox {
+    display: flex; align-self: center;
+}

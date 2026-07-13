@@ -1,0 +1,1374 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+
+
+            <div class="cptGnb">
+                <div class="gnbArea">
+                    <div class="gnbGroup">
+                        <div class="logoBox">
+                            <!-- arex 로고 -->
+                            <div class="logo"><a href="./index.html">공항철도</a></div>
+                            <!-- 협력사 로고 -->
+                            <div class="logoSide"><a href="./index.html">롯데마트</a></div>
+                        </div>   
+                        <div class="gnbBox">
+                            <!-- gnb 상단 -->
+                            <div class="gnbTop">
+                                <div class="gnbTopArea">
+                                    <ul class="depth1Group">
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">로그인</a>
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">회원가입</a>
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name" target="_blank" title="새 창 열림">공항철도 홈페이지</a>
+                                        </li>
+                                        <!-- 20251106 수정 -->
+                                        <li class="depth1List depth1Btn">
+                                            <button type="button" class="depth1Name" onclick="openPopup2('pop01', event)">
+                                                <span class="global"></span>
+                                                <span class="blind">언어 및 화폐 변경</span>
+                                                <span class="txt">KOR - KRW</span>
+                                            </button>
+                                        </li>     
+                                        <!--// 20251106 수정 -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--// gnb 상단 -->
+                            <!-- gnb 하단 -->
+                            <div class="gnbCont">                          
+                                <!-- 메뉴 -->
+                                <div class="menuArea">
+                                    <ul class="depth1Group">
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">승차권</a>
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">승차권</p>
+                                                        <p class="subTit">승차권을 예매하고 편리하게 이용하세요.</p>
+                                                    </div>
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 예약</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 확인</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 변경/반환</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용내역/영수증조회</a></li>
+                                                    </ul>  
+                                                </div>  
+                                            </div>                                      
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">직통열차</a>    
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">직통열차</p>
+                                                        <p class="subTit">도심과 공항을 가장 빠르고 쾌적하게 이용해 보세요.</p>
+                                                    </div>                                                    
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 소개</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 시각표</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 운임안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 이용안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">도심공항터미널</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴호텔</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴카드</a></li>
+                                                    </ul>  
+                                                </div>  
+                                            </div>                                                                 
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">일반열차</a>     
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">일반열차</p>
+                                                        <p class="subTit">수도권 어디서나 인천공항까지 편하게 이용해 보세요.</p>
+                                                    </div>                                                      
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 소개</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 운임안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 승차권구입 안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 정보</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 편의시설</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 구내매장</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">실시간 열차정보</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">구글 스트리트뷰</a></li>                                                        
+                                                    </ul>  
+                                                </div>  
+                                            </div>                               
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">고객서비스</a>              
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">고객서비스</p>
+                                                        <p class="subTit">고객을 위한 모든 서비스, 지금 바로 이용하세요.</p>
+                                                    </div>                                                      
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">체험학습</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">회의실</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자전거 휴대승차</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">유실물센터</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">간편지연증명서</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">행사신청</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">광고문의</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">SCAT Reward 프로그램</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">마케팅 제휴신청</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">소비자중심경영</a></li>                                            
+                                                    </ul>  
+                                                </div>  
+                                            </div>                                                                       
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">고객센터</a>       
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">고객센터</p>
+                                                        <p class="subTit">더 나은 서비스를 위해 고객님의 목소리에 귀 기울입니다.</p>
+                                                    </div>                                                      
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공지사항</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">냉난방간편접수</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">고객의 소리</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">VOC</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자주하는 질문 </a></li>                                          
+                                                    </ul>  
+                                                </div>  
+                                            </div>                     
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 검색, 장바구니, 개인정보 -->
+                                <!-- 메뉴 검색 --><!-- 20251128 수정 (위치 변경) -->
+                                <div class="srchArea ">
+                                    <div class="srchBox">
+                                        <div class="srchCont" role="search">
+                                            <label for="srchBox" class="blind">메뉴 검색</label>
+                                            <input id="srchBox" class="srchInput" placeholder="메뉴 검색">
+                                            <button class="srchBtn" type="button" aria-label="검색 실행">
+                                                <img src="/common/images/common/ic_26_srchBtn_b.svg" alt="">
+                                            </button>
+                                        </div>
+                                        
+                                        <ul class="srchList">
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 소개</a></li>
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 운임안내</a></li>
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 승차권구입 안내</a></li>
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 역정보</a></li>             
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 편의시설</a></li>     
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 실시간 열차정보</a></li>                           
+                                        </ul>
+                                        
+                                        
+                                        <div class="srchClose">
+                                            <button type="button" class="srchCloseBtn">
+                                                <img src="/common/images/common/ic_44_close_b.svg" alt="">
+                                                <span class="blind">메뉴 검색 닫기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>                                 
+                                <div class="quickArea">
+                                    <button class="srchBtn" type="button">
+                                        <img src="/common/images/common/ic_26_srch.svg" alt="">
+                                        <span class="blind">메뉴검색 열기</span>
+                                    </button>
+                                    <button class="cartBtn on" type="button"> <!-- 20260105 class "on" 추가 -->
+                                        <img src="/common/images/common/ic_26_cart.svg" alt="">
+                                        <span class="blind">장바구니</span>
+                                    </button>
+                                    <!-- 20251128 수정 -->
+                                    <div class="comDropdown comMyDrop">
+                                        <div class="dropArea">
+                                            <button class="infoBtn btnDrop" type="button">
+                                                <img src="/common/images/common/ic_26_info.svg" alt="">
+                                                <span class="blind">개인정보</span>
+                                            </button>
+                                            <ul class="dropMenu">
+                                                <li>나의 AREX</li>
+                                                <li><a href="#">체험학습 예약내역</a></li>
+                                                <li><a href="#">회의실 예약내역</a></li>
+                                                <li><a href="#">자전거 휴대승차 예약내역</a></li>
+                                                <li><a href="#">나의 쿠폰함</a></li>
+                                                <li><a href="#">장바구니</a></li>
+                                                <li><a href="#">회원정보</a></li>
+                                            </ul>                                            
+                                        </div>
+                                    </div>   
+                                    <!--// 20251128 수정 -->                                    
+                                </div>
+                                <!-- 사이트맵 -->
+                                <div class="sitemapArea">
+                                    <button class="openBtn" aria-expanded="false" type="button">
+                                        <img src="/common/images/common/ic_26_hamburger.svg" alt="pc 전체메뉴 열기">
+                                    </button>
+                                    <button class="moOpenBtn" aria-expanded="false" type="button">
+                                        <img src="/common/images/common/ic_26_hamburger.svg" alt="모바일 전체메뉴 열기">
+                                    </button>
+                                    <div class="sitemap">
+                                        <div class="sitemapInner">
+                                            <div class="sitemapCont">
+                                                <div class="sitemapHead">
+                                                    <p class="tit">전체메뉴</p>
+                                                </div>
+                                                <nav aria-label="사이트맵 전체 메뉴">
+                                                    <div class="depth1Wrap">
+                                                        <ul class="depth1Group">
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">승차권</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 예약</a></li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">승차권 확인</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">유효승차권</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">제휴서비스</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">승차권 변경/반환</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 반환</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 변경</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">이용내역/영수증조회</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">구매이력</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">상품구매내역</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul> 
+                                                            </li>
+
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">직통열차</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 소개</a></li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">직통열차 시각표</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">직통열차 시각표(평일)</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">직통열차 시각표(휴일)</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 운임안내</a></li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">직통열차 이용안내</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 구입안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">온라인 승차권 구입</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">발매기 승차권 구입</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">역 이동 동선안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권확인/열차탑승</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 재발행</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권·상품 변경</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 반환</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">상품 결제취소</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">상품 반품</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">영수증 발행</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">도심공항터미널</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">도심공항터미널 이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">도심공항터미널 이용절차</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">항공보안 자율신고제도</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴호텔</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴카드</a></li>
+                                                                </ul>  
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">일반열차</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 소개</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 운임안내</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 승차권구입 안내</a></li>
+                                                                    <li class="depth2List depth2ListInfo">
+                                                                        <a href="javascript:void(0)" class="depth2Name">역 정보</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">서울역</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">공덕</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">홍대입구</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">디지털미디어시티</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">마곡나루</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">김포공항</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">계양</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">검암</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">청라국제도시</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">영종</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">운서</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">공항화물청사</a></li>  
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">인천공항1터미널</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">인천공항2터미널</a></li>                                                         
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">역 편의시설</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">편의시설 설치현황</a></li>  
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">배려시설 현황</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">전동휠체어 승차위치</a></li>                                                         
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 구내매장</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">실시간 열차정보</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">구글 스트리트뷰</a></li>                                                        
+                                                                </ul>  
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">고객서비스</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">체험학습</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">프로그램</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">예약하기</a></li>
+                                                                        </ul>                                                                    
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">회의실</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">위치확인</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">예약하기</a></li>
+                                                                        </ul>                                                                         
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">자전거 휴대승차</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">예약하기</a></li>
+                                                                        </ul>   
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">유실물센터</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">간편지연증명서</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">행사신청</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">광고문의</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">SCAT Reward 프로그램</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">마케팅 제휴신청</a></li>               
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">소비자중심경영</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">고객 서비스 헌장</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">CCM 개요</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">CCM 인증현황</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">CCM 주요활동</a></li>
+                                                                        </ul>   
+                                                                    </li>                                                         
+                                                                </ul>  
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">고객센터</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공지사항</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">냉난방간편접수</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">고객의 소리</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">VOC</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자주찾는 질문(FAQ)</a></li>                                          
+                                                                </ul>                                                              
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">마이페이지</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">나의 AREX</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">체험학습 예약내역</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">회의실 예약내역</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자전거 휴대승차 예약내역</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">나의 쿠폰함</a></li>      
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">장바구니</a></li>             
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">회원정보</a></li>                                                               
+                                                                </ul>  
+                                                            </li>                                                        
+                                                        </ul>
+                                                    </div>
+                                                </nav>
+                                                <div class="sitemapFoot">
+                                                    <button class="closeBtn" type="button">
+                                                        <span class="blind">전체메뉴 닫기</span>
+                                                    </button>
+                                                </div>
+                                            </div>                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 모바일 메뉴 -->
+                                <div class="moMenuArea">
+                                    <div class="moMenuBox">
+                                        <!-- 상단 -->
+                                        <div class="topBox">
+                                            <button type="button" class="logOutBtn">로그아웃</button>
+                                            <div class="topArea">
+                                                <button class="infoBtn" type="button">
+                                                    <img src="/common/images/common/ic_32_info_w.svg" alt="">
+                                                    <span class="blind">개인정보</span>
+                                                </button>
+                                                <!-- 20260204 추가 -->
+                                                <button class="cartBtn on" type="button"> <!-- addClass : on - 장바구니 담겨있음 표시 -->
+                                                    <img src="/common/images/common/ic_32_cart_w.svg" alt="">
+                                                    <span class="blind">장바구니</span>
+                                                </button>
+                                                <!-- //20260204 추가 -->
+                                                <button class="globalBtn" type="button" onclick="openPopup2('pop01', event)">
+                                                    <img src="/common/images/common/ic_32_global.svg" alt="">
+                                                    <span class="blind">언어 설정</span>
+                                                </button>
+                                                <button class="MoCloseBtn" type="button">
+                                                    <img src="/common/images/common/ic_32_moClose.svg" alt="">
+                                                    <span class="blind">모바일메뉴 닫기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="topMenu" role="menu">
+                                            <div class="topMenuArea">
+                                                <p class="list"><a href="javascript:void(0)"><img src="/common/images/common/ic_24_ticket_cir.svg" alt="">승차권 예약</a></p>
+                                                <p class="list"><a href="javascript:void(0)"><img src="/common/images/common/ic_24_myticket_cir.svg" alt="">나의 승차권</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="midBox">
+
+                                            <!-- 20251124 수정 및 리스트 추가 -->
+                                            <div class="srchBox">
+                                                <div class="srchCont" role="search">
+                                                    <label for="srchBox2" class="blind">메뉴를 검색해보세요.</label>
+                                                    <input id="srchBox2" class="srchInput" placeholder="메뉴를 검색해보세요.">
+                                                    <button class="srchBtn" type="button" aria-label="검색 실행">
+                                                        <img src="/common/images/common/ic_26_srchBtn_b.svg" alt="">
+                                                    </button>
+                                                </div>
+                                                <ul class="srchList" style="display: none;">
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 소개</a></li>
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 운임안내</a></li>
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 승차권구입 안내</a></li>
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 역정보</a></li>             
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 편의시설</a></li>     
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 실시간 열차정보</a></li>                           
+                                                </ul>
+                                            </div>
+                                                
+                                            <!-- <div class="srchBox" role="search">
+                                                <label for="srch" class="blind">메뉴 검색</label>
+                                                <input id="srch" class="srchInput" placeholder="메뉴를 검색해보세요.">
+                                                <button class="srchBtn" type="button" aria-label="검색 실행">
+                                                    <img src="/common/images/common/ic_26_srchBtn_b.svg" alt="">
+                                                </button>
+                                            </div> -->
+                                            <div class="naviBox" role="navigation">
+                                                <div class="naviArea">
+                                                    <button class="naviItem active" data-target="tickets" aria-pressed="true">승차권</button>
+                                                    <button class="naviItem" data-target="express" aria-pressed="false">직통열차</button>
+                                                    <button class="naviItem" data-target="regular" aria-pressed="false">일반열차</button>
+                                                    <button class="naviItem" data-target="service" aria-pressed="false">고객서비스</button>
+                                                    <button class="naviItem" data-target="center" aria-pressed="false">고객센터</button>
+                                                    <button class="naviItem" data-target="mypage" aria-pressed="false">마이페이지</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 메인 콘텐츠 -->
+                                        <div class="moMenuBody" role="menu">
+                                            <!-- 승차권 -->
+                                            <section id="tickets" class="section">
+                                                <h2 class="title">승차권</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">승차권 예약</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">승차권 확인</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">유효승차권</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴서비스</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">승차권 변경/반환</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 반환</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 변경</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">이용내역/영수증조회</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">구매이력</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">상품구매내역</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                            <!-- 직통열차 -->
+                                            <section id="express" class="section">
+                                                <h2 class="title">직통열차</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">직통열차 소개</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">직통열차 시간표</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 시간표 (평일)</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 시간표 (휴일)</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">직통열차 운임안내</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">직통열차 이용안내</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 구입안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">온라인 승차권 구입</a></li>   
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">발매기 승차권 구입</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 이동 동선안내</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권확인/열차탑승</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 재발행</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권·상품 변경</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 반환</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">상품 결제취소</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">상품 반품</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">영수증 발행</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">도심공항터미널</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">도심공항터미널 이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">도심공항터미널 이용절차</a></li>  
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">항공보안 자율신고제도</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">제휴호텔</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">제휴카드</a></li>
+                                                </ul>
+                                            </section>
+                                            <!-- 일반열차 섹션 -->
+                                            <section id="regular" class="section">
+                                                <h2 class="title">일반열차</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">일반열차 소개</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">일반열차 운임안내</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">열차 승차권 구입 안내</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">역정보</a>
+                                                        <ul class="depth2Group depth2GroupInfo" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">서울역</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공덕</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">홍대입구</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">디지털미디어시티</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">마곡나루</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">김포공항</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">계양</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">검암</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">청라국제도시</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">영종</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">운서</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공항화물청사</a></li>  
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">인천공항1터미널</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">인천공항2터미널</a></li>                                         
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">역 편의시설</a>
+                                                        <ul class="depth2Group depth2GroupInfo" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">편의시설 설치현황</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">배려시설 현황</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">전동휠체어 승차위치</a></li>                                    
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">역 구내매장</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">실시간 열차정보</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">구글 스트리트뷰</a></li>
+                                                </ul>
+                                            </section>
+                                            <!-- 고객서비스 --> 
+                                            <section id="service" class="section">
+                                                <h2 class="title">고객서비스</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">체험학습</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">프로그램</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">예약하기</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">회의실</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">위치확인</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">예약하기</a></li>                                          
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">자전거 휴대승차</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">예약하기</a></li>                     
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">유실물센터</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">간편지연증명서</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">행사신청</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">광고문의</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">SCAT Reward 프로그램</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">마케팅 제휴신청</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">소비자중심경영</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">고객 서비스 헌장</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">CCM 개요</a></li>     
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">CCM 인증현황</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">CCM 주요활동</a></li>                     
+                                                        </ul>  
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                            <!-- 고객센터 -->
+                                            <section id="center" class="section">
+                                                <h2 class="title">고객센터</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">공지사항</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">냉난방간편접수</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">고객의 소리</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">VOC</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">자주찾는 질문(FAQ)</a></li>
+                                                </ul>
+                                            </section>
+                                            <!-- 마이페이지 -->
+                                            <section id="mypage" class="section">
+                                                <h2 class="title">마이페이지</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">나의 AREX</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">체험학습 예약내역</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">회의실 예약내역</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">자전거 휴대승차 예약내역</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">나의 쿠폰함</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">장바구니</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">회원정보</a></li>
+                                                </ul>
+                                            </section>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// gnb 하단 -->
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- 팝업 열기 버튼 예시 -->
+            <!-- <button onclick="openPopup2('sample01', event)">팝업 열기</button> -->
+            <div id="pop01" class="modPopup tini"> <!-- class - on : 팝업오픈 -->
+                <div class="popupDim">딤영역</div>
+                <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                    <div class="popupInMotion">
+                        <div class="popupContainer">
+                            <div class="popupContArea">
+                                <button type="button" class="btnPopClose" onclick="closePopup2('pop01');">닫기</button>
+                                <div class="popTitle">언어 및 화폐 선택</div>
+                                <div class="popCont">
+                                    <!-- 팝업 컨텐츠 영역 -->
+                                    <div class="comLog">
+                                        <div class="fnCont">
+                                            <div class="fnGroup">
+                                                <div class="labelBox">
+                                                    <label for="lang">언어</label>
+                                                </div>
+                                                <div class="frmGroup">
+                                                    <select name="lang" id="lang" class="iptSlt lg">
+                                                        <option value="" disabled selected>언어</option> <!-- 텍스트 수정 200251014 -->
+                                                        <option value="">한국어</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="fnGroup">
+                                                <div class="labelBox">
+                                                    <label for="money">화폐</label>
+                                                </div>                            
+                                                <div class="frmGroup">
+                                                    <select name="money" id="money" class="iptSlt lg">
+                                                        <option value="" disabled selected>KRW</option>
+                                                        <option value="">KRW</option>
+                                                    </select>                                    
+                                                </div>
+                                            </div>
+                                        </div>                        
+                                    </div>
+                                    <!-- //팝업 컨텐츠 영역 -->
+                                </div>
+                                
+                                <!-- 팝업 하단 영역 -->
+                                <div class="popBtm division">
+                                    <div class="alignC">
+                                        <div class="btnBox cta">
+                                            <button type="button" class="btn dkLine">취소</button>
+                                            <button type="button" class="btn blue">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 탑 (타이틀) -->
+                
+
+                <div class="cptSubTop">
+                    <div class="subTopArea">
+                        <div class="comBreadCrumb">
+                            <div class="bcArea">
+                                <ul class="bcList">
+                                    <li class="bcItem"><a href="/main">홈</a></li>
+                                    
+                                    <li class="bcItem">
+                                        <div class="comDropdown comDropdownLocn">
+                                            <div class="dropArea">
+                                                <button type="button" class="btnDrop" title="열림">고객서비스</button>
+                                                <ul class="dropMenu" style="display: none;">
+                                                    
+                                                    <li><a href="javascript:void(0)">승차권</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">직통열차</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">일반열차</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">고객서비스</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">고객센터</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="bcItem">
+                                        <div class="comDropdown comDropdownLocn">
+                                            <div class="dropArea">
+                                                <button type="button" class="btnDrop" title="열림">회의실</button>
+                                                <ul class="dropMenu" style="display: none;">
+                                                    
+                                                    <li><a href="javascript:void(0)">체험학습</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">회의실</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">자전거 휴대승차</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">이용안내</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">예약하기</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">유실물센터</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">간편지연증명서</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">행사신청</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">광고문의</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">SCAT Reward 프로그램</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">마케팅 제휴신청</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">소비자중심경영</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="bcItem">
+                                        <div class="comDropdown comDropdownLocn">
+                                            <div class="dropArea">
+                                                <button type="button" class="btnDrop" title="열림">회의실 예약하기</button>
+                                                <ul class="dropMenu" style="display: none;">
+                                                    
+                                                    <li><a href="javascript:void(0)">회의실 이용안내</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">회의실 위치안내</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">회의실 예약하기</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comSubTitle">
+                            <div class="subTitleArea">
+                                <h1>회의실 예약하기</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="layoutContArea">
+
+                    <div class="cptContents">
+                        <div class="contentsArea">
+                            <div class="pubTitH2">
+                                <h2>회의실 예약 신청서</h2>
+                            </div>
+
+                            <div class="pubTitH3">
+                                <h3>회의실 정보</h3>
+                            </div>
+
+                            <div class="comTableBasic tablePc"><!-- 20251128 수정 -->
+                                <table>
+                                    <caption>회의실 정보_회의실, 예약일, 이용시간, 총 이용료, 할인율, 할인 이용료를 포함한 표</caption><!-- 20251217 수정 -->
+                                    <!-- 20251217 수정 -->
+                                    <colgroup>
+                                        <col span="6" style="width:16.666%;">
+                                    </colgroup>
+                                    <!--// 20251217 수정 -->
+                                    <thead>
+                                        <tr>
+                                            <th>회의실</th>
+                                            <th>예약일</th>
+                                            <th>이용시간</th>
+                                            <th>총 이용료</th>
+                                            <th>할인율</th>
+                                            <th>할인 이용료</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>AREX B1-1</span>
+                                            </td>
+                                            <td>
+                                                <span>2025-08-07</span>
+                                            </td>
+                                            <td>
+                                                <span>16:00 ~ 18:00</span>
+                                                (<span>2</span>시간)
+                                            </td>
+                                            <td class="price"><!-- 20251128 수정 -->
+                                                ￦ <span>90,000</span> 원
+                                            </td>
+                                            <td class="minus">
+                                                <span>0</span>%
+                                            </td>
+                                            <td class="plus">
+                                                ￦ <span>90,000</span> 원
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 20251128 수정 -->
+                            <div class="comTableBasic tableMo1">
+                                <table>
+                                    <caption>회의실 정보_회의실, 예약일, 이용시간, 총 이용료, 할인율, 할인 이용료를 포함한 표</caption><!-- 20251217 수정 -->
+                                    <!-- 20251217 수정 -->
+                                    <colgroup>
+                                        <col style="width:120px;">
+                                        <col>
+                                    </colgroup>
+                                    <!--// 20251217 수정 -->
+                                    <tbody>
+                                        <tr>
+                                            <th>회의실</th>
+                                            <td>
+                                                <span>AREX B1-1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>예약일</th>
+                                            <td>
+                                                <span>2025-08-07</span>
+                                            </td>                                            
+                                        </tr>
+                                        <tr>
+                                            <th>이용시간​</th>
+                                            <td>
+                                                <span>16:00 ~ 18:00 (2시간)</span>
+                                            </td>                                            
+                                        </tr>
+                                        <tr>
+                                            <th>총 이용료</th>
+                                            <td class="price">
+                                                <span>￦ 90,000 원</span>
+                                            </td>                                            
+                                        </tr>
+                                        <tr>
+                                            <th>할인율</th>
+                                            <td class="minus">
+                                                <span>0%</span>
+                                            </td>                                            
+                                        </tr>                                        
+                                        <tr>
+                                            <th>할인 이용료</th>
+                                            <td class="plus">
+                                                <span>￦ 90,000 원</span>
+                                            </td>                                            
+                                        </tr>                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--// 20251128 수정 -->
+
+                            <div class="pubTitH3 tableType">
+                                <h3>신청자 정보</h3>
+                                <p>
+                                    <span class="required">*</span>필수입력
+                                </p>
+                            </div>
+
+                            <div class="comTableForm">
+                                <table class="formTable">
+                                    <caption>신청자 정보_신청자명, 휴대폰번호, 이메일, 사업자명, 회의명, 사용인원, 요청사항, 결제총금액을 포함한 표</caption><!-- 20251217 수정 -->
+                                    <!-- 20251217 수정 -->
+                                    <colgroup>
+                                        <col style="width:240px;">
+                                        <col>
+                                    </colgroup>
+                                    <!--// 20251217 수정 -->
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>신청자명
+                                            </th>
+                                            <td>
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" title="신청자명 입력">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>휴대폰 번호
+                                            </th>
+                                            <td>
+                                                <div class="frmGroup gap04">
+                                                    <div class="frmBox frmTini">
+                                                        <input type="text" class="iptText" title="휴대폰번호 첫번째 세자리">
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div class="frmBox frmTini">
+                                                        <input type="text" class="iptText" title="휴대폰번호 두번째 세자리 또는 네자리">
+                                                    </div>
+                                                    <span>-</span>
+                                                    <div class="frmBox frmTini">
+                                                        <input type="text" class="iptText" title="휴대폰번호 마지막 네자리">
+                                                    </div>
+                                                </div>
+                                                <div class="infoText red">
+                                                    ※ 회의 당일 30분전 도어락 비밀번호 4자리가 발송되어니 실제 이용자의 휴대전화번호를 필히 입력하시기 바랍니다.
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>이메일
+                                            </th>
+                                            <td>
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" title="이메일주소 입력">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>사업자명
+                                            </th>
+                                            <td>
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" title="사업자명 입력">
+                                                </div>
+                                                <div class="infoText">
+                                                    ※ 회의실 입구 디지털 사이니지 안내용
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>회의명
+                                            </th>
+                                            <td>
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" title="회의명 입력">
+                                                </div>
+                                                <div class="infoText">
+                                                    ※ 회의실 입구 디지털 사이니지 안내용
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>사용인원
+                                            </th>
+                                            <td>
+                                                <div class="frmGroup gap08 moFull">
+                                                    <div class="frmBox frmTini">
+                                                        <input type="text" class="iptText" title="사용예정 인원 입력">
+                                                    </div>
+                                                    <span class="mR32">명</span>
+                                                </div>
+                                                <div class="infoText">
+                                                    ※ 최대 00명
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                요청사항
+                                            </th>
+                                            <td>
+                                                <textarea class="iptTextArea" placeholder="요청 사항을 입력해 주세요." title="요청사항 입력"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <span class="required">*</span>결제 총금액
+                                            </th>
+                                            <td>
+                                                <div class="infoText blue">
+                                                    ￦ <span>90,000</span> 원
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- 20251128 수정 -->
+                                <span class="pubRefer">※ daum, hanmail 의 경우 스팸처리 되거나 전송이 되지 않을 수 있습니다. daum외 다른 메일주소로 등록하여 주시기 바랍니다.​</span>
+                                <span class="pubRefer">※ 회의명 등은 이용 고객 편의를 위해 당일 회의 알림에 활용됩니다.​</span>
+                                <span class="pubRefer">※ 하단 주의사항을 반드시 확인하시고, 모두 체크해 주시기 바랍니다.</span>
+                                <!--// 20251128 수정 -->                                
+                            </div>
+                            
+                            <div class="comAgreement type02">
+                                <div class="agAll">
+                                    <div class="frmGroup">
+                                        <div class="frmChoBox">
+                                            <input id="agreeAll" type="checkbox" class="iptChk lg txt">
+                                            <label for="agreeAll" class="iptLbl">전체동의</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 251120 수정 -->
+                                <div class="agreeInner">
+                                    <div class="checkArea">
+                                        <div class="frmGroup">
+                                            <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">회의실 기본 이용수칙</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="descArea scrType">
+                                        <!-- 20251208 수정 -->
+                                        <div class="descBox">
+① 회의실 이용시간은 준비 및 정리정돈 시간 포함입니다.(이를 감안하여 예약 진행하여 주시기 바랍니다.)<br>
+추가 준비 및 정리정돈 시간이 필요하신 고객은 다른 회의에 지장이 없는 경우에 한해 별도의 임대료를 지불 후 이용하셔야 합니다.<br>
+또한, 식사 등으로 회의 중간에 자리를 이석하는 경우에도 비용을 지불하셔야 합니다.<br>
+이를 지키지 못해 회의실 담당자가 조치한 사항에 대해서는 이의를 제기할 수 없습니다.<br><br>
+
+② 회의실 비품은 기존에 배치된 상태로만 사용하셔야 합니다.<br>
+회의 테이블의 이동 배치는 승인해 드릴 수 없습니다.<br><br>
+
+③ 회의 시 고객님의 과실로 임대하신 부대장비가 훼손된 경우에는 배상하셔야 합니다.<br><br>
+
+④ 음식물 냄새에 따른 고객민원으로 인하여 도시락 반입 시 공기청정기를 필히 틀어주시고,<br>
+음식물 쓰레기는 다음 회의에 지장이 없도록 정리정돈하여 쓰레기통 옆에 놓아주시기 바랍니다.<br>
+이를 지키지 못해 회의실 담당자가 조치한 사항에 대해서는 이의를 제기할 수 없습니다.<br><br>
+
+⑤ 퇴실 전 개인물품은 다시 한번 잘 확인하시고, 도난 및 분실 시에는 책임지지 않습니다.<br>
+                                        </div>
+                                        <!--// 20251208 수정 -->
+                                    </div>
+                                </div>
+                                
+                                <div class="agreeInner">
+                                    <div class="checkArea">
+                                        <div class="frmGroup">
+                                            <div class="frmChoBox"><input id="chk402" type="checkbox" class="iptChk sm"><label for="chk402" class="iptLbl">회의실 이용에 대한 약관</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="descArea scrType">
+                                        <!-- 20251208 수정 -->
+                                        <div class="descBox">
+누리집 이용약관 「제5장 회의실 이용」<br>
+회의실 이용 시 회사와 이용자 간 계약과 관련한 사항은 아래 제5장 회의실 이용에서 규정한 바를 따른다.<br><br>
+
+제30조(회의실 이용 서비스 계약의 성립)<br>
+본 계약은 이용자가 공항철도 누리집 온라인 예약 및 결제, 또는 현장에서 사용료를 결제함으로써 성립된다.<br><br>
+
+제31조(계약 목적물)<br>
+이용자가 공항철도 누리집에서 예약한 회의실을 지칭한다.<br><br>
+
+제32조(회의실 사용시간)<br>
+이용자가 온라인 예약 시 누리집에서 선택한 시간과 현장에서 연장 요청하여 결제한 시간을 포함한다.<br><br>
+
+제33조(회의실 사용료)<br>
+① 사용료(부대장비사용료 포함)는 회의실운영에 관한 지침 또는 회사 누리집(www.arex.or.kr)의 회의실 이용안내에 명시된 금액으로 한다.<br>
+② 초과 사용 시 1시간 단위로 연장 사용이 가능하며, 추가 사용요금 결제 후 이용할 수 있다.<br><br>
+
+제34조(계약의 취소 및 변경요청)<br>
+① 이용자가 계약을 취소하는 경우 납부금액을 기준으로 다음 각 호에 따라 취소수수료를 수수한다.<br>
+   1. 사용개시 7일전까지 : 100% 환불<br>
+   2. 사용개시 6일 ~ 3일전까지 : 10% 공제한 금액<br>
+   3. 사용개시 2일전부터 당일까지 : 환불 없음<br>
+② 사용일 또는 회의실 변경 등을 요청한 때, 사용 가능한 회의실이 있는 경우는 사용 1일 전까지 수수료 없이 변경할 수 있다.<br>
+   다만, 사용일을 연기하거나 사용시간을 단축할 때는 취소수수료 기준으로 부과된다.<br><br>
+
+제35조(회의실 시설 및 설비의 보존)<br>
+① 이용자가 선량한 관리자로서 회의실 시설 및 설비의 보존을 위해 책임을 다한다.<br>
+② 이용자의 귀책사유로 인하여 회사의 재산상 손해가 발생하였을 때에는 이용자가 이를 변상함은 물론 모든 책임을 진다.<br><br>
+
+제36조(회의실 이용자의 행위제한)<br>
+이용자는 회사의 허락 없이 다음 행위를 할 수 없다.<br>
+   1. 공중에 대하여 불쾌감을 주거나 또는 통로, 기타 공용시설에 간판, 광고물의 설치, 게시, 부착 또는 각종 기기의 설치 행위<br>
+   2. 폭발물, 위험성 있는 물체 또는 인체에 유해하고 불쾌감을 줄 우려가 있는 물품 반입 및 보관 행위<br>
+   3. 임의로 냉·난방 기기를 반입하거나 사용하는 행위<br>
+   4. 회사의 동의 없이 시설물의 이동· 변경 배치 행위<br>
+   5. 회사의 동의 없이 장비·중량물 반입행위<br>
+   6. 이용자가 신청한 장소를 제외한 역 시설물에 출입하는 행위<br>
+   7. 공공질서 및 미풍양식을 위해하는 행위<br>
+   8. 주류 및 알콜성 음료의 반입, 판매 및 식음행위<br>
+   9. 기타 이 규칙에서 정하는 내용 외에 회사의 필요에 따라 유선 또는 서면으로 통지하는 행위<br><br>
+
+제37조(회의실 이용 계약의 해지)<br>
+다음 각 호의 1에 해당하는 경우에는 언제든지 계약의 전부 또는 일부에 대하여 계약을 취소할 수 있다.<br>
+   1. 회의실 사용과 관련된 제반 계약조건을 위반한 때<br>
+   2. 회사 또는 회의실의 시설물을 파손 또는 훼손한 때<br>
+   3. 제36조를 위반한 때<br><br>
+
+제38조(회의실 사용료의 반환)<br>
+제9조*의 사유로 인하여 계약을 해지한 경우에는 납부한 사용료를 반환하지 아니한다.<br>
+   * 제9조(회원정보의 변경)<br>
+   ① 회원은 회원관리 메뉴를 통하여 언제든지 본인의 개인정보를 열람하고 수정할 수 있다.<br>
+      다만, 서비스 관리를 위해 반드시 필요한 전자우편의 변경을 원하는 경우 탈퇴 후 재가입하여야 한다.<br>
+   ② 원은 가입 시 등록한 정보가 변경되었을 경우 즉시 회원정보 메뉴에서 이를 변경하여야하며,<br>
+      회사는 회원이 회원정보를 변경하지 아니하여 발생한 손해에 대하여 책임을 부담하지 않는다.<br><br>
+
+제39조(회의실 반환)<br>
+이용자는 사용시간이 끝난 후 직원의 확인 하에 시설 및 설비를 원상태로 반환하여야 한다.<br><br>
+
+제40조(회의실 분쟁)<br>
+위 각 조항에 관하여 의문, 쟁의 또는 명시되지 못함으로 인하여 발생하는 분쟁은 당사자 간의 협의로서 해결하도록 한다.<br><br>
+                                        </div>
+                                        <!--// 20251208 수정 -->
+                                    </div>
+                                </div>
+
+                                <div class="agreeInner">
+                                    <div class="checkArea">
+                                        <div class="frmGroup">
+                                            <div class="frmChoBox"><input id="chk403" type="checkbox" class="iptChk sm"><label for="chk403" class="iptLbl">개인정보 수집 및 이용 동의서</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="descArea scrType">
+                                        <!-- 20251208 수정 -->
+                                        <div class="descBox">
+공항철도는 회의실 서비스 운영을 위해 아래와 같이 개인정보를 수집하고 있습니다.<br><br>
+
+개인정보의 수집 및 이용 목적<br><br>
+
+공항철도는 수집한 개인정보를 다음의 목적을 위해서만 사용하며, 아래 목적 외에는 사용하지 않습니다.<br>
+- 회의 안내를 위한 회의명 및 예약자 표출 등 업무연락, 고객만족 설문조사, 홍보 DM발송<br><br>
+
+수집하는 개인 정보의 항목<br>
+- 필수: 성명, 전화번호, 이메일 주소(본인 인증)<br><br>
+
+개인정보 보유 기간<br>
+- 5년<br><br>
+
+회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 내부규정에 따라 파기합니다. 단, 관계법령에 의하여 보존할 필요가 있는 경우 회사는 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.<br>
+- 계약 또는 청약철회 등에 관한 기록: 5년<br>
+- 대금결제 및 재화 등의 공급에 관한 기록: 5년<br>
+- 소비자의 불만 또는 분쟁처리에 관한 기록: 3년<br><br>
+
+귀하는 위와 같은 개인정보 수집·이용에 동의하지 않으실 수 있습니다. 단, 수집되는 개인정보는 회의실 예약을 위한 필수정보로 미동의 시 해당서비스를 이용하실 수 없습니다.<br>
+                                        </div>
+                                        <!--// 20251208 수정 -->
+                                    </div>
+                                </div>
+                                <!--// 251120 수정 -->
+                            </div>
+
+                            <div class="pubTitH3">
+                                <h3>주의사항 확인</h3>
+                            </div>
+                            <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">24시간이내 결제가 없는 경우 '자동취소' 됩니다.</label></div>
+                            </div>
+                            <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">취소수수료 이용일 기준 7일전(전액), 6~3일 전(10%공제), 2일 전(환불없음)</label></div><!-- 20251208 수정 -->
+                            </div>
+                            <!-- <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">24시간이내 결제가 없는 경우 ‘자동취소’ 됩니다.</label></div>
+                            </div> --><!-- 20251208 수정 -->
+                            <!-- <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">취소수수료 이용일 기준 7일전(전액), 6~3일 전(10%공제), 2일 전(환불 없음)​</label></div>
+                            </div> --><!-- 20251208 수정 -->
+                            <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl">회의실 이용시간은 준비 및 정리정돈 시간 포함입니다.(도어락 비밀번호는 회의시작 30분전 발송)​</label></div>
+                            </div>
+                            <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl">회의실 이용시간 초과 시 추가요금 부과됩니다.​</label></div>
+                            </div>
+                            <div class="frmGroup">
+                                <div class="frmChoBox"><input id="chk007" type="checkbox" class="iptChk"><label for="chk007" class="iptLbl">결제 카드 변경은 불가합니다. 홈페이지를 통해 취소 후 다시 결제하셔야 하며 취소수수료가 발생할 수 있습니다.​</label></div>
+                            </div>
+
+                            <div class="comBtnGroup">
+                                <div class="alignC cta">
+                                    <button type="button" class="btn gLine lg">취소</button>
+                                    <button type="button" class="btn blue lg">등록</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="comSubBtm">
+                        <div class="subBtmArea">
+                            <dl class="manager">
+                                <dt>담당부서</dt>
+                                <dd>
+                                    <ul>
+                                        <li>서울역 회의실</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <ul class="btmList">
+                                <li class="phone">032-745-7404</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //layoutContArea -->
+
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            
+
+            <div class="cptFooter">
+                <div class="footArea">
+                    <div class="copyArea">
+                        <div class="quickGroup">
+                            <ul>
+                                <li class="hglt"><a href="javascript:void(0)">공항철도</a></li>
+                                <li><a href="javascript:void(0)">여객운송약관</a></li>
+                                <li><a href="javascript:void(0)">누리집 이용약관</a></li>
+                                <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyGroup">
+                            <div class="infoArea">
+                                <ul>
+                                    <li class="add">(22694) 인천광역시 서구 검바위로 46 (검암동) 공항철도(주)</li>
+                                    <li class="tel">전화 <span>1599-7788</span></li>
+                                    <li class="fax">팩스 <span>032-745-8899</span></li>
+                                    <li class="name">대표자 : 박대수</li>
+                                    <li class="lcn">사업자등록번호 : 101-81-68490</li>
+                                </ul>
+                            </div>
+                            <div class="copyBox">
+                                <p>Copyright (C) 2025 by AIRPORT RAILROAD Co., Ltd. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 20260331 수정 -->
+                    <div class="markArea">
+                        <ul>
+                            <li><img src="/common/images/common/eprivacy.svg" alt="eprivacy mark"></li>
+                            <li><img src="/common/images/common/wa_mark.svg" alt="wa mark"></li>
+                        </ul>
+                    </div>
+                    <!-- //20260331 수정 -->
+                </div>
+            </div>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

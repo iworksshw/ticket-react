@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>(티켓) 상품</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comTicketGoods.scss
+    -->
+    <div class="comTicketGoods">
+        <ul class="goodsList">
+            <li class="item">
+                <dl class="info">
+                    <dt class="tit"><span>5,000원 충전된 교통카드</span><button type="button" class="btnDel">상품삭제</button></dt>
+                    <dd class="desc">
+                        <div class="pubIncDec">
+                            <button type="button" class="btnNum minus" disabled="">-1</button>
+                            <span class="textNum">0<span class="blind">개</span></span>
+                            <button type="button" class="btnNum plus">+1</button>
+                        </div>
+                        <div class="priceBox">
+                            <span class="price">
+                                <span class="bold">10000원</span>
+                            </span>
+                        </div>
+                    </dd>
+                </dl>
+            </li>
+            <li class="item">
+                <dl class="info">
+                    <dt class="tit"><span>10,000원 충전된 교통카드</span><button type="button" class="btnDel">상품삭제</button></dt>
+                    <dd class="desc">
+                        <div class="pubIncDec">
+                            <button type="button" class="btnNum minus">-1</button>
+                            <span class="textNum">1<span class="blind">개</span></span>
+                            <button type="button" class="btnNum plus">+1</button>
+                        </div>
+                        <div class="priceBox">
+                            <span class="oldPrice">10000원</span>
+                            <span class="price">
+                                <span class="bold">10000원</span>
+                                <span class="won">(₩12,500)</span>
+                            </span>
+                        </div>
+                    </dd>
+                </dl>
+            </li>
+                
+        </ul>
+        <div class="totalPrice">
+            <dl class="info">
+                <dt class="tit"><span>상품</span></dt>
+                <dd class="desc">
+                    <span class="oldPrice">25,000원</span>
+                    <span class="price">
+                        <span class="bold">25,000원</span>
+                        <span class="won">(₩12,500)</span>
+                    </span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- 상품없음 -->
+    <div class="comTicketGoods">
+        <ul class="goodsList">
+            <li class="item">
+                <p class="noMsg">선택된 상품이 없습니다.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

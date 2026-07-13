@@ -1,0 +1,99 @@
+//스텝박스
+.comStepBox {
+    .stepBoxArea {
+        .cont {
+            border-top: 1px solid var(--border-color-G300, #D6DBE1); padding: 60px 0; display: flex; flex-direction: row; align-items: flex-start;
+
+            &:first-child {
+                border-top: 1px solid transparent;
+            }
+
+            .icBox {
+                border-radius: 50%; background: var(--bg-color-B100, #EEF7FF); width: 120px; height: 120px; display: flex; flex-shrink: 0; justify-content: center; align-items: center; margin: 0 40px;
+
+                @include media('mobile') {
+                    margin: 0 0 20px 0; width: 100px; height: 100px;
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+
+            .contBox {
+                width: 100%;
+                > dl {
+
+                    .tit {
+                        margin-bottom: 12px; color: var(--text-color-G900, #111); font-size: rem(24px); font-style: normal; font-weight: 600; line-height: 150%;
+
+                        em {
+                            color: var(--text-color-B500, #107AF2); font-weight: 600;
+                        }
+                        @include media('mobile') {
+                            font-size: rem(22px);
+                        }
+                    }
+
+                    .desc {
+                        color: var(--text-color-G800, #24272D); font-size: rem(18px); font-weight: 400; line-height: 160%;
+                        .descArea {
+                            margin-top: 12px;
+                            .item {
+                                padding-left: 21px; margin-top: 8px; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; position: relative;
+
+                                &:first-child {margin-top: 0;}
+                                &::before {content:""; width: 5px; height: 5px; border-radius: 50%; background: var(--color-primary-blue-400, #329CFF); display: block; position: absolute; left: 8px; top: 12px;}
+
+                                .pubCaption {margin-top: 4px;}
+
+                                @include media('mobile') {
+                                    padding-left: 17px; font-size: rem(17px);
+                                    &::before {left: 4px; top: 12px;}
+                                }
+
+                                a {
+                                    display: inline-block; color: var(--text-color-G700, #3A3F49);
+
+                                    &.underline {
+                                        border-bottom: 1px solid var(--border-color-G400, #B9C1C9);
+                                    }
+                                }
+                                em {
+                                    font-weight: 600;
+                                }
+
+                            }
+                        }
+                    }
+
+                    &:not(:has(.descArea)) {
+                        .desc {
+                            .descArea {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+
+                }
+                .comImgWrap {
+                    img {
+                        width: 100%;
+                    }
+                    .imgTxt {
+                        color: var(--text-color-G700, #3A3F49); font-weight: 400;
+                        > a {
+                            color: var(--text-color-G700, #3A3F49);
+                        }
+                    }
+                }
+            }
+
+            @include media('mobile') {
+                flex-direction: column; padding: 40px 0;
+            }
+        }
+        .comTableForm.md table {
+            min-width: 500px;
+        }
+    }
+}

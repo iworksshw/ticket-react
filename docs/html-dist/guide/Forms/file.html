@@ -1,0 +1,138 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">첨부파일</div>
+<div class="guideCont">
+<div class="gText">
+    스크립트는 common.js에 포합되어 있습니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<!-- 파일 업로드 -->
+<div class="comFileList">
+    <ul class="fileGroup">
+        <li class="file upload">
+            <dl>
+                <dt>첨부파일</dt>
+                <dd>
+                    <div class="frmGroup">
+                        <div class="fileBox">
+                            <div class="fileBefore">
+                                <label for="uploadBtn1" class="btn">파일선택</label>
+                                <div class="clar"> * 최대 500MB까지 첨부가능</div>
+                                <input type="file" id="uploadBtn1" class="uploadBtn">
+                            </div>
+                            <div class="fileAfter">
+                                <div class="textBox"></div>
+                                <button type="button" class="fileDel">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="frmGroup">
+    <div class="fileBox">
+        <div class="fileBefore">
+            <label for="uploadBtn2" class="btn">파일선택</label>
+            <div class="clar"> * 최대 500MB까지 첨부가능</div>
+            <input type="file" id="uploadBtn2" class="uploadBtn">
+        </div>
+        <div class="fileAfter">
+            <div class="textBox"></div>
+            <button type="button" class="fileDel">삭제</button>
+        </div>
+    </div>
+</div>   
+
+
+<!-- 파일 다운로드 -->
+<div class="comFileList">
+    <ul class="fileGroup">
+        <li class="file download">
+            <dl>
+                <dt>첨부파일</dt>
+                <dd>
+                    <a href="#" class="fileName">재능기부 훈련지 모집공고.png</a>
+                    <a href="#" class="fileName">재능기부 훈련지 모집공고.png</a>
+                    <a href="#" class="fileName">재능기부 훈련지 모집공고.png</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<script>
+setTimeout(() => {
+    
+    //파일찾기
+    const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
+    uploadFiles.forEach(function(uploadFile,idx){
+        uploadFile.addEventListener("change",function(event){
+            const fileBox = parentsElementFind(this, "fileBox");
+            let fileName;
+            if(window.FileReader){
+                fileName = this.files[0].name;
+            } else {
+                console.log("noFileReader");
+                //var filename = $(this).val().split('/').pop().split('\\').pop();
+                //var filename = this.val().split('/').pop().split('\\').pop();
+            }
+            fileBox.querySelector(".textBox").innerText = fileName;
+            fileBox.classList.add("on");
+        });
+    });
+
+    //파일찾기 취소
+    const delFiles = document.querySelectorAll(".fileBox .fileDel");
+    delFiles.forEach(function(delFile,idx){
+        delFile.addEventListener("click",function(event){
+            const fileBox = parentsElementFind(this, "fileBox");
+            fileBox.querySelector(".uploadBtn").value = "";
+            fileBox.querySelector(".textBox").innerText = "";
+            fileBox.classList.remove("on");
+        });
+    });
+}, 500);
+</script>
+<!-- //가이드 그룹 -->
+
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        

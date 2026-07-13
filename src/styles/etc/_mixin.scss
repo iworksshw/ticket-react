@@ -1,0 +1,53 @@
+// src/styles/etc/_mixin.scss
+@use 'sass:map'; // 👈 최신 Sass 내장 맵 모듈 로드
+
+// 1. 변수를 믹스인보다 상단으로 올렸습니다. (매개변수 기본값 $breakpointText 참조를 위함)
+$breakpointText: (
+    mobile: 767px,
+    tablet: 1023px,
+    pcs: 1279px,
+    pcl: 1440px,
+);
+
+// 반응형 믹스인 (신형 내장 함수 적용)
+@mixin media($breakpoint, $breakpoints: $breakpointText) {
+    // map-has-key(...) ➡️ map.has-key(...)
+    @if map.has-key($breakpoints, $breakpoint) {
+        // map-get(...) ➡️ map.get(...)
+        $breakpoint: map.get($breakpoints, $breakpoint);
+    }
+
+    @media screen and (max-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+// 한줄 말줄임
+@mixin line1() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+// 한줄 말줄임 취소
+@mixin lineAuto() {
+    white-space: normal;
+    overflow: auto;
+    text-overflow: clip;
+}
+
+// 여러줄 말줄임
+@mixin line($line) {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+// rem공식
+$basicFontSize: 16px;
+@function rem($pixels, $base: $basicFontSize) {
+    @return calc($pixels / $base) + rem;
+}

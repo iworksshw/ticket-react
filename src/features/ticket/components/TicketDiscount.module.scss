@@ -1,0 +1,190 @@
+@use "@/styles/etc/mixin" as *;
+
+//티켓 할인
+.comTicketDiscount {
+    width: 100%; margin-top: 24px;
+    .discountList {
+        width: 100%; border-top: 2px solid var(--border-color-G900, #111);
+        .discItem {
+            width: 100%; padding: 24px 20px; border-bottom: 1px solid var(--border-color-G300, #D6DBE1); display: flex; justify-content: space-between; gap: 20px;
+        }
+    }
+    @include media('tablet') {
+        .discountList {
+            .discItem {
+                padding: 20px 8px;
+            }
+        }
+        // &:has(.infoBox .alignL .frmGroup) {
+        //     .infoBox .alignR {padding-left: 32px;}
+        // }
+    }
+    .infoBox {
+        width: 100%; display: flex; justify-content: space-between;
+        .alignL {
+            display: flex; justify-content: flex-start; align-items: flex-start;
+            span {
+                padding-left: 24px; color: var(--text-color-G900, #111); font-size:rem(18px); font-style: normal; font-weight: 400; line-height: 160%; position: relative;
+                &::before {
+                    content:""; width: 1px; height: 10px; background: var(--border-color-G400, #B9C1C9); display: block; position: absolute; left: 12px; top: calc(50% - 5px);
+                }
+                &:first-child {
+                    padding-left: 0;   
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+            .bold {color: var(--text-color-G900, #111); font-weight: 500;}
+            .colorBlue {color: var(--text-color-B500, #107AF2); font-weight: 500;}
+        }
+        .alignR {
+            display: flex; justify-content: flex-end; align-items: center; gap: 0 12px;
+            .oldPrice {
+                color: var(--text-color-G500, #808892); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; text-decoration-line: line-through;
+            }
+            .price {
+                color: #000; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                .won {color: var(--text-color-G600, #565B64); font-size: rem(12px); font-style: normal; font-weight: 400; line-height: 160%;}
+                .bold {font-weight: 400;}
+            }
+            .state {
+                width: 90px; height: 30px; margin-left: 8px; font-size: rem(16px); font-style: normal; font-weight: 600; text-align: center; line-height: 160%; border-radius: 20px; align-content: center;
+                &.blue {color: #fff; background: var(--bg-color-B500, #107AF2);}
+                &.bLine {color: var(--text-color-B500, #107AF2); background: var(--color-primary-blue-100, #EEF7FF);}
+                &.gray {color: var(--text-color-G700, #3A3F49); background: var(--bg-color-G200, #F3F6FB);}
+                &.dkBlue {color: #fff; background: var(--bg-color-DB500, #233850);}
+                &.orange {color: #fff; background: var(--color-secondary-orange-500, #FF6F3F);}
+            }
+            // .info {
+            //     width: max-content; display: flex;
+            //     .tit {
+            //         color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+            //     }
+            //     .desc {
+            //         margin-left: 8px;
+            //         .bold {
+            //             color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+            //         }
+            //         .won {
+
+            //         }
+            //     }
+            // }
+        }
+        .cancelPrice {
+            width: auto; min-width: max-content; justify-items: flex-end; display: flex;
+            .priceLine {
+                width: max-content; min-width: max-content; margin-top: 8px;
+                &:first-child {margin-top: 0;}
+            }
+            .info {
+                width: auto; min-width: max-content; padding-left: 16px; display: flex; position: relative;
+                &::before {
+                    content:""; width: 1px; height: 10px; background: var(--border-color-G400, #B9C1C9); display: block; position: absolute; left: 7px; top: 9px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                    &::before {display: none;}
+                }
+                .tit {
+                    color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; //display: inline-block;
+                }
+                .desc {
+                    margin-left: 8px; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; //display: inline-block;
+                    .won {
+                        color: var(--text-color-G600, #565B64); font-size: rem(14px);
+                    }
+                }
+                &.allPrice {
+                    .desc {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        &:has( + .btnBox) {
+            .alignL {align-items: flex-end;}
+        }
+        @include media('tablet') {
+            flex-wrap: wrap; gap: 4px;
+            .alignL {
+                width: 100%;
+                span {
+                    font-size:rem(15px); padding-left: 16px;
+                    &::before {
+                        left: 8px;
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+            .alignR {
+                width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 0 8px;
+                .oldPrice {
+                    font-size: rem(14px);
+                }
+                .price {
+                    font-size: rem(15px);
+                    .bold {
+
+                    }
+                }
+            }
+            .cancelPrice {
+                width: 100%; min-width: auto; margin-top: 12px; flex-wrap: wrap; //width: max-content; justify-items: flex-end;
+                .priceLine {
+                    width: 100%; margin-top: 0;
+                }
+                .info {
+                    width: 100%; margin-top: 8px; padding-left: 0; display: flex; justify-content: space-between;
+                    &::before {display: none;}
+                    &:first-child {margin-top: 0;}
+                    .tit {font-size: rem(15px);}
+                    .desc {font-size: rem(15px);}
+                }
+            }
+        }
+    }
+    .btnBox {
+        align-content: center;
+        // .btn은 Button 컴포넌트(@/components/common/forms/Button.jsx)가 쓰는 전역 클래스라서
+        // 이 모듈 스코프 안에서도 :global()로 감싸야 실제 .btn 엘리먼트에 적용된다.
+        :global(.btn) {padding: 7px 16px; font-size: rem(14px);}
+    }
+    &:has(.infoList) {
+        .discountList .discItem:last-child {border-bottom: 0;}
+    }
+    .infoList {
+        width: 100%; padding: 24px 20px; border-top: 1px dashed var(--border-color-G400, #B9C1C9); border-bottom: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G100, #F8F9FC);
+        .item {
+            width: 100%;
+            .info {
+                width: 100%; margin-top: 12px; display: flex; justify-content: space-between;
+                &:first-child {margin-top: 0;}
+                .tit {
+                    width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-start;
+                }
+                .desc {
+                    width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; display: flex; justify-content: flex-end; white-space: nowrap; text-align: right; align-items: center;
+                    .won {margin-left: 4px; color: var(--text-color-G600, #565B64); font-size: rem(14px); font-style: normal; font-weight: 400; line-height: 160%;}
+                    .colorBlue {color: var(--text-color-B500, #107AF2);}
+                }
+            }
+        }
+        @include media('tablet') {
+            padding: 20px 8px;
+            .item {
+                .info {
+                    .tit {
+                        font-size: rem(15px);
+                    }
+                    .desc {
+                        font-size: rem(15px);
+                    }
+                }
+            }
+        }
+    }
+}

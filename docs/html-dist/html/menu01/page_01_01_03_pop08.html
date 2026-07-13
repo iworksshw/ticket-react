@@ -1,0 +1,317 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">5,000원 충전된 교통카드</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                         <!-- 추천상품 상세 -->
+                        <div class="cptProduct">
+                            <div class="productArea">
+                                <div class="productBox">
+                                    <!-- 스와이프 슬라이드 -->
+                                    <div class="swiper-container productSlide swiper-container-initialized swiper-container-horizontal">
+                                        <div class="arrowBox">
+                                            <button class="btnArrow prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></button>
+                                            <button class="btnArrow next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></button>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                                            <li class="swiper-slide swiper-slide-active">
+                                                <img src="/common/images/contents/cont_01_01_16_001.jpg" alt="하늘색 배경에 '라인프렌즈 한복 세로형 티머니카드'텍스트와 라인프렌즈 캐릭터인 브라운,코니,샐리가 한복을 입고 부채를 든 모습의 티머니카드 디자인이 있고, 카드 옆에는 동일한 디자인의 패키지 박스가 있습니다.">
+                                            </li>
+                                            <li class="swiper-slide swiper-slide-next">
+                                                <img src="/common/images/contents/cont_01_01_16_001.jpg" alt="하늘색 배경에 '라인프렌즈 한복 세로형 티머니카드'텍스트와 라인프렌즈 캐릭터인 브라운,코니,샐리가 한복을 입고 부채를 든 모습의 티머니카드 디자인이 있고, 카드 옆에는 동일한 디자인의 패키지 박스가 있습니다.">
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <img src="/common/images/contents/cont_01_01_16_001.jpg" alt="하늘색 배경에 '라인프렌즈 한복 세로형 티머니카드'텍스트와 라인프렌즈 캐릭터인 브라운,코니,샐리가 한복을 입고 부채를 든 모습의 티머니카드 디자인이 있고, 카드 옆에는 동일한 디자인의 패키지 박스가 있습니다.">
+                                            </li>
+                                        </ul>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>  
+                                    <script>productSlide();</script>
+                                    <div class="productPay">
+                                        <p class="tit">5,000원 충전된 교통카드</p>
+                                        <p class="subDiscount">13,000원</p>
+                                        <!-- <p class="subTit">10,000원</p> -->
+                                        <!-- 20251128 수정 -->
+                                        <p class="subTit soldOut">10,000원 <span class="soldOutTxt">품절</span></p><!-- 품절시 사용 가능한 class -->
+                                        <div class="dateBox">
+                                            <p class="txt">기간할인</p>
+                                            <!-- <p class="txtEnd">기간할인종료</p> -->
+                                            <p class="expiry">2023-12-30 까지</p>
+                                            <p class="stock">재고 23개</p>
+                                        </div>
+                                        <!--// 20251128 수정 -->
+                                        <!-- 25.10.28 수정 -->
+                                        <div class="infoOption">
+                                            <div class="box">
+                                                <div class="txt">옵션명</div>
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt" title="옵션 분류">
+                                                            <option value="">선택</option>
+                                                            <option value="">선택1</option>
+                                                            <option value="">선택2</option>
+                                                            <option value="">선택3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="txt">옵션명</div>
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt" title="옵션 분류">
+                                                            <option value="">선택</option>
+                                                            <option value="">선택1</option>
+                                                            <option value="">선택2</option>
+                                                            <option value="">선택3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// 25.10.28 수정 -->
+                                        <!-- 상품 옵션이 없는 구성 -->
+                                        <dl class="info">
+                                            <dt class="top">
+                                                <span class="cardTxt">5,000원 충전된 교통카드</span>
+                                            </dt>
+                                            <dd class="desc">
+                                                <div class="pubIncDec">
+                                                    <button type="button" class="btnNum minus" disabled="">-1</button>
+                                                    <span class="textNum">0<span class="blind">개</span></span>
+                                                    <button type="button" class="btnNum plus">+1</button>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <!-- 25.10.28 수정 -->
+                                        <!-- 상품 옵션이 있는 구성 -->
+                                        <dl class="info">
+                                            <dt class="top">
+                                                <span class="cardTxt">5,000원 충전된 교통카드/옵션1/옵션2 <button type="button" class="deleteBtn">삭제</button></span><!-- 20251118 수정 deleteBtn : 휴지통 버튼 추가 (button으로 변경) -->
+                                            </dt>
+                                            <dd class="desc">
+                                                <div class="pubIncDec">
+                                                    <button type="button" class="btnNum minus" disabled="">-1</button>
+                                                    <span class="textNum">0<span class="blind">개</span></span>
+                                                    <button type="button" class="btnNum plus">+1</button>
+                                                </div>
+                                            </dd>
+                                            <dd class="subDesc">10,000원</dd>
+                                        </dl>
+                                        <div class="payTit">
+                                            <p class="txt">총 결제 금액</p>
+                                            <p class="money">10,000원</p>
+                                        </div>
+                                    </div>
+                                    <!--// 25.10.28 수정 -->
+                                </div>
+                                <div class="boxArea">
+                                    <div class="detailBox">
+                                        <!-- 20260102 class 추가 -->
+                                        <div class="modTab">
+                                            <div class="tabSwiper toMob swiper-container">
+                                                <ul class="tabMenu tabMenu1 swiper-wrapper on">
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="선택 된 탭메뉴">상품상세</button></li>
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">상품수령안내</button></li>
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">반품/교환 방법</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //20260102 class 추가 -->
+
+                                        <!-- editor 수정 부분 -->
+                                        <div class="editorBox">
+                                            <p class="boxTit">상품상세</p>
+                                            <ul class="editorList">
+                                                <li class="item">1. 5천원이 충전된 교통카드(총 1만원)</li>
+                                                <li class="item">2. 구매 시 객실승무원이 좌석으로 배송</li>
+                                                <li class="item">3. 서울역에서 별도의 절차 없이 1,4호선 환승 가능</li>
+                                                <li class="item">※ 교통카드가 없는 고객 환승 절차<br>
+                                                    <span class="space">① 서울역 하차(게이트 밖으로 이동)</span>
+                                                    <span class="space">② 교통카드 또는 1회용 승차권 구매</span>
+                                                    <span class="space">③ 서울역 재승차</span>
+                                                    <span class="space">④ 1,4호선 환승</span>
+                                                </li>
+                                            </ul>
+                                            <div class="editorImg">
+                                                <img src="/common/images/contents/cont_01_01_16_002.jpg" alt="티머니카드 서비스 안내" aria-describedby="cont_01_01_16_002"><!-- 20251217 수정 -->
+                                                <p id="cont_01_01_16_002" class="blind">
+                                                    이미지 상단에는 하늘색 배경에 “라인프렌즈 한복 세로형 티머니카드”라는 제목이 큰 글씨로 쓰여 있습니다. 오른쪽 상단에는 ‘LINE FRIENDS’ 로고가 보입니다. 중앙에는 라인프렌즈 캐릭터인 브라운,코니,샐리가 한복을 입고 부채를 든 모습의 티머니카드 디자인이 보입니다. 카드 옆에는 동일한 디자인의 패키지 박스가 함께 보입니다.
+                                                    그 아래에는 “이 상품은 5천원 충전이 되어 있는 카드입니다.”라는 안내 문구가 있습니다.
+                                                    하단에는 ‘티머니카드 서비스 안내’라는 제목 아래 사용법과 충전, 잔액 환불, 고장 카드 환불 방법이 표 형식으로 안내되어 있습니다.
+                                                    1.사용: 지하철, 버스, 택시, 편의점, 베이커리, 카페 등에서 사용 가능
+                                                    2.충전: 충전처-편의점(GS25, CU, 세븐일레븐, 미니스톱, 이마트24, 스토리웨이)과 지하철 역사 내 무인 충전기에서 가능, 충전한도-1회 충전 한도는 1천원부터 9만원까지, 카드당 최대 50만 원까지 충전 가능
+                                                    3.잔액환불: 환불처-편의점(GS25, CU, 세븐일레븐, 미니스톱, 이마트24, 스토리웨이)에서 환불 가능, 수수료 500원, 환불 한도는 2~3만 원 이하, 주의사항-정상 카드는 카드값 환불 불가
+                                                    4.고장카드환불: 환불처에서 우편 환불 봉투 수령 후 접수 또는 티머니타운, 홈페이지(pay.tmoney.co.kr), 고객센터(1644-0088)에서 접수 가능, 주의사항-최초 충전 후 2년 이내 고장 시 카드값 환불 가능, 단 고객 과실로 인한 카드 파손 또는 외형 변형 시 환불 불가
+                                                    맨 아래에는 “자세한 사항은 티머니카드&amp;페이 홈페이지(pay.tmoney.co.kr) 내용을 참고해 주시기 바랍니다.”라는 안내 문구가 있습니다.
+                                                </p>
+                                            </div>
+                                            <p class="boxTit">필수정보</p>
+                                            <div class="editorTable">
+                                                <table class="basic">
+                                                    <caption>제품정보, 기타를 나타낸 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:18.9%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <!-- thead 있을때 -->
+                                                        <tr>
+                                                            <th>제품정보​</th>
+                                                            <td class="left">- 종류 : 교통카드 - 소재 : PVC - 치수 : 가로 5.3 X 세로 8.5 (단위:cm) - 제조사 : ㈜티머니 - 제조국 : 한국 - 취급시 주의사항 및 품질보증기준 : 제품후면부 및 이용안내지 확인</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>기타</th>
+                                                            <td class="left">- 어린이/청소년 할인등록은 편의점(서울역 지하 3층 등)에서 등록할 수 있습니다. - 본 고지사항 외 관련 이용약관은 홈페이지 하단의 링크를 통해 확인할 수 있습니다.</td>
+                                                        </tr>                                            
+                                                    </tbody>
+                                                </table>                                                
+                                            </div>
+                                        </div>
+                                        <!--// editor 수정 부분 -->
+                                    </div>
+                                    <div class="guideBox">
+                                        <!-- 20260102 class 추가 -->
+                                        <div class="modTab">
+                                            <div class="tabSwiper toMob swiper-container">
+                                                <ul class="tabMenu tabMenu2 swiper-wrapper">
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="선택 된 탭메뉴">상품상세</button></li>
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="탭메뉴">상품수령안내</button></li>
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">반품/교환 방법</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //20260102 class 추가 -->
+
+                                        <!-- editor 수정 부분 -->
+                                        <div class="editorBox">
+                                            <div class="basicText">
+                                                <ul class="list">
+                                                    <li class="listItem">상품은 예약하신 승차권의 좌석으로 승무원이 직접 전달해 드립니다.</li>
+                                                    <li class="listItem">원활한 상품 지급을 위해 지정된 좌석에 착석하여 주시기 바랍니다.</li>
+                                                    <li class="listItem">상품구매내역 확인을 위해 승무원에게 승차권을 보여주시기 바랍니다.</li>
+                                                    <li class="listItem">승차권 또는 영수증이 없는 경우 상품 수령이 불가하오니 반드시 지참해주시기 바랍니다.<br>
+                                                    (영수증은 직통열차 예약발매시스템에서 상품 구매 시 입력하신 전자우편으로 전달됩니다.)
+                                                    </li>
+                                                </ul>
+                                                <ul class="list">
+                                                    <li class="listTit">※ 미수령 시</li>
+                                                    <li class="listItem">민원대응 및 사고 등 부득이한 사유로 차내에서 상품 제공이 어려울 수 있습니다.</li>
+                                                    <li class="listItem">상품 수령을 못하신 경우 하차 후 승무원에게 문의해주시기 바랍니다.</li>
+                                                    <li class="listItem">미수령한 상품에 대해서는 자동으로 환불 처리됩니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--// editor 수정 부분 -->
+                                    </div>
+                                    <div class="methodBox">
+                                        <!-- 20260102 class 추가 -->
+                                        <div class="modTab">
+                                            <div class="tabSwiper toMob swiper-container">
+                                                <ul class="tabMenu tabMenu3 swiper-wrapper">
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="선택 된 탭메뉴">상품상세</button></li>
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">상품수령안내</button></li>
+                                                    <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="탭메뉴">반품/교환 방법</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //20260102 class 추가 -->
+
+                                        <!-- editor 수정 부분 -->
+                                        <div class="editorBox">
+                                            <div class="basicText">
+                                                <ul class="list">
+                                                    <li class="listItem">상품 수령 후 상품의 하자 및 단순 변심의 경우 즉시 승무원에게 문의해주시기 바랍니다.</li>
+                                                    <li class="listItem">직통열차 하차 이후 단순변심으로 인해 교환 및 반품을 원하시는 경우,&nbsp;수령 후 7일 이내 서울역 고객 안내센터를 방문해주시기 바랍니다. (그 외 관련사항 이용약관 제26조 참조)</li>
+                                                    <li class="listItem">열차 미탑승 등의 사유로 상품을 수령하지 못한 경우 자동으로 환불 처리됩니다.</li>
+                                                    <li class="listItem">반품으로 인한 결제취소는 영업일 기준 2~3일이 소요될 수 있습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--// editor 수정 부분 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn blue">담기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

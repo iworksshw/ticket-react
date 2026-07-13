@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/common.js"></script>
+    <title>냉난방 간편접수</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/component/_cptComplain.scss
+    -->
+
+    <!-- 냉난방 간편접수 -->
+    <div class="cptComplain">
+        <p class="pgSubTit">
+            공항철도 이용 중 냉난방 불편사항을<br><em>실시간으로 접수</em>하실 수 있습니다.
+        </p>
+
+        <div class="imgRadio">
+            <ul>
+                <li class="cold">
+                    <input type="radio" id="cold" name="complain">
+                    <label for="cold">
+                        <span>추워요</span>
+                    </label>
+                </li>
+                <li class="hot">
+                    <input type="radio" id="hot" name="complain">
+                    <label for="hot">
+                        <span>더워요</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <p class="pgDesc">
+            <span>잠깐! 약냉방칸을 아시나요?</span>
+            서울역행 진행방향 4호차, 인천공항 진행방향 3호차는 다른 호차에 비해 2℃ 높게 운영 중에 있습니다.
+        </p>
+
+        <!-- 칸번호 입력 (comLog) -->
+        <div class="comLog">
+            <div class="fnCont">
+                <div class="fnGroup">
+                    <div class="labelBox">
+                        <label for="trainNumber">칸번호</label>
+                    </div>
+                    <div class="frmGroup">
+                        <div class="frmBox">
+                            <input type="text" class="iptText lg" id="trainNumber" placeholder="예) 2025" name="trainNumberBox" title="칸번호 입력">
+                            <button class="btnReset">텍스트 지우기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comBtnGroup">
+            <div class="alignC">
+                <button type="button" class="btn blue lg">접수하기</button>
+            </div>
+        </div>
+
+        <!-- 칸번호 안내 (comGrayBox) -->
+        <div class="comGrayBox">
+            <dl class="boxGroup">
+                <dt class="boxTitle">
+                    <em>칸번호는 어디에 있나요?</em>
+                </dt>
+                <dd class="boxCont">
+                    출입문 및 객실안내 표기시 화면 우측 상단 혹은 열차와 열차 사이의 통로 위쪽을 확인해주세요.
+                    <div class="imgBox">
+                        <ul>
+                            <li>
+                                <img src="/common/images/contents/cont05_02_001.png" alt="객차번호 안내 이미지 01">
+                            </li>
+                            <li>
+                                <img src="/common/images/contents/cont05_02_002.png" alt="객차번호 안내 이미지 02">
+                            </li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

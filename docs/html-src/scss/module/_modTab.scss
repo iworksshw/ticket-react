@@ -1,0 +1,230 @@
+/* ----------------------------------- 탭 ----------------------------------- */
+
+.modTab {
+    width: auto; min-width:100%; margin-top: 40px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .tabSwiper {
+        width:100%; overflow:hidden;
+        @include media('mobile') {
+            width: calc(100% + 32px); margin-left: -16px; padding: 0 20px;
+        }
+    }
+
+    & + .modTabLine {
+        margin-top:32px;
+        @include media('mobile') {
+            margin-top:16px;
+        }
+    }
+
+    .tabMenu {
+        background: #fff; display: flex; width:100%; margin-bottom: 60px;
+
+        &.half {
+            .tabItem {
+                flex: 1;
+            }
+        }
+        &.tab12 {
+            flex-wrap: wrap;
+            &::after {content: ""; width: calc(16.6666% + 1px); height: 62px; margin: -1px 0 0 -1px; border: 1px solid var(--border-color-G300); border-radius: 0 0 12px 0; display: inline-block; box-sizing: border-box;}
+            .tabItem {
+                width: calc(16.6666% + 1px); margin-left: -1px;
+                button {border-radius: 0; }
+                &:nth-child(1), &:nth-child(7) {width: 16.6666%; margin-left: 0;}
+                &:nth-child(n + 7) {margin-top: -1px;}
+                &:last-of-type button {border-radius: 0;}
+                &:first-of-type button {border-radius: 0;}
+                &:nth-child(1) button {border-radius: 12px 0 0 0;}
+                &:nth-child(6) button {border-radius: 0 12px 0 0;}
+                &:nth-child(7) button {border-radius: 0 0 0 12px;}
+                &:nth-child(12) button {border-radius: 0 0 12px 0;}
+            }
+            @include media ('pcs') {
+                flex-wrap: nowrap;
+                &::after {display: none;}
+                .tabItem {
+                    width: auto !important;
+                    &:first-of-type button {border-radius: 12px 0 0 12px;}
+                    &:nth-child(6) button {border-radius: 0;}
+                    &:nth-child(7) {
+                        margin-left: -1px;
+                        button {border-radius: 0 ;}
+                    }
+                    &:last-of-type button {border-radius: 0 12px 12px 0;}
+                    &:nth-child(n + 7) {margin-top: 0;}
+                }
+            }
+            @include media ('mobile') {
+                margin-bottom: 40px;
+                .tabItem {
+                    width: auto !important; margin: 0 !important; margin-right: 8px !important;
+                    &:last-child {margin-right: 0 !important;}
+                    button { border-radius: 8px !important;}
+                }
+            }
+        }
+
+        @include media ('mobile') {
+             margin-bottom: 40px;
+        }
+        .tabItem{
+            width:100%; flex-shrink: 1;
+
+            @include media ('mobile') {
+                width:auto; margin-right: 8px;
+            }
+            .tabName{
+                width:100%; min-width:max-content; padding: 15px 16px; font-size: rem(18px); color: var(--text-color-G900); font-weight: 400; border: 1px solid var(--border-color-G300); line-height:30px;
+
+                .num {
+                    color: var(--text-color-G600); font-size: rem(14px); font-weight: 500; line-height: 160%;
+                }
+
+                @include media ('mobile') {
+                    padding: 10px 16px;
+                    border-radius: 8px;
+                    border:0;
+                    background:var(--bg-color-G200);
+                    line-height:28px;
+                    font-size: rem(17px);
+                }
+                &.on{
+                    color: #fff; border: 1px solid var(--color-primary-blue-900); background: var(--color-primary-blue-900); font-weight:700;
+
+                    .num {
+                        color: #fff;
+                    }
+
+                    @include media ('mobile') {
+                        border-radius: 8px;
+                        border:0;
+                    }
+                }
+                &:disabled {color: var(--text-color-G500, #808892); border: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G100, #F8F9FC); cursor: auto;}
+            }
+            &:first-of-type {
+                button {
+                    border-radius:12px 0 0 12px;
+                    @include media ('mobile') {
+                        border-radius: 8px;
+                    }
+                }
+            }
+            &:last-of-type {
+                button {
+                    border-radius:0 12px 12px 0;
+                    @include media ('mobile') {
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .tabContainer {
+        width: 100%;
+        .tabCont {
+            width: 100%; display: none;
+            &.on {
+                display: block;
+            }
+        }
+    }
+
+    .tabCont .tabInTab:first-child {margin-top: -28px;}
+    .tabInTab {
+        width: 100%; position: relative; margin-top: 40px;
+        &:first-child {margin-top: 0;}
+        .inTabSwiper {
+            width:100%; height: 65px; margin-bottom: 60px; overflow:hidden; background: #fff;
+            &::after {content:""; width: 100%; height: 1px; background: var(--border-color-G300); display: block; position: absolute; left: 0; top: 64px;}
+
+            @include media ('mobile') {
+                margin-bottom: 40px;
+            }
+        }
+        &.sticky {
+            .inTabSwiper {position: sticky; left: 0; top: 0;}
+        }
+        .inTabMenu {
+            display: flex; width:100%;
+            .inTabItem {
+                flex-shrink: 1;
+                .inTabName {
+                    width: 100%; padding: 0 20px; font-size: rem(16px); color: var(--text-color-G900); font-weight: 400; border:none; line-height:64px;
+                    @include media ('mobile') {
+                        font-size:rem(15px); line-height:52px;
+                    }
+                    &.on {
+                        color: var(--color-primary-blue-900); border-bottom:none; background:none; position:relative; font-weight:700;
+                        &::after {
+                            content:''; position:absolute; bottom:-1px; left:0; width:100%; height:2px; background:var(--color-primary-blue-900)
+                        }
+                    }
+                }
+            }
+        }
+        &.freeW .inTabMenu .inTabItem {width: max-content;}
+        .swiperDirt {
+            width: 100%; position: absolute; left: 0; top: 0; z-index: 10;
+            .dirtBox {
+                width: 64px; height: 57px; display: flex; align-items: center; position: absolute; transition: all 0.3s; opacity: 1;
+                &:has(.btnDirt.swiper-button-disabled){
+                    opacity: 0.01; pointer-events: none;
+                }
+                .btnDirt {
+                    width: 32px; height: 32px; font-size: 0; border-radius: 50%; border: 1px solid #CDD1D5; display: flex;
+                }
+                &.prev {
+                    padding-left: 8px; left: 0; top: 0; background: var(--white, linear-gradient(270deg, var(--color-alpha-base25, rgba(255, 255, 255, 0.25)) 0%, var(--color-alpha-base100, #FFF) 30%));
+                    .btnDirt {background: #fff url(/common/images/common/ic_20_tab_arr.svg) center no-repeat; transform: rotate(180deg);}
+                }
+                &.next {
+                    padding-left: 24px; right: 0; top: 0; background: var(--white, linear-gradient(90deg, var(--color-alpha-base25, rgba(255, 255, 255, 0.25)) 0%, var(--color-alpha-base100, #FFF) 30%));
+                    .btnDirt {background: #fff url(/common/images/common/ic_20_tab_arr.svg) center no-repeat;}
+                }
+            }
+        }
+        @include media ('tablet') {
+            margin-top: 16px;
+            &:first-child {margin-top: 0;}
+            .inTabMenu {
+                .inTabItem {
+                    width:max-content;
+                    .inTabName {
+                        width: max-content;
+                    }
+                }
+            }
+        }
+        @include media ('mobile') {
+            .inTabSwiper {
+                height: 53px;
+                &::after {top: 52px;}
+            }
+            .swiperDirt {
+                display: none;
+            }
+        }
+
+        .inTabContainer {
+            width: 100%;
+            .inTabCont {
+                width: 100%; display: none;
+                &.on {
+                    display: block;
+                }
+                .inTabServ {
+                    width: 100%; display: none;
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,250 @@
+//이력조회검색바
+.comMeeting {
+
+    .meetingArea {
+
+        .meetingDate {
+            border-radius: 12px; background: var(--bg-color-G100); display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 28px 0; margin-bottom: 32px;
+
+            .tit {
+                color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%; margin-right: 16px; margin-left: 16px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                @include media ('tablet') {
+                    font-size: rem(17px); margin-left: 0;
+                }
+            }
+            &.ticket {
+                @include media('tablet'){
+                    .fnGroupWrap {
+                        flex-wrap: wrap; row-gap: 8px;
+                        .tui-datepicker-input {
+                            width: 100% !important;
+                        }
+                        .frmGroup:nth-child(1) {
+                            width: calc(100% - 30px);
+                        }
+                        .frmGroup:nth-child(3) {
+                            width: 100%;
+                        }
+                        .frmGroup:nth-child(4) {
+                            margin-left: 0; flex-wrap: wrap; gap: 8px;
+                            .frmChoBox {width: 100%;}
+                        }
+                    }
+                }
+            }
+            .tui-datepicker-input {
+                @include media ('tablet') {
+                    width: 100% !important;
+                }
+            }
+            .fnGroupWrap {
+                display: flex; flex-direction: row; align-items: center; flex-wrap: wrap;
+
+                .frmGroup {
+                    width: 200px; margin-top: 0;
+
+                    &.frmGroupBe {
+                        @include media ('tablet') {
+                            width: 90%;
+
+                            .tui-datepicker-input {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &.frmGroupAf {
+                        @include media ('tablet') {
+                        width: 100%;
+
+                            .tui-datepicker-input {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &:has(.frmChoBox) {
+                        width: max-content; margin-left: 16px;
+                    }
+                }
+                .deco {
+                    margin: 0 8px; color: var(--text-color-G900); font-size: rem(17px); font-weight: 400; line-height: 160%;
+                }
+
+                &.meeting {
+                    .frmGroup {
+                        @include media ('tablet') {
+                            width: 100% !important;
+                        }
+                    }
+                }
+
+                @include media ('tablet') {
+                    margin: 8px 0 12px 0; width: 100%; row-gap: 8px;
+
+                    > div {
+                        &:nth-child(1) {
+                            width: calc(100% - 30px) !important;
+                        }
+                        &:nth-child(3) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @include media ('mobile') {
+                    > div {
+                        &:nth-child(1) {
+                            width: calc(100% - 30px);
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                margin-left: 32px;
+                @include media ('tablet') {
+                    width: 100%; margin-left: 0;
+                }
+            }
+
+            @include media ('tablet') {
+                flex-direction: column; align-items: flex-start; justify-content: flex-start; margin-top: -16px; margin-bottom: 20px; padding: 20px 16px;
+            }
+
+        }
+
+        .meetingCont {
+
+            .meetHeader {
+                color: var(--text-color-G800); font-size: rem(18px); font-weight: 600; line-height: 160%; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 16px 0;
+
+                .tit {
+                    color: var(--text-color-G800); font-size: rem(18px); font-weight: 600; line-height: 160%;
+                    @include media ('mobile') {
+                        font-size: rem(17px);
+                    }
+                }
+
+                .chkBox {
+                    display: flex; flex-direction: row; gap: 20px; color: var(--text-color-G900); font-size: rem(18px); font-weight: 400; line-height: 160%;
+
+                    .chk {
+                        display: flex; flex-direction: row; gap: 8px; align-items: center;
+                        &:nth-child(1) {
+                            &::before {
+                                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/common/images/common/ic_20_chk01.svg) center no-repeat; vertical-align: middle;
+                            }
+                        }
+                        &:nth-child(2) {
+                            &::before {
+                                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/common/images/common/ic_20_chk02.svg) center no-repeat; vertical-align: middle;
+                            }
+                        }
+                        &:nth-child(3) {
+                            &::before {
+                                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/common/images/common/ic_20_chk03.svg) center no-repeat; vertical-align: middle;
+                            }
+                        }
+                        &:nth-child(4) {
+                            &::before {
+                                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/common/images/common/ic_20_chk04.svg) center no-repeat; vertical-align: middle;
+                            }
+                        }
+                    }
+
+                    @include media ('mobile') {
+                        font-size: rem(17px); flex-wrap: wrap; row-gap: 12px; column-gap: 20px;
+                    }
+                }
+
+                @include media ('mobile') {
+                    flex-direction: column; align-items: flex-start; gap: 12px;
+                }
+
+            }
+
+            .meetFooter {
+                display: flex; flex-direction: column; margin-top: 60px;
+
+                .txtBox {
+                    color: var(--text-color-G700); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+
+                    .result {
+                        display: inline-block; color: var(--text-color-B500); font-weight: 600;
+                    }
+
+                    & + .comBtnGroup {
+                        margin-top: 40px;
+                    }
+
+                    @include media ('mobile') {
+                        font-size: rem(17px);
+                    }
+
+                }
+
+                @include media ('mobile') {
+                    margin-top: 40px;
+                }
+            }
+
+        }
+
+        .information {
+            margin-top: 60px;
+        }
+
+        // 테이블
+        .table01 { border-top: 1px solid var(--text-color-G900); border-bottom: 1px solid var(--border-color-G300); background: #fff; box-sizing: border-box;}
+        .table01 table { width: 100%; border-collapse: collapse; border-spacing: 0; table-layout: fixed;}
+        .table01 th { color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%; background: var(--bg-color-G100); padding: 16px;}
+        .table01 thead th { border-bottom: 1px solid var(--border-color-G300); }
+        .table01 tbody th { border-top: 1px solid var(--border-color-G300); }
+        .table01 tbody tr:first-child th { border-top: 0; }
+        .table01 tbody th span { display: inline-block; }
+        .table01 tbody td { border-top: 1px solid var(--border-color-G300); color: var(--text-color-G800); text-align: center; font-size: rem(18px); font-weight: 400; line-height: 160%;}
+        .table01 tr:first-child td { border-top: none; }
+        .table01 th:first-child, .table01 td:first-child { border-left: none; }
+        .table01 td { text-align: center; margin: 0; padding: 0; }
+        .td_left { text-align: left !important; }
+        .td_right { text-align: right !important; }
+        .table01 td a { font-size: inherit; }
+        .table01.type_conf a, .table01.type_conf span {display: block; text-indent:-9999px; overflow: hidden;}
+
+        // 예약가능
+        .table01.type_conf .r_o {height: 54px;}
+        // 예약선택
+        .table01.type_conf .r_c {width: 100%; background:url(/common/images/common/ic_24_table_chk.svg) var(--bg-color-B100) no-repeat 50% 50%; height: 54px;}
+        // 예약불가
+        .table01.type_conf .r_x {background: var(--color-gray-400); height: 54px;}
+        // 출입불가
+        .table01.type_conf .r_xp {background:url(/common/images/common/ic_16_table_line.svg) no-repeat 50% 50%; height: 54px;}
+
+        .table01.type_conf th {border-left:1px solid var(--border-color-G300);}
+        .table01.type_conf th:first-child {border-left:0;}
+        .table01.type_conf td {border-left:1px solid var(--border-color-G300);}
+        .table01.type_conf td:first-child {border-left:0;}
+
+        @include media ('tablet') {
+            .table01 {
+                width: 100%; overflow-x: auto; -webkit-overflow-scrolling:touch
+            }
+            .table01 table {
+                min-width: 1200px;
+            }
+            .table01 th {
+                font-size: rem(17px);
+            }
+            .table01 tbody td {
+                font-size: rem(17px);
+            }
+        }
+
+    }
+}

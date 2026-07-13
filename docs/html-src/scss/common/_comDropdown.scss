@@ -1,0 +1,82 @@
+/* --------------------------- 드롭다운 --------------------------- */
+.comDropdown {
+
+    // 기본형
+    // 드롭다운 (gnb & breadcrumb)
+    display: flex; flex-direction: column; width: max-content; position: relative; justify-content: center;
+
+    .btnDrop {
+        display: flex; align-items: center; justify-content: space-between; flex-direction: row; font-size: rem(15px); color: var(--text-color-G600); font-weight: 400;
+
+        &::after {
+            content: ''; display: inline-block; width: 20px; height: 20px; background: url('/common/images/common/ic_16_arr_cir.svg') no-repeat center / contain; vertical-align: middle; margin-left: 4px; transition: transform 0.3s ease;
+        }        
+
+        &.open {
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .dropMenu {
+        position: absolute; left: 50%; transform: translateX(-50%); top: 35px; z-index: 20; display: none;
+        border-radius: 20px; border: 1px solid var(--border-color-G400); background: #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20); padding: 16px; width: max-content; 
+        
+        > li {
+            text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; 
+
+            > a {
+                display: inline-block; width: 100%; text-align: center; color: var(--text-color-G600); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; transition: color 0.2s ease;
+
+                &:hover {
+                    color: var(--text-color-B500) !important;
+                }
+            }            
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    // 드롭다운 (location)
+    &.comDropdownLocn {
+        .btnDrop {
+            color: var(--text-color-G700); font-size: rem(16px); font-weight: 400; line-height: 160%;
+
+            &::after {
+                content: ''; display: inline-block; width: 20px; height: 20px; background: url('/common/images/common/ic_20_location_arr.svg') no-repeat center / contain; vertical-align: middle; margin: 2px 0 0 4px; transition: transform 0.3s ease;
+            }
+        }
+    }
+
+    &.comMyDrop {
+        .dropMenu {
+            padding: 8px 0; max-width: 186px; top: 55px;
+
+            > li {
+                    
+                &:first-child {
+                    color: var(--text-color-B500); padding: 8px 12px;
+                }
+
+                &::before {
+                    content: ''; display: block;
+                    position: absolute; left: 50%; top: -14.5px; transform: translateX(-50%);
+                    background: url('/common/images/common/ic_14_arr_top.png') no-repeat center / 100%; width: 14px; height: 16px;
+                }
+
+                > a {
+                    padding: 8px 12px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 0px;
+                }                
+            }
+        }
+    }
+
+}

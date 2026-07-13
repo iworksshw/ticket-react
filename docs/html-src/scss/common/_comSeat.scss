@@ -1,0 +1,281 @@
+//좌석변경
+.comSeat {
+    .seatWrap {
+        max-width: 100%;
+
+        .seatFilter {
+            display: flex; justify-content: center; align-self: stretch; gap: 32px; border-radius: 12px; background: var(--bg-color-G100); padding: 12px 16px;
+
+            .filterBox {
+                display: flex; justify-content: center; align-items: center;
+
+                img {
+                    width: 42px; margin: 0; vertical-align: middle;
+
+                    @include media('mobile') {
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                .txt {
+                    margin-left: 4px; color: var(--text-color-G900); text-align: center; font-size: rem(16px); font-weight: 500; line-height: 160%;
+
+                    @include media('mobile') {
+                        font-size: rem(15px); 
+                    }
+                }
+            }
+
+            @include media('mobile') {
+                gap: 20px;
+            }
+        }
+
+        .seatBox {
+            display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4px; padding: 32px 20px 40px 20px;
+
+            .seatArea {
+                display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+                
+                // 6호차 좌측정렬
+                &:not(:has(.seatFo)) {
+                    align-items: flex-start;
+
+                    .seatRow {
+                        .defaultArea {
+                            margin-left: -70px;
+
+                            @include media('mobile') {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                // 6호차 우측정렬
+                &:not(:has(.seatRe)) {
+                    align-items: flex-end;
+                    
+                    .seatRow {
+                        .defaultArea {
+                            margin-right: -70px;
+                            
+                            @include media('mobile') {
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .seatRow {
+            
+                    .defaultArea {
+                        display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 8px;
+
+                        .seat {
+
+                            // 접근성
+                            input {
+                                &:focus + label {
+                                    outline: 2px solid #111; outline-offset: 2px; border-radius: 6px;
+                                }
+                            }
+
+                            label {
+                                @include media('mobile') {
+                                    transform: rotate(-90deg);
+                                    &::after {
+                                        transform: rotate(90deg); top: auto !important; bottom: -4px;
+                                    }
+                                }
+
+                                span {
+                                    color: var(--text-color-G700); text-align: center; font-size: rem(16px); font-weight: 500; line-height: 160%;
+
+                                    @include media('mobile') {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+
+                            // 화면에 보이지 않는 공백 좌석
+                            .seatEmpty {
+                                display: block; width: 50px; height: 46px; margin: 4px;
+                            }
+
+                            // 선택 불가능한 좌석
+                            .notSltSeatRe {
+                                display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 2px 4px; background: url(/common/images/common/ic_50_seat_chk_re.svg) no-repeat center / contain; cursor: not-allowed;
+
+                                @include media('mobile') {
+                                    transform: rotate(-90deg);
+                                }
+                            }
+
+                            // 선택 불가능한 좌석
+                            .notSltSeatFo {
+                                display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 2px 4px; background: url(/common/images/common/ic_50_seat_chk.svg) no-repeat center / contain; cursor: not-allowed;
+
+                                @include media('mobile') {
+                                    transform: rotate(-90deg);
+                                }
+                            }
+
+                            // 역방향
+                            &.seatRe {
+
+                                label {
+                                    display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: url(/common/images/common/ic_50_seat_dft_re.svg) no-repeat center; cursor: pointer; transition: all 0.2s ease; 
+                                    margin: 2px 4px; padding-right: 4px; color: var(--text-color-G700); font-size: rem(16px); font-weight: 500; line-height: 160%; position: relative;
+
+                                    span {
+                                        position: relative; z-index: 2; 
+                                    }
+                                }
+                                // 선택 된 좌석
+                                input:checked + label {
+                                    background: url(/common/images/common/ic_50_seat_slt_re.svg) no-repeat center / contain;
+                                    &::after {
+                                        content:""; width: 18px; height: 18px; background: url(/common/images/common/ic_22_seat_checked.svg) center no-repeat; display: block; position: absolute; top: -4px; right: -6px; z-index: 3;
+                                    }
+
+                                    span {
+                                        color: var(--text-color-B500); font-weight: 600;
+                                    }
+                                }
+
+                                // 이미 예약 된 좌석
+                                input:disabled + label {
+                                    background: url(/common/images/common/ic_50_seat_chk_re.svg) no-repeat center / contain; cursor: not-allowed;
+
+                                    span {
+                                        //color: #fff;
+                                    }
+                                }
+                            }
+
+                            // 순방향
+                            &.seatFo{
+
+                                label {
+                                    display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: url(/common/images/common/ic_50_seat_dft.svg) no-repeat center; cursor: pointer; transition: all 0.2s ease; 
+                                    margin: 2px 4px; padding-left: 4px; color: var(--text-color-G700); font-size: rem(16px); font-weight: 500; line-height: 160%; position: relative;
+
+                                    span {
+                                        position: relative; z-index: 2;
+                                    }
+                                }
+                                // 선택 된 좌석
+                                input:checked + label {
+                                    background: url(/common/images/common/ic_50_seat_slt.svg) no-repeat center / contain;
+                                    &::after {
+                                        content:""; width: 18px; height: 18px; background: url(/common/images/common/ic_22_seat_checked.svg) center no-repeat; display: block; position: absolute; top: -4px; right: -6px; z-index: 3;
+                                    }
+
+                                    span {
+                                        color: var(--text-color-B500); font-weight: 600;
+                                    }
+                                }
+                                // 이미 예약 된 좌석
+                                input:disabled + label {
+                                    background: url(/common/images/common/ic_50_seat_chk.svg) no-repeat center / contain; cursor: not-allowed;
+
+                                    span {
+                                        //color: #fff;
+                                    }
+                                }
+                            }
+
+                            &.seatRe + .seatFo {
+                                margin-left: 40px;
+
+                                @include media('mobile') {
+                                    margin-left: 0; margin-bottom: 40px;
+                                }
+                            }
+                        }
+
+                        @include media('mobile') {
+                            flex-direction: column-reverse; 
+                        }
+
+                    }
+                    
+                    @include media('mobile') {
+                        width: 100%; flex-wrap: wrap; column-gap: 4px; flex-direction: column-reverse;
+                    }
+                }
+
+                // 통로 방향
+                .aisle {
+                    width: 708px; height: 24px; margin: 12px auto; background: url(/common/images/contents/cont_01_01_12_001.jpg) no-repeat center / contain; 
+
+                    &.aisleRe {
+                        transform: rotate(180deg); 
+
+                        @include media('mobile') {
+                            width: 24px !important; height: 600px !important; padding: 12px; margin: 0 auto; background: url(/common/images/contents/cont_01_01_12_002.jpg) no-repeat center / contain; margin-top: 100px;
+                        }
+                    }
+
+                    @include media('mobile') {
+                        width: 24px !important; height: 600px !important; padding: 12px; margin: 0 auto; background: url(/common/images/contents/cont_01_01_12_002.jpg) no-repeat center / contain; margin-top: 100px;
+                    }
+                }
+
+                @include media('mobile') {
+                    max-width: 320px; width: 100%; padding: 0 20px; flex-direction: row; align-items: flex-start;
+                }
+                
+            }
+
+            @include media('mobile') {
+                padding: 16px 0 16px 0; width: 100%;
+            }
+        }
+
+        .sltInfo {
+            border-radius: 12px; background: var(--bg-color-B100); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; height: 76px;
+            
+            .left {
+                min-width: max-content; display: flex; flex-direction: row; 
+
+                > p {
+                    font-size: rem(18px); font-weight: 400; line-height: 160%;
+
+                    @include media('mobile') {
+                        font-size: rem(17px); 
+                    }
+                }
+                .txtGray {
+                    color: var(--text-color-G600); margin-right: 12px;
+                }
+                span.checked {
+                    color: var(--text-color-B500); font-weight: 600;
+                }
+                .txtBlack {
+                    display: flex; color: var(--text-color-G900); font-weight: 600; gap: 3px;
+                }
+                .txtLast {
+                    margin-left: 8px;
+                }
+            }
+
+            .right {
+                display: flex; gap: 8px;
+
+                .seatChkd {
+                    color: var(--bg-color-G200); font-size: rem(18px); font-weight: 600; line-height: 160%; padding: 4px 16px; border-radius: 20px; background: var(--text-color-B500);
+
+                    @include media('mobile') {
+                        font-size: rem(17px); 
+                    }
+                }
+            }
+
+            @include media('mobile') {
+                flex-direction: column; align-items: flex-start; gap: 12px; height: auto;
+            }
+        }
+    }
+}

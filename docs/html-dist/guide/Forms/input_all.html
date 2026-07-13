@@ -1,0 +1,117 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+    
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">Select</div>
+<div class="guideCont">
+<div class="gText">
+    - input text, password 폼입니다.
+    <br>- 기본 폼이며 검색, 그리드, 테이블에 동일한 폼을 사용합니다
+    <br>- 가능한 class "frmGroup" 내부에서 사용합니다.
+    <br>- input의 text와 password는 class "iptText"를 사용합니다.
+    <br>- addClass로 크기를 조절 할 수 있으며 이를 이용해서 input,select 등을 조합 할 수도 있습니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<style>
+
+</style>
+
+<div class="frmGroup">
+    <select title="년도" class="iptSlt frmSm">
+        <option value="">2023</option>
+        <option value=""></option>
+    </select>
+    <div class="textBox">년도</div>
+</div>
+<div class="frmGroup">
+    <select title="휴대폰 앞번호" class="iptSlt frmXs">
+        <option value="">010</option>
+        <option value=""></option>
+    </select>
+    <div class="textBox deco">-</div>
+    <input type="text" class="iptText frmXs" title="휴대폰 중간 번호" placeholder="많이 작은" />
+    <div class="textBox deco">-</div>
+    <input type="text" class="iptText frmXs" title="휴대폰 뒷 번호" placeholder="많이 작은" />
+</div>
+
+<div class="frmGroup">
+    <input type="text" class="iptText frmTini" title="년도" placeholder="가장 작은" />
+    <select class="iptSlt frmSm">
+        <option value="">2023</option>
+        <option value=""></option>
+    </select>
+    <input type="text" class="iptText frmSm" title="월" placeholder="작은" />
+    <input type="text" class="iptText frmMd" title="일" placeholder="보통" />
+    <select title="년도" class="iptSlt frmLg">
+        <option value="">2023</option>
+        <option value=""></option>
+    </select>
+    <input type="text" class="iptText" title="이름" placeholder="100%" />
+</div>
+<div class="frmGroup">
+    <input type="text" class="iptText" title="이름" placeholder="100%" />
+    <input type="text" class="iptText" title="이름" placeholder="100%" />
+</div>
+<div class="frmGroup">
+    <input type="text" class="iptText" title="이름" placeholder="100%" />
+    <div class="textBox">텍스트를</div>
+    <input type="text" class="iptText" title="이름" placeholder="100%" />
+    <div class="textBox">넣어도</div>
+    <input type="text" class="iptText" title="이름" placeholder="100%" />
+    <div class="textBox">됨</div>
+</div>
+
+<div class="frmGroup">
+    <div class="frmChoBox"><input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLbl">좋아합니다</label></div>
+    <div class="frmChoBox"><input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLbl">싫어합니다</label></div>
+    <div class="frmChoBox"><input id="rdo303" type="radio" class="iptRdo" name="rdo301"><label for="rdo303" class="iptLbl">기타의견</label></div>
+    <input type="text" class="iptText" title="이름" disabled value="'frmChoBox' 외부에서 조합하면 100%짜리도 가능합니다." placeholder="'frmChoBox' 외부에서 조합하면 100%짜리도 가능합니다." />
+    <input type="text" class="iptText" title="이름" placeholder="'frmChoBox' 외부에서 조합하면 100%짜리도 가능합니다." />
+</div>
+<div class="frmGroup">
+    <div class="frmChoBox"><input id="rdo401" type="radio" class="iptRdo" name="rdo401"><label for="rdo401" class="iptLbl">좋아합니다</label></div>
+    <div class="frmChoBox"><input id="rdo402" type="radio" class="iptRdo" name="rdo401"><label for="rdo402" class="iptLbl">싫어합니다</label></div>
+    <div class="frmChoBox">
+        <input id="rdo403" type="radio" class="iptRdo" title="이름" name="rdo401"><label for="rdo403" class="iptLbl">기타의견</label>
+        <input type="text" class="iptText frmLg" title="이름" placeholder="내부조합은 frmLg까지만" />
+    </div>
+</div>
+        
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+    
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        

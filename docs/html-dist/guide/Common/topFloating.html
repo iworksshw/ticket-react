@@ -1,0 +1,79 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">탑 & 플로팅메뉴</div>
+<div class="guideCont">
+<div class="gText">
+        탑 & 플로팅메뉴입니다.
+    <br>css는 _cptTopFloating.scss를 참고바랍니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+    <!-- 탑 & 플로팅메뉴 공통 -->
+    <div class="comTopFloating" aria-label="플로팅 네비게이션 메뉴와 탑버튼">
+        <div class="topFloatArea">
+            <nav>
+                <ul class="topFloatMenu">
+                    <li class="menuItem">
+                        <button class="btnItem" type="button">승차권 예약</button>
+                    </li>
+                    <li class="menuItem">
+                        <button class="btnItem" type="button">유효승차권</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="floatTopBox">
+                <button class="btnFloatTop" type="button">TOP</button>
+            </div>
+        </div>
+    </div>
+    <!--// 탑 & 플로팅메뉴 공통 -->
+        
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+
+    
+</div>
+</div>
+
+    
+<script>
+    run();
+
+    /* top버튼 클릭 시 최상단으로 이동 (탑+플로팅) */
+    document.querySelector('.btnFloatTop').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+</script>
+    
+        

@@ -1,0 +1,148 @@
+@use "@/styles/etc/mixin" as *;
+
+//나의 쿠폰함
+.comCoupon {
+    display: flex; margin-top: 20px; flex-direction: column; gap: 20px;
+
+    .couponBox {
+        display: flex; flex-direction: row; align-items: stretch; border-radius: 12px; border: 1px solid var(--border-color-G300); background: #fff;
+
+        .imgWrap {
+            display: flex; justify-content: center; align-items: center; margin: 20px 60px;
+
+            .img {
+                width: 88px; height: 74px; background: url(/images/common/ic_88_coupon.png) center no-repeat; background-size: 100%;
+            }
+
+            @include media('mobile'){
+                display: none;
+            }
+        }
+        .txt {
+            padding: 40px 0; width: 100%;
+
+            .tit {
+                color: var(--text-color-G900); font-size: rem(18px); font-style: normal; font-weight: 500; line-height: 160%; //display: flex; align-items: center;
+                .new {
+                    margin: 0 10px 0 6px; padding: 0 8px; border-radius: 60px; border: 1px solid var(--text-color-B500, #107AF2); background: var(--text-color-whtie, #FFF); color: var(--text-color-B500, #107AF2); text-align: center;
+                    font-size: rem(14px); font-style: normal; font-weight: 500; line-height: 160%; display: inline-block; display: inline-flex;
+                }
+                .gift {
+                    margin: 0 10px 0 6px; padding: 0 8px; border-radius: 60px; border: 1px solid var(--color-secondary-dark-blue-400, #4B6889); background: var(--text-color-whtie, #FFF); color: var(--color-secondary-dark-blue-400, #4B6889); text-align: center;
+                    font-size: rem(14px); font-style: normal; font-weight: 500; line-height: 160%; display: inline-block; display: inline-flex;
+                }
+
+                @include media('mobile'){
+                    font-size: rem(16px); flex-direction: column; align-items: flex-start; gap: 3px;
+                }
+            }
+            .discount {
+                color: var(--text-color-B500); font-size: rem(24px); font-style: normal; font-weight: 600; line-height: 150%; margin: 4px 0 12px 0;
+                .won {font-size: 20px; color: var(--text-color-G500); font-weight: 400;}
+                @include media('mobile'){
+                    margin: 0 0 8px 0; font-size: rem(22px);
+                }
+            }
+            .date {
+                color: var(--text-color-G500); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; flex-direction: row; gap: 24px;
+
+                .dateTxt {
+                    display: flex; flex-direction: row; gap: 6px; position: relative;
+                    &::before {
+                        content:""; width: 1px; height: 10px; background: var(--border-color-G400, #B9C1C9); display: block; position: absolute; left: -12px; top: 8px;
+                    }
+                    &:first-child {
+                        &::before {display: none;}
+                    }
+                    @include media('tablet') {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dateNum {
+                    color: var(--text-color-G700); font-weight: 500; position: relative;
+                }
+
+                > p {
+                    &:nth-child(2) {
+                        &.dateTxt {
+                            .dateNum {
+                                // &::before {
+                                //     content: ''; display: block; width: 1px; height: 10px; background: var(--border-color-G400); position: absolute; left: -44px; top: 50%; transform: translateY(-50%);
+
+                                //     @include media('mobile'){
+                                //         display: none;
+                                //     }
+                                // }
+                            }
+                        }
+                    }
+                }
+
+                @include media('tablet'){
+                    font-size: rem(14px); flex-direction: column; gap: 0;
+                }
+            }
+
+            @include media('mobile'){
+                padding: 20px;
+            }
+        }
+        .present {
+            border-left: 1px dashed var(--border-color-G400); background: var(--bg-color-B100); font-size: rem(18px); font-style: normal; font-weight: 500; line-height: 160%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px; margin: 0 0 0 auto; padding: 12px 24px; min-width: 200px; border-radius: 0 12px 12px 0;
+
+            &:disabled {
+                cursor: auto; background: var(--bg-color-G200);
+            }
+            .imgCoupon {
+                display: block; width: 24px; height: 24px; background: url(/images/common/ic_24_present.png) center no-repeat; background-size: 100%;
+            }
+
+            .imgExpiration {
+                display: block; width: 24px; height: 24px; background: url(/images/common/ic_24_chk.png) center no-repeat; background-size: 100%;
+            }
+
+            .imgGift {
+                display: block; width: 24px; height: 24px; background: url(/images/common/ic_24_gift.png) center no-repeat; background-size: 100%;
+            }
+
+            .blueTxt {
+                color: var(--text-color-B500);
+            }
+
+            .grayTxt {
+                color: var(--text-color-G600);
+            }
+
+            .darkTxt {
+                color: var(--color-primary-blue-900)
+            }
+
+            @include media('mobile'){
+                font-size: rem(15px); min-width: 110px; padding: 12px 0;
+            }
+        }
+    }
+
+    .couponTxt {
+        margin-bottom: 20px;
+
+        .imgWrap {
+            margin: 20px 50px; display: flex; align-items: center;
+
+            .img {
+                width: 70px; vertical-align: middle; display: block;
+            }
+
+            @include media('mobile'){
+                display: flex; margin: 20px;
+            }
+        }
+
+        .txt {
+            padding: 24px 0;
+        }
+    }
+}

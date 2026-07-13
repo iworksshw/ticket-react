@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>문의내역</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comRequestList.scss
+    -->
+
+    <!-- 문의내역 : 내역 없음 -->
+    <div class="comRequestList">
+        <ul class="noList">
+            <li>
+                <p>문의하신 내역이 없습니다.</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 문의내역 : 목록 -->
+    <div class="comRequestList">
+        <ul class="hasList">
+            <li>
+                <button type="button" class="trig" aria-expanded="false">
+                    <span class="left">
+                        <span class="stat ing">접수중</span>
+                        <span class="tit">오는열차 승차권을 구매하고 싶어요.</span>
+                    </span>
+                    <span class="right">
+                        <span class="date">2025-10-16</span>
+                        <span class="trigIco"><span class="blind">열기</span></span>
+                    </span>
+                </button>
+                <div class="listCont">
+                    <div class="inner">
+                        <p class="detail">
+                            학생 2명이 감기에 걸려 참가가 힘든 상태입니다. 2명 취소요청 드립니다.
+                        </p>
+                        <div class="opt">
+                            <button type="button">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="on">
+                <button type="button" class="trig" aria-expanded="true">
+                    <span class="left">
+                        <span class="stat comp">답변완료</span>
+                        <span class="tit">체험학습 문의 타이틀 제목 길이 테스트</span>
+                    </span>
+                    <span class="right">
+                        <span class="date">2025-10-15</span>
+                        <span class="trigIco"><span class="blind">접기</span></span>
+                    </span>
+                </button>
+                <div class="listCont">
+                    <div class="inner">
+                        <p class="detail">
+                            학생 2명이 감기에 걸려 참가가 힘든 상태입니다. 2명 취소요청 드립니다.
+                        </p>
+                        <div class="opt">
+                            <button type="button">삭제</button>
+                        </div>
+                        <!-- 답변 등록 시 노출 -->
+                        <div class="answerBox">
+                            <div class="area">
+                                <span class="stat answer">답변</span>
+                                <div class="txt">
+                                    <p class="tit">체험일 5일 전까지 인원변경 가능합니다. 체험학습 예약내역에서 인원변경 버튼을 선택 후 신청해 주시기 바랍니다. 인원 취소 시 해당 금액 만큼 환불 처리됩니다. (수수료 무료)</p>
+                                    <p class="date">답변 등록일: <span>2025-10-16</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

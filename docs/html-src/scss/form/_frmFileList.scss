@@ -1,0 +1,171 @@
+/* -------------------------------- 첨부파일 -------------------------------- */
+.frmFileList{
+    width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+
+    &.type02 {  
+        padding:24px 32px; background:var(--bg-color-B100); border-radius:8px;
+
+        @include media ('mobile') {
+            padding:20px;
+        }
+    }
+
+    &:first-child {margin-top: 10px;}
+    .fileGroup {
+        width:100%;
+        .file {
+
+            &:first-child {margin-top:0;}
+
+            dl {
+                width:100%; height:100%; display: flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:97px;
+                @include media ('mobile') {
+                    flex-flow:column; gap:12px; align-items: flex-start;
+                }
+            }
+
+            dt {
+                min-width: max-content; font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900);
+                @include media ('mobile') {
+                    font-size:rem(17px);
+                }
+            }
+
+            dd {
+                width:100%; display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:0 32px;
+
+                @include media ('mobile') {
+                    flex-flow:column; align-items: flex-start; gap:12px; 
+                }
+
+                > a {
+                    display:block; width:max-content; position:relative; padding-left:24px; font-size:rem(18px); font-weight:500; line-height:160%; color:var(--text-color-B500);
+
+                    @include media ('mobile') {
+                        font-size:rem(17px);
+                    }
+
+                    &::before {
+                        content:''; position:absolute; top:50%;left:0; width:20px; height:20px; transform:translateY(-50%); background:url(/common/images/common/ico_20_attfile.svg)0 0 no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*fileBox*/
+    .fileBox {
+        width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px;
+        input[type=file] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+
+        .fileAfter {
+            position:relative; max-width: 550px; width: 100%;
+
+            .textBox {
+                width:100%; padding:12px 16px; border:1px solid var(--border-color-G300); border-radius:8px; min-height:50px;
+            }
+
+            .fileDel {
+                position:absolute; top:50%; right:16px; transform:translateY(-50%);
+                width:24px; height:24px; font-size:0; background:url(../images/common/ic_24_trashcan.svg) center no-repeat;
+            }
+
+            @include media ('mobile') {
+                width: 100%;
+            }
+        }
+
+        .fileBefore {
+            display:flex; gap:12px;
+
+            .btn {
+                padding:12px 20px; border:1px solid var(--text-color-G500); background:#fff; border-radius:8px; font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G800); cursor:pointer;
+                &:focus {
+                    & + input[type='file'] {
+                         border:1px solid red;
+                    }
+                }
+            }
+
+            .addBtn {
+                width:52px; height:52px; padding:12px; font-size:0; background:url(../images/common/ic_24_plusbutton.svg) center no-repeat; border-radius:8px; border:1px solid var(--text-color-G500); cursor:pointer;
+            }
+
+            &:has(input[type='file']:focus){
+                .btn {
+                    outline:-webkit-focus-ring-color auto 1px;
+                }
+            }
+
+            @include media ('mobile') {
+                margin: 0 auto 0 0;
+            }
+        }
+
+        @include media ('tablet') {
+            margin-right: 10px;
+        }
+
+        @include media ('mobile') {
+            flex-wrap: wrap; //flex-direction: column;
+        }
+    }
+
+    .infoText {
+        width:110px;
+    }
+
+    .docDownload {
+        width:180px; display:block; position:relative; font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-B500); padding-right:20px; margin: 0 auto;
+        
+
+        &::after {
+            content:''; position:absolute; top:50%; right:0; width:16px; height:16px; background:url(/common/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
+        }
+
+        @include media ('mobile') {
+            text-align: right; margin: 8px 0 0 auto;
+        }
+
+        @include media(688px) {
+            position: absolute; right: 0; bottom: 13px;
+        }
+    }
+
+    &.type03 {
+        .fileBox {
+            .fileAfter {
+                width:max-content; margin: 0 auto 0 0;
+                .textBox {
+                    border:0 !important; padding:0; display:block; position:relative; font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-B500); border-radius:0; min-height:auto; padding-right:0; padding-left:20px; font-weight:500;
+                    // width:max-content;
+
+                    &::after {
+                        content:''; position:absolute; top:50%; right:auto; left:0; width:16px; height:16px; background:url(/common/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
+
+                        @include media ('mobile') {
+                            top: 13px;
+                        }
+                    }
+                }
+
+                .fileDel {
+                    display:none;
+                }
+
+                @include media ('mobile') {
+                    width: auto;
+                }
+            }
+
+            @include media ('mobile') {
+                flex-direction: column; align-items: flex-start;
+            }
+        }
+    }
+
+    @include media ('mobile') {
+        flex-direction: column; align-items: flex-start;
+    }
+}

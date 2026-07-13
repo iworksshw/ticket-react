@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/common.js"></script>
+    <title>간편지연증명서</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/component/_cptPopCerti.scss
+    -->
+
+    <!-- 간편지연증명서 팝업 열기 버튼 예시 -->
+    <button type="button" class="btn blue" onclick="openPopup('sample01');">간편지연증명서</button>
+
+    <div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea">
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button type="button" class="btnPopClose" onclick="closePopup('sample01');" aria-label="간편 지연증명서 팝업 닫기">닫기</button>
+                        <div class="popTitle">간편지연증명서</div>
+                        <div class="popCont">
+                            <!-- 팝업 컨텐츠 영역 -->
+                            <div class="cptPopCerti">
+                                <div class="contHeader">
+                                    <div class="logoBox">
+                                        <!-- arex 로고 -->
+                                        <div class="logo"><a href="./#"></a></div>
+                                    </div>
+                                    <div class="comBtnGroup">
+                                        <div class="alignC cta">
+                                            <button type="button" class="btn blue">간편지연증명서 인쇄</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contBody">
+                                    <div class="pubTitH2">
+                                        <h2>간편 지연증명서</h2>
+                                    </div>
+                                    <div class="cont">
+                                        <div>
+                                            <p class="time">09시~13시</p>
+                                        </div>
+                                        <div>
+                                            <p class="txt">열차이용에 불편을 드려 대단히 죄송합니다.<br>
+                                                귀하께서 이용하신 <span>"공항방면 일반열차"</span>가 지연운행 되었음을 증명합니다.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="date">2025.07.25<br>
+                                                공항철도 (주)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contFooter">
+                                    <span class="pubRefer dark">※ 본 간편 지연증명서는 <em class="colorBlue">2025년 07월25일 09시부터 13시</em>까지 이 노선에서 운행하였던 열차가 5분 이상 지연되었음을 표시하는 것이며, 개별 열차의 지연을 증명하는 것은 아닙니다.</span>
+                                    <span class="pubRefer dark">※ 본 간편 지연증명서의 내용을 무단으로 복제 및 변경하거나 개인 홈페이지, 블로그 등에 공개하는 것을 금지합니다.</span>
+                                    <span class="pubRefer dark">※ 지연시간이 포함된 지연증명서 발급을 원하실 경우 하단버튼을 클릭해 주시기 바랍니다. 다만, 이는 담당자 확인 후 발행이 가능하여 시간이 다소 소요될 수 있는 점 양해 부탁드립니다.</span>
+                                    <div class="comBtnGroup">
+                                        <div class="alignC cta">
+                                            <button type="button" class="btn dkLine lg">지연증명서 신청</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //팝업 컨텐츠 영역 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

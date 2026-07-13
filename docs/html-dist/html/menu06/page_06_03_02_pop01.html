@@ -1,0 +1,161 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">비회원 승차권예약 확인</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comCharge">
+                            <p class="title">
+                                회의실 AREX B2-4
+                            </p>
+
+                            <div class="dateCalcu">
+                                <ul>
+                                    <li>
+                                        <div class="inner">
+                                            <span>이용일</span>
+                                            <div class="frmGroup">
+                                                <!-- 20251217 수정 -->
+                                                <div class="frmBox">
+                                                    <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                        <input type="text" class="iptText" value="2025-09-25" title="이용일" id="startpicker-input">                                         
+                                                        <div id="startpicker-container" style="margin-left: -1px; z-index: 9999; position: fixed !important;"><div class="tui-datepicker tui-hidden tui-rangepicker">      <div class="tui-datepicker-body tui-datepicker-type-date">      <div class="tui-calendar-container"><div class="tui-calendar">    <div class="tui-calendar-header"><div class="tui-calendar-header-inner">      <button class="tui-calendar-btn tui-calendar-btn-prev-month tui-hidden" tabindex="0">Prev month</button>      <a href="javascript:void(0)" title="월 선택" class="tui-calendar-title tui-calendar-title-month">2026년 06월</a>      <button class="tui-calendar-btn tui-calendar-btn-next-month" tabindex="0">Next month</button>    </div>    <div class="tui-calendar-header-info">    <p class="tui-calendar-title-today">오늘: 2026.06.12 (토)</p>  </div></div>    <div class="tui-calendar-body"><div class="tui-calendar-body-inner">  <div class="tui-calendar-body-header">    <ul>      <li scope="col">월</li>      <li scope="col">화</li>      <li scope="col">수</li>      <li scope="col">목</li>      <li scope="col">금</li>      <li class="tui-sat" scope="col">토</li>      <li class="tui-sun" scope="col">일</li>    </ul>  </div>  <div class="tui-calendar-body-body">        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-blocked" data-timestamp="1780153200000">31</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780239600000">1</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780326000000">2</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780412400000">3</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780498800000">4</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780585200000">5</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1780671600000">6</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1780758000000">7</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780844400000">8</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780930800000">9</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1781017200000">10</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1781103600000">11</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected" data-timestamp="1781190000000">12</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-selectable" data-timestamp="1781276400000">13</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-selectable" data-timestamp="1781362800000">14</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781449200000">15</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781535600000">16</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781622000000">17</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781708400000">18</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781794800000">19</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-selectable" data-timestamp="1781881200000">20</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-selectable" data-timestamp="1781967600000">21</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782054000000">22</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782140400000">23</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782226800000">24</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782313200000">25</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782399600000">26</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-selectable" data-timestamp="1782486000000">27</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-selectable" data-timestamp="1782572400000">28</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782658800000">29</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782745200000">30</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1782831600000">1</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1782918000000">2</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783004400000">3</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1783090800000">4</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable" data-timestamp="1783177200000">5</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783263600000">6</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783350000000">7</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783436400000">8</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783522800000">9</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783609200000">10</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1783695600000">11</a>      </li>          </ul>      </div></div></div></div></div>    </div>  </div></div> <!-- 20251222 수정 -->
+                                                    </div>
+                                                </div>
+                                                <!--// 20251217 수정 -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span>취소일</span>
+                                            <!-- 20251217 수정 -->
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmMd">
+                                                        <input id="endpicker-input" type="text" aria-label="Date">
+                                                        <div id="endpicker-container" style="margin-left: -1px; z-index: 9999; position: fixed !important;"><div class="tui-datepicker tui-hidden tui-rangepicker">      <div class="tui-datepicker-body tui-datepicker-type-date">      <div class="tui-calendar-container"><div class="tui-calendar">    <div class="tui-calendar-header"><div class="tui-calendar-header-inner">      <button class="tui-calendar-btn tui-calendar-btn-prev-month tui-hidden" tabindex="0">Prev month</button>      <a href="javascript:void(0)" title="월 선택" class="tui-calendar-title tui-calendar-title-month">2026년 06월</a>      <button class="tui-calendar-btn tui-calendar-btn-next-month" tabindex="0">Next month</button>    </div>    <div class="tui-calendar-header-info">    <p class="tui-calendar-title-today">오늘: 2026.06.12 (토)</p>  </div></div>    <div class="tui-calendar-body"><div class="tui-calendar-body-inner">  <div class="tui-calendar-body-header">    <ul>      <li scope="col">월</li>      <li scope="col">화</li>      <li scope="col">수</li>      <li scope="col">목</li>      <li scope="col">금</li>      <li class="tui-sat" scope="col">토</li>      <li class="tui-sun" scope="col">일</li>    </ul>  </div>  <div class="tui-calendar-body-body">        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-blocked" data-timestamp="1780153200000">31</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780239600000">1</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780326000000">2</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780412400000">3</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780498800000">4</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780585200000">5</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1780671600000">6</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1780758000000">7</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780844400000">8</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1780930800000">9</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1781017200000">10</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-blocked" data-timestamp="1781103600000">11</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected tui-is-selected-range" data-timestamp="1781190000000">12</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-selectable" data-timestamp="1781276400000">13</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-selectable" data-timestamp="1781362800000">14</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781449200000">15</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781535600000">16</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781622000000">17</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781708400000">18</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1781794800000">19</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-selectable" data-timestamp="1781881200000">20</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-selectable" data-timestamp="1781967600000">21</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782054000000">22</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782140400000">23</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782226800000">24</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782313200000">25</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782399600000">26</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sat tui-is-selectable" data-timestamp="1782486000000">27</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-sun tui-is-selectable" data-timestamp="1782572400000">28</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782658800000">29</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-is-selectable" data-timestamp="1782745200000">30</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1782831600000">1</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1782918000000">2</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783004400000">3</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1783090800000">4</a>      </li>          </ul>        <ul class="tui-calendar-week">            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable" data-timestamp="1783177200000">5</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783263600000">6</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783350000000">7</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783436400000">8</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783522800000">9</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1783609200000">10</a>      </li>            <li>          <a href="javascript:void(0)" class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1783695600000">11</a>      </li>          </ul>      </div></div></div></div></div>    </div>  </div></div> <!-- 20251222 수정 -->
+                                                    </div>   
+                                                </div> 
+                                            </div>
+                                            <!--// 20251217 수정 -->                                        
+                                        </div>
+                                        <button type="button" class="btn gLine">계산하기</button>
+                                        <!-- 20251217 수정 -->
+                                        <script>
+                                            datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                                        </script>   
+                                        <!--// 20251217 수정 -->                                     
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="comTableBasic">
+                                <table>
+                                    <caption>취소수수료_결제금액, 취소수수료, 환불금액에 관한 표</caption><!-- 20251217 수정 -->
+                                    <!-- 20251217 수정 -->
+                                    <colgroup>
+                                        <col style="width:160px;">
+                                        <col>
+                                    </colgroup>
+                                    <!--// 20251217 수정 -->
+                                    <tbody>
+                                        <tr>
+                                            <th class="left"><em>결제금액</em></th>
+                                            <td class="left">￦ 80,000 원</td>
+                                        </tr>
+                                        <tr class="border">
+                                            <th class="left"><em>취소수수료</em></th>
+                                            <td class="left">￦ 0 원</td>
+                                        </tr>
+                                        <tr class="border">
+                                            <th class="left"><em>환불금액</em></th>
+                                            <td class="left"><em>￦ 80,000 원</em></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <span class="pubCaption gray">당일 예약건에 한해서 이용일시 이전에는 100% 환불 됩니다.</span>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

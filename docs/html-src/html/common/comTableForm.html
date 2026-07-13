@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/common.js"></script>
+    <title>테이블 : 입력폼</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comTableForm.scss
+        scss/form/_frmFileList.scss
+        scss/form/_frmGroup.scss
+        scss/form/_frmBox.scss
+        scss/form/_iptText.scss
+        scss/form/_iptTextArea.scss
+        scss/public/_pubText.scss
+        scss/value/_varEtc.scss
+    -->
+    <div class="comTableForm">
+        <table class="formTable">
+            <caption>신청자명, 휴대폰번호, 이메일, 사업자명, 회의명, 사용인원, 요청사항, 결제총금액을 포함한 표</caption><!-- 20251128 수정 -->
+            <colgroup>
+                <col style="width: 240px;">
+                <col style="width: auto;">
+            </colgroup>
+
+            <tbody>
+                <tr>
+                    <th>
+                        <span class="required">*</span>신청자명
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="신청자명 입력">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>휴대폰 번호
+                    </th>
+                    <td>
+                        <div class="frmGroup gap04">
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="휴대폰번호 첫번째 세자리">
+                            </div>
+                            <span>-</span>
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="휴대폰번호 두번째 세자리 또는 네자리">
+                            </div>
+                            <span>-</span>
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="휴대폰번호 마지막 네자리">
+                            </div>
+                        </div>
+                        <em class="pubInfoText varColorRed">
+                            ※ 회의 당일 30분전 도어락 비밀번호 4자리가 발송되어니 실제 이용자의 휴대전화번호를 필히 입력하시기 바랍니다.
+                        </em>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>이메일
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="이메일주소 입력">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>사업자명
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="사업자명 입력">
+                        </div>
+                        <div class="pubInfoText">
+                            ※ 회의실 입구 디지털 사이니지 안내용
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>회의명
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="회의명 입력">
+                        </div>
+                        <div class="pubInfoText">
+                            ※ 회의실 입구 디지털 사이니지 안내용
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>사용인원
+                    </th>
+                    <td>
+                        <div class="frmGroup gap08 moFull">
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="사용예정 인원 입력">
+                            </div>
+                            <span class="mR32">명</span>
+                        </div>
+                        <div class="pubInfoText">
+                            ※ 최대 00명
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        요청사항
+                    </th>
+                    <td>
+                        <textarea name="" id="" class="iptTextArea" placeholder="요청 사항을 입력해 주세요." title="요청사항 입력"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        제출서류
+                    </th>
+                    <td>
+                        <div class="frmFileList">
+                            <div class="fileBox">
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button type="button" class="fileDel">삭제</button>
+                                </div>
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="btn">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="docDownload">참가자 양식 다운로드</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        제출서류
+                    </th>
+                    <td>
+                        <div class="frmFileList">
+                            <div class="fileBox">
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button type="button" class="fileDel">삭제</button>
+                                </div>
+                                <div class="fileBefore">
+                                    <label for="uploadBtn2" class="btn">파일선택</label>
+                                    <input type="file" id="uploadBtn2" class="uploadBtn">
+                                    <button type="button" class="addBtn">첨부파일 추가</button>
+                                </div>
+                            </div>
+                            <div class="infoText red">
+                                * 용량제한 5MB
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        제출서류
+                    </th>
+                    <td>
+                        <div class="frmFileList">
+                            <div class="fileBox">
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button type="button" class="fileDel">삭제</button>
+                                </div>
+                                <div class="fileBefore">
+                                    <label for="uploadBtn2" class="btn">파일선택</label>
+                                    <input type="file" id="uploadBtn2" class="uploadBtn">
+                                    <button type="button" class="addBtn">첨부파일 추가</button>
+                                </div>
+                            </div>
+                            <div class="infoText red">
+                                * 용량제한 5MB
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comTableForm">
+        <table class="formTable">
+            <caption>
+                할인선택_어른(할인없음), 어린이, 경로, 장애인, 국가유공자, 교환번호, 할인쿠폰(회원), 할인쿠폰, 제휴카드로 구성된 표
+            </caption><!-- 20251217 수정 -->
+            <!-- 20251217 수정 -->
+            <colgroup>
+                <col style="width:200px;">
+                <col>
+            </colgroup>
+            <!--// 20251217 수정 -->
+            <tbody>
+                <!-- thead 있을때 -->
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc01" type="radio" class="iptChk" name="discount">
+                            <label for="dc01" class="iptLbl lblBold">어른</label> <!-- 20260128 수정 -->
+                        </div>
+                    </th>
+                    <td class="left">할인 중복적용 불가</td> <!-- 20260128 수정 -->
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc02" type="radio" class="iptChk" name="discount">
+                            <label for="dc02" class="iptLbl lblBold">어린이</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        탑승일 기준 만 6세 ~ 만 12세
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc03" type="radio" class="iptChk" name="discount">
+                            <label for="dc03" class="iptLbl lblBold">경로</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        신분증
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc04" type="radio" class="iptChk" name="discount">
+                            <label for="dc04" class="iptLbl lblBold">장애인</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        시·군·구청장 발행 복지카드<br>국가·지방자치단체가 발급한 장애인등록증/장애인증명서
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc05" type="radio" class="iptChk" name="discount">
+                            <label for="dc05" class="iptLbl lblBold">국가유공자</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        국가보훈처 발행 유공자증<br>국가보훈처 발행 5.18 민주유공자
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc06" type="radio" class="iptChk" name="discount">
+                            <label for="dc06" class="iptLbl lblBold">교환번호</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" title="교환번호" placeholder="교환번호 13자리를 입력해 주세요.">
+                            <button type="button" class="fncBtn">인증</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc07" type="radio" class="iptChk" name="discount">
+                            <label for="dc07" class="iptLbl lblBold">교환번호</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" title="교환번호" placeholder="교환번호 13자리를 입력해 주세요." value="1234567890123">
+                            <button type="button" class="fncBtn">취소</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc08" type="radio" class="iptChk" name="discount">
+                            <label for="dc08" class="iptLbl lblBold">할인쿠폰(회원)</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select title="쿠폰 선택" class="iptSlt">
+                                <option value="">쿠폰 선택</option>
+                                <option value="">옵션1</option>
+                            </select>
+                        </div>
+                        <!--20251028 직접 입력 선택시 표출 그 외 항상 숨김 처리-->
+                        <div class="frmGroup" style="display:none;">
+                            <input type="text" class="iptText" title="교환번호" placeholder="교환번호 8자리를 입력해 주세요.">
+                            <button type="button" class="fncBtn">인증</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc09" type="radio" class="iptChk" name="discount">
+                            <label for="dc09" class="iptLbl lblBold">할인쿠폰</label>
+                        </div>
+                    </th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" title="교환번호" placeholder="교환번호 8자리를 입력해 주세요.">
+                            <button type="button" class="fncBtn">인증</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc10" type="radio" class="iptChk" name="discount">
+                            <label for="dc10" class="iptLbl lblBold">제휴카드</label>
+                        </div>
+                        <button type="button" class="affList" title="새 창 열림">제휴카드목록</button> <!-- 20260324 수정 -->
+                    </th>
+                    <td class="left">
+                        <!-- 20251121 삭제 <div class="moLabel flex">
+                            <div>
+                                <input id="dc10" type="radio" class="iptChk" name="discount">
+                                <label for="dc10" class="iptLbl lblBold">제휴카드</label>
+                            </div>
+                            <button type="button" class="affList">제휴카드목록</button>
+                        </div> -->
+                        <div class="frmGroup">
+                            <button type="button" class="affCardInfo">제휴카드 정보 입력</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        <div>
+                            <input id="dc11" type="radio" class="iptChk" name="discount">
+                            <label for="dc11" class="iptLbl lblBold">제휴카드</label>
+                        </div>
+                        <button type="button" class="affList" title="새 창 열림">제휴카드목록</button> <!-- 20260324 수정 -->
+                    </th>
+                    <td class="left">
+                        <!-- 20251121 삭제 <div class="moLabel flex">
+                            <div>
+                                <input id="dc11" type="radio" class="iptChk" name="discount">
+                                <label for="dc11" class="iptLbl lblBold">제휴카드</label>
+                            </div>
+                            <button type="button" class="affList">제휴카드목록</button>
+                        </div> -->
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" title="카드번호" placeholder="" value="000-****-****-0000 (MM/YY)">
+                            <button type="button" class="fncBtn">인증</button>
+                        </div>
+                    </td>
+                </tr>                                       
+            </tbody>
+        </table>                                                
+    </div>
+</body>
+</html>

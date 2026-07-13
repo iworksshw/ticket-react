@@ -1,0 +1,198 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytMember">
+    <div class="memberArea">
+
+        <!-- 상단영역 -->
+        <div class="memberTop">
+            <!-- Top -->
+            <div class="topArea">
+                <div class="logoArea"><a href="javascript:void(0)"><img src="/common/images/common/ic_142_logo.svg" alt="arex 로고"></a></div>
+                <div class="langArea">
+                    <div class="comDropdown">
+                        <div class="dropArea">
+                            <button class="btnDrop" type="button">
+                                한국어
+                            </button>
+                            <ul class="dropMenu">
+                                <li><a href="javascript:void(0)">영어</a></li>
+                                <li><a href="javascript:void(0)">중국어</a></li>
+                                <li><a href="javascript:void(0)">일본어</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 20250922 버튼 추가 -->
+                    <button class="closeBtn" type="button">
+                        <span class="blind">전체메뉴 닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="memberContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="memberSubCont">
+
+                <div class="cptLogin">
+                    <div class="loginArea">
+                        <div class="loginTop">
+                            <strong class="eyebrow">공항철도 회원가입</strong>
+                            <h1 class="loginHeadline">선택 정보 입력</h1>
+                            <p class="loginHeadText">고객님의 편리한 서비스 이용을 위해 회원정보를 등록하세요.</p>
+                        </div>
+                        <div class="loginCont">
+                            
+                            <!-- 필수정보입력 영역 -->
+                            <div class="comLog">
+                                <div class="fnCont">
+                                    <div class="fnGroup">
+                                        <div class="labelBox">
+                                            <label for="nation1">국적</label>
+                                        </div>
+                                        <div class="frmGroup">
+                                            <select name="nation1" id="nation1" class="iptSlt lg"><!-- 20251128 수정 -->
+                                                <option value="" disabled selected>대륙 정보를 선택해 주세요.</option> <!-- 텍스트 수정 200251014 -->
+                                                <option value="">동북아시아</option>
+                                                <option value="">동남아시아</option>
+                                            </select>
+                                        </div>
+                                        <div class="frmGroup">
+                                            <select name="nation2" id="nation2" class="iptSlt lg" aria-label="두 번째 국적">
+                                                <option value="" disabled selected>국적을 선택해주세요.</option>
+                                                <option value="">대한민국</option>
+                                                <option value="">태국</option>
+                                            </select>                                    
+                                        </div>
+                                    </div>   
+                                    <div class="fnGroup">
+                                        <div class="labelBox">
+                                            <label for="birth">출생년도</label>
+                                        </div>
+                                        <div class="frmGroup">
+                                            <select name="birth" id="birth" class="iptSlt lg">
+                                                <option value="">2000</option>
+                                                <option value="">1999</option>
+                                            </select>
+                                        </div>
+                                    </div>      
+                                    <div class="fnGroup">
+                                        <div class="labelBox" id="genderLabel">성별</div>
+                                        <div class="fnChoGroup" role="radiogroup" aria-labelledby="genderLabel"> <!-- 202151217 수정 -->
+                                            <div class="frmChoBox">
+                                                <input id="rdo301" type="radio" class="iptRdo" name="rdo301">
+                                                <label for="rdo301" class="iptLbl">남자</label>
+                                            </div>
+                                            <div class="frmChoBox">
+                                                <input id="rdo302" type="radio" class="iptRdo" name="rdo301">
+                                                <label for="rdo302" class="iptLbl">여자</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fnGroup">
+                                        <div class="labelBox">
+                                            <label for="nationCode">전화번호</label>
+                                        </div>
+                                        <div class="frmGroup">
+                                            <select name="nationCode" id="nationCode" class="iptSlt lg">
+                                                <option value="" disabled="" selected="">국가코드를 선택하세요.</option>
+                                                <option value="">+82 대한민국</option>
+                                                <option value="">+82 대한민국</option>
+                                            </select>
+                                        </div>
+                                        <div class="frmGroup">
+                                            <div class="frmBox">
+                                                <label for="phoneNum" class="blind">전화번호</label><!-- 20251128 수정 -->
+                                                <input type="tel" class="iptText lg" id="phoneNum" placeholder="전화번호를 숫자만 입력해 주세요." name="phoneNum">
+                                                <button class="btnReset">텍스트 지우기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="btmBtn">
+                                <button type="button" class="btn dkLine lg">다음에 등록</button>
+                                <button type="button" class="btn dkBlue lg">등록완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 20250922 삭제-->
+        <!-- <div class="memberFooter">
+            <div class="footerArea">
+                <ul class="btmMenuList">
+                    <li class="btmItem"><a href="javascript:void(0)" class="link">여객운송약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">누리집 이용약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">개인정보보처리방침</a></li>
+                </ul>
+                <div class="copyright">
+                    Copyright (C) 2025 by AIRPORT RAILROAD Co., Ltd. All rights reserved.
+                </div>
+            </div>
+        </div> -->
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

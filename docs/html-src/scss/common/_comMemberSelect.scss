@@ -1,0 +1,168 @@
+//예약방식
+.comMemberSelect {
+    width:100%; position:relative;
+
+    .memberList {
+        display:flex; flex-flow:row nowrap; align-items: stretch; justify-content: flex-start; gap:20px;
+
+        @include media ('mobile') {
+            gap:12px;
+        }
+
+        li {
+            width:100%; display: flex;
+
+            .mbBox {
+                display:block; width:100%; position:relative; border:1px solid var(--border-color-G300); border-radius:12px; padding: 40px 0; cursor:pointer; display: flex; align-items: center;
+
+                &.member {
+                    &::before {
+                        content:''; position:absolute; top: 40px; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/common/images/common/ic_120_box_025.png)0 0 no-repeat;  background-size:contain;
+
+                        @include media ('mobile') {
+                            width:100px; height:100px;
+                        }
+                    }                    
+                }
+
+                &.noMember {
+                    &::before {
+                        content:''; position:absolute; top:40px; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/common/images/common/ic_120_box_026.png)0 0 no-repeat; background-size:contain;
+                        
+                        @include media ('mobile') {
+                            width:100px; height:100px;
+                        }
+                    }
+                }
+
+                .memberTxt {
+                    display:block; width:100%; text-align:center; font-size:rem(20px); font-weight:700; line-height:160%; color:var(--text-color-G900); padding-top:140px;
+
+                    @include media ('mobile') {
+                        padding-top:120px; font-size:rem(18px);
+                    }                    
+                }
+
+                &:hover {
+                    border:1px solid var(--color-primary-blue-500);
+                }
+
+                // label {
+                //     display:block; width:100%; position:relative; border:1px solid var(--border-color-G300); border-radius:12px; padding: 40px 0; cursor:pointer;
+
+                //     span {
+                //         position:relative; display:block; width:100%; text-align:center; font-size:rem(20px); font-weight:700; line-height:160%; color:var(--text-color-G900); padding-top:140px;
+                        
+                //         @include media ('mobile') {
+                //             padding-top:120px; font-size:rem(18px);
+                //         }
+                //     }
+
+                //     &:hover {
+                //         border:1px solid var(--color-primary-blue-500);
+                //     }
+                // }
+
+                // input {
+                //     position:absolute; top:0; left:0; width:1px; height:1px;
+                // }
+
+                &.icon001 {
+                    label {
+                        span {
+                            &::before {
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/common/images/common/ic_120_box_025.png)0 0 no-repeat;  background-size:contain;
+
+                                @include media ('mobile') {
+                                    width:100px; height:100px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.icon002 {
+                    label {
+                        span {
+                            &::before {
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/common/images/common/ic_120_box_026.png)0 0 no-repeat; background-size:contain;
+                                
+                                @include media ('mobile') {
+                                    width:100px; height:100px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.icon003 {
+                    label {
+                        span {
+                            &::before {
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/common/images/common/ic_120_box_027.png)0 0 no-repeat; background-size:contain;
+                                
+                                @include media ('mobile') {
+                                    width:100px; height:100px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.icon004 {
+                    label {
+                        span {
+                            &::before {
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/common/images/common/ic_120_box_028.png)0 0 no-repeat; background-size:contain;
+                                
+                                @include media ('mobile') {
+                                    width:100px; height:100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mbMsg {
+        width:100%; position:relative; margin-top:60px; font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900); text-align:center;
+
+        @include media ('mobile') {
+            margin-top:40px; font-size:rem(17px);
+        }
+    }
+
+    .mbMenu {
+        width:100%; position:relative; margin-top:20px; 
+        display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:24px;
+        @include media ('mobile') {
+            gap:16px;
+        }
+
+        li {
+            a {
+                position:relative; display:block; width:max-content; font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G700); text-decoration: underline; text-underline-position: under;
+                @include media ('mobile') {
+                    font-size:rem(15px);
+                }
+
+                &::after {
+                    content:''; position:absolute; top:50%; right:-12px; width:1px; height:10px; background:var(--border-color-G400); transform:translateY(-50%);
+                    @include media ('mobile') {
+                        right:-8px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                a {
+                    &::after {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <title>Board List</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comGroupTop.scss
+        scss/common/_comBoardList.scss
+        scss/common/_comPaging.scss
+        scss/form/_frmGroup.scss
+        scss/form/_frmBox.scss
+        scss/form/_iptSlt.scss
+        scss/form/_frmSearch.scss
+        scss/form/_iptText.scss
+    -->
+    <div class="comGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div>
+        </div>
+        <div class="alignR">
+            <ul class="opList">
+                <li class="item">
+                    <div class="frmGroup">
+                        <div class="frmBox">
+                            <select class="iptSlt" title="검색 분류">
+                                <option value="">전체</option>
+                                <option value="">제목</option>
+                                <option value="">내용</option>
+                                <option value="">제목 + 내용</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="frmGroup">
+                        <div class="frmSearch">
+                            <input type="text" class="iptText" placeholder="검색어를 입력해주세요." title="검색어 입력">
+                            <button class="btnSearch">검색</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="comBoardList">
+        <table>
+            <caption>게시판 테이블 표</caption>
+            <colgroup>
+                <col style="width:9%;">
+                <col>
+                <col style="width:11.7%;">
+                <col style="width:11.7%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="bdType"><span class="listType">10</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">2025년 공항철도 여름철도학교 지원자 모집 에어부산 인천국제공항제2여객터미널 이전 안내 2025년 공항철도 여름철도학교 지원자 모집 에어부산 인천국제공항제2여객터미널 이전 안내</a>
+                                <!-- <span class="num">[2]</span>
+                                <span class="icons">
+                                    <span class="icon new">새로운 글</span>
+                                    <span class="icon file">첨부파일</span>
+                                    <span class="icon secret">비밀글</span>
+                                </span> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.09.02</td>
+                    <td class="view">12334</td>             
+                </tr>
+                <tr>
+                    <th class="bdType"><span class="listType">9</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">에어부산 인천국제공항제2여객터미널 이전 안내</a>
+                                <!-- <span class="num">[2]</span> -->
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.09.01</td>
+                    <td class="view">12334</td>               
+                </tr>      
+                <tr>
+                    <th class="bdType"><span class="listType">8</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">2025년 공항철도 하반기 신입사원 채용 공고</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.29</td>
+                    <td class="view">12334</td>               
+                </tr>     
+                <tr>
+                    <th class="bdType"><span class="listType">7</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">독립구간 정기권 운영 종료 알림</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.27</td>
+                    <td class="view">12334</td>               
+                </tr>     
+                <tr>
+                    <th class="bdType"><span class="listType">6</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">공항철도 운임 조정 안내</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.25</td>
+                    <td class="view">12334</td>               
+                </tr>     
+                <tr>
+                    <th class="bdType"><span class="listType">5</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">제 21대 대통령선거 임시공휴일 평일 열차 시각표 적용 알림</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.24</td>
+                    <td class="view">12334</td>               
+                </tr>     
+                <tr>
+                    <th class="bdType"><span class="listType">4</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">[훈련상황] 공항철도 일부구간 열차운행 중단 안내</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.23</td>
+                    <td class="view">12334</td>               
+                </tr>     
+                <tr>
+                    <th class="bdType"><span class="listType">3</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">공항철도, 2025년 재난대응 안전한국훈련 실시(5.21.(수))</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.22</td>
+                    <td class="view">1</td>               
+                </tr> 
+                <tr>
+                    <th class="bdType"><span class="listType">2</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">공항철도 역사투어 참가자 모집(4/23~30)</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.22</td>
+                    <td class="view">12</td>               
+                </tr>
+                <tr>
+                    <th class="bdType"><span class="listType">1</span></th>
+                    <td class="bdTitle">
+                        <div class="link">
+                            <div class="title">
+                                <a href="javascript:void(0)">직통열차 소소(笑疏)한 이벤트!</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="date">25.08.22</td>
+                    <td class="view">123</td>               
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 페이징 -->
+    <div class="comPaging forPc"> <!--for pc verstion-->
+        <a class="start" href="javascript:void(0)">첫페이지로 이동</a>
+        <a class="prev" href="javascript:void(0)">이전 페이지로 이동</a>
+        <ul class="numList">
+            <li><a href="javascript:void(0)">1</a></li>
+            <li class="on"><a href="javascript:void(0)">2</a></li>
+            <li><a href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+            <li><a href="javascript:void(0)">6</a></li>
+            <li><a href="javascript:void(0)">7</a></li>
+            <li><a href="javascript:void(0)">8</a></li>
+            <li><a href="javascript:void(0)">9</a></li>
+            <li><a href="javascript:void(0)">10</a></li>
+        </ul>
+        <a class="next" href="javascript:void(0)">다음 페이지로 이동</a>
+        <a class="end" href="javascript:void(0)">마지막 페이지로 이동</a>
+    </div>
+
+    <div class="comPaging forMo"> <!--for mobile verstion-->
+        <a class="start" href="javascript:void(0)">첫페이지로 이동</a>
+        <a class="prev" href="javascript:void(0)">이전 페이지로 이동</a>
+        <ul class="numList">
+            <li><a href="javascript:void(0)">1</a></li>
+            <li class="on"><a href="javascript:void(0)">2</a></li>
+            <li><a href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+        </ul>
+        <a class="next" href="javascript:void(0)">다음 페이지로 이동</a>
+        <a class="end" href="javascript:void(0)">마지막 페이지로 이동</a>
+    </div>
+
+</body>
+</html>

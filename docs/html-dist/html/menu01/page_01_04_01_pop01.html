@@ -1,0 +1,148 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">영수증 조회</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comReceipt">
+                            <div class="receiptBox">
+                                <p class="logoImg"><img src="/common/images/common/logo_160_arex.svg" alt="arex 로고"></p>
+                                <p class="txt">영수증 <em>(반환)</em></p>
+                            </div>
+                            <div class="receiptBox">
+                                <p class="num">A1035</p>
+                                <p class="info">서울역(10:30) → 인천공항2터미널(11:10) <span class="seat">(3석)</span></p>
+                            </div>
+                        </div>
+                        <div class="comTableForm">
+                            <table class="formTable">
+                                <caption>영수증 조회 표(승인번호, 승인일시, 카드사, 카드번호, 할부개월, 결제, 수수료, 반환금액, 영수증 발행으로 구성)</caption>
+                                <!-- 20251217 수정 -->
+                                <colgroup>
+                                    <col style="width:31.45%;">
+                                    <col>
+                                </colgroup>
+                                <!-- 20251217 수정 -->
+                                <tbody>
+                                    <!-- thead 있을때 -->
+                                    <tr>
+                                        <th class="left">승인번호</th>
+                                        <td class="left">탑승일 기준 만 6세 ~ 만 12세</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">승인일시</th>
+                                        <td class="left">YYYY-MM-DD 00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">카드사</th>
+                                        <td class="left"><span class="card">비씨</span></td>
+                                    </tr>      
+                                    <tr>
+                                        <th class="left">카드번호</th>
+                                        <td class="left">0000-****-****-0000</td>
+                                    </tr> 
+                                    <tr>
+                                        <th class="left">할부개월</th>
+                                        <td class="left">일시불</td>
+                                    </tr> 
+                                    <tr>
+                                        <th class="left">결제</th>
+                                        <td class="left">10,000</td>
+                                    </tr> 
+                                    <tr>
+                                        <th class="left">수수료</th>
+                                        <td class="left">0</td>
+                                    </tr> 
+                                    <tr>
+                                        <th class="left">반환금액</th>
+                                        <td class="left">12,500</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">영수증 발행</th>
+                                        <td class="left">YYYY-MM-DD 00:00</td>
+                                    </tr>                                                                                 
+                                </tbody>
+                            </table>                                                
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">인쇄</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

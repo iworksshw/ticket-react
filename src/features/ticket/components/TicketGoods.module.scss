@@ -1,0 +1,169 @@
+@use "@/styles/etc/mixin" as *;
+
+//(티켓) 상품
+.comTicketGoods {
+    width: 100%;
+    .goodsList {
+        width: 100%; border-top: 2px solid var(--border-color-G900, #111);
+        .item {
+            width: 100%; padding: 24px 20px; border-bottom: 1px solid var(--border-color-G300, #D6DBE1);
+            &:last-child {border-bottom: 1px dashed var(--border-color-G400, #B9C1C9);}
+            &:has(.noMsg) {border-bottom: 0;}
+            .info {
+                width: 100%; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;
+                &:first-child {margin-top: 0;}
+                .tit {
+                    width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; /* display: flex; justify-content: flex-start; */
+                    .colorBlue {color: var(--text-color-B500, #107AF2);}
+                }
+                .desc {
+                    display: flex; justify-content: flex-end;
+                    .priceBox {
+                        width: max-content; margin-left: 40px; display: flex; gap: 12px;
+                        .oldPrice { color: var(--text-color-G500, #808892); font-size: 1rem; font-style: normal; font-weight: 400; line-height: 160%; text-decoration-line: line-through;}
+                        .price {
+                            .bold { 
+                                color: #000; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                            }
+                            .won {
+                                color: var(--text-color-G600, #565B64); font-size: rem(12px); font-style: normal; font-weight: 400; line-height: 160%;
+                            }
+                        }
+                    }
+                    .goodsNum {
+                        width: max-content; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+                    }
+                }
+                .btnDel {
+                    width: 24px; height: 24px; margin-left: 8px; font-size: 0; background: url(/common/images/common/ic_24_trash.svg) center no-repeat; display: inline-block; vertical-align: text-bottom;
+                }
+            }
+            .noMsg {
+                padding: 26px 0; color: var(--text-color-G700, #3A3F49); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+            }
+        }
+        
+        .cancelPrice {
+            width: max-content; justify-items: flex-end;
+            .priceLine {
+                width: max-content; margin-top: 8px;
+                &:first-child {margin-top: 0;}
+                .ccInfo {
+                    width: max-content; display: inline-block;
+                    .ccTit {
+                        color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: inline-block;
+                    }
+                    .ccDesc {
+                        margin-left: 8px; color: var(--text-color-B500, #107AF2); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: inline-block;
+                    }
+                    &.allPrice {
+                        .ccDesc {
+                            color: var(--text-color-G900, #111);
+                        }
+                    }
+                }
+            }
+        }
+        &:not(:has( + .totalPrice)) {
+            .item {
+                border-bottom: 1px solid var(--border-color-G300, #D6DBE1);
+                .info {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+    .totalPrice {
+        width: 100%; padding: 24px 20px; border-bottom: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G100, #F8F9FC);
+        .info {
+            width: 100%; display: flex; justify-content: space-between;
+            .tit {
+                // width: 100%; color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-start;
+                width: 100%; display: flex; justify-content: flex-start;
+                span {color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;}
+            }
+            .desc {
+                // color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; display: flex; justify-content: flex-end; align-items: center; white-space: nowrap;
+                width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; display: flex; justify-content: flex-end; white-space: nowrap; 
+                text-align: right; align-items: center; gap: 12px;
+                span {color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;}
+                .oldPrice { color: var(--text-color-G500, #808892); font-size: 1rem; font-style: normal; font-weight: 400; line-height: 160%; text-decoration-line: line-through;}
+                .price {
+                    color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+                    .won {color: var(--text-color-G600, #565B64); font-size: rem(14px); font-style: normal; font-weight: 400; line-height: 160%;}
+                }
+                .colorBlue {color: var(--text-color-B500, #107AF2);}
+            }
+        }
+    }
+    @include media('mobile') {
+        .goodsList {
+            .item {
+                padding: 20px 8px;
+                .info {
+                    flex-wrap: wrap; gap: 8px;
+                    &:first-child {margin-top: 0;}
+                    .tit {
+                        font-size: rem(15px);
+                    }
+                    .desc {
+                        width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 8px;
+
+                        .priceBox {
+                            width: 100%; display: flex; justify-content: flex-end; align-items: center; gap: 8px;
+                            .oldPrice {font-size: rem(14px);}
+                            .price {
+                                .bold {font-size: rem(15px);}
+                            }
+                        }
+                        .goodsNum {font-size: rem(17px);}
+                    }
+                    .btnDel {
+                        width: 20px; height: 20px; background: url(/common/images/common/ic_24_trash.svg) center / 20px no-repeat;
+                    }
+                }
+                .noMsg {
+                    padding: 20px 0; font-size: rem(17px);
+                }
+            }
+            .cancelPrice {
+                width: 100%; margin-top: 12px;
+                .priceLine {
+                    width: 100%; margin-top: 0;
+                    .ccInfo {
+                        width: 100%; display: flex; justify-content: space-between;
+                        .ccTit {
+                            font-size: rem(15px);
+                        }
+                        .ccDesc {
+                            font-size: rem(15px);
+                        }
+                    }
+                }
+            }
+        }
+        
+        .totalPrice {
+            padding: 20px 8px;
+            .info {
+                .tit {
+                    span {
+                        font-size: rem(14px);
+
+                        @include media('mobile') {
+                            font-size: rem(15px);
+                        }
+                    }
+                }
+                .desc {
+                    gap: 8px;
+                    .oldPrice { font-size: rem(14px);}
+                    .price {
+                        .bold {font-size: rem(15px);}
+                        .won {font-size: rem(12px);}
+                    }
+                }
+            }
+        }
+    }
+}

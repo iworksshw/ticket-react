@@ -1,0 +1,238 @@
+@use 'index' as *;
+
+//텍스트 : 느낌표 아이콘
+.pubCaption {
+    margin-top: 12px; padding-left: 28px; color: var(--text-color-B500, #107AF2); font-size: rem(16px); font-style: normal; font-weight: 600; line-height: 160%; display: block; position: relative;
+    &::before {content:""; width: 24px; height: 24px; background: url(/images/common/ic_24_caption.svg) center no-repeat; display: block; position: absolute; left: 0; top: -1px;}
+    & + .pubCaption {margin-top: 8px;}
+    &.gray {
+        color: var(--text-color-G700, #3A3F49);
+        &::before {background: url(/images/common/ic_24_caption_gray.svg) center no-repeat;}
+    }
+}
+
+//체크/라디오 폼 가운데 정렬
+.pubCenterChk {
+    margin-top: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+    .frmGroup .frmChoBox {
+        width: 100%; flex-wrap: wrap; align-self: flex-start;
+
+        span.text {
+            width: 100%; padding-left: 32px; font-size: 0.875rem; font-style: normal; font-weight: 500; line-height: 160%;
+        }
+    }
+}
+
+//좌측 : 텍스트, 우측 : - 숫자 +
+.pubIncDec {
+    width: max-content; display: flex; align-items: center;
+    .btnNum {
+        width: 32px; height: 32px; font-size: 0; border-radius: 50%; border: 1px solid var(--border-color-G400, #B9C1C9); background: #fff;
+        &:disabled {opacity: 0.3; cursor: auto;}
+        &.minus {
+            background: url(/images/common/ic_24_minus.svg) center no-repeat;
+            &:disabled {background: var(--bg-color-G400) url(/images/common/ic_24_minus.svg) center no-repeat;}
+        }
+        &.plus {
+            background: url(/images/common/ic_24_plus.svg) center no-repeat;
+            &:disabled {background: var(--bg-color-G400) url(/images/common/ic_24_plus.svg) center no-repeat;}
+        }
+    }
+    .textNum {
+        min-width: 24px; margin: 0 16px; color: var(--text-color-G900, #111); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+
+        @include media ('mobile') {
+            font-size: rem(17px);
+        }
+    }
+}
+
+//기본 텍스트 리스트
+.pubTextList {
+    margin-top: 12px;
+    .textListItem {
+        padding-left: 21px; margin-top: 8px; position: relative;
+        &:first-child {margin-top: 0;}
+        &::before{
+            content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--color-primary-blue-400); display: block; position: absolute; left: 8px; top: 12px;
+        } 
+    }
+}
+
+//텍스트 : 당구장
+.pubRefer {
+    margin-top: 12px; color: var(--text-color-G500); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: block; position:relative; font-weight:400; line-height:160%;
+
+    & + .pubRefer {margin-top: 0;}
+    &.bold {
+        color: var(--color-primary-blue-900, #0A4991); font-size:rem(16px); font-weight: 600;
+        @include media ('mobile') {
+            font-size:rem(15px);
+        }
+    }
+    &.dark {
+        color: var(--text-color-G700, #3A3F49); font-size:rem(16px); font-weight: 400;
+        @include media ('mobile') {
+            font-size:rem(15px);
+        }
+    }
+    em {
+        font-weight: 600;
+    }
+
+    &.sm {
+        padding-left:21px; font-size:rem(16px); 
+        &::before {
+            content:'※'; position:absolute; top:0; left:0; font-size:rem(16px); font-weight:400; line-height:160%;
+            @include media ('mobile') {
+                font-size:rem(15px);
+            }
+        }
+        @include media ('mobile') {
+            font-size:rem(15px);
+        }
+    }
+}
+
+//기본 텍스트
+.pubText {
+    margin-top: 12px; color: var(--text-color-G800); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: block; 
+    &:is(em) {
+        font-weight: 600;
+    }
+    &:is(b) {
+        font-weight: 600;
+    }
+    @include media('mobile') {
+        font-size: rem(17px);
+    }
+}
+
+//안내 텍스트
+.pubInfoText {
+    margin-top:8px; font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G600); display:block;
+    &:is(em) {
+        font-weight: 600;
+    }
+    &:is(b) {
+        font-weight: 600;
+    }
+    @include media('mobile') {
+        font-size: rem(15px);
+    }
+}
+
+//H2 타이틀
+.pubTitH2 {
+    width: 100%; margin-top: 60px; display: flex; justify-content: space-between; align-items: center;
+    h2 {
+        color: var(--text-color-G900); font-size: rem(30px); font-style: normal; font-weight: 600; line-height: 150%;
+    }
+
+
+    @include media('mobile') {
+         margin-top: 40px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px;
+        h2 {
+            font-size: rem(24px);
+        }
+    }
+}
+
+//H3 타이틀
+.pubTitH3 {
+     position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; margin: 40px 0 20px;
+    &:first-child {margin-top: 0;}
+
+    @include media ('mobile') {
+        align-items: flex-end; margin:40px 0 16px; flex-wrap: wrap;
+    }
+    h3 {
+        font-size:rem(24px); font-weight:600; line-height:150%; color:var(--text-color-G900);
+        .pubCaption {margin-top: 0;}
+        @include media ('mobile') {
+            font-size:rem(18px); font-weight:700;
+        }
+    }
+
+    .alignR {
+        span {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            @include media ('mobile') {
+                font-size:rem(15px); font-weight:500;
+            }
+        }
+        .change {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            min-height: 24px; background: url(/images/common/ic_24_change.svg) left center no-repeat;
+        }
+
+        .train {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            min-height: 24px; background: url(/images/common/ic_24_train.svg) left center no-repeat;
+        }
+
+        .request {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            min-height: 24px; background: url(/images/common/ic_24_write.svg) left center no-repeat;
+        }
+    }
+
+    em {
+        color:var(--text-color-B500); font-weight:600;
+    }
+    & + .comTitH4 {
+        margin-top: 0;
+    }
+    & + .cptMeeting {
+        margin-top: 40px;
+    }
+    & + form:has(.cptMeeting) {
+        margin-top: 40px;
+    }
+}
+
+//H4 타이틀
+.pubTitH4 {
+    width: 100%; margin-top: 32px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;
+    &:first-child {margin-top: 0;}
+    
+    &.box {
+        border-radius: 8px; background: var(--bg-color-B100); padding: 20px 28px; margin: 40px 0 28px 0;
+        h4 {
+            padding-left: 0;
+            &::before {display: none;}
+        }
+    }
+    h4 {
+        padding-left: 24px; color: var(--text-color-G900); font-size: rem(20px); font-style: normal; font-weight: 700; line-height: 160%; position: relative;
+        &::before {content:""; width: 16px; height: 16px; background: url(/images/common/ic_16_tit_h4.svg) center no-repeat; display: block; position: absolute; left: 0; top: 8px;}
+    }
+
+    @include media('mobile') {
+        display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px;
+        h4 {
+            padding-left: 22px; font-size: rem(18px);
+            &::before {top: 6px;}
+        }
+    }
+    
+    &:has(.alignR) {
+        display: flex; align-items: center; justify-content: space-between;
+        .alignR {
+            span {
+                font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+                @include media ('mobile') {
+                    font-size:rem(15px); font-weight:500;
+                }
+            }
+            .change {
+                font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+                min-height: 24px; background: url(/images/common/ic_24_change.svg) left center no-repeat;
+            }
+        }
+    }
+}
+
+.varColorBlue {color: var(--color-primary-blue-500) !important;}
+.varColorRed {color: var(--color-danger-500) !important;}

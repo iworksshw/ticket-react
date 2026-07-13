@@ -1,0 +1,83 @@
+@use "@/styles/etc/mixin" as *;
+
+//회색정보상자
+.comGrayBox {
+    width: 100%; margin-top: 32px; padding: 40px; border-radius: 12px; background: var(--bg-color-G100, #F8F9FC);
+    .boxGroup {
+        width: 100%;
+        .boxTitle {
+            width: 100%;
+            em {
+                width: 100%; padding-left: 42px; font-size: rem(22px); font-weight: 600; line-height: 150%; color: var(--color-primary-blue-900); position: relative; 
+                &::before {
+                    content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 30px; height: 30px; background: url(/images/common/ic_30_question.svg) 0 0 no-repeat;
+                }
+            }
+            span {
+                &::before {content:""; width: 1px; height: 16px; background: var(--border-color-G400, #B9C1C9); display: block; position: absolute; left: 16px; top: 6px;}
+                padding-left: 32px; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; display: inline-block; position: relative;
+            }
+        }
+        .boxCont {
+            margin-top: 20px; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+
+            em {
+                font-weight: 600;
+            }
+
+            @include media('mobile') {
+                font-size: rem(17px);
+            }
+
+            .alignBox {
+                display: flex; justify-content: space-between;
+                @include media('mobile') {
+                    flex-direction: column; gap: 24px;
+                }
+            }
+
+            .imgBox {
+                margin-top: 20px;
+                > ul {
+                    display: flex; flex-flow: column; width: 100%; gap: 24px;
+                    > li {
+                        border-radius: 20px; overflow: hidden;
+                        > img {
+                            display: block; width: 100%; max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include media('mobile') {
+        margin-top: 24px; padding: 32px 24px;
+        .boxGroup {
+            .boxTitle {
+                em {
+                    font-size: rem(20px); display: block;
+                }
+                span {
+                    &::before {display: none;}
+                    margin-top: 12px; padding-left: 0; font-size: rem(17px); display: block;
+                }
+            }
+            .boxCont {
+                margin-top: 20px; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                @include media('mobile') {
+                    font-size: rem(17px);
+                }
+            }
+        }
+    }
+
+    &:has(+ .comMypage) {
+        margin-bottom: 60px;
+
+        @include media('mobile') {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+

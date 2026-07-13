@@ -1,0 +1,418 @@
+@use "@/styles/etc/mixin" as *;
+
+//승차권 상세
+.comTicketView {
+    width:100%; position:relative;
+    @media print {
+        width:1000px !important;
+    }
+
+    .ticketCov {
+        width:100%;
+
+        .ticketWrap {
+            width:100%; display:flex; flex-flow: column; gap:60px;
+
+            @include media ('pcs') {
+                flex-flow: unset; gap:0;
+            }
+
+            .ticBox {
+
+                & + .ticBox {
+                    .pageCnt {
+                        padding-top:40px; border-top:1px solid var(--border-color-G300);
+                        @include media ('pcs') {
+                            padding:0; border:none;
+                        }
+                    }
+                }
+
+                .pageCnt {
+                    font-size:rem(30px); font-weight:600; line-height:150%; color:var(--text-color-G900); margin-bottom:16px; text-align:center;
+
+                    @include media ('pcs') {
+                        display:none;
+                    }
+                }
+
+                .ticPage {
+                    width:740px; border:1px solid var(--border-color-G400); border-radius:20px; background:#fff; margin:0 auto; padding:30px 24px;
+                    display:flex; flex-flow: column; gap:20px;
+
+                    @include media ('pcs') {
+                        width:100%; border:none; background: var(--bg-color-G200); padding:24px 20px; gap:0; position:relative;
+
+                        &::before {
+                            content:''; position:absolute; top:138px; left:-10px; width:20px; height:20px; background:#fff; border-radius:50%;
+                        }
+
+                        &::after {
+                            content:''; position:absolute; top:138px; right:-10px; width:20px; height:20px; background:#fff; border-radius:50%;
+                        }
+                    }
+
+                    .ticHead {
+                        display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+
+                        .dateInfo {
+                            font-size:rem(16px); font-weight:400; line-height:1; color:var(--text-color-G900);
+                            span {
+                                display: block; margin-top:10px; font-size:rem(18px); font-weight:600; line-height:1; color:var(--text-color-G900);
+                            }
+                        }
+
+                        .title {
+                            font-size:rem(28px); font-weight:600; line-height:1; color:var(--text-color-G900); text-align:center; margin-left:-50px;
+                            span {
+                                display:block; font-size:rem(18px); font-weight:600; line-height:1; margin-top:16px; color:var(--text-color-G900);
+                            }
+                        }
+
+                        .logo {
+                            img {
+                                width:120px;
+                            }
+                        }
+
+                        @include media ('pcs') {
+                            display:none;
+                        }
+                    }
+
+                    .ticBody {
+                        padding:24px 20px; width:100%; height:230px; overflow:hidden; background:url(/images/common/ticketBg.png)0 0 no-repeat; background-size:contain;
+                        display:flex; flex-flow: column; gap:35px;
+
+                        @include media ('pcs') {
+                            background:none; height:auto; gap:0; padding:0;
+                        }
+
+                        .infoTop {
+                            display:flex; flex-flow: row nowrap; align-items: center; justify-content:space-between;
+
+                            @include media ('pcs') {
+                                flex-flow:column;
+                            }
+
+                            .trainInfo {
+                                display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:20px;
+
+                                @include media ('pcs') {
+                                    flex-flow:column; align-items: flex-start; justify-content: flex-start; width:100%; gap:0;
+                                }
+
+                                div {
+
+                                    &.moInfo {
+                                        display:none;
+
+                                        @include media ('pcs') {
+                                            display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:16px;
+
+                                            span {
+                                                font-size:rem(14px); font-weight:600; line-height:160%; color:var(--text-color-B500); position:relative;
+
+                                                &:first-of-type {
+                                                    &::after {
+                                                        content:''; position:absolute; top:50%; right:-8px; width:1px; height:10px; background:var(--border-color-G400); transform:translateY(-50%);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    > span {
+
+                                        &.forMo {
+                                            display:flex; flex-flow: column;
+
+                                            @include media ('pcs') {
+                                                order:1;
+                                            }
+
+                                            .stn {
+                                                font-size:rem(24px); font-weight:600; line-height:1; color:var(--text-color-G900);
+
+                                                @include media ('pcs') {
+                                                    font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900);
+                                                }
+                                            }
+
+                                            .stnEng {
+                                                font-size:rem(18px); font-weight:400; line-height:1; color:var(--text-color-G500);
+                                                width:168px; height:33px; word-break:break-word; margin:10px auto 12px;
+
+                                                @include media ('pcs') {
+                                                    margin:0; width:auto; height:auto;
+                                                    font-size:rem(12px);
+                                                }
+                                            }
+                                        }
+
+                                        display:block; text-align:center;
+
+                                        @include media ('pcs') {
+                                            text-align:left;
+                                        }
+
+                                        &.time {
+                                            font-size:rem(30px); font-weight:600; line-height:1; color:var(--text-color-G900);
+                                            @include media ('pcs') {
+                                                order:0;
+                                                font-size:rem(17px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+                                            }
+                                        }
+                                    }
+
+                                    &.depart {
+                                        display:flex; flex-flow:column; width:200px;
+
+                                        @include media ('pcs') {
+                                            width:100%; flex-flow:row nowrap; align-items: flex-start; justify-content: flex-start;
+                                            padding-left:18px; gap:12px; position:relative; margin-top:12px;
+
+                                            &::before {
+                                                content:''; position:absolute; top:11px; left:0; width:6px; height:6px; background:#107af2; border-radius:50%; z-index:3;
+                                            }
+
+                                            &::after {
+                                                content: ""; width: 2px; height: calc(100% + 8px); border-left: 2px dotted var(--border-color-G400, #B9C1C9); position: absolute; left: 2px; top: 14px; z-index: 1;
+                                            }
+                                        }
+                                    }
+
+                                    &.destination {
+                                        display:flex; flex-flow:column; width:200px;
+
+                                        @include media ('pcs') {
+                                            width:100%; flex-flow:row nowrap; align-items: flex-start; justify-content: flex-start;
+                                            padding-left:18px; gap:12px; position:relative; margin-top:8px;
+
+                                            &::before {
+                                                content:''; position:absolute; top:11px; left:0; width:6px; height:6px; background:#107af2; border-radius:50%; z-index:3;
+                                            }
+                                        }
+                                    }
+
+                                    &.arrow {
+                                        width:40px; height:40px; background:url(/images/common/ic_40_ticketArrow.svg)50% 50% no-repeat;
+
+                                        @include media ('pcs') {
+                                            display:none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .qrBox {
+                                display:flex; flex-flow: column; align-items: end;
+
+                                @include media ('pcs') {
+                                    align-items: center; width:100%; background:#fff; padding :40px 0; margin-top:24px; border-radius:12px 12px 0 0;
+                                }
+                                .qrArea {
+                                    position:relative; width:82px; height:82px;
+
+                                    @include media ('pcs') {
+                                        width:140px; height:140px;
+                                    }
+
+                                    canvas {
+                                        width:100%; height:100%;
+                                    }
+
+                                    img {
+                                        width:100%; height:100%;
+                                    }
+
+                                    .printed {
+                                        position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.5); top:0; left:0;
+
+                                        span {
+                                            position:absolute; top:50%; left:50%; width:100%; transform:translate(-50%,-50%); height:36px; line-height:36px; background:var(--color-primary-blue-500); color:#fff; font-size:rem(18px); font-weight:600; text-align:center;
+                                        }
+                                    }
+                                }
+
+                                .qrNum {
+                                    display:block; font-size:rem(12px); font-weight:400; line-height:160%; color:var(--text-color-G900); margin-top:4px;
+
+                                    @include media ('pcs') {
+                                        font-size:rem(12px); margin-top:8px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .infoBot {
+                            display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+
+                            @include media ('pcs') {
+                                flex-flow:column; justify-content: center; align-items: center; background:var(--bg-color-DB500); padding:8px 12px 12px 12px; border-radius: 0 0 12px 12px; gap:8px;
+                            }
+
+                            p {
+                                &.carNSeat {
+                                    font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G900); display: flex;
+                                    @include media ('pcs') {
+                                        font-size:rem(12px);
+                                    }
+                                    .hglt {
+                                        font-weight:600; font-size:rem(22px);
+
+                                        @include media ('pcs') {
+                                            font-size:rem(17px);
+                                        }
+                                    }
+
+                                    .slash {
+                                        position:relative; display:inline-block; margin-right:20px;
+
+                                        &::after {
+                                            content:'/'; position:absolute; top:50%; right:-13px; transform:translateY(-50%);
+
+                                            @include media ('pcs') {
+                                                content:''; width:1px; height:10px; background:var(--border-color-G400);
+                                            }
+                                        }
+                                    }
+
+                                    .space {
+                                        display:inline-block; margin-left:8px;
+                                    }
+                                }
+
+                                &.cate {
+                                    font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G900);
+                                    @include media ('pcs') {
+                                        font-size:rem(12px); display: flex;
+                                    }
+                                    span {
+                                        display:block;
+
+                                        @include media ('pcs') {
+                                            display:inline-block; position:relative;
+
+                                            &.ctSlash {
+                                                margin-right:20px;
+
+                                                &::after {
+                                                    content:''; width:1px; height:10px; background:var(--border-color-G400); position:absolute; top:50%; right:-13px; transform:translateY(-50%);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.train {
+                                    font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G900); margin-top:-25px; display: flex;
+
+                                    .carNum {
+                                        display:inline-block; margin-left:8px; font-size:rem(22px); font-weight:600; line-height:160%;
+                                    }
+
+                                    @include media ('pcs') {
+                                        display:none;
+                                    }
+                                }
+
+                                @include media ('pcs') {
+                                    color:#fff !important;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .arrBox {
+                        display:none;
+                        position:relative; width:120px; margin:16px auto 24px; height:32px; border-radius:20px; background:rgba(58,63,73,0.7); padding: 4px 8px;
+
+                        a {
+                            width:24px; height:24px; position:absolute; top:50%; background:url(/images/common/ic_24_ticBtn.svg)50% 50% no-repeat; z-index:3;
+
+                            &.prev {
+                                left:8px; transform:translateY(-50%);
+                            }
+
+                            &.next {
+                                right:8px; transform: translateY(-50%) rotate(180deg);
+                            }
+                        }
+
+                        :global(.swiper-pagination) {
+                            position:absolute; left:0; width:100%; top:50%; transform:translateY(-50%); text-align:center;
+                            height:32px; bottom:auto; font-size:rem(15px); font-weight:400; line-height:160%; color:#fff; z-index:2;
+
+                            :global(.swiper-pagination-current) {
+                                font-weight:600;
+                            }
+                        }
+
+                        @include media ('pcs') {
+                            display:block;
+                        }
+                    }
+
+                    .ticFoot {
+                        p {
+                            font-size:rem(18px); font-weight:400; line-height:150%; color:var(--text-color-G900); text-align:center; margin-bottom:34px;
+
+                            br {
+                                display:none;
+
+                                @include media ('pcs') {
+                                    display:block;
+                                }
+                            }
+
+                            span {
+                                @include media ('pcs') {
+                                    &:not(.eng) {
+                                        color:var(--text-color-B500); font-weight:600;
+                                    }
+                                }
+
+                                &.eng {
+                                    display:block;
+
+                                    @include media ('pcs') {
+                                        margin-top:8px; font-size:rem(12px);
+                                    }
+                                }
+                            }
+
+                            @include media ('pcs') {
+                                padding: 24px 0; border-top:1px dashed var(--text-color-G400); margin-bottom:0; font-size:rem(15px);
+                            }
+                        }
+
+                        .TransCardList {
+                            width:100%; padding:20px 12px 12px 12px; border-top:1px dashed var(--text-color-G900);
+
+                            ul {
+                                display:flex; flex-flow:column; gap:20px;
+
+                                li {
+                                    width:100%; line-height:1; font-size:rem(16px); font-weight:500; line-height:1; color:var(--text-color-G900);
+
+                                    @include media ('pcs') {
+                                        > span {
+                                            font-size:rem(15px);
+                                            color:var(--text-color-B500);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ticPrintInfo {
+                    width: 740px; margin: 0 auto; margin-top: 40px; padding-top: 40px; border-top: 1px dashed var(--border-color-G500);
+                    img {width: 100%;}
+                }
+            }
+        }
+    }
+}

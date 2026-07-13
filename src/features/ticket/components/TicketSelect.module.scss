@@ -1,0 +1,152 @@
+@use "@/styles/etc/mixin" as *;
+//열차 선택
+.comTicketSelect {
+    width:100%; position:relative;
+
+    .ticketGroup {
+        display:flex; flex-flow: column; gap:24px;
+
+        .ticketItem {
+            padding:40px 32px; width:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+            border: 1px solid var(--border-color-G300); border-radius:20px;
+
+            @include media ('tablet') {
+                flex-flow:column; gap:20px;
+            }
+
+            @include media ('mobile') {
+                padding:20px; align-items: flex-start; justify-content: flex-start; gap:0;
+            }
+
+            > div {
+                &.num {
+                    width:max-content;
+                    font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:8px;
+
+                    em {
+                        font-weight:600; color:var(--text-color-G900);
+                    }
+
+                    @include media ('mobile') {
+                        margin-bottom:12px;
+                    }
+                }
+
+                &.stationInfo {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px;
+                    @include media ('mobile') {
+                        gap:0; position:relative;
+                    }
+                    .station {
+                        width:260px;
+
+                        @include media ('mobile') {
+                            width:max-content;
+                        }
+
+                        span {
+                            display:block; text-align:center; width:100%;
+
+                            @include media ('mobile') {
+                                width:auto;
+                            }
+
+                            &.time {
+                                font-size:rem(24px); font-weight:600; line-height:160%; color:var(--text-color-G900); margin-bottom:4px;
+
+                                @include media ('mobile') {
+                                    position:relative; margin-right:12px; font-size:rem(20px); font-weight:600; line-height:150%; margin-bottom:0;
+
+                                    &::after {
+                                        content:''; position:absolute; top:50%; right:-42px; width:30px; height:24px; background:url(/images/common/ic_30_arrow.svg)50% 50% no-repeat; transform:translateY(-50%);
+                                    }
+                                }
+                            }
+
+                            &.name {
+                                font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+
+                                @include media ('mobile') {
+                                    display:none;
+                                }
+                            }
+                        }
+
+                        &:last-of-type {
+                            .time {
+                                @include media ('mobile') {
+                                    margin-left:42px;
+                                }
+
+                                &::after {
+                                    display:none;
+                                }
+                            }
+                        }
+                    }
+
+                    .allTime {
+                        width:100px; position:relative; text-align:center; padding-top:32px;
+                        font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-B500);
+
+                        @include media ('mobile') {
+                            padding-top:0; width:max-content; position:absolute; top:50%; right:-35px; transform:translateY(-50%);
+
+                            &::after {
+                                content:')';
+                            }
+                        }
+
+                        &::before {
+                            content:''; width:70px; height:10px; position:absolute; top:7px; left:50%; transform:translateX(-50%); background:url(/images/common/ic_70_arrow.svg)50% 50% no-repeat;
+
+                            @include media ('mobile') {
+                                content:'('; width:auto; height:auto; position:relative; top:auto; left:auto; transform:none; background:none;
+                            }
+                        }
+                    }
+                }
+
+                &.stationM {
+                    display:none;
+                    @include media ('mobile') {
+                        display:block; margin:8px 0 20px; font-size:rem(15px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+                    }
+                }
+            }
+
+            // .btn은 Button 컴포넌트(@/components/common/forms/Button.jsx)가 쓰는 전역 클래스라서
+            // 이 모듈 스코프 안에서도 :global()로 감싸야 실제 .btn 엘리먼트에 적용된다.
+            :global(.btn) {
+                padding:12px 0; width:120px; position:relative;
+
+                @include media ('mobile') {
+                    width:100%;
+                }
+
+                &:focus-visible {
+                    outline: 2px solid blue;
+                }
+            }
+
+            // inMsg("매진임박" 배지)는 이 컴포넌트에만 쓰이는 클래스라 굳이 :global이 필요 없다.
+            // .btn 내부에 있지만 모듈 클래스라서 .ticketItem 하위 자손 선택자로 충분히 적용된다.
+            .inMsg {
+                position:absolute; top:-18px; right:-12px; border-radius:10px 30px 30px 0; background:#107AF2; padding:2px 8px; font-size:rem(14px); font-weight:700; line-height:160%; color:#fff;
+            }
+
+            &:hover {
+                border:4px solid var(--color-primary-blue-200); padding:37px 29px;
+
+                @include media ('tablet') {
+                    border:1px solid var(--border-color-G300); padding:40px 32px;
+                }
+
+                @include media ('mobile') {
+                    border:1px solid var(--border-color-G300); padding:20px;
+                }
+            }
+        }
+    }
+}

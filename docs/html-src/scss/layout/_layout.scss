@@ -1,0 +1,181 @@
+
+//기본 레이아웃(가이드용)
+.g-wrap {
+    .lytLayout {
+        width: 100%; padding: 10px; font-size: 16px; border: 1px solid #999; border-radius: 5px; background: #ddd;
+        .layoutArea{
+            .layoutTop{
+                width: 100%; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #eee;
+            }
+            .layoutContainer{
+                width: 100%; display: flex; gap: 10px;
+                //좌메뉴가 없을 때
+                .layoutCont{
+                    width: 100%; height: 200px; margin-top: 10px; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #eee; align-content: center;
+                }
+
+                //좌메뉴가 있을 때
+                .layoutNav{
+                    width: 30%; height: 200px; margin-top: 10px; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #eee; align-content: center;
+                }
+                .layoutSubCont{
+                    width: 70%; height: 200px; margin-top: 10px; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #eee; align-content: center;
+
+                }
+            }
+            .layoutFooter{
+                width: 100%; margin-top: 10px; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #eee;
+            }
+        }
+    }
+}
+
+//기본 레이아웃
+.lytLayout {
+    width: 100%;
+    .layoutArea{
+        width: 100%;
+        .layoutTop{
+            width: 100%;
+        }
+        .layoutContainer{
+            width: 100%;
+
+            //좌메뉴가 없을 때
+            .layoutCont{
+                width: 100%;
+            }
+
+            //좌메뉴가 있을 때
+            .layoutNav{
+            }
+            .layoutSubCont{
+                width: 100%;
+                .layoutContArea {
+                    width: 100%; max-width: 1280px; padding: 0 40px; margin: 0 auto; position: relative;
+                    @include media('pcs'){
+                        padding: 0 20px;
+                    }
+                    @include media('mobile'){
+                        padding: 0 16px;
+                    }
+                }
+            }
+        }
+        .layoutFooter{
+            width: 100%; margin-top: 80px;
+            @include media('mobile') {margin-top: 60px;}
+        }
+    }
+}
+
+//통합회원 레이아웃
+.lytMember{
+    width: 100%;
+    .memberArea {
+        width: 100%;
+        .memberTop {
+            width: 100%; border-bottom: 1px solid var(--border-color-G300, #D6DBE1);
+            .topArea {
+                width: 100%; padding:20px 40px; display:flex; flex-flow: row nowrap; align-items: center ;justify-content: space-between;
+                .logoArea {
+                    position:relative;
+
+                    > a {
+                        display:block;
+                        
+                        > img {
+                            display:block; width:100%; max-width:100%;
+                        }
+                    }
+                }
+                .langArea {
+                    display: flex; align-items: center;
+                    .closeBtn {
+                        width: 32px; height: 32px; margin-left: 16px; background: url(/common/images/common/ic_32_join_close.svg) center no-repeat; vertical-align: middle; display: none;
+                    }
+                }
+            }
+        }
+        .memberContainer {
+            width: 100%; padding-top: 60px; padding-bottom: 100px;
+            .memberSubCont {
+                width: 100%; max-width: 600px; padding:  20px; margin: 0 auto;
+            }
+        }
+        .memberFooter {
+            width: 100%; margin-top: 100px;
+            .footerArea {
+                width: 100%; padding: 24px 20px 28px; 
+                .btmMenuList {
+                    width: 100%; display: flex; justify-content: center;
+                    .btmItem {
+                        width: max-content; padding-left: 24px; position: relative;
+                        &:first-child {
+                            padding-left: 0;
+                            &::before {display: none;}
+                        }
+                        &::before {content:""; width: 1px; height: 10px; background: var(--border-color-G400, #B9C1C9); display: block; position: absolute; left: 12px; top: 7px;}
+                        .link {
+                            color: var(--text-color-G600, #565B64); font-size: rem(16px); font-style: normal; font-weight: 500; line-height: 160%;
+                        }
+                    }
+                }
+                .copyright {
+                    width: 100%; margin-top: 4px; color: var(--text-color-G500, #808892); font-size: rem(14px); font-style: normal; font-weight: 400; line-height: 160%;  display: flex; justify-content: center;
+                }
+            }
+        }
+        @include media('720px') {
+            .memberTop {
+                .topArea {
+                    padding:12px 16px;
+                    .logoArea {
+                        > a {
+                            > img {
+                                height: 30px;
+                            }
+                        }
+                    }
+                    
+                    .langArea {
+                        .closeBtn {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .memberContainer {
+                padding-top: 40px;
+                .memberSubCont {
+                    max-width: none; padding: 16px;
+                }
+            }
+            .memberFooter {
+                margin-top: 60px;
+                .footerArea {
+                    padding: 24px 16px 28px; 
+                    .btmMenuList {
+                        flex-wrap: wrap;
+                        .btmItem {
+                            padding-left: 16px;
+                            &:first-child {padding-left: 0;}
+                            &::before {left: 8px; top: 4px;}
+                            .link {
+                                font-size: rem(15px);
+                            }
+                        }
+                    }
+                    .copyright {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 1023px) {
+
+}

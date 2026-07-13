@@ -1,0 +1,91 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">댓글</div>
+<div class="guideCont">
+<div class="gText">
+    딥변 및 만족도 체크 콤포넌트 입니다.
+    <br>css는 _comReply.scss 및 _comSurvey.scss를 참고바랍니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<!-- 댓글 영역 -->
+<div class="comReply">
+    <div class="repTit">
+        <p class="tit">답변</p>
+        <p class="date">2025.08.20</p>
+    </div>
+
+    <div class="repCont">
+        안녕하십니까, 고객님.<br>
+        고객님의 비비안 웨스트우드 검정 모자는 습득되어 인천공항2터미널역에서 보관 중입니다. (접수번호 : V0006180K0618 0006)<br>
+        6월 24일까지 인천공항2터미널역 안내센터로 신분증을 지참하셔서 직접 방문하시면 찾으실 수 있습니다.<br>
+        (6월 25일 검암역 유실물 센터로 이관)
+    </div>
+</div>
+
+<div class="comBtnGroup">
+    <div class="alignC">
+        <div class="btnBox">
+            <button type="button" class="btn dkBlue list">삭제</button>
+            <button type="button" class="btn dkLine list">수정</button>
+            <button type="button" class="btn dkLine list">목록</button>
+        </div>
+    </div>
+</div>
+
+<div class="comSurvey">
+    <p class="title">고객의 소리 답변 만족도</p>
+    <div class="rate">
+        <div class="frmGroup">
+            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">매우 만족</label></div>
+            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">만족</label></div>
+            <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">보통</label></div>
+            <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo101"><label for="rdo104" class="iptLbl">불만족</label></div>
+            <div class="frmChoBox"><input id="rdo105" type="radio" class="iptRdo" name="rdo101"><label for="rdo105" class="iptLbl">매우 불만족</label></div>
+        </div>
+    </div>
+    <div class="typeWrite">
+        <textarea name="" id="" placeholder="만족 또는 불만족하신 사유가 있으면 작성하여 주시기 바랍니다. (200자 이내)" title="만족 또는 불만족 사유 입력"></textarea><!-- 20251211 수정 -->
+        <button type="button">등록</button>
+    </div>
+</div>
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        

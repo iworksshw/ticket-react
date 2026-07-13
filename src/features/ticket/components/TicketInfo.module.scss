@@ -1,0 +1,726 @@
+@use "@/styles/etc/mixin" as *;
+
+//티켓 정보
+.comTicketInfo {
+    width: 100%; padding: 40px; border-radius: 12px; background: var(--bg-color-G200, #F3F6FB); position: relative;
+    @include media('tablet') {
+        padding: 24px 20px; border-radius: 12px;
+    }
+    & + .comTicketInfo {margin-top: 20px;}
+    /* radio에따라서 창 자동으로 열고 닫기 */
+    &:has(.infoRadio .iptChk) {
+        .infoTop {
+            .infoR .btn {
+                .more {display: block;}
+                .simple {display: none;}
+            }
+        }
+        .infoCont {
+            display: none;
+        }
+    } 
+    &:has(.infoRadio .iptChk:checked) {
+        .infoTop {
+            .infoR .btn {
+                .more {display: none;}
+                .simple {display: block;}
+            }
+        }
+        .infoCont {
+            display: block;
+        }
+    }
+    &:not(:has(.infoRadio .iptChk)) {
+        .infoTop {
+            .infoR .btn {
+                .more {display: block; pointer-events: none;}
+                .simple {display: none; pointer-events: none;}
+                &.on {
+                    .more {display: none;}
+                    .simple {display: block;}
+                }
+            }
+        }
+        &:has(.infoTop .infoR .btn) {
+            .infoCont {
+                display: none;
+            }
+        }
+        &:has(.infoTop .infoR .btn.on) {
+            .infoCont {
+                display: block;
+            }
+        }
+    } 
+
+
+    .infoTop {
+        width: 100%; display: flex; justify-content: space-between; 
+        .infoL {width: 100%; display: flex; flex-wrap: wrap; justify-content: flex-start;}
+        .infoR {
+            display: flex; justify-content: flex-end; align-items: center;
+            // .btn은 Button 컴포넌트(@/components/common/forms/Button.jsx)가 쓰는 전역 클래스라서
+            // 이 모듈 스코프 안에서도 :global()로 감싸야 실제 .btn 엘리먼트에 적용된다. .on은 토글
+            // 상태를 나타내려고 직접 className으로 넘기는 모듈 클래스라서 그대로 둔다.
+            :global(.btn.gLine) {
+                width: 36px; height: 36px; padding: 0; font-size: 0; border: 0; border-radius: 50%; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_12_arr_up.svg) center no-repeat; transform: rotate(180deg);
+                &.on {transform: rotate(0deg);}
+            }
+        }
+        .infoRadio {
+            width: 100%; display: flex; align-items: center;
+            // iptChk/iptLbl은 전역 폼 클래스(src/styles/etc/_form.scss)라서 :global()로 감싸야
+            // 실제 <input class="iptChk">/<label class="iptLbl"> 엘리먼트에 적용된다.
+            :global(.iptChk + .iptLbl) {color: var(--text-color-B500, #107AF2); font-weight: 600;}
+            .infoPrint {width: max-content; height: 30px; margin-left: 12px; padding: 0 20px; color: var(--text-color-whtie, #FFF); text-align: center; font-size: rem(16px); font-style: normal;
+                font-weight: 600; line-height: 160%; border-radius: 15px; background: var(--bg-color-B500, #107AF2); align-content: center;}
+            .date {color: var(--text-color-G600, #565B64);}
+        }
+        .infoName {
+            width: 100%; 
+            .item {
+                padding-left: 24px; display: inline-block; position: relative;
+                &::before {
+                    content:""; width: 1px; height: 10px; background: var(--border-color-G400, #B9C1C9); display: block; position: absolute; left: 12px; top: 8px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                    &::before {display: none;}
+                }
+                .iptChk {position: absolute; left: 0; top: 0;}
+                span {color: var(--text-color-G600, #565B64); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%;}
+                .em {margin-left: 8px; color: var(--text-color-B500, #107AF2); font-weight: 600;}
+            }
+        }
+        .stationBox {
+            margin-top: 12px; display: flex; align-items: center;
+            .station {
+                min-width: max-content; padding-left: 124px; position: relative; display: flex; flex-wrap: wrap;
+                &::before {
+                    content: ""; width: 100px; height: 24px; background: url(/images/common/ic_100_arrow.svg) center no-repeat; display: block; position: absolute; left: 12px; top: 6px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                    &::before {display: none;}
+                }
+                .name {
+                    color: var(--text-color-G900, #111); font-size: rem(24px); font-style: normal; font-weight: 600; line-height: 150%;
+                }
+                .time {
+                    margin-left: 8px; color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; align-content: flex-end;
+                }
+            }
+            .statusGroup {
+                width: max-content; margin-left: 12px; display: flex; gap: 4px;
+                .status {
+                    width: 90px; height: 30px; padding: 0 20px;  text-align: center; font-size: rem(16px); font-style: normal; 
+                    font-weight: 600; line-height: 160%; border-radius: 15px; align-content: center; display: block;
+                    &.print {color: #fff; background: var(--color-secondary-dark-blue-400, #4B6889);}
+                    &.goods {
+                        color: #fff; background: var(--bg-color-B50, #107AF2);
+                        &::before {content:""; width: 20px; height: 20px; vertical-align: sub; background: url(/images/common/ic_20_goods.svg) center no-repeat; display: inline-block;}
+
+                        @include media('tablet') {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        :global(.btn) {
+            height: 50px; margin-left: 12px;
+            &.dkLine {border: 1px solid var(--border-color-G400, #B9C1C9);}
+            &:first-child {margin-left: 0;}
+        }
+        @include media('tablet') {
+            flex-wrap: wrap;
+            .infoR {
+                width: 100%;
+                :global(.btn.gLine) {position: absolute; right: 20px; top: 4px;}
+            }
+            .infoRadio {
+                justify-content: space-between;
+                :global(.iptChk + .iptLbl) {font-size: rem(15px); align-content: center;}
+                .infoPrint {font-size: rem(15px);}
+                :global(.frmChoBox):has(.date) {
+                    flex-wrap: wrap;
+                    .date {width: 100%; padding-left: 32px; color: var(--text-color-G600, #565B64);}
+                }
+            }
+            .infoName {
+                .item {
+                    padding-left: 16px;
+                    &:first-child {padding-left: 0;}
+                    &::before {
+                        left: 8px; top: 6px;
+                    }
+                    span {font-size: 0;}
+                    .em {margin-left: 0; font-size: rem(14px);}
+                }
+            }
+            .stationBox {
+                flex-wrap: wrap; gap: 8px;
+                .station {
+                    width: 100%; padding-left: 18px; display: flex; flex-wrap: nowrap;
+                    &::before {
+                        content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary-blue-500, #107AF2); display: block; position: absolute; left: 0px; top: 10px; z-index: 2;
+                    }
+                    &:first-child {
+                        padding-left: 18px; 
+                        &::before {display: block;}
+                        &::after {content:""; width: 2px; height: calc(100% + 8px); border-left: 2px dotted var(--border-color-G400, #B9C1C9); position: absolute; left: 2px; top: 14px; z-index: 1;}
+                    }
+                    .name {
+                        margin-left: 12px; font-size: rem(18px); line-height: 160%; order: 1;
+                    }
+                    .time {
+                        margin-left: 0px; font-size: rem(17px); order: 0; align-content: flex-start;
+                    }
+                }
+                .statusGroup {
+                    margin-left: 0;
+                    .status {
+                        width: 74px; height: 26px; padding: 0 10px; font-size: rem(14px); border-radius: 13px;
+                        &.goods {
+                            &::before {width: 18px; height: 18px; background: url(/images/common/ic_20_goods.svg) center / 18px no-repeat;}
+                        }
+                    }
+                }
+            }
+            :global(.btn) {
+                width: 100%; margin-top: 20px; height: auto; margin-left: 8px; flex-shrink: 1;
+                &:first-child {margin-left: 0;}
+            }
+        }
+    }
+
+    .infoCont {
+        width: 100%;
+
+        .contTitle {
+            margin-top: 32px; color: var(--text-color-G900, #111); font-size:rem(20px); font-style: normal; font-weight: 700; line-height: 160%;
+        }
+        //&.on {display: block;}
+        .infoList {
+            width: 100%; margin-top: 32px;
+            .item {
+                width: 100%; margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--border-color-G400, #B9C1C9);
+                &:first-child {margin-top: 0;}
+                .info {
+                    width: 100%; margin-top: 12px; display: flex; justify-content: space-between;
+                    &:first-child {margin-top: 0;}
+                    .tit {
+                        width: 100%; color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-start;
+                    }
+                    .desc {
+                        width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-end; white-space: normal; text-align: right; align-items: center;
+                        .scale {font-size: rem(22px); font-weight: 600;}
+                        .won {margin-left: 4px; color: var(--text-color-G600, #565B64); font-size: rem(14px); font-style: normal; font-weight: 400; line-height: 160%;}
+                        .colorBlue {color: var(--text-color-B500, #107AF2); display: contents;}
+                    }
+                }
+            }
+            &.goods {
+                .info {
+                    width: 100%; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;
+                    &:first-child {margin-top: 0;}
+                    .tit {
+                        width: 100%; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; /* display: flex; justify-content: flex-start; */
+                        .colorBlue {color: var(--text-color-B500, #107AF2);} display: inline;
+                    }
+                    .desc {
+                        display: flex; justify-content: flex-end;
+                        .priceBox {
+                            width: max-content; margin-left: 40px; display: flex; gap: 12px;
+                            .oldPrice { color: var(--text-color-G500, #808892); font-size: 1rem; font-style: normal; font-weight: 400; line-height: 160%; text-decoration-line: line-through;}
+                            .price {
+                                .bold { 
+                                    color: #000; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                                }
+                                .won {
+                                    color: var(--text-color-G600, #565B64); font-size: rem(12px); font-style: normal; font-weight: 400; line-height: 160%;
+                                }
+                            }
+                        }
+                        .goodsNum {
+                            width: max-content; color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+                        }
+                    }
+                    .btnDel {
+                        width: 24px; height: 24px; margin-left: 8px; font-size: 0; background: url(/images/common/ic_24_trash.svg) center no-repeat; display: inline-block; vertical-align: text-bottom;
+                    }
+                }
+                @include media('mobile'){
+                    .info {
+                        flex-wrap: wrap; gap: 8px;
+                        &:first-child {margin-top: 0;}
+                        .tit {
+                            font-size: rem(15px); 
+                        }
+                        .desc {
+                            width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 8px;
+
+                            .priceBox {
+                                //width: 100%; display: flex; justify-content: flex-end; align-items: center; gap: 8px;
+                                width: 100%; margin-left: 0; display: flex; justify-content: flex-start; align-items: center; gap: 8px;
+                                .oldPrice {font-size: rem(14px);}
+                                .price {
+                                    .bold {font-size: rem(15px);}
+                                }
+                            }
+                            .goodsNum {font-size: rem(17px);}
+                        }
+                        .btnDel {
+                            width: 20px; height: 20px; background: url(/images/common/ic_24_trash.svg) center / 20px no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        .priceList {
+            width: 100%; margin-top: 32px; padding: 16px 0; border-radius: 12px; background: #fff; display: flex; justify-content: center; gap: 52px;
+            .info {
+                min-width: 200px; position: relative;
+                &:nth-child(2)::before {
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_plus.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                }
+                &:nth-child(3)::before {
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_equal.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                }
+                .tit {
+                    width: 100%; color: var(--text-color-G600, #565B64); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                }
+                .desc {
+                    width: 100%; margin-top: 8px; color: var(--text-color-G900, #111); text-align: center; font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;
+                    .won {color: var(--text-color-G600, #565B64); font-size: rem(14px); font-weight: 400;}
+                }
+                .colorBlue {color: var(--text-color-B500, #107AF2);}
+            }
+            &.minus {
+                .info {
+                    &:nth-child(2)::before {
+                        background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_minus.svg) center no-repeat;
+                    }
+                }
+            }
+            &.type02 {
+                width: 100%; margin-top: 24px; padding: 24px 0 0; border-radius: 0; border-top: 1px solid var(--color-gray-900, #111); background: #fff; justify-content: flex-start; flex-wrap: wrap; gap: 0;
+                .info {
+                    width: 100%; margin-top: 12px; min-width: auto; display: flex; justify-content: space-between;
+                    &:first-child {margin-top: 0;}
+                    &::before {
+                        display: none;
+                    }
+                    .tit {
+                        width: 100%; color: var(--text-color-G600, #565B64); text-align: left; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-start;
+                    }
+                    .desc {
+                        width: 100%; margin: 0; color: var(--text-color-G900, #111); font-size: rem(18px); text-align: right; font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-end; white-space: nowrap; text-align: right; align-items: center;
+                    }
+                    .colorBlue {color: var(--text-color-B500, #107AF2);}
+                    &.total {
+                        margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--border-color-G400, #B9C1C9);
+                        .desc {font-size: rem(22px); font-weight: 600;}
+                    }
+                }
+            }
+        }
+        @include media('tablet') {
+            .contTitle {
+                font-size:rem(18px); 
+            }
+            .infoList {
+                margin-top: 24px;
+                .item {
+                    margin-top: 20px; padding-top: 20px;
+                    &:first-child {margin-top: 0;}
+                    .info {
+                        .tit {
+                            font-size: rem(15px);
+                        }
+                        .desc {
+                            font-size: rem(15px); white-space: normal;
+                            .won {font-size: 12px;}
+                        }
+                        &.nextLine {
+                            flex-wrap: wrap; gap: 8px;
+                            .desc {justify-content: flex-start;}
+                        }
+                    }
+                }
+            }
+            .priceList {
+                padding: 20px 0 0; border-radius: 0; border-top: 1px solid var(--color-gray-900, #111); background: transparent; flex-wrap: wrap; justify-content: flex-start; gap: 0;
+                .info {
+                    width: 100%; min-width: auto; margin-top: 8px; display: flex; justify-content: space-between;
+                    &:first-child {margin-top: 0;}
+                    &:nth-child(2)::before {
+                        display: none;
+                    }
+                    &:nth-child(3)::before {
+                        display: none;
+                    }
+                    .tit {
+                        width: 100%; text-align: left; font-size: rem(15px);
+                    }
+                    .desc {
+                        width: 100%; margin-top: 0; text-align: right; font-size: rem(15px); font-weight: 400; line-height: 160%;
+                        .won {font-size: rem(12px);}
+                    }
+                    &.total {
+                        margin-top: 20px; padding-top: 20px; border-top: 1px dashed var(--border-color-G400, #B9C1C9);
+                        .tit {align-content: center;}
+                        .desc {font-size: rem(20px); font-weight: 600;}
+                    }
+                }
+                &.type02 {
+                    margin-top: 20px; padding: 20px 0 0;
+                    .info {
+                        margin-top: 8px;
+                        &:first-child {margin-top: 0;}
+                        .tit {
+                            font-size: rem(15px);
+                        }
+                        .desc {
+                            font-size: rem(15px);
+                        }
+                        &.total {
+                            margin-top: 16px; padding-top: 16px;
+                            .desc {font-size: rem(20px);}
+                        }
+
+                    }
+                }
+            }
+        }
+        
+        /* 티켓정보 내부 승차권리스트 */
+        .ticketDiscount {
+            margin-top: 24px;
+            .discountList {
+                .discItem {
+                    //padding-left: 0; padding-right: 0;
+                    &:last-child {padding-bottom: 0; border-bottom: 0;}
+                }
+            }
+            @include media('tablet') {
+                margin-top: 32px;
+            }
+        }
+        .contTitle + .ticketDiscount {margin-top: 8px;}
+
+        /* 티켓정보 내부 상품리스트 */
+        .ticketGoodsList {
+            margin-top: 24px;
+            .goodsList {
+                .item:nth-child(odd):last-child {
+                    .itemBox {
+                        padding-bottom: 0; border-bottom: 0;
+                    }
+                    .btnBox {
+                        padding-bottom: 0; border-bottom: 0;
+                    }
+                }
+                &:has(.item:nth-child(even):last-child) {
+                    
+                    .item:nth-last-child(1) {
+                        .itemBox {
+                            padding-bottom: 0; border-bottom: 0;
+                        }
+                        .btnBox {
+                            padding-bottom: 0; border-bottom: 0;
+                        }
+                    }
+                    .item:nth-last-child(2) {
+                        .itemBox {
+                            padding-bottom: 0; border-bottom: 0;
+                        }
+                        .btnBox {
+                            padding-bottom: 0; border-bottom: 0;
+                        }
+                    }
+                }
+            }
+            @include media('tablet') {
+                .goodsList {
+                    .item {
+                        width: 100%;
+                    }
+                    &:has(.item:nth-child(even):last-child) {
+                        .item:nth-last-child(2) {
+                            .itemBox {
+                                padding-bottom: 20px; border-bottom: 1px solid var(--border-color-G300, #D6DBE1);
+                            }
+                            .btnBox {
+                                padding-bottom: 20px; border-bottom: 1px solid var(--border-color-G300, #D6DBE1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .infoBtm {
+        width: 100%; margin-top: 24px;
+        .payCancel {
+            width: 100%; padding: 16px 24px; text-align: center; border-radius: 8px; background: var(--bg-color-G200, #F3F6FB);
+            p {
+                color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+            }
+        }
+        @include media('tablet') {
+            margin-top: 12px;
+            .payCancel {
+                p {
+                    font-size: rem(17px);
+                }
+            }
+
+        }
+
+        .priceList {
+            width: 100%; margin-top: 32px; padding: 16px 0; border-radius: 12px; background: #fff; display: flex; justify-content: center; gap: 52px;
+            .info {
+                min-width: 200px; position: relative;
+                &:nth-child(2)::before {
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_plus.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                }
+                &:nth-child(3)::before {
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_equal.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                }
+                .tit {
+                    width: 100%; color: var(--text-color-G600, #565B64); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                }
+                .desc {
+                    width: 100%; margin-top: 8px; color: var(--text-color-G900, #111); text-align: center; font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;
+                    .won {color: var(--text-color-G600, #565B64); font-size: rem(14px); font-weight: 400;}
+                }
+                .colorBlue {color: var(--text-color-B500, #107AF2);}
+            }
+            &.minus {
+                .info {
+                    &:nth-child(2)::before {
+                        background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_minus.svg) center no-repeat;
+                    }
+                }
+            }
+            &.type02 {
+                width: 100%; margin-top: 24px; padding: 24px 0 0; border-radius: 0; border-top: 1px solid var(--color-gray-900, #111); background: none; justify-content: flex-start; flex-wrap: wrap; gap: 0;
+                .info {
+                    width: 100%; margin-top: 12px; min-width: auto; display: flex; justify-content: space-between;
+                    &:first-child {margin-top: 0;}
+                    &::before {
+                        display: none;
+                    }
+                    .tit {
+                        width: 100%; color: var(--text-color-G600, #565B64); text-align: left; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-start;
+                    }
+                    .desc {
+                        width: 100%; margin: 0; color: var(--text-color-G900, #111); font-size: rem(18px); text-align: right; font-style: normal; font-weight: 400; line-height: 160%; display: flex; justify-content: flex-end; white-space: nowrap; text-align: right; align-items: center;
+                    }
+                    .colorBlue {color: var(--text-color-B500, #107AF2);}
+                    &.total {
+                        margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--border-color-G400, #B9C1C9);
+                        .desc {font-size: rem(22px); font-weight: 600;}
+                    }
+                }
+            }
+        }
+        @include media('tablet') {
+            .priceList {
+                padding: 20px 0 0; border-radius: 0; border-top: 1px solid var(--color-gray-900, #111); background: transparent; flex-wrap: wrap; justify-content: flex-start; gap: 0;
+                .info {
+                    width: 100%; min-width: auto; margin-top: 8px; display: flex; justify-content: space-between;
+                    &:first-child {margin-top: 0;}
+                    &:nth-child(2)::before {
+                        display: none;
+                    }
+                    &:nth-child(3)::before {
+                        display: none;
+                    }
+                    .tit {
+                        width: 100%; text-align: left; font-size: rem(15px);
+                    }
+                    .desc {
+                        width: 100%; margin-top: 0; text-align: right; font-size: rem(15px); font-weight: 400; line-height: 160%;
+                        .won {font-size: rem(12px);}
+                    }
+                    &.total {
+                        margin-top: 20px; padding-top: 20px; border-top: 1px dashed var(--border-color-G400, #B9C1C9);
+                        .tit {align-content: center;}
+                        .desc {font-size: rem(20px); font-weight: 600;}
+                    }
+                }
+                &.type02 {
+                    margin-top: 20px; padding: 20px 0 0;
+                    .info {
+                        margin-top: 8px;
+                        &:first-child {margin-top: 0;}
+                        .tit {
+                            font-size: rem(15px);
+                        }
+                        .desc {
+                            font-size: rem(15px);
+                        }
+                        &.total {
+                            margin-top: 16px; padding-top: 16px;
+                            .desc {font-size: rem(20px);}
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
+    /*티켓형태*/
+    &.view {
+        border-radius: 20px;
+        @include media('tablet') {
+            border-radius: 12px;
+        }
+        .infoTop {
+            .stationBox {
+                width: 100%; justify-content: center;
+                .station {
+                    width: 374px;
+                    &:first-child {width: 250px;} 
+                    .name {width: 100%; text-align: center; display: block;}
+                    .time {width: 100%; margin-top: 8px; text-align: center; display: block;}
+                }
+            }
+            @include media('tablet') {
+                .stationBox {
+                    width: 100%; justify-content: flex-start;
+                    .station {
+                        width: 100%;
+                        &:first-child {width: auto;} 
+                        .name {width: auto; text-align: left; display: block;}
+                        .time {width: auto; margin-top: 0; text-align: left; display: block;}
+                    }
+                }
+            }
+        }
+        .infoCont {
+            position: relative;
+            &::before {
+                content: ""; width: 20px; height: 40px; border-radius: 0 20px 20px 0; background: #fff; display: block; position: absolute; left: -40px; top: -15px;
+
+                @include media('tablet') {
+                    width: 20px; height: 20px; border-radius: 50%; left: -30px; top: -10px;
+                }
+            }
+            &::after {
+                content: ""; width: 20px; height: 40px; border-radius: 20px 0 0 20px; background: #fff; display: block; position: absolute; right: -40px; top: -15px;
+
+                @include media('tablet') {
+                    width: 20px; height: 20px; border-radius: 50%; right: -30px; top: -10px;
+                }                    
+            }
+        }
+    }
+    
+    /* 리스트 형태 */
+    &.list {
+        border-radius: 20px; border: 1px solid var(--border-color-G300, #D6DBE1); background: #fff;
+        @include media('tablet') {
+            border-radius: 12px;
+        }
+        &:hover {
+            border: 1px solid var(--border-color-B500, #107AF2);
+        }   
+        .infoTop {
+            .infoName {
+                .item {
+                    span {color: var(--text-color-B500, #107AF2); font-weight: 600;}
+                }
+            }
+            .infoR {
+                :global(.btn.gLine) {
+                    width: max-content; height: auto; padding: 11px 20px; font-size: rem(16px); border-radius: 8px; border: 1px solid var(--border-color-G400, #B9C1C9); background: #fff; transform: rotate(0deg); position: static;
+                    &.on {transform: rotate(0deg);}
+                }
+                @include media('tablet') {
+                    :global(.btn.gLine) {width: 100%;}
+                }
+            }
+        }
+        .infoCont {
+            .priceList {
+                background: var(--bg-color-G200, #F3F6FB);
+                &.type02 {background: #fff;}
+
+                @include media('mobile') {
+                    background: #fff;
+                }                    
+            }
+            .infoList.goods {
+                .info {
+                    .desc {
+                        .priceBox {
+                            @include media('mobile') {
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .infoBtm {
+            .priceList {
+                background: var(--bg-color-G200, #F3F6FB);
+                &.type02 {background: #fff;}
+            }
+        }
+        
+    }
+
+    /* 예약 없음 */
+    &.noBooking {
+        height: 280px; position: relative;
+
+        .noTxt {
+            color: var(--text-color-G600); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; background: transparent; gap: 6px; height: 100%;
+
+            &::before {
+                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_ticket_g.png) center / 18px no-repeat; background-size: 100%; vertical-align: middle;
+            }
+
+            &::after {
+                display: none !important;
+            }
+
+            @include media('tablet') {
+                font-size: rem(15px);
+            }
+        } 
+        
+        &::before {
+            content: ""; width: 20px; height: 40px; border-radius: 0 20px 20px 0; background: #fff; display: block; position: absolute; left: 0px; top: 55%;
+
+            @include media('tablet') {
+                width: 20px; height: 20px; border-radius: 50%; left: -10px;
+            }
+        }
+        &::after {
+            content: ""; width: 20px; height: 40px; border-radius: 20px 0 0 20px; background: #fff; display: block; position: absolute; right: 0px; top: 55%;
+
+            @include media('tablet') {
+                width: 20px; height: 20px; border-radius: 50%; right: -10px;
+            }                    
+        } 
+        
+        @include media('tablet') {
+            height: 216px;
+        }
+    }
+
+    
+    & + .ticketInfo {
+        margin-top: 24px;
+        @include media('mobile') {
+            margin-top: 16px;
+        }
+    }
+}

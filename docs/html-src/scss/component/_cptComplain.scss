@@ -1,0 +1,157 @@
+//냉난방 간편접수
+.cptComplain {
+    width:100%; position:relative;
+    p.pgSubTit {
+        font-size:rem(17px); font-weight:600; line-height:160%; color:var(--text-color-G700); margin-bottom:24px; text-align: center;
+        > em {
+            color:var(--text-color-B500); font-weight:600;
+        }
+    }
+
+    .imgRadio {
+        > ul {
+            display:flex; flex-flow: row nowrap; align-items: center ;justify-content: flex-start; gap:8px;
+
+            > li {
+                width:calc(50% - 4px);
+
+                > input {
+                    position:absolute; top:0; left:0; width:1px; height:1px;
+
+                    & + label {
+                        position:relative; width:100%; padding: 23.5px 20px; border-radius: 20px; display:inline-block; cursor:pointer; border:1px solid #fff;
+
+                        span {
+                            position:relative;display:inline-block; width:100%; text-align:center; font-size:rem(18px); font-weight:700; line-height:160%; padding-top:140px;
+
+                            &::before {
+                                content:''; position:absolute; top:50%; left:50%; width:140px; height:140px; transform:translate(-50%,-50%);
+                            }
+                        }
+                    }
+                }
+
+                &.cold {
+                    label {
+                        background: #EEF7FF;
+                        span {
+                            color:var(--text-color-B500);
+
+                            &::before {
+                                background:url(/common/images/common/ico_120_cold.png) 0 0 no-repeat;
+                                background-size:contain;
+                            }
+                        }
+                    }
+
+                    input:checked {
+                        & + label {
+                            background:#CBE8FF;
+                            border:1px solid var(--text-color-B500);
+
+                            &::after {
+                                content:''; position:absolute; top:12px; right:12px; width:32px; height:32px; background:url(/common/images/common/ico_32_cold01.png)0 0 no-repeat;
+                            }
+                        }
+                    }
+                }
+                &.hot {
+                    label {
+                        background: #FFF5F5;
+                        span {
+                            color:var(--color-danger-500);
+
+                            &::before {
+                                background:url(/common/images/common/ico_120_hot.png)  0 0 no-repeat;
+                                background-size:contain;
+                            }
+                        }
+                    }
+
+                    input:checked {
+                        & + label {
+                            background:#FFDADB;
+                            border:1px solid var(--color-danger-500);
+
+                            &::after {
+                                content:''; position:absolute; top:12px; right:12px; width:32px; height:32px; background:url(/common/images/common/ico_32_hot02.png)0 0 no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pgDesc {
+        width:100%; position:relative; font-size:rem(15px); font-weight:400; line-height:160%; color:var(--text-color-G700); margin:24px 0 32px;
+
+        span {
+            display:block; width:100%; position:relative; padding-left:24px; font-weight:600; line-height:160%; color:var(--text-color-B500);
+
+            &::before {
+                content:''; position:absolute; top:50%; left:0; width:24px; height:29px; transform:translateY(-50%); background:url(/common/images/common/ic_24_caption.svg)0 0 no-repeat;
+            }
+        }
+    }
+
+    .comBtnGroup {
+        margin-bottom:24px;
+        button {
+            margin-top:16px; width:100%;
+        }
+    }
+
+    .imgBox {
+        margin-top: 8px;
+        > ul {
+            display:flex; flex-flow: column; width:100%; gap:24px;
+            > li { border-radius:20px; overflow:hidden;
+                > img {
+                    display:block; width:100%; max-width:100%;
+                }
+            }
+        }
+    }
+}
+
+// .information {
+//     width:100%; position:relative; background:#f8f9fc; padding:32px 24px; border-radius:12px;
+
+//     > .infoTit {
+//         position:relative; width:100%; font-size:rem(20px); font-weight:600; line-height:150%; color:var(--color-primary-blue-900);
+//         padding-left:42px; margin-bottom:20px; display: flex; gap: 32px; align-items: center; 
+
+//         &::before {
+//             content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:30px; height:30px; background:url(/common/images/common/ic_30_question.svg) 0 0 no-repeat;
+//             @include media("mobile"){
+//                 top: 0px; left: 0px; transform: translateY(0);
+//             }
+//         }
+
+//         &::after {
+//             content:''; width: 1px; height: 16px; background: var(--border-color-G400); position: absolute; left: 214px; top: 50%; transform: translateY(-50%); 
+//             @include media("mobile"){
+//                 display: none;
+//             }
+//         }
+
+//         .line {
+//             display: inline-block; color: var(--text-color-G800); font-size: rem(18px); font-weight: 600; line-height: 160%;
+//             @include media("mobile"){
+//                 transform: translateX(-40px); font-size: rem(17px);
+//             }
+//         }
+
+//         @include media("mobile"){
+//             flex-direction: column; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap; row-gap: 12px;
+//         }
+
+//     }
+
+//     > .desc {
+//         font-size:rem(17px); font-weight:400; line-height:160%; color:var(--text-color-G800); margin-bottom:12px;
+//     }
+
+
+// }

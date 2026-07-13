@@ -1,0 +1,163 @@
+/* ----- 라디오/체크박스 ----- */
+.iptLbl {
+    min-height:26px; margin-right:10px; padding-left: 32px; color: var(--text-color-G900, #111); font-size: rem(18px); font-weight: 400; word-break: keep-all; line-height: 25px; display: inline-block;
+    &:last-child {margin-right:0;}
+    &.noText {padding-left: 24px; font-size: 0;}
+    &.sm.noText {padding-left: 20px; font-size: 0;}
+    &.lg.noText {padding-left: 32px; font-size: 0;}
+    &.bold {font-weight: 600;}
+
+    @include media ('mobile') {
+        font-size:rem(17px);
+    }
+}
+/* checkbox */
+.iptChk {
+    &+ .iptLbl {
+        background:url(/common/images/common/ic_24_chk_off.svg) left 1px no-repeat; cursor: pointer;
+        &.noText {padding-left: 24px; font-size: 0;}
+
+        &.lblBold {
+            font-weight:600;
+        }
+
+        em {
+            font-weight:600;
+        }
+    }
+    &:checked + .iptLbl {background:url(/common/images/common/ic_24_chk_on.svg) left 1px no-repeat;}
+    &:indeterminate + .iptLbl {background:url(/common/images/common/ic_24_chk_off.svg) left center no-repeat;}
+    &:disabled + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/common/images/common/ic_24_chk_off_dis.svg) left 1px no-repeat;}
+    &:disabled:checked + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/common/images/common/ic_24_chk_on_dis.svg) left 1px no-repeat;}
+    &:disabled:indeterminate + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/common/images/common/ic_24_chk_ind_dis.svg) left 1px no-repeat;}
+    &:focus + .iptLbl {outline: auto;}
+
+    &.lg {
+        &+ .iptLbl {
+            min-height: 34px; padding-left: 32px; font-size: rem(20px); background:url(/common/images/common/ic_32_chk_off.svg) left 1px no-repeat;
+            &.noText {padding-left: 32px; font-size: 0;}
+        }
+        &:checked + .iptLbl {background:url(/common/images/common/ic_32_chk_on.svg) left 1px no-repeat;}
+        &:indeterminate + .iptLbl {background:url(/common/images/common/ic_32_chk_ind.svg) left center no-repeat;}
+        &:disabled + .iptLbl {background:url(/common/images/common/ic_32_chk_off_dis.svg) left 1px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/common/images/common/ic_32_chk_on_dis.svg) left 1px no-repeat;}
+        &:disabled:indeterminate + .iptLbl {background:url(/common/images/common/ic_32_chk_ind_dis.svg) left 1px no-repeat;}
+        &:focus + .iptLbl {outline: auto;}
+    }
+
+    &.txt {
+        &+ .iptLbl {
+            line-height:34px; padding-left:40px;
+            font-size:rem(19px);
+            @include media('mobile') {
+                font-size:rem(17px);
+            }
+        }
+    }
+
+    &.sm {
+        &+ .iptLbl {
+            padding-left: 28px; font-size: rem(16px); background:url(/common/images/common/ic_20_chk_off.svg) left 3px no-repeat; color:var(--text-color-G900) !important; font-weight:400;
+            &.noText {padding-left: 20px; font-size: 0;}
+        }
+        &:checked + .iptLbl {background:url(/common/images/common/ic_20_chk_on.svg) left 2px no-repeat;}
+        &:indeterminate + .iptLbl {background:url(/common/images/common/ic_20_chk_ind.svg) left center no-repeat;}
+        &:disabled + .iptLbl {background:url(/common/images/common/ic_20_chk_off_dis.svg) left 2px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/common/images/common/ic_20_chk_on_dis.svg) left 2px no-repeat;}
+        &:disabled:indeterminate + .iptLbl {background:url(/common/images/common/ic_20_chk_ind_dis.svg) left 2px no-repeat;}
+        &:focus + .iptLbl {outline: auto;}
+
+        &:checked {
+            &.blue {
+                & + .iptLbl {background:url(/common/images/common/ic_20_chk_on_blue.svg) left 2px no-repeat;}
+                & + label {
+                    color:var(--color-primary-blue-700) !important; font-weight:600;
+                }
+            }
+        }
+        &:checked {
+            &.green {
+                & + .iptLbl {background:url(/common/images/common/ic_20_chk_on_purple.svg) left 2px no-repeat;}
+
+                & + label {
+                    color:#CE46E0 !important; font-weight:600;
+                }
+            }
+        }
+
+        &:checked {
+            &.red {
+                & + .iptLbl {background:url(/common/images/common/ic_20_chk_on_red.svg) left 2px no-repeat;}
+                
+                & + label {
+                    color:#dd3500 !important; font-weight:600;
+                }
+            }
+        }
+        
+        &:checked {
+            &.black {
+                & + .iptLbl {background:url(/common/images/common/ic_20_chk_on_black.svg) left 2px no-repeat;}
+                
+                & + label {
+                    color:var(--text-color-G700); font-weight:600;
+                }
+            }
+        }
+    }
+    //2025.09.15 추가
+    &.tiny {
+        &+ .iptLbl {
+            padding-left: 28px; font-size: rem(16px); background:url(/common/images/common/ic_20_tiny_chk_off.svg) left center no-repeat;
+            @include media ('mobile') {
+                font-size:rem(15px);
+            }
+            &.noText {padding-left: 20px; font-size: 0;}
+        }
+        &:checked + .iptLbl {
+            background:url(/common/images/common/ic_20_tiny_chk_on.svg) left center no-repeat;
+
+            > span {
+                color:var(--color-primary-blue-500); font-weight:600;
+            }
+        }
+
+        &:focus + .iptLbl {outline: auto;}
+    }
+}
+
+/* radio */
+.iptRdo {
+    &+ .iptLbl {
+        background:url(/common/images/common/ic_24_rdo_off.svg) left 1px no-repeat;
+        &.noText {padding-left: 24px; font-size: 0;}
+    }
+    &:checked + .iptLbl {background:url(/common/images/common/ic_24_rdo_on.svg) left 1px no-repeat;}
+    &:disabled + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/common/images/common/ic_24_rdo_off_dis.svg) left 1px no-repeat;}
+    &:disabled:checked + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/common/images/common/ic_24_rdo_on_dis.svg) left 1px no-repeat;}
+    &:focus + .iptLbl {outline: auto;}
+    
+    &.lg {
+        &+ .iptLbl {
+            min-height: 34px; padding-left: 40px; font-size: rem(18px); background:url(/common/images/common/ic_32_chk_off.svg) left 1px no-repeat; align-content: center;
+            &.noText {padding-left: 32px; font-size: 0;}
+        }
+        &:checked + .iptLbl {background:url(/common/images/common/ic_32_chk_on.svg) left 1px no-repeat;}
+        &:disabled + .iptLbl {background:url(/common/images/common/ic_32_chk_off_dis.svg) left 1px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/common/images/common/ic_32_chk_on_dis.svg) left 1px no-repeat;}
+        &:disabled:indeterminate + .iptLbl {background:url(/common/images/common/ic_32_chk_ind_dis.svg) left 1px no-repeat;}
+        &:focus + .iptLbl {outline: auto;}
+    }
+
+    &.sm {
+        &+ .iptLbl {
+            font-size: rem(16px); background:url(/common/images/common/ic_20_rdo_off.svg) left 4px no-repeat;
+            &.noText {padding-left: 20px; font-size: 0;}
+        }
+        &:checked + .iptLbl {background:url(/common/images/common/ic_20_rdo_on.svg) left 4px no-repeat;}
+        &:disabled + .iptLbl {background:url(/common/images/common/ic_20_rdo_off_dis.svg) left 4px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/common/images/common/ic_20_rdo_on_dis.svg) left 4px no-repeat;}
+        &:focus + .iptLbl {outline: auto;}
+    }
+
+}

@@ -1,0 +1,130 @@
+
+@use 'index' as *;
+
+/* ----- 버튼 ----- */
+.btn {
+    width: max-content; height: auto; padding: 11px 20px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 160%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+    @include media ('mobile'){font-size: rem(15px);}
+
+    //크기별
+    &.xl {
+        padding: 19px 28px; font-size: rem(22px); line-height: normal;
+        @include media ('mobile'){}
+    }
+    &.lg {
+        padding: 15px 24px; font-size: rem(18px);
+        @include media ('mobile'){font-size: rem(17px);}
+    }
+    &.md {padding: 11px 20px; font-size: rem(16px);}
+    &.sm {padding: 7px 16px; font-size: rem(14px);}
+    &.xs {}
+
+    //목적별
+    &.list {
+        width: 120px; padding: 11px 20px; font-size: rem(18px); 
+        @include media ('mobile'){font-size: rem(17px); width:30%;}
+    }
+
+    //가로 너비 예외
+    &.pcW180 {width:180px} //PC width 180px, Mo width 100%
+    &.pcW140 {width:140px} //PC width 140px, Mo width 100%
+    &.pcW128 {width:128px} //PC width 128px
+    &.pcW200 {width:200px} //PC width 200px, Mo width 100%
+    &.pmW150 {
+        width:150px;
+        @include media ('mobile'){
+            width:150px !important;
+        }
+    } //PC width 150px, Mo 150px
+    &.pmW180 {
+        width:180px;
+        @include media ('mobile'){
+            width:180px !important;
+        }
+    } //PC width 180px, Mo 180px
+
+    //색깔별
+    &.blue {
+        color: #fff; border: 1px solid var(--color-primary-blue-500, #107AF2); background: var(--color-primary-blue-500, #107AF2);
+        &:hover {border: 1px solid var(--color-primary-blue-700, #0D62C2); background: var(--color-primary-blue-700, #0D62C2);}
+        &:active {border: 1px solid  var(--color-primary-blue-900, #0A4991); background:  var(--color-primary-blue-900, #0A4991);}
+        &:disabled {color: var(--text-color-G500, #808892); border: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G300, #D6DBE1); cursor:default;}
+        &.line {padding: 0; color: var(--color-primary-blue-500, #107AF2); font-size: rem(18px); border-radius: 0; line-height: 150%; border: 0; border-bottom: 1px solid var(--color-primary-blue-500, #107AF2); background: #fff;}
+    }
+    &.dkBlue {
+        color: #fff; border: 1px solid var(--bg-color-DB500, #233850); background: var(--bg-color-DB500, #233850);
+        &:hover {border: 1px solid var(--bg-color-DB500, #233850); background: var(--bg-color-DB500, #233850);}
+        &:active {border: 1px solid  var(--bg-color-DB500, #233850); background:  var(--bg-color-DB500, #233850);}
+        &:disabled {color: var(--text-color-G500, #808892); border: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G300, #D6DBE1); cursor:default;}
+        &.line {padding: 0; color: var(--bg-color-DB500, #233850); font-size: rem(18px); border-radius: 0; line-height: 150%; border: 0; border-bottom: 1px solid var(--bg-color-DB500, #233850); background: #fff;}
+        &:focus {outline: 3px double #000000;}
+    }
+    // &.red {
+    //     color: #fff; border: 1px solid #dc3545; background: #dc3545;
+    //     &:hover {border: 1px solid #e45765; background: #e45765;}
+    //     &:active {border: 1px solid #fc132a; background: #fc132a;}
+    //     &:disabled {color: #999; border: 1px solid #ccc; background: #ccc; cursor:default;}
+    // }
+    // &.purple {
+    //     color: #fff; border: 1px solid #712cf9; background: #712cf9;
+    //     &:hover {border: 1px solid #8244fc; background: #8244fc;}
+    //     &:active {border: 1px solid #5808f7; background: #5808f7;}
+    //     &:disabled {color: #999; border: 1px solid #ccc; background: #ccc; cursor:default;}
+    // }
+    // &.dark {
+    //     color: #fff; border: 1px solid #2a2d3e; background: #2a2d3e;
+    //     &:hover {border: 1px solid #323442; background: #323442;}
+    //     &:active {border: 1px solid #20243f; background: #20243f;}
+    //     &:disabled {color: #999; border: 1px solid #ccc; background: #ccc; cursor:default;}
+    // }
+    &.gLine {
+        color: var(--text-color-G700, #3A3F49); border: 1px solid var(--border-color-G400, #B9C1C9); background: #fff;
+        &:hover {color: var(--text-color-G700, #3A3F49); border: 1px solid var(--text-color-G500, #808892);}
+        &:active {border: 1px solid var(--text-color-G500, #808892); background: var(--border-color-G50, #FCFCFE)}
+        &:disabled {color: var(--text-color-G400, #B9C1C9); border: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G100, #F8F9FC); cursor:default;}
+        &.line {padding: 0; font-size: rem(18px); border-radius: 0; line-height: 150%; border: 0; border-bottom: 1px solid var(--border-color-G400, #B9C1C9);}
+    }
+    // &.blLine {
+    //     color: var(--Gray-600); border: 1px solid #0d6efd; background: #fff;
+    //     &:hover {color: #111; border: 1px solid #0d6efd;}
+    //     &:active {border: 1px solid #0d6efd;}
+    //     &:disabled {color: #999; border: 1px solid #ccc; cursor:default;}
+    // }
+    &.dkLine {
+        color: var(--text-color-G800, #24272D); border: 1px solid var(--border-color-G500, #808892); background: #fff;
+        &:hover {color: var(--text-color-G800, #24272D); border: 1px solid var(--border-color-G600, #565B64);}
+        &:active {border: 1px solid var(--border-color-G600, #565B64); background: var(--border-color-G50, #FCFCFE)}
+        &:disabled {color: var(--text-color-G500, #808892); border: 1px solid var(--border-color-G300, #D6DBE1); background: var(--bg-color-G100, #F8F9FC); cursor:default;}
+        &.line {padding: 0; font-size: rem(18px); border-radius: 0; line-height: 150%; border: 0; border-bottom: 1px solid var(--border-color-G500, #808892);}
+    }
+    
+
+    //외부링크
+    &[target=_blank] {
+        position: relative;
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_link_blank.svg);}
+    }
+    &.blue[target=_blank] , &.dkBlue[target=_blank] {
+        position: relative;
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_link_blank_w.svg);}
+    }
+    //아이콘 예시 샘플
+    &.downIcon {
+        position: relative; 
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_download.svg);}
+    }
+
+    &.link {
+        position: relative; 
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_link_blank_w.svg);}
+    }
+
+    //2025.09.15 텍스트 타입 버튼 케이스 추가
+    &.btnText {
+        position:relative; min-height:auto; height:auto; padding: 0 20px 0 0; line-height:1; font-size:rem(14px); color:var(--text-color-G700); font-weight:400;
+
+        &::after {
+            content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:16px; height:16px; background:url(/images/common/ico_desc.svg);
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.comTableForm {
+    width:100%; position:relative; margin-top:12px; margin-bottom:60px;
+
+    table.formTable {
+        width:100%; table-layout:fixed; border-collapse:collapse; border-top:1px solid var(--text-color-G800);
+        @include media ('pcs') {
+            table-layout: auto; display:block; margin-top:12px;
+        }
+        tbody {
+            @include media ('pcs') {
+                display:block; width:100%;
+            }
+            tr {
+                @include media ('pcs') {
+                    display:block; width:100%;
+                }
+                th {
+                    padding:26px 20px; background:var(--bg-color-G100); text-align:left;
+                    font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900); border-bottom:1px solid var(--border-color-G300); border-right:1px solid var(--border-color-G300);
+                    @include media ('pcs') {
+                        display:block; background:#fff; border-bottom:0; border-right:none; padding:20px 0 0 0; font-size:rem(17px);
+                    }
+                    span.required {
+                        display:inline-block; font-size:rem(18px); font-weight:600; line-height:160%; color:var(--color-danger-500); margin-right:4px;
+                    }
+                }
+
+                td {
+                    padding:16px 20px; font-size:rem(18px); color:var(--text-color-G800); line-height:160%; border-bottom:1px solid var(--border-color-G300);
+                    @include media ('pcs') {
+                        display:block; width:100%; margin-top:8px; padding:0 0 20px 0; font-size:rem(17px);
+                        > .frmBox { width:100%; min-width:100%; }
+                        > select { width:100%; }
+                    }
+
+                    .frmGroup {
+                        margin-top:0; align-items:center;
+
+                        > span {
+                            font-size:rem(17px); font-weight:600; color:var(--text-color-G900);
+                            &.mR32 { margin-right:32px; }
+                        }
+
+                        &.gap04 { gap:4px; }
+                        &.gap08 { gap:8px; }
+
+                        @include media ('pcs') {
+                            .frmTini { width:100%; }
+                            &.moFull .frmTini { width:100px; }
+                        }
+                    }
+                    
+                    button:not(.affList) {
+                        display:inline-block; padding:0 20px; text-align:center; line-height:50px; height:50px; 
+                        font-size:rem(16px); font-weight:500; color:var(--text-color-G800); border:1px solid var(--text-color-G500); border-radius:8px; word-break: keep-all;
+
+                        @include media ('mobile') {
+                            font-size: rem(15px); 
+
+                            &.affCardInfo {
+                                width:100%;
+                            }
+                        }
+                    }
+                    
+                }
+                
+                .affList {
+                    font-size:rem(14px); font-weight:400; line-height:160%; color:var(--text-color-G700); padding-right:20px; position:relative;
+                        margin-left:32px;
+
+                    &::after {
+                        content:''; position:absolute; top:50%; right:0; width:18px; height:18px; transform:translateY(-50%);
+                        background:url(/common/images/common/ic_18_outShare.svg)50% 50% no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

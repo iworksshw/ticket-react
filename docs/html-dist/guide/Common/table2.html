@@ -1,0 +1,213 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">테이블 입력/신청 폼</div>
+<div class="guideCont">
+<div class="gText">
+        - 주로 신청 폼에 사용되는 테이블입니다.<br>
+        - PC와 Mobile의 형태가 다릅니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+
+<div class="comApplicant">
+    <table>
+        <caption>신청자명, 휴대폰번호, 이메일, 사업자명, 회의명, 사용인원, 요청사항, 결제총금액을 포함한 표</caption><!-- 20251128 수정 -->
+        <colgroup>
+            <col style="width: 240px;">
+            <col style="width: auto;">
+        </colgroup>
+
+        <tbody>
+            <tr>
+                <th>
+                    <span class="required">*</span>신청자명
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>신청자명
+                    </div>
+                    <div class="frmBox frmMd">
+                        <input type="text" class="iptText" title="신청자명 입력">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span class="required">*</span>휴대폰 번호
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>휴대폰 번호
+                    </div>
+                    <div class="frmGroup gap04">
+                        <div class="frmBox frmTini">
+                            <input type="text" class="iptText" title="휴대폰번호 첫번째 세자리">
+                        </div>
+                        <span>-</span>
+                        <div class="frmBox frmTini">
+                            <input type="text" class="iptText" title="휴대폰번호 두번째 세자리 또는 네자리">
+                        </div>
+                        <span>-</span>
+                        <div class="frmBox frmTini">
+                            <input type="text" class="iptText" title="휴대폰번호 마지막 네자리">
+                        </div>
+                    </div>
+                    <div class="infoText red">
+                        ※ 회의 당일 30분전 도어락 비밀번호 4자리가 발송되어니 실제 이용자의 휴대전화번호를 필히 입력하시기 바랍니다.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span class="required">*</span>이메일
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>이메일
+                    </div>
+                    <div class="frmBox frmMd">
+                        <input type="text" class="iptText" title="이메일주소 입력">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span class="required">*</span>사업자명
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>사업자명
+                    </div>
+                    <div class="frmBox frmMd">
+                        <input type="text" class="iptText" title="사업자명 입력">
+                    </div>
+                    <div class="infoText">
+                        ※ 회의실 입구 디지털 사이니지 안내용
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span class="required">*</span>회의명
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>회의명
+                    </div>
+                    <div class="frmBox frmMd">
+                        <input type="text" class="iptText" title="회의명 입력">
+                    </div>
+                    <div class="infoText">
+                        ※ 회의실 입구 디지털 사이니지 안내용
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span class="required">*</span>사용인원
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>사용인원
+                    </div>
+                    <div class="frmGroup gap08 moFull">
+                        <div class="frmBox frmTini">
+                            <input type="text" class="iptText" title="사용예정 인원 입력">
+                        </div>
+                        <span class="mR32">명</span>
+                    </div>
+                    <div class="infoText">
+                        ※ 최대 00명
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    요청사항
+                </th>
+                <td>
+                    <div class="moLabel">
+                        요청사항
+                    </div>
+                    <textarea name="" id="" class="iptTextArea" placeholder="요청 사항을 입력해 주세요." title="요청사항 입력"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span class="required">*</span>결제 총금액
+                </th>
+                <td>
+                    <div class="moLabel">
+                        <span class="required">*</span>결제 총금액
+                    </div>
+                    <div class="infoText blue">
+                        ￦ <span>90,000</span> 원
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 20251128 수정 -->
+    <span class="pubRefer">※ daum, hanmail 의 경우 스팸처리 되거나 전송이 되지 않을 수 있습니다. daum외 다른 메일주소로 등록하여 주시기 바랍니다.​</span>
+    <span class="pubRefer">※ 회의명 등은 이용 고객 편의를 위해 당일 회의 알림에 활용됩니다.​</span>
+    <span class="pubRefer">※ 하단 주의사항을 반드시 확인하시고, 모두 체크해 주시기 바랍니다.</span>
+    <!--// 20251128 수정 -->                                
+</div>
+
+
+        
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+<!-- //가이드 그룹 -->
+    
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

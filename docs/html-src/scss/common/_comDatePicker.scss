@@ -1,0 +1,218 @@
+/* --------------------------- Date Picker --------------------------- */
+.tui-datepicker-input {
+    width: 100%; height: 50px; margin-left: 5px; position: relative;
+    > input {
+        width: 100%; height: 50px; padding: 0 16px; color: #333; font-size: rem(16px); font-weight: 400; line-height: normal; border-radius: 8px; border:1px solid var(--border-color-G300);
+        background: #fff url(/common/images/common/ic_24_calendar.svg) right 16px center no-repeat !important;
+    }
+}
+
+.fnGroupWrap {
+    .tui-datepicker-input {
+        width: 200px;
+
+        &.moFull {
+            @include media('mobile') {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.tui-datepicker {
+    top:calc(100% + 5px); left:0; z-index:5; width:360px; border: 1px solid var(--bg-color-G200, #F3F6FB);
+    /*border:1px solid var(--prm3) !important;*/ border-radius:6px; overflow:hidden; box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.15);
+    &.tui-hidden {
+        display: none;
+    }
+    @include media ('pcs') {
+        width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.1);
+    }
+    
+    .tui-datepicker-body.tui-datepicker-type-date {
+        @include media('pcs') {
+            width: 360px !important; border-radius: 20px; overflow: hidden;
+        }
+    }
+    .tui-datepicker-type-date {
+        width:100% !important;
+    }
+    .tui-calendar {
+        width:100% !important;
+    }
+    .tui-calendar-btn {
+        background:transparent !important;
+    }
+    .tui-calendar-header {
+        padding-top:12px; border-bottom:none;
+    }
+    .tui-calendar-header-inner {
+        position:relative; padding:12px 20px; border:none; height:62px;
+
+        > a {
+            position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:rem(18px); font-weight:400; padding:0;
+        }
+
+        > button {
+            position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border:1px solid var(--border-color-G300); border-radius:50%; display:block;
+
+            &.tui-calendar-btn-prev-month {
+                left:20px;
+            }
+
+            &.tui-calendar-btn-next-month {
+                right:20px;
+            }
+
+            &.tui-hidden {
+                display: none;
+            }    
+        }
+    }
+    .tui-calendar-title {
+        display:inline-block; padding-right:20px; font-size:16px; color:var(--t1); font-weight:600; line-height:1.4 !important; position:relative;
+        &::after {
+            content:''; position:absolute; top:50%; right:0; width:0; height:0; border-top:8px solid var(--t1); border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:0px solid transparent; transform:translateY(-50%);
+        }
+    }
+
+    .tui-calendar-header-info {display:none !important; background:#fff;}
+
+    .tui-calendar-body {
+        padding:8px 12px !important;
+    }
+    
+    .tui-calendar-month{
+        .tui-calendar-body {
+            width:100% !important;
+            .tui-calendar-month-group {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+                > li {
+                    width:25%;
+                    > a {
+                        display:block; width:100%; font-size:14px; color:var(--text-color-G800); font-weight:400; line-height:50px;
+                        &.tui-is-selected {
+                            background:#0A4991 !important; color:#fff !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tui-calendar-btn-prev-year{
+            width:38px !important;
+            left:20px !important;
+        }
+
+        .tui-calendar-btn-next-year {
+            width:38px !important;
+            right:20px !important;
+        }
+    }
+
+    .tui-calendar-year {
+        .tui-calendar-body {
+            width:100% !important;
+            .tui-calendar-year-group {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+                > li {
+                    width:33.3333%;
+                    > a {
+                        display:block; width:100%; font-size:16px; color:var(--text-color-G800); font-weight:400; line-height:50px;
+                        &.tui-is-selected {
+                            background:#0A4991 !important; color:#fff !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .tui-calendar-btn-prev-year{
+            width:38px !important;
+            left:20px !important;
+        }
+
+        .tui-calendar-btn-next-year {
+            width:38px !important;
+            right:20px !important;
+        }
+    }
+    .tui-calendar-body-header {
+        margin-bottom:4px;
+        > ul {
+            display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap: 0;
+            > li {
+                font-size:rem(14px); font-weight:400; color:var(--text-color-G800); line-height:30px; width:48px; display: list-item;
+                &.tui-sun {
+                    color:#ef2b2a !important; 
+                }
+                &.tui-sat {
+                    color:#107af2 !important; 
+                }
+            }
+        }
+    }
+    .tui-calendar-body-body {
+        .tui-calendar-week {
+            display:flex; flex-flow: row nowrap; align-items: center ;justify-content: flex-start; gap: 0;
+
+            > li {
+                > a {
+                    display:block; font-size:16px; color:var(--text-color-G800); font-weight:400; width:48px; height:48px; text-align:center; line-height:48px; margin-bottom:8px; cursor:pointer;
+
+                    &.tui-is-selected {
+                        background:#0A4991 !important; color:#fff !important; border-radius:50%;
+                    }
+
+                    &.tui-calendar-today {
+                        position:relative;
+                        &::before {
+                            content:''; position:absolute; top:7px; left:50%; transform:translateX(-50%); width:4px; height:4px; background:#107af2; border-radius:50%;
+                        }
+
+                        &.tui-is-selected {
+                            &::before {
+                                display:none;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        border-radius:50%; overflow:hidden;
+                    }
+
+                    &.tui-calendar-prev-month,
+                    &.tui-calendar-next-month {
+                        visibility:visible;
+                        color: var(--tbg3) !important;
+                    }
+
+                    &.tui-is-blocked {
+                        color:var(--text-color-G500) !important;
+                    }
+
+                    &.tui-calendar-next-month {
+                        color:var(--text-color-G500) !important;
+                    }
+
+                    &.tui-calendar-prev-month {
+                        color:var(--text-color-G500) !important;
+                    }
+                }
+                
+            }
+            &:last-of-type {
+                display:none !important
+            }
+            &:last-of-type {
+                margin-bottom:0;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/* ----- 검색 필드 ----- */
+.frmSearch {
+    width: 100%; position: relative;
+    .btnSearch {
+        width: 24px; height: 24px; font-size: 0; background: url(/common/images/common/ic_24_search.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
+        @include media ('mobile') {
+            width: 20px; height: 20px; top: 14px;
+        }
+    }
+    
+    &.typeLine {
+        .iptText {
+            padding: 0; color: var(--Gray-900); font-size: rem(20px); font-weight: 600; border-radius: 0; border: 0; border-bottom: 2px solid #333; 
+            &::placeholder {color: var(--Gray-900);}
+        }
+        .btnSearch {
+            width: 40px; height: 40px; background: url(/common/images/common/ic_40_search.svg) center no-repeat; position: absolute; right: 0; top: 4px;
+        }
+        @include media ('mobile') {
+            .iptText {
+                font-size: rem(18px);
+            }
+            .btnSearch {
+                width: 32px; height: 32px; background: url(/common/images/common/ic_32_search.svg) center no-repeat; right: 0; top: 8px;
+            }
+        }
+    }
+}

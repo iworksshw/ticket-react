@@ -1,0 +1,368 @@
+ //마이페이지
+ .comMypage {
+
+    .frmGroup + .mypageWrap {
+        margin-top: 12px;
+    }
+
+    .frmGroup {
+        .iptLbl {
+            color: var(--text-color-G900); font-size: rem(18px); font-weight: 400; line-height: 160%;
+
+            @include media ('mobile') {
+                font-size: rem(17px);
+            }
+        }
+    }
+
+    .mypageWrap {
+        display: flex; flex-direction: column; gap: 20px;
+
+        .mypageArea {
+            padding: 40px; background: #fff; border-radius: 12px; border: 1px solid var(--border-color-G300); display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 20px; transition: border 0.2s ease;
+
+            &:has(.link) {padding: 0; display: block;}
+
+            &:hover {
+                border: 1px solid var(--border-color-B500);
+            }
+            .link {
+                padding: 40px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 20px;
+            }
+
+            .contBox {
+                display: flex; flex-direction: column; gap: 12px; justify-content: center;
+
+                .dateBox {
+                    display: flex; flex-direction: row; gap: 8px;
+
+                    .dateTxt {
+                        color: var(--text-color-B500); font-size: rem(18px); font-weight: 600; line-height: 160%;
+
+                        @include media('mobile') {
+                            font-size: rem(15px);
+                        }
+                    }
+                    .date {
+                        color: var(--text-color-B500); font-size: rem(18px); font-weight: 600; line-height: 160%;
+
+                        @include media('mobile') {
+                            font-size: rem(15px);
+                        }
+                    }
+
+                }
+
+                .top {
+                    display: flex; flex-direction: row; gap: 12px; align-items: center;
+
+                    .type {
+                        padding: 2px 16px; display: flex; justify-content: center; align-items: center; border-radius: 4px; text-align: center; font-size: rem(16px); font-weight: 600; line-height: 160%;
+
+                        &.group {
+                            background: var(--bg-color-B100); color: var(--color-primary-blue-600);
+                        }
+                        &.each {
+                            background: #F4EFFF; color: #9442C7;
+                        }
+
+                        @include media('mobile') {
+                            font-size: rem(15px); padding: 1px 12px;
+                        }
+                    }
+                }
+
+                .middle {
+                    display: flex; flex-direction: row; align-items: center;
+
+                    .txt {
+                        color: var(--text-color-G900); font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;
+
+                        @include media('mobile') {
+                            font-size: rem(20px);
+                        }
+                    }
+
+                    .stationBox {
+                        display: flex; align-items: center;
+
+                        .station {
+                            padding-left: 50px; position: relative; display: flex; align-items: flex-end; gap: 5px;
+
+                            &::before {
+                                content: ""; display: block; width: 24px; height: 24px; background: url(/common/images/common/ic_24_arrow.svg) center no-repeat; background-size: 100%; position: absolute; left: 12px; top: 6px;
+                            }
+                            &:first-child {
+                                padding-left: 0;
+
+                                &::before {display: none;}
+                            }
+                            .name {
+                                color: var(--text-color-G900, #111); font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;
+
+                                @include media('mobile') {
+                                    font-size: rem(20px);
+                                }
+                            }
+                            .loca {
+                                color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+
+                                @include media('mobile') {
+                                    font-size: rem(17px);
+                                }
+                            }
+
+                            @include media('mobile') {
+                                width: 100%; padding-left: 18px; display: flex; align-items: center;
+
+                                &::before {
+                                    content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary-blue-500, #107AF2); display: block; position: absolute; left: 0px; top: 10px; z-index: 2;
+                                }
+                                &:first-child {
+                                    padding-left: 18px;
+
+                                    &::before {
+                                        display: block;
+                                    }
+                                    &::after {
+                                        content:""; width: 2px; height: calc(100% + 8px); border-left: 2px dotted var(--border-color-G400, #B9C1C9); position: absolute; left: 2px; top: 14px; z-index: 1;
+                                    }
+                                }
+                                .name {
+                                    margin-left: 12px; font-size: rem(18px); line-height: 160%; order: 1;
+                                }
+                                .time {
+                                    margin-left: 0px; font-size: rem(17px); order: 0;
+                                }
+                            }
+                        }
+
+                        @include media('mobile') {
+                            flex-wrap: wrap; gap: 8px;
+                        }
+                    }
+
+                    @include media('mobile') {
+                        flex-direction: column; align-items: flex-start;
+                    }
+                }
+
+                .base {
+                    display: flex; flex-direction: row; align-items: center; gap: 24px;
+
+                    .formerTxt {
+                        color: var(--text-color-G600); font-size: rem(16px); font-weight: 400; line-height: 160%; position: relative;
+
+                        &::after {
+                            content: ''; display: block; width: 1px; height: 10px; background: var(--border-color-G400); position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+
+                            @include media('mobile') {
+                                display: none;
+                            }
+                        }
+
+                        @include media('mobile') {
+                            font-size: rem(15px);
+                        }
+                    }
+                    .latterTxt {
+                        color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%;
+
+                        @include media('mobile') {
+                            font-size: rem(15px);
+                        }
+                    }
+
+                    > p {
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    @include media('mobile') {
+                        flex-direction: row; align-items: flex-start; column-gap: 10px; row-gap: 4px; flex-wrap: wrap;
+                    }
+                }
+
+                @include media('mobile') {
+                    justify-content: flex-start;
+                }
+            }
+
+            .stateBox {
+                display: flex; flex-direction: column;
+
+                .state {
+                    display: flex; justify-content: center; align-items: center; padding: 12px 24px; border-radius: 40px;
+                    font-size: rem(16px); font-weight: 600; line-height: 160%;
+
+                    &.cancel {
+                        color: var(--text-color-G600); background: var(--bg-color-G200);
+                    }
+                    &.confirmWait {
+                        color: var(--color-primary-blue-900); background: var(--color-primary-blue-200);
+                    }
+                    &.payWait {
+                        color: #fff; background: var(--color-primary-blue-900);
+                    }
+                    &.payComplete {
+                        color: #fff; background: var(--color-secondary-dark-blue-400);
+                    }
+
+                    @include media('mobile') {
+                        padding: 8px 20px; font-size: rem(15px);
+                    }
+                }
+
+                @include media('mobile') {
+                    align-items: flex-end;
+                }
+            }
+
+            @include media('mobile') {
+                align-items: unset; flex-direction: column; padding: 24px 20px; gap: 16px;
+                &:has(.link) {
+                    padding: 0;
+                }
+                .link {
+                     align-items: unset; flex-direction: column; padding: 24px 20px; gap: 16px;
+                }
+            }
+        }
+    }
+
+    & + .comTicketH3 {
+        padding-bottom:0px;
+    }
+
+    /*마이페이지 마케팅수신정보 영역 추가*/
+    .marketingInfo {
+        width:100%; position:relative; margin-top:24px;
+
+        .frmGroup {
+            flex-flow: column;
+
+            .frmChoBox {
+                width:100%;
+
+                label {
+                    span {
+                        font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G500);
+
+                        @include media ('mobile') {
+                            font-size: rem(15px); display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*마이페이지 sns로그인 관리 추가*/
+    .loginSet {
+        width:100%; position:relative; margin-top:12px;
+
+        ul {
+            display:flex; flex-flow:row wrap; align-items: center; justify-content: flex-start; gap:20px 20px;
+            @include media ('mobile') {
+                flex-flow:column; gap: 16px;
+            }
+            li {
+                width:calc(50% - 10px); padding:20px 32px; border:1px solid var(--border-color-G300); border-radius:12px;
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; position:relative;
+
+                @include media ('mobile') {
+                    width:100%; flex-flow: column; align-items: flex-start; gap:4px; padding:20px;
+                }
+
+                div {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:20px;
+
+                    span {
+                        &.snsLogo01 {
+                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_google.png)50% 50% no-repeat; background-size: 100%;
+                            @include media ('mobile') {
+                                width: 60px; height: 60px;
+                            }
+                        }
+                        &.snsLogo02 {
+                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_naver.png)50% 50% no-repeat; background-size: 100%;
+                            @include media ('mobile') {
+                                width: 60px; height: 60px;
+                            }
+                        }
+                        &.snsLogo03 {
+                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_kakao.png)50% 50% no-repeat; background-size: 100%;
+                            @include media ('mobile') {
+                                width: 60px; height: 60px;
+                            }
+                        }
+                        &.snsLogo04 {
+                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_apple.png)50% 50% no-repeat; background-size: 100%;
+                            @include media ('mobile') {
+                                width: 60px; height: 60px;
+                            }
+                        }
+                    }
+
+                    p {
+                        display:flex; flex-flow:column; gap:4px;
+
+                        span {
+                            &.email {
+                                font-size:rem(18px); font-weight:600; line-height:160%; color:var(--rext-color-G90);
+
+                                @include media ('mobile') {
+                                    font-size: rem(17px);
+                                }
+                            }
+
+                            &.loginDate {
+                                font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G500);
+
+                                @include media ('mobile') {
+                                    font-size: rem(15px);
+                                }
+                            }
+
+                            &.notConnect {
+
+                            }
+                        }
+                    }
+
+                    @include media ('mobile') {
+                        gap: 12px;
+                    }
+                }
+
+                button {
+                    width:max-content; border-bottom:1px solid var(--border-color-G400);
+                    font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G700);
+
+                    @include media ('mobile') {
+                        margin: 0 0 0 auto;
+                    }
+                }
+
+                .connect {
+                    color: var(--text-color-G700); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%;
+
+                    @include media ('mobile') {
+                        font-size: rem(15px);
+                    }
+                }
+
+                .notConnect {
+                    color: var(--text-color-G500); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%;
+
+                    @include media ('mobile') {
+                        font-size: rem(17px);
+                    }
+                }
+            }
+        }
+    }
+}

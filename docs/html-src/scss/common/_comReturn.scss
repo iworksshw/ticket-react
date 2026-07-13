@@ -1,0 +1,114 @@
+//상품 반품
+.comReturn {
+    display: flex; flex-direction: column; gap: 40px;
+
+    .txtBox {
+        display: flex; padding: 24px 20px; flex-direction: column; align-items: center; align-self: stretch; border-radius: 12px; background: var(--bg-color-B100, #EEF7FF); gap: 4px;
+
+        .tit {
+            color: var(--text-color-G900); text-align: center; font-size: rem(22px); font-weight: 600; line-height: 150%;
+
+            em {
+                color: var(--text-color-B500); font-weight: 600;
+            }
+
+            @include media ('mobile') {
+                font-size: rem(20px);
+            }
+        }
+        .subTit {
+            color: var(--text-color-G800); text-align: center; font-size: rem(18px); font-weight: 400; line-height: 160%;
+
+            @include media ('mobile') {
+                font-size: rem(17px);
+            }
+        }
+    }
+
+    .contBox {
+        .fnChoGroup {
+            width: 100%;
+
+            .frmChoBox {
+                flex-direction: column;
+
+                .etcWrap {
+                    margin-top: 12px; width: 100%;
+
+                    .etcReason {
+                        border-radius: 8px; border: 1px solid var(--border-color-G300); background: #fff; display: flex; align-items: flex-start; height: 150px; padding: 20px 16px; flex-shrink: 0; align-self: stretch; width: 100%;
+                    }
+                }
+            }
+        }
+
+        .fnGroup {
+            width: 100%;
+
+            .frmGroup {
+                width: 100%; margin-top: 0;
+            }
+        }
+
+        .discItem {
+            &.left {
+                justify-content: flex-start !important;
+            }
+            &.center {
+                justify-content: center !important;
+            }
+        }
+
+        .returnList {
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+            .loc {
+                color: var(--text-color-G900); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; margin-bottom: 20px;
+
+                @include media ('mobile') {
+                    font-size: rem(17px);
+                }
+            }
+            .txt {
+                color: var(--text-color-G700); text-align: center; font-size: rem(16px); font-weight: 400; line-height: 160%;
+
+                @include media ('mobile') {
+                    font-size: rem(15px);
+                }
+            }
+            .tel {
+                color: var(--text-color-G700); text-align: center; font-size: rem(16px); font-weight: 400; line-height: 160%;
+
+                @include media ('mobile') {
+                    font-size: rem(15px);
+                }
+            }
+        }
+
+        .returnRes {
+            .txt {
+                color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%; text-align: left; display: flex; gap: 8px; align-items: center;
+
+                @include media ('mobile') {
+                    font-size: rem(17px);
+                }
+
+                .detailTxt {
+                    color: var(--text-color-G700); font-size: rem(16px); font-weight: 400; line-height: 160%;
+
+                    @include media ('mobile') {
+                        font-size: rem(15px);
+                    }
+                }
+            }
+        }
+    }
+
+    .topTit {
+        color: var(--text-color-G900); font-size: rem(24px); font-style: normal; font-weight: 600; line-height: 150%; margin-bottom: 12px;
+
+        @include media ('mobile') {
+            font-size: rem(20px); margin-bottom: 8px;
+        }
+    }
+}

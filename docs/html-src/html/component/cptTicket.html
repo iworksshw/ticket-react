@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/common.js"></script>
+    <title>승차권 콘텐츠 영역</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/component/_cptTicket.scss
+    -->
+
+    <!-- 승차권 콘텐츠 영역 (예약완료/조회 화면 등에서 사용) -->
+    <div class="cptTicket">
+        <div class="ticketArea">
+
+            <!-- 예약 완료 안내 -->
+            <div class="comComplete chkIco">
+                <div class="completeTxt">
+                    <p class="title">
+                        승차권 예약이 완료되었습니다.
+                    </p>
+                    <p class="desc">
+                        <em>'인쇄한 승차권'</em> 또는 <em>'모바일QR승차권'</em>을 사용하여 직통열차를 탑승할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="comTicketInfo view"> <!-- addClass : view - 티켓형태로 보여짐 -->
+                <div class="infoTop">
+                    <div class="infoL">
+                        <ul class="infoName">
+                            <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li>
+                            <li class="item"><span>열차번호</span><span class="em">A1026</span></li>
+                        </ul>
+                        <div class="stationBox">
+                            <div class="station">
+                                <span class="name">인천공항 1터미널</span>
+                                <span class="time">(05:23)</span>
+                            </div>
+                            <div class="station">
+                                <span class="name">서울역</span>
+                                <span class="time">(06:07)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoCont on">
+                    <ul class="infoList">
+                        <li class="item">
+                            <dl class="info">
+                                <dt class="tit">예약번호</dt>
+                                <dd class="desc">2508188599045</dd>
+                            </dl>
+                            <dl class="info">
+                                <dt class="tit">탑승인원</dt>
+                                <dd class="desc">어른 3명, 어린이 2명</dd>
+                            </dl>
+                            <dl class="info">
+                                <dt class="tit">열차좌석</dt>
+                                <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)
+                                    <br>4호차 (8D, 9A)</dd>
+                            </dl>
+                        </li>
+                        <li class="item">
+                            <dl class="info">
+                                <dt class="tit">상품</dt>
+                                <dd class="desc">5,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개)
+                                    <br>10,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개)</dd>
+                            </dl>
+                        </li>
+                    </ul>
+
+                    <!-- 승차권+상품=총결제금액 -->
+                    <div class="priceList">
+                        <dl class="info">
+                            <dt class="tit">승차권</dt>
+                            <dd class="desc">
+                                <span class="bold">50,500원</span>
+                                <span class="won">(₩50,500)</span>
+                            </dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">상품</dt>
+                            <dd class="desc">
+                                <span class="bold">20,000원</span>
+                                <span class="won">(₩20,000)</span>
+                            </dd>
+                        </dl>
+                        <dl class="info total">
+                            <dt class="tit">총 결제 금액</dt>
+                            <dd class="desc">
+                                <span class="bold colorBlue">75,500원</span>
+                                <span class="won">(₩75,500)</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comBtnGroup">
+                <div class="alignC cta">
+                    <button type="button" class="btn blue lg">승차권 보기</button>
+                    <button type="button" class="btn dkLine lg">나의 승차권 조회</button>
+                </div>
+            </div>
+
+            <!-- 이용안내 -->
+            <div class="comTicketBox">
+                <div class="boxArea">
+                    <div class="boxHeader"><h4>이용안내</h4></div>
+                    <ul class="boxList">
+                        <li class="item">승차권은 <em>열차 출발 5분 전까지 구매</em>할 수 있습니다.</li>
+                        <li class="item"><em>인쇄한 승차권 또는 모바일 QR승차권</em>을 소지하여야 직통열차를 탑승할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

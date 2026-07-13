@@ -1,0 +1,81 @@
+/* --------------------------- 버튼그룹 --------------------------- */
+.comBtnGroup {
+    width: 100%; margin-top: 60px; display: flex; justify-content: space-between;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .alignL, .alignC, .alignR {
+        display: flex; gap: 12px; width: 100%;
+        &.cta {
+            .btn {
+                width: 240px;
+                &.xl {width: 280px;}
+                &.lg {width: 280px;}
+                &.sm {width: 180px;}
+            }
+            &:has(.btn:nth-child(4)) {
+                .btn {
+                    &.lg {width: 200px;}
+                }
+            }
+            &:has(.btn .dest) {
+                .btn {
+                    &.lg {width: 280px; padding: 15px 0;}
+                }
+            }
+        }
+    }
+    .alignL {justify-content: flex-start;}
+    .alignC {justify-content: center;}
+    .alignR {justify-content: flex-end;}
+    .alignR.moR {flex-flow: inherit;}
+
+    @include media('mobile') {
+        margin-top: 40px;
+        .alignL, .alignC, .alignR {
+            gap: 8px;
+            &.cta:not([data-mo-cols]) {
+                &:has(.btn:nth-child(2)) {
+                    .btn, .btn.xl, .btn.lg, .btn.sm {width: 100%;}
+                    &:has(.btn:nth-child(4)) {
+                        flex-wrap: wrap;
+                    }
+                }
+                .btn, .btn.xl, .btn.lg, .btn.sm {width: 100%; flex-shrink: 1;}
+            }
+            &[data-mo-cols="1"] {
+                flex-wrap: wrap;
+                .btn, .btn.xl, .btn.lg, .btn.sm {width: 100%; flex-shrink: 1;}
+            }
+            &[data-mo-cols="1-2"] {
+                flex-wrap: wrap;
+                .btn:nth-child(1), .btn.xl:nth-child(1), .btn.lg:nth-child(1), .btn.sm:nth-child(1) {width: 100%; flex-shrink: 1;}
+                .btn:nth-child(n+2), .btn.xl:nth-child(n+2), .btn.lg:nth-child(n+2), .btn.sm:nth-child(n+2) {width: calc(50% - 4px); flex-shrink: 1;}
+            }
+            &[data-mo-cols="2-1"] {
+                flex-wrap: wrap;
+                .btn:nth-child(-n+2), .btn.xl:nth-child(-n+2), .btn.lg:nth-child(-n+2), .btn.sm:nth-child(-n+2) {width: calc(50% - 4px); flex-shrink: 1;}
+                .btn:nth-child(3), .btn.xl:nth-child(3), .btn.lg:nth-child(3), .btn.sm:nth-child(3) {width: 100%; flex-shrink: 1;}
+            }
+            &[data-mo-cols="2-2"] {
+                flex-wrap: wrap;
+                .btn, .btn.xl, .btn.lg, .btn.sm {width: calc(50% - 4px); flex-shrink: 1;}
+            }
+        }
+    }
+
+    /*마이페이지 버튼내 목적지 표기*/
+    span.dest {
+        display:inline-block; margin-right:4px; padding:2px 12px; background:var(--color-primary-blue-700); border-radius:20px; color:#fff;
+    }
+
+    & + .comTitH3 {
+        margin-top:60px;
+
+        @include media ('mobile') {
+            margin-top:40px;
+        }
+    }
+}

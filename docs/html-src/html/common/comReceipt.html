@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>영수증 상단</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comReceipt.scss
+    -->
+
+    <!-- 영수증 상단 -->
+    <div class="comReceipt">
+        <div class="receiptBox">
+            <p class="logoImg"><img src="/common/images/common/logo_160_arex.svg" alt="arex 로고"></p>
+            <p class="txt">영수증 <em>(반환)</em></p>
+        </div>
+        <div class="receiptBox">
+            <p class="num">A1035</p>
+            <p class="info">서울역(10:30) → 인천공항2터미널(11:10) <span class="seat">(3석)</span></p>
+        </div>
+        <dl class="receiptListGroup">
+            <div class="item">
+                <dl class="receiptList">
+                    <dt>승인번호</dt>
+                    <dd>123456789</dd>
+                </dl>
+            </div>
+            <div class="item">
+                <dl class="receiptList">
+                    <dt>승인일시</dt>
+                    <dd>2025-10-05 10:30</dd>
+                </dl>
+            </div>
+        </dl>
+        <dl class="receiptTotal">
+            <dt>총 결제 금액</dt>
+            <dd>44,500원</dd>
+        </dl>
+        <div class="receiptCmt">
+            <p>본 영수증은 세금계산서 또는 현금영수증을 대신하지 않습니다.</p>
+        </div>
+    </div>
+</body>
+</html>

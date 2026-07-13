@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <title>Reply / Survey</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comReply.scss
+        scss/common/_comSurvey.scss
+        scss/common/_comBtnGroup.scss
+        scss/etc/_btn.scss
+        scss/form/_frmGroup.scss
+        scss/form/_iptChk.scss
+    -->
+
+
+    <!-- 답글 -->
+    <div class="comReply">
+        <div class="repTit">
+            <p class="tit">답변</p>
+            <p class="date">2025.08.20</p>
+        </div>
+
+        <div class="repCont">
+            안녕하십니까, 고객님.<br>
+            고객님의 비비안 웨스트우드 검정 모자는 습득되어 인천공항2터미널역에서 보관 중입니다. (접수번호 : V0006180K0618 0006)<br>
+            6월 24일까지 인천공항2터미널역 안내센터로 신분증을 지참하셔서 직접 방문하시면 찾으실 수 있습니다.<br>
+            (6월 25일 검암역 유실물 센터로 이관)
+        </div>
+    </div>
+
+    <!-- 버튼영역 -->
+    <div class="comBtnGroup">
+        <div class="alignC">
+            <div class="btnBox">
+                <button type="button" class="btn dkBlue list">삭제</button>
+                <button type="button" class="btn dkLine list">수정</button>
+                <button type="button" class="btn dkLine list">목록</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 만족도 -->
+    <div class="comSurvey">
+        <p class="title">고객의 소리 답변 만족도</p>
+        <div class="rate">
+            <div class="frmGroup">
+                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">매우 만족</label></div>
+                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">만족</label></div>
+                <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">보통</label></div>
+                <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo101"><label for="rdo104" class="iptLbl">불만족</label></div>
+                <div class="frmChoBox"><input id="rdo105" type="radio" class="iptRdo" name="rdo101"><label for="rdo105" class="iptLbl">매우 불만족</label></div>
+            </div>
+        </div>
+        <div class="typeWrite">
+            <textarea name="" id="" placeholder="만족 또는 불만족하신 사유가 있으면 작성하여 주시기 바랍니다. (200자 이내)" title="만족 또는 불만족 사유 입력"></textarea>
+            <button class="btnSubmit">등록</button>
+        </div>
+    </div>
+</body>
+</html>

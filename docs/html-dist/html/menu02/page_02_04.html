@@ -1,0 +1,2216 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+
+
+            <div class="cptGnb">
+                <div class="gnbArea">
+                    <div class="gnbGroup">
+                        <div class="logoBox">
+                            <!-- arex 로고 -->
+                            <div class="logo"><a href="./index.html">공항철도</a></div>
+                            <!-- 협력사 로고 -->
+                            <div class="logoSide"><a href="./index.html">롯데마트</a></div>
+                        </div>   
+                        <div class="gnbBox">
+                            <!-- gnb 상단 -->
+                            <div class="gnbTop">
+                                <div class="gnbTopArea">
+                                    <ul class="depth1Group">
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">로그인</a>
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">회원가입</a>
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name" target="_blank" title="새 창 열림">공항철도 홈페이지</a>
+                                        </li>
+                                        <!-- 20251106 수정 -->
+                                        <li class="depth1List depth1Btn">
+                                            <button type="button" class="depth1Name" onclick="openPopup2('pop01', event)">
+                                                <span class="global"></span>
+                                                <span class="blind">언어 및 화폐 변경</span>
+                                                <span class="txt">KOR - KRW</span>
+                                            </button>
+                                        </li>     
+                                        <!--// 20251106 수정 -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--// gnb 상단 -->
+                            <!-- gnb 하단 -->
+                            <div class="gnbCont">                          
+                                <!-- 메뉴 -->
+                                <div class="menuArea">
+                                    <ul class="depth1Group">
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">승차권</a>
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">승차권</p>
+                                                        <p class="subTit">승차권을 예매하고 편리하게 이용하세요.</p>
+                                                    </div>
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 예약</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 확인</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 변경/반환</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용내역/영수증조회</a></li>
+                                                    </ul>  
+                                                </div>  
+                                            </div>                                      
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">직통열차</a>    
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">직통열차</p>
+                                                        <p class="subTit">도심과 공항을 가장 빠르고 쾌적하게 이용해 보세요.</p>
+                                                    </div>                                                    
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 소개</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 시각표</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 운임안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 이용안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">도심공항터미널</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴호텔</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴카드</a></li>
+                                                    </ul>  
+                                                </div>  
+                                            </div>                                                                 
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">일반열차</a>     
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">일반열차</p>
+                                                        <p class="subTit">수도권 어디서나 인천공항까지 편하게 이용해 보세요.</p>
+                                                    </div>                                                      
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 소개</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 운임안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 승차권구입 안내</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 정보</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 편의시설</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 구내매장</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">실시간 열차정보</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">구글 스트리트뷰</a></li>                                                        
+                                                    </ul>  
+                                                </div>  
+                                            </div>                               
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">고객서비스</a>              
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">고객서비스</p>
+                                                        <p class="subTit">고객을 위한 모든 서비스, 지금 바로 이용하세요.</p>
+                                                    </div>                                                      
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">체험학습</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">회의실</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자전거 휴대승차</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">유실물센터</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">간편지연증명서</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">행사신청</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">광고문의</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">SCAT Reward 프로그램</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">마케팅 제휴신청</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">소비자중심경영</a></li>                                            
+                                                    </ul>  
+                                                </div>  
+                                            </div>                                                                       
+                                        </li>
+                                        <li class="depth1List">
+                                            <a href="javascript:void(0)" class="depth1Name">고객센터</a>       
+                                            <div class="depth2Area">
+                                                <div class="depth2Box">
+                                                    <div class="depth2Tit">
+                                                        <p class="mainTit">고객센터</p>
+                                                        <p class="subTit">더 나은 서비스를 위해 고객님의 목소리에 귀 기울입니다.</p>
+                                                    </div>                                                      
+                                                    <ul class="depth2Group" role="menu">
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공지사항</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">냉난방간편접수</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">고객의 소리</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">VOC</a></li>
+                                                        <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자주하는 질문 </a></li>                                          
+                                                    </ul>  
+                                                </div>  
+                                            </div>                     
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 검색, 장바구니, 개인정보 -->
+                                <!-- 메뉴 검색 --><!-- 20251128 수정 (위치 변경) -->
+                                <div class="srchArea ">
+                                    <div class="srchBox">
+                                        <div class="srchCont" role="search">
+                                            <label for="srchBox" class="blind">메뉴 검색</label>
+                                            <input id="srchBox" class="srchInput" placeholder="메뉴 검색">
+                                            <button class="srchBtn" type="button" aria-label="검색 실행">
+                                                <img src="/common/images/common/ic_26_srchBtn_b.svg" alt="">
+                                            </button>
+                                        </div>
+                                        
+                                        <ul class="srchList">
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 소개</a></li>
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 운임안내</a></li>
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 승차권구입 안내</a></li>
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 역정보</a></li>             
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 편의시설</a></li>     
+                                            <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 실시간 열차정보</a></li>                           
+                                        </ul>
+                                        
+                                        
+                                        <div class="srchClose">
+                                            <button type="button" class="srchCloseBtn">
+                                                <img src="/common/images/common/ic_44_close_b.svg" alt="">
+                                                <span class="blind">메뉴 검색 닫기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>                                 
+                                <div class="quickArea">
+                                    <button class="srchBtn" type="button">
+                                        <img src="/common/images/common/ic_26_srch.svg" alt="">
+                                        <span class="blind">메뉴검색 열기</span>
+                                    </button>
+                                    <button class="cartBtn on" type="button"> <!-- 20260105 class "on" 추가 -->
+                                        <img src="/common/images/common/ic_26_cart.svg" alt="">
+                                        <span class="blind">장바구니</span>
+                                    </button>
+                                    <!-- 20251128 수정 -->
+                                    <div class="comDropdown comMyDrop">
+                                        <div class="dropArea">
+                                            <button class="infoBtn btnDrop" type="button">
+                                                <img src="/common/images/common/ic_26_info.svg" alt="">
+                                                <span class="blind">개인정보</span>
+                                            </button>
+                                            <ul class="dropMenu">
+                                                <li>나의 AREX</li>
+                                                <li><a href="#">체험학습 예약내역</a></li>
+                                                <li><a href="#">회의실 예약내역</a></li>
+                                                <li><a href="#">자전거 휴대승차 예약내역</a></li>
+                                                <li><a href="#">나의 쿠폰함</a></li>
+                                                <li><a href="#">장바구니</a></li>
+                                                <li><a href="#">회원정보</a></li>
+                                            </ul>                                            
+                                        </div>
+                                    </div>   
+                                    <!--// 20251128 수정 -->                                    
+                                </div>
+                                <!-- 사이트맵 -->
+                                <div class="sitemapArea">
+                                    <button class="openBtn" aria-expanded="false" type="button">
+                                        <img src="/common/images/common/ic_26_hamburger.svg" alt="pc 전체메뉴 열기">
+                                    </button>
+                                    <button class="moOpenBtn" aria-expanded="false" type="button">
+                                        <img src="/common/images/common/ic_26_hamburger.svg" alt="모바일 전체메뉴 열기">
+                                    </button>
+                                    <div class="sitemap">
+                                        <div class="sitemapInner">
+                                            <div class="sitemapCont">
+                                                <div class="sitemapHead">
+                                                    <p class="tit">전체메뉴</p>
+                                                </div>
+                                                <nav aria-label="사이트맵 전체 메뉴">
+                                                    <div class="depth1Wrap">
+                                                        <ul class="depth1Group">
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">승차권</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 예약</a></li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">승차권 확인</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">유효승차권</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">제휴서비스</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">승차권 변경/반환</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 반환</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 변경</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">이용내역/영수증조회</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">구매이력</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">상품구매내역</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul> 
+                                                            </li>
+
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">직통열차</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 소개</a></li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">직통열차 시각표</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">직통열차 시각표(평일)</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">직통열차 시각표(휴일)</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 운임안내</a></li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">직통열차 이용안내</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 구입안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">온라인 승차권 구입</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">발매기 승차권 구입</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">역 이동 동선안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권확인/열차탑승</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 재발행</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권·상품 변경</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">승차권 반환</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">상품 결제취소</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">상품 반품</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">영수증 발행</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">도심공항터미널</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">도심공항터미널 이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">도심공항터미널 이용절차</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">항공보안 자율신고제도</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴호텔</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴카드</a></li>
+                                                                </ul>  
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">일반열차</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 소개</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 운임안내</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">일반열차 승차권구입 안내</a></li>
+                                                                    <li class="depth2List depth2ListInfo">
+                                                                        <a href="javascript:void(0)" class="depth2Name">역 정보</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">서울역</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">공덕</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">홍대입구</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">디지털미디어시티</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">마곡나루</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">김포공항</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">계양</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">검암</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">청라국제도시</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">영종</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">운서</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">공항화물청사</a></li>  
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">인천공항1터미널</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">인천공항2터미널</a></li>                                                         
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">역 편의시설</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">편의시설 설치현황</a></li>  
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">배려시설 현황</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">전동휠체어 승차위치</a></li>                                                         
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 구내매장</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">실시간 열차정보</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">구글 스트리트뷰</a></li>                                                        
+                                                                </ul>  
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">고객서비스</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">체험학습</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">프로그램</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">예약하기</a></li>
+                                                                        </ul>                                                                    
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">회의실</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">위치확인</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">예약하기</a></li>
+                                                                        </ul>                                                                         
+                                                                    </li>
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">자전거 휴대승차</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">이용안내</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">예약하기</a></li>
+                                                                        </ul>   
+                                                                    </li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">유실물센터</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">간편지연증명서</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">행사신청</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">광고문의</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">SCAT Reward 프로그램</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">마케팅 제휴신청</a></li>               
+                                                                    <li class="depth2List">
+                                                                        <a href="javascript:void(0)" class="depth2Name">소비자중심경영</a>
+                                                                        <ul class="depth3Group" role="menu">
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">고객 서비스 헌장</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">CCM 개요</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">CCM 인증현황</a></li>
+                                                                            <li class="depth3List"><a href="javascript:void(0)" class="depth3Name">CCM 주요활동</a></li>
+                                                                        </ul>   
+                                                                    </li>                                                         
+                                                                </ul>  
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">고객센터</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공지사항</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">냉난방간편접수</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">고객의 소리</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">VOC</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자주찾는 질문(FAQ)</a></li>                                          
+                                                                </ul>                                                              
+                                                            </li>
+                                                            <li class="depth1List">
+                                                                <div class="depth1Name">마이페이지</div>
+                                                                <ul class="depth2Group" role="menu">
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">나의 AREX</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">체험학습 예약내역</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">회의실 예약내역</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">자전거 휴대승차 예약내역</a></li>
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">나의 쿠폰함</a></li>      
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">장바구니</a></li>             
+                                                                    <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">회원정보</a></li>                                                               
+                                                                </ul>  
+                                                            </li>                                                        
+                                                        </ul>
+                                                    </div>
+                                                </nav>
+                                                <div class="sitemapFoot">
+                                                    <button class="closeBtn" type="button">
+                                                        <span class="blind">전체메뉴 닫기</span>
+                                                    </button>
+                                                </div>
+                                            </div>                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 모바일 메뉴 -->
+                                <div class="moMenuArea">
+                                    <div class="moMenuBox">
+                                        <!-- 상단 -->
+                                        <div class="topBox">
+                                            <button type="button" class="logOutBtn">로그아웃</button>
+                                            <div class="topArea">
+                                                <button class="infoBtn" type="button">
+                                                    <img src="/common/images/common/ic_32_info_w.svg" alt="">
+                                                    <span class="blind">개인정보</span>
+                                                </button>
+                                                <!-- 20260204 추가 -->
+                                                <button class="cartBtn on" type="button"> <!-- addClass : on - 장바구니 담겨있음 표시 -->
+                                                    <img src="/common/images/common/ic_32_cart_w.svg" alt="">
+                                                    <span class="blind">장바구니</span>
+                                                </button>
+                                                <!-- //20260204 추가 -->
+                                                <button class="globalBtn" type="button" onclick="openPopup2('pop01', event)">
+                                                    <img src="/common/images/common/ic_32_global.svg" alt="">
+                                                    <span class="blind">언어 설정</span>
+                                                </button>
+                                                <button class="MoCloseBtn" type="button">
+                                                    <img src="/common/images/common/ic_32_moClose.svg" alt="">
+                                                    <span class="blind">모바일메뉴 닫기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="topMenu" role="menu">
+                                            <div class="topMenuArea">
+                                                <p class="list"><a href="javascript:void(0)"><img src="/common/images/common/ic_24_ticket_cir.svg" alt="">승차권 예약</a></p>
+                                                <p class="list"><a href="javascript:void(0)"><img src="/common/images/common/ic_24_myticket_cir.svg" alt="">나의 승차권</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="midBox">
+
+                                            <!-- 20251124 수정 및 리스트 추가 -->
+                                            <div class="srchBox">
+                                                <div class="srchCont" role="search">
+                                                    <label for="srchBox2" class="blind">메뉴를 검색해보세요.</label>
+                                                    <input id="srchBox2" class="srchInput" placeholder="메뉴를 검색해보세요.">
+                                                    <button class="srchBtn" type="button" aria-label="검색 실행">
+                                                        <img src="/common/images/common/ic_26_srchBtn_b.svg" alt="">
+                                                    </button>
+                                                </div>
+                                                <ul class="srchList" style="display: none;">
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 소개</a></li>
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 운임안내</a></li>
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 승차권구입 안내</a></li>
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 역정보</a></li>             
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 편의시설</a></li>     
+                                                    <li class="item"><a href="javascript:void(0)"><span class="highlight">일반</span>열차 실시간 열차정보</a></li>                           
+                                                </ul>
+                                            </div>
+                                                
+                                            <!-- <div class="srchBox" role="search">
+                                                <label for="srch" class="blind">메뉴 검색</label>
+                                                <input id="srch" class="srchInput" placeholder="메뉴를 검색해보세요.">
+                                                <button class="srchBtn" type="button" aria-label="검색 실행">
+                                                    <img src="/common/images/common/ic_26_srchBtn_b.svg" alt="">
+                                                </button>
+                                            </div> -->
+                                            <div class="naviBox" role="navigation">
+                                                <div class="naviArea">
+                                                    <button class="naviItem active" data-target="tickets" aria-pressed="true">승차권</button>
+                                                    <button class="naviItem" data-target="express" aria-pressed="false">직통열차</button>
+                                                    <button class="naviItem" data-target="regular" aria-pressed="false">일반열차</button>
+                                                    <button class="naviItem" data-target="service" aria-pressed="false">고객서비스</button>
+                                                    <button class="naviItem" data-target="center" aria-pressed="false">고객센터</button>
+                                                    <button class="naviItem" data-target="mypage" aria-pressed="false">마이페이지</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 메인 콘텐츠 -->
+                                        <div class="moMenuBody" role="menu">
+                                            <!-- 승차권 -->
+                                            <section id="tickets" class="section">
+                                                <h2 class="title">승차권</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">승차권 예약</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">승차권 확인</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">유효승차권</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">제휴서비스</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">승차권 변경/반환</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 반환</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 변경</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">이용내역/영수증조회</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">구매이력</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">상품구매내역</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                            <!-- 직통열차 -->
+                                            <section id="express" class="section">
+                                                <h2 class="title">직통열차</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">직통열차 소개</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">직통열차 시간표</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 시간표 (평일)</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">직통열차 시간표 (휴일)</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">직통열차 운임안내</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">직통열차 이용안내</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 구입안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">온라인 승차권 구입</a></li>   
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">발매기 승차권 구입</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">역 이동 동선안내</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권확인/열차탑승</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 재발행</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권·상품 변경</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">승차권 반환</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">상품 결제취소</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">상품 반품</a></li>                
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">영수증 발행</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">도심공항터미널</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">도심공항터미널 이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">도심공항터미널 이용절차</a></li>  
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">항공보안 자율신고제도</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">제휴호텔</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">제휴카드</a></li>
+                                                </ul>
+                                            </section>
+                                            <!-- 일반열차 섹션 -->
+                                            <section id="regular" class="section">
+                                                <h2 class="title">일반열차</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">일반열차 소개</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">일반열차 운임안내</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">열차 승차권 구입 안내</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">역정보</a>
+                                                        <ul class="depth2Group depth2GroupInfo" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">서울역</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공덕</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">홍대입구</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">디지털미디어시티</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">마곡나루</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">김포공항</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">계양</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">검암</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">청라국제도시</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">영종</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">운서</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">공항화물청사</a></li>  
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">인천공항1터미널</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">인천공항2터미널</a></li>                                         
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">역 편의시설</a>
+                                                        <ul class="depth2Group depth2GroupInfo" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">편의시설 설치현황</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">배려시설 현황</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">전동휠체어 승차위치</a></li>                                    
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">역 구내매장</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">실시간 열차정보</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">구글 스트리트뷰</a></li>
+                                                </ul>
+                                            </section>
+                                            <!-- 고객서비스 --> 
+                                            <section id="service" class="section">
+                                                <h2 class="title">고객서비스</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">체험학습</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">프로그램</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">예약하기</a></li>                                       
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">회의실</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">위치확인</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">예약하기</a></li>                                          
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">자전거 휴대승차</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">이용안내</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">예약하기</a></li>                     
+                                                        </ul>  
+                                                    </li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">유실물센터</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">간편지연증명서</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">행사신청</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">광고문의</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">SCAT Reward 프로그램</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">마케팅 제휴신청</a></li>
+                                                    <li class="depth1List">
+                                                        <a href="javascript:void(0)" class="depth1Name">소비자중심경영</a>
+                                                        <ul class="depth2Group" role="menu">
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">고객 서비스 헌장</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">CCM 개요</a></li>     
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">CCM 인증현황</a></li>
+                                                            <li class="depth2List"><a href="javascript:void(0)" class="depth2Name">CCM 주요활동</a></li>                     
+                                                        </ul>  
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                            <!-- 고객센터 -->
+                                            <section id="center" class="section">
+                                                <h2 class="title">고객센터</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">공지사항</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">냉난방간편접수</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">고객의 소리</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">VOC</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">자주찾는 질문(FAQ)</a></li>
+                                                </ul>
+                                            </section>
+                                            <!-- 마이페이지 -->
+                                            <section id="mypage" class="section">
+                                                <h2 class="title">마이페이지</h2>
+                                                <ul class="depth1Group">
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">나의 AREX</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">체험학습 예약내역</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">회의실 예약내역</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">자전거 휴대승차 예약내역</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">나의 쿠폰함</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">장바구니</a></li>
+                                                    <li class="depth1List"><a href="javascript:void(0)" class="depth1Name">회원정보</a></li>
+                                                </ul>
+                                            </section>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// gnb 하단 -->
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- 팝업 열기 버튼 예시 -->
+            <!-- <button onclick="openPopup2('sample01', event)">팝업 열기</button> -->
+            <div id="pop01" class="modPopup tini"> <!-- class - on : 팝업오픈 -->
+                <div class="popupDim">딤영역</div>
+                <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                    <div class="popupInMotion">
+                        <div class="popupContainer">
+                            <div class="popupContArea">
+                                <button type="button" class="btnPopClose" onclick="closePopup2('pop01');">닫기</button>
+                                <div class="popTitle">언어 및 화폐 선택</div>
+                                <div class="popCont">
+                                    <!-- 팝업 컨텐츠 영역 -->
+                                    <div class="comLog">
+                                        <div class="fnCont">
+                                            <div class="fnGroup">
+                                                <div class="labelBox">
+                                                    <label for="lang">언어</label>
+                                                </div>
+                                                <div class="frmGroup">
+                                                    <select name="lang" id="lang" class="iptSlt lg">
+                                                        <option value="" disabled selected>언어</option> <!-- 텍스트 수정 200251014 -->
+                                                        <option value="">한국어</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="fnGroup">
+                                                <div class="labelBox">
+                                                    <label for="money">화폐</label>
+                                                </div>                            
+                                                <div class="frmGroup">
+                                                    <select name="money" id="money" class="iptSlt lg">
+                                                        <option value="" disabled selected>KRW</option>
+                                                        <option value="">KRW</option>
+                                                    </select>                                    
+                                                </div>
+                                            </div>
+                                        </div>                        
+                                    </div>
+                                    <!-- //팝업 컨텐츠 영역 -->
+                                </div>
+                                
+                                <!-- 팝업 하단 영역 -->
+                                <div class="popBtm division">
+                                    <div class="alignC">
+                                        <div class="btnBox cta">
+                                            <button type="button" class="btn dkLine">취소</button>
+                                            <button type="button" class="btn blue">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 탑 (타이틀) -->
+                
+
+                <div class="cptSubTop">
+                    <div class="subTopArea">
+                        <div class="comBreadCrumb">
+                            <div class="bcArea">
+                                <ul class="bcList">
+                                    <li class="bcItem"><a href="/main">홈</a></li>
+                                    
+                                    <li class="bcItem">
+                                        <div class="comDropdown comDropdownLocn">
+                                            <div class="dropArea">
+                                                <button type="button" class="btnDrop" title="열림">직통열차</button>
+                                                <ul class="dropMenu" style="display: none;">
+                                                    
+                                                    <li><a href="javascript:void(0)">승차권</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">직통열차</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">일반열차</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">고객서비스</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">고객센터</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="bcItem">
+                                        <div class="comDropdown comDropdownLocn">
+                                            <div class="dropArea">
+                                                <button type="button" class="btnDrop" title="열림">직통열차 이용안내</button>
+                                                <ul class="dropMenu" style="display: none;">
+                                                    
+                                                    <li><a href="javascript:void(0)">직통열차 소개</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">직통열차 시각표</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">직통열차 운임안내</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">직통열차 이용안내</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">도심공항터미널</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">제휴호텔</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">제휴카드</a></li>
+                                                    
+                                                    <li><a href="javascript:void(0)">제휴사</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comSubTitle">
+                            <div class="subTitleArea">
+                                <h1>직통열차 이용안내</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="layoutContArea">
+
+                    <!-- 티켓 -->
+                    <div class="cptContents">
+                        <div class="contentsArea">
+
+                            <div class="comSubInfo">
+                                <div class="infoText">
+                                    이용안내 페이지 입니다. 공항철도에서 알려드리는 <em>안내사항을 참고</em>해 주세요.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modTab">
+                        <div class="tabSwiper swiper-container toTab">
+                            <ul class="swiper-wrapper tabMenu tab12">
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">승차권 구입안내</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">온라인 승차권 구입</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">발매기 승차권 구입</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">찾아오시는 길</button></li> <!-- 20260128 수정 -->
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">승차권확인/열차탑승</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">승차권 재발행</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">승차권·상품 변경</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">승차권 반환</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">상품 결제취소</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">상품 반환</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">영수증 발행</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabContainer">
+                            <div class="tabCont on">
+                                <div class="pubTitH2">
+                                    <h2>직통열차 승차권 온라인 예매</h2>
+                                </div>
+
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <div class="imgTit">직통열차 승차권 온라인 예매</div>
+                                            <img src="/common/images/contents/cont_02_04_001.png" alt="PC 및 모바일 홈페이지에서 온라인 예매를 할 수 있다고 알려주는 이미지로 PC메인 화면을 보여주고 있다.">
+                                        </div>
+                                        <div class="imgArea">
+                                            <div class="imgTit">공항철도 직통열차 APP</div>
+                                            <img src="/common/images/contents/cont_02_04_002.png" alt="공항철도 직통열차 APP(App Store, Google Play)에서 온라인 예매를 할 수 있다고 알려주는 이미지로 APP화면들을 보여주고 있다.">
+                                        </div>                                       
+                                    </div>
+                                </div>
+
+                                <!-- 20260128 추가 -->
+                                <div class="pubTitH2">
+                                    <h2>직통열차 승차권 현장 예매</h2>
+                                </div>
+                                <div class="pubTitH4">
+                                    <h4>자동발매기 이용</h4>
+                                </div>
+                                <ul class="pubTextList">
+                                    <li class="textListItem">서울역 : 공항철도 서울역 지하 2층​</li>
+                                    <li class="textListItem">인천공항1터미널역 : 인천공항 제1여객터미널 지하1층 교통센터​</li>
+                                    <li class="textListItem">인천공항2터미널역 : 인천공항 제2여객터미널 지하1층 교통센터​</li>
+                                </ul>
+                                <!-- //20260128 추가 -->
+
+                                <!-- 20260128 삭제
+                                <div class="pubTitH2">
+                                    <h2>직통열차 승차권 현장 예매</h2>
+                                </div>
+
+                                <div class="comImgWrap col3">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_003.png" alt="서울역 지하 2층 고객안내센터(Infomation cener) 사진">
+                                            <p class="imgTxt">서울역 지하 2층</p>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_004.png" alt="인천공항 1터미널 교통센터 지하 1층 예매하는 곳에서 담당자와 이야기 나누고 있는 고객들">
+                                            <p class="imgTxt">인천공항 1터미널 교통센터 지하 1층</p>
+                                        </div> 
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_005.png" alt="인천공항 2터미널 교통센터 지하 1층 예매하는 곳에서 담당자와 이야기를 나누고 있는 고객들">
+                                            <p class="imgTxt">인천공항 2터미널 교통센터 지하 1층</p>
+                                        </div>                                       
+                                    </div>
+                                </div> -->
+
+                                <div class="pubTitH2">
+                                    <h2>신용카드 이용안내</h2>
+                                </div>
+                                <p class="pubText">직통열차 승차권 구입 편의를 위하여 다양한 국내 및 해외 발행 신용카드로 결제가 가능합니다.</p>
+                                
+                                <div class="pubTitH4">
+                                    <h4>국내발행 신용카드</h4>
+                                </div>
+                                <div class="comImgWrap col4">
+                                    <div class="imgGroup card">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_006.png" alt="KB국민카드 로고">
+                                            <p class="imgTxt">KB국민카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_007.png" alt="롯데카드 로고">
+                                            <p class="imgTxt">롯데카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_008.png" alt="삼성카드 로고">
+                                            <p class="imgTxt">삼성카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_009.png" alt="하나카드 로고">
+                                            <p class="imgTxt">하나카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_010.png" alt="현대카드 로고">
+                                            <p class="imgTxt">현대카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_011.png" alt="비씨카드 로고">
+                                            <p class="imgTxt">비씨카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_012.png" alt="신한카드 로고">
+                                            <p class="imgTxt">신한카드</p>
+                                        </div>                                     
+                                    </div>
+                                </div>
+                                
+                                <div class="pubTitH4">
+                                    <h4>해외발행 신용카드</h4>
+                                </div>
+                                <div class="comImgWrap col4">
+                                    <div class="imgGroup card">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_013.png" alt="비자카드 로고">
+                                            <p class="imgTxt">비자카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_014.png" alt="마스터카드 로고">
+                                            <p class="imgTxt">마스터카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_015.png" alt="JCB카드 로고">
+                                            <p class="imgTxt">JCB카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_016.png" alt="다이너스클럽카드 로고">
+                                            <p class="imgTxt">다이너스클럽카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_017.png" alt="아메리칸익스프레스카드 로고">
+                                            <p class="imgTxt">아메리칸익스프레스카드</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_018.png" alt="유니온페이카드(은련카드) 로고">
+                                            <p class="imgTxt">유니온페이카드(은련카드)</p>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                
+                                <div class="pubTitH4">
+                                    <h4>간편결제(온라인 한정)</h4>
+                                </div>
+                                <div class="comImgWrap col4">
+                                    <div class="imgGroup card">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_019.png" alt="KAKAO PAY 로고">
+                                            <p class="imgTxt">KAKAO PAY</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_020.png" alt="PAYCO 로고">
+                                            <p class="imgTxt">PAYCO</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_021.png" alt="ALIPAY 로고">
+                                            <p class="imgTxt">ALIPAY</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_022.png" alt="WECHAT PAY 로고">
+                                            <p class="imgTxt">WECHAT PAY</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_023.png" alt="KB PAY 로고">
+                                            <p class="imgTxt">KB PAY</p>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_024.png" alt="SAMSUNG PAY 로고">
+                                            <p class="imgTxt">SAMSUNG PAY</p>
+                                        </div>                                    
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_025.png" class="imgPC" alt="승차권 예약 페이지에서 출발역, 도착역, 날짜 선택칸에서 출발역을 클릭하고 있는 이미지">
+                                            <img src="/common/images/contents/cont_02_04_025_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">01. 출발역 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>열차 조회는 메인화면이나 승차권 예약 메뉴를 통해서 열차를 조회할 수 있습니다.</li>
+                                                <li>출발역은 서울역, 인천공항1터미널, 인천공항2터미널 중에 선택할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_026.png" class="imgPC" alt="승차권 예약 방법 - 도착역 선택" aria-describedby="cont_02_04_026"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_026" class="blind">
+                                                열차역 선택 팝업에서 상단에 서울역, 인천공항 1터미널, 인천공항 2터미널을 선택하는 칸을 클릭하고 있고, 그 아래에 "항공권에 표시된 터미널 정보를 확인하여 선택하시기 바랍니다." 라는 문구와 인천공항 1터미널 - 아시아나, 제주, 티웨이, 이스타 항공 등이 있음을 보여주는 리스트와 인천공항 2터미널 - 대한, 진, 에어, klm네덜란드 항공 등이 있음을 보여주는 리스트가 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_026_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">02. 도착역 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>출발역이 서울역일 경우 인천공항1터미널, 인천공항2터미널 중 선택 할 수 있습니다.</li>
+                                                <li>출발역이 인천공항1터미널이거나 인천공항2터미널일 경우 도착역은 서울역으로 자동 선택됩니다.</li>
+                                                <li>도착역이 인천공항터미널일 경우 항공권에 표시된 항공사를 확인하고 도착역을 선택해 주세요.</li>
+                                            </ul>
+                                        </div> 
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_027.png" class="imgPC" alt="승차권 예약 방법 - 출발일/시간 선택" aria-describedby="cont_02_04_027"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_027" class="blind">
+                                                열차시간 선택 팝업에서 연도, 달, 출발일 날짜를 선택하여 클릭하고 있고, 그 아래에 시간선택 칸에서 04시, 05시, 06시, 07시, 08시, 09시 등 시간을 선택하는 칸이 있고, 하단부에 취소 및 확인 버튼이 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_027_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">03. 출발일/시간 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>출발일 선택은 오늘(현재 날짜) 이후 최대 2개월까지 조회할 수 있습니다.</li>
+                                                <li>열차의 출발 시간은 현재 날짜 현재 시간 이후의 시간으로 조회할 수 있습니다.</li>
+                                                <li>해당 일자 내의 열차가 조회됩니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_028.png" class="imgPC" alt="승차권 예약 방법 - 예약인원수 선택" aria-describedby="cont_02_04_028"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_028" class="blind">
+                                                탑승인원 선택 팝업에서 어른(13세 이상), 어린이(만6세~만12세) 각각 숫자를 정할수 있는 - 와 + 버튼이 있으며, 그 아래에 주의사항이 적혀 있습니다.
+                                                "1.예약인원은 어른, 어린이를 포함하여 총 12명까지 선택 가능합니다. 2.어린이는 탑승일 기준 만 6세 ~ 만 12세까지 입니다. 3.보호자 1인이 동반하는 유아가 1인을 초과하거나 좌석이 필요한 경우 어린이로 승차권을 구매하셔야 합니다. 4.휠체어 좌석은 현장구매만 가능합니다."
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_028_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">04. 예약인원 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>예약인원은 어른, 어린이를 포함하여 총 12명까지 선택 가능합니다.</li>
+                                                <li>어린이는 탑승일 기준 만 6세 ~ 만 12세까지 입니다.</li>
+                                                <li>보호자 1인이 동반하는 유아가 1인을 초과하거나 좌석이 필요한 경우 어린이로 승차권을 구매하셔야 합니다.</li>
+                                            </ul>
+                                        </div> 
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_029.png" class="imgPC" alt="승차권 예약 방법 - 열차조회 및 선택" aria-describedby="cont_02_04_029"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_029" class="blind">
+                                                "여행정보를 확인하고, 열차를 선택해 주세요." 타이틀이 상단부에 보여지고 있고 그 아래에 열차번호, 출발역(시간) -&gt; 소요시간 -&gt; 도착역(시간), 예약버튼(매진임박을 알리는 뱃지)를 보여주는 컨텐츠가 리스트 형태로 보여지고 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_029_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">05. 열차조회 및 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>선택 된 조건으로 열차를 조회합니다.</li>
+                                                <li>해당 일자 내의 열차만 조회됩니다.</li>
+                                                <li>좌석의 수가 30 미만일 경우 "매진임박" 뱃지가 표시됩니다.</li>
+                                                <li>여유 좌석이 없을 경우 "매진" 뱃지가 표시됩니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_030.png" class="imgPC" alt="승차권 예약 방법 - 좌석 선택 및 변경" aria-describedby="cont_02_04_030"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_030" class="blind">
+                                                좌석변경 팝업에서 1호차(좌석수) ~ 6호차(좌석수)를 선택 할 수 있는 탭 버튼이 있고, 그 아래에 1열 선택불가 칸 + 1d~13d, 2열 1c~13c, 통로(2열과 3열 사이), 3열 1b~13b, 4열 1a~13a + 선택불가 칸의 좌석이 있습니다. 숫자 1~7는 역방향이고 숫자 8~13는 순방향을 나타냅니다. 그리고 그 아래에 선택좌석과 선택한 좌석을 알려주는 정보가 보여지고 있고, 그 아래에 취소 및 확인 버튼이 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_030_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">06. 좌석 바꾸기</div>
+                                            <ul class="imgTxtList">
+                                                <li>원하는 좌석을 선택하여 좌석을 바꿀 수 있습니다.</li>
+                                                <li>호차 이동을 위해서는 좌석 전체를 해제해야 이동할 수 있습니다.</li>
+                                            </ul>
+                                        </div>    
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_031.png" class="imgPC" alt="승차권 예약 방법 - 할인 목록 선택" aria-describedby="cont_02_04_031"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_031" class="blind">
+                                                할인선택 팝업에서 상단부에는 선택호차, 선택좌석이 있고 운임 가격 - 할인 가격 = 결제금액 가격이 보여지고 있습니다. 그 아래에는 테이블 형태의 할인 버튼과 설명이 보여지고 있습니다.
+                                                1.체크박스&amp;어른(할인없음) - 설명없음
+                                                2.체크박스&amp;어린이 - 탑승일 기준 만 6세 ~ 만 12세
+                                                3.체크박스&amp;경로 - 신분증
+                                                4.체크박스&amp;장애인 - 시·군·구청장 발행 복지카드&amp;국가·지방자치단체가 발급한 장애인등록증/장애인증명서
+                                                5.체크박스&amp;국가유공자 - 국가보훈처 발행 유공자증&amp;국가보훈처 발행 5.18 민주유공자
+                                                6.체크박스&amp;교환번호 - 교환번호 13자리 입력 칸과 인증버튼
+                                                7.체크박스&amp;교환번호 - 교환번호 13자리와 취소버튼
+                                                8.체크박스&amp;할인쿠폰(회원) - 쿠폰 종류를 선택하는 칸
+                                                9.체크박스&amp;할인쿠폰 - 교환번호 8자리 입력 칸과 인증버튼
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_031_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">07. 할인 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>쿠폰 또는 바우처 번호가 있거나 제휴할인 카드가 있을 경우 할인을 선택하실 수 있습니다.</li>
+                                                <li>공공할인(어린이, 경로, 장애인, 국가유공자)을 선택할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_032.png" class="imgPC" alt="승차권 예약 방법 - 공항철도 추천 상품 선택" aria-describedby="cont_02_04_032"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_032" class="blind">
+                                                추천상품 페이지에서 "라인프렌즈 한복 세트형 티머니카드" 이미지가 왼쪽에 있고, 오른쪽에는 5,000원 충전된 할인 교통카드, 원래 가격, 할인 된 가격, 기간할인을 알리는 텍스트와 함께 마감 날짜와 재고 개수를 보여주고 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_032_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">08. 공항철도 추천상품 </div>
+                                            <ul class="imgTxtList">
+                                                <li>추천상품에서 상품목록을 나열됩니다.</li>
+                                                <li>구매하고자 하는 상품을 클릭하여 상품의 상세내용을 확인합니다.</li>
+                                                <li>상품의 옵션 또는 개수를 선택합니다.</li>
+                                                <li>담기 버튼을 눌러서 상품을 담습니다.</li>
+                                            </ul>
+                                        </div>   
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_033.png" class="imgPC" alt="승차권 예약 방법 - 상품 선택" aria-describedby="cont_02_04_033"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_033" class="blind">
+                                                운임 가격, 할인 가격이 상단부에 보여지고 있고, "상품" 타이틀과 함께 5,000원 충전된 교통카드&amp;삭제 아이콘이 있고, 그 오른쪽으로 -와+버튼으로 수량 조절 버튼과 가격을 알려주는 텍스트가 있고 그 아래에 상품 총 가격이 보여지고 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_033_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">09. 상품 담기</div>
+                                            <ul class="imgTxtList">
+                                                <li>담은 상품은 승차권 목록 하단에 담아져 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_034.png" class="imgPC" alt="승차권 예약 방법 - 장바구니 확인" aria-describedby="cont_02_04_034"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_034" class="blind">
+                                                "선택한 열차를 장바구니에 담았습니다. 장바구니로 이동 하시겠습니까? 20분 안에 결제하셔야 승차권 예약이 완료됩니다." 텍스트 아래에 열차추가선택 및 장바구니로 이동 버튼이 있는 팝업창입니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_034_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">10. 장바구니</div>
+                                            <ul class="imgTxtList">
+                                                <li>선택한 열차를 장바구니에 담아 여러 여정을 한번에 결제할 수 있습니다.</li>
+                                                <li>20분 안에 결제하셔야 승차권 예약이 완료됩니다.</li>
+                                            </ul>
+                                        </div> 
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_035.png" class="imgPC" alt="승차권 예약 방법 - 결제 방법 선택" aria-describedby="cont_02_04_035"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_035" class="blind">
+                                                "결제 방법" 타이틀 아래에 신용카드, 간편결제를 선택하는 체크박스가 있고, 그 아래에 본인 카드의 정보(카드별명, 카드번호)를 보여주는 칸과 직접입력 추가 칸이 있는 슬라이드 기능이 있는 컨텐츠가 있습니다. 그 아래에 카드구분 - 체크박스&amp;국내 발급카드 또는 체크박스&amp;해외 발급카드 선택하는 칸이 있고, 카드번호 - 0000-0000-0000-00000 를 보여주는 테이블이 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_035_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">11. 결제</div>
+                                            <ul class="imgTxtList">
+                                                <li>신용카드나 간편결제로 결제할 수 있습니다.</li>
+                                                <li>즐겨쓰는 카드를 등록해 사용하시면 쉽고 빠르게 입력할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_036.png" class="imgPC" alt="승차권 예약 방법 - 승차권 확인" aria-describedby="cont_02_04_036"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_036" class="blind">
+                                                승차권 보기 팝업에서 상단부에 현재페이지/전체페이지를 알려주고 있습니다. 그 아래에 출발일 직통열차 승차권(express ticket), arex 로고가 있고, 그 아래에 출발역(시간)-&gt;도착역(시간)와 qr코드(인쇄완료)&amp;관련 번호가 있고, 그 아래에 예약호차와 예약좌석이 보여지고 있습니다. 또한 그 아래에 어른, 열차번호, 방향이 나와있고 "열차 출발시각 3분 전 까지 승강장에 도착하셔야 합니다. (Arrive at the platform at least 3 minutes before departure time.)" 라는 텍스트가 있습니다. 가장 아래에는 5천원 충전된 교통카드/옵션1,옵션1(개수)를 알려주는 칸이 있고, 가장 아래에 닫기 및 인쇄 버튼이 있습니다.
+                                            </p>                                            
+                                            <img src="/common/images/contents/cont_02_04_036_m.png" class="imgMO" alt="">
+                                            <div class="imgTit">12. 승차권 확인</div>
+                                            <ul class="imgTxtList">
+                                                <li>결제된 승차권에는 QR코드가 생성됩니다.</li>
+                                                <li>QR코드가 표시된 승차권을 확인하셔서 게이트에서 QR코드를 스캔하시면 통과 후 열차에 탑승할 수 있습니다.</li>
+                                            </ul>
+                                        </div>                                    
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup g60">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_037.png" aria-describedby="cont_02_04_037" alt="직통열차 언어선택(한글,영어,중문,일본어)"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_037" class="blind">
+                                                발매기 내 승차권 구매화면 중 언어 선택화면으로 한글,영어,중문,일본어로 되어있다. 
+                                                화면 내 타이틀은 직통열차이며 서울역에서 인천공항1터미널역까지는 43분 소요되고 인천공항2터미널역까지는 51분 소요되며 
+                                                인천공항1터미널역에서 인천공항2터미널역까지는 8분 소요됨을 나타내고 있다.
+                                            </p>
+                                            <!-- <img src="/common/images/contents/cont_02_04_037_m.png" class="imgMO" aria-describedby="cont_02_04_037_m" alt="">
+                                            <p id="cont_02_04_037_m" class="blind">
+                                                발매기 내 승차권 구매화면 중 언어 선택화면으로 한글,영어,중문,일본어로 되어있다. 
+                                                화면 내 타이틀은 직통열차이며 서울역에서 인천공항1터미널역까지는 43분 소요되고 인천공항2터미널역까지는 51분 소요되며 
+                                                인천공항1터미널역에서 인천공항2터미널역까지는 8분 소요됨을 나타내고 있다.
+                                            </p> -->
+                                            <div class="imgTit">01. 언어 선택</div>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_038.png" aria-describedby="cont_02_04_038" alt="도착역 선택"><!-- 20251217 수정 -->
+                                            <p id="cont_02_04_038" class="blind">
+                                                도착역을 선택하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 도착역이 선택되어 있다. 
+                                                상단 타이틀(도착역 선택)옆에는 남은 시간(15:48)이 표시되어 있다. 
+                                                도착역은 인천공항1터미널(항공사 : 아시아나, 제주에어, 티웨이, 에어서울, EASTAR'JET, 더보기)과 인천공항2터미널(코리안에어, 에어프랑스, 진에어, KLM, DELTA, 더보기)중 고를 수 있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "도착역을 선택하여 주십시오."라는 문구가 있다.
+                                            </p>
+                                            <!-- <img src="/common/images/contents/cont_02_04_038_m.png" class="imgMO" aria-describedby="cont_02_04_038_m" alt="">
+                                            <p id="cont_02_04_038_m" class="blind">
+                                                도착역을 선택하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 도착역이 선택되어 있다. 
+                                                상단 타이틀(도착역 선택)옆에는 남은 시간(15:48)이 표시되어 있다. 
+                                                도착역은 인천공항1터미널(항공사 : 아시아나, 제주에어, 티웨이, 에어서울, EASTAR'JET, 더보기)과 인천공항2터미널(코리안에어, 에어프랑스, 진에어, KLM, DELTA, 더보기)중 고를 수 있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "도착역을 선택하여 주십시오."라는 문구가 있다.
+                                            </p> -->
+                                            <div class="imgTit">02. 도착역 선택</div>
+                                        </div> 
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_039.png" aria-describedby="cont_02_04_039" alt="출발열차 선택"><!-- 20251217 수정 -->
+                                            <div id="cont_02_04_039" class="blind">
+                                                <p>열차선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 열차선택이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다.
+                                                상단 타이틀(열차선택)옆에는 남은 시간(15:48)이 표시되어 있다.
+                                                메인에는 열차선택하는 테이블 화면이 있다. 버튼이 있으나 이미지이므로 조작되지 않는다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "출발열차를 선택하여 주십시오."라는 문구가 있다.
+                                                </p>
+                                                <table>
+                                                    <caption>출발열차 선택 표-출발시각, 도착시각, 잔여좌석, 열차번호, 지연 및 선택이 포함된 표</caption>
+                                                    <thead>
+                                                        <tr><th>출발시각</th><th>도착시각</th><th>잔여좌석</th><th>열차번호</th><th>지연</th><th>선택</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>16:10</td><td>16:53</td><td>247</td><td>A1031</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>16:50</td><td>17:34</td><td>247</td><td>A1033</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>17:30</td><td>18:13</td><td>247</td><td>A1035</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>18:10</td><td>18:53</td><td>247</td><td>A1037</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>18:50</td><td>19:33</td><td>247</td><td>A1039</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>19:30</td><td>20:13</td><td>247</td><td>A1041</td><td>-</td><td>선택</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- <img src="/common/images/contents/cont_02_04_039_m.png" class="imgMO" aria-describedby="cont_02_04_039_m" alt="">
+                                            <div id="cont_02_04_039_m" class="blind">
+                                                <p>열차선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 열차선택이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다.
+                                                상단 타이틀(열차선택)옆에는 남은 시간(15:48)이 표시되어 있다.
+                                                메인에는 열차선택하는 테이블 화면이 있다. 버튼이 있으나 이미지이므로 조작되지 않는다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "출발열차를 선택하여 주십시오."라는 문구가 있다.
+                                                </p>
+                                                <table>
+                                                    <caption>출발시각, 도착시각, 잔여좌석, 열차번호, 지연 및 선택이 포함된 표</caption>
+                                                    <thead>
+                                                        <tr><td>출발시각</td><td>도착시각</td><td>잔여좌석</td><td>열차번호</td><td>지연</td><td>선택</td></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>16:10</td><td>16:53</td><td>247</td><td>A1031</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>16:50</td><td>17:34</td><td>247</td><td>A1033</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>17:30</td><td>18:13</td><td>247</td><td>A1035</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>18:10</td><td>18:53</td><td>247</td><td>A1037</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>18:50</td><td>19:33</td><td>247</td><td>A1039</td><td>-</td><td>선택</td></tr>
+                                                        <tr><td>19:30</td><td>20:13</td><td>247</td><td>A1041</td><td>-</td><td>선택</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div> -->
+                                            <div class="imgTit">03. 열차 선택</div>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_040.png" aria-describedby="cont_02_04_040" alt="인원(어른, 어린이) 선택"><!-- 20251217 수정 -->
+                                            <div id="cont_02_04_040" class="blind">
+                                                <p>인원선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 인원선택이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다. 열차선택 탭에는 16:10 - A1031 열차가 선택되어있다.
+                                                상단 타이틀(인원선택)옆에는 남은 시간(15:49)이 표시되어 있다.
+                                                어른(만 13세 이상)은 최대 8매, 어린이(만6세~12세)는 최대 4매까지 구매가능하다.
+                                                아래 문구에는 "어린이는 2010-10-05 이후부터 2017-10-04 이전 출생자입니다. 유아에게 좌석이 필요한 경우에는 어린이 표를 구매하십시오"라고 되어있다. 그아래 확인버튼이 있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "승차인원을 선택한 후 확인버튼을 눌러주십시오."라는 문구가 있다.
+                                                </p>
+                                            </div>
+                                            <!-- <img src="/common/images/contents/cont_02_04_040_m.png" class="imgMO" aria-describedby="cont_02_04_040_m" alt="">
+                                            <div id="cont_02_04_040_m" class="blind">
+                                                <p>인원선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 인원선택이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다. 열차선택 탭에는 16:10 - A1031 열차가 선택되어있다.
+                                                상단 타이틀(인원선택)옆에는 남은 시간(15:49)이 표시되어 있다.
+                                                어른(만 13세 이상)은 최대 8매, 어린이(만6세~12세)는 최대 4매까지 구매가능하다.
+                                                아래 문구에는 "어린이는 2010-10-05 이후부터 2017-10-04 이전 출생자입니다. 유아에게 좌석이 필요한 경우에는 어린이 표를 구매하십시오"라고 되어있다. 그아래 확인버튼이 있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "승차인원을 선택한 후 확인버튼을 눌러주십시오."라는 문구가 있다.
+                                                </p>
+                                            </div> -->
+                                            <div class="imgTit">04. 인원(어른, 어린이) 선택</div>
+                                        </div> 
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_041.png" aria-describedby="cont_02_04_041" alt="결제(현금,카드) 선택"><!-- 20251217 수정 -->
+                                            <div id="cont_02_04_041" class="blind">
+                                                <p>인원선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 결제금액이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다. 열차선택 탭에는 16:10 - A1031 열차가 결정되어있다. 인원선택은 어른1명 좌석은 2-8D 구매방식은 일반승차권이 결정되어 있다.
+                                                상단 타이틀(결제)옆에는 남은 시간(15:52)이 표시되어 있다.
+                                                운임 11,000원, 합계금액 11,000원, 투입금액 0원, 거스름돈 0원이 표시되고 있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "현금이나 신용카드를 넣어주십시오."라는 문구가 있다.
+                                                </p>
+                                            </div>
+                                            <!-- <img src="/common/images/contents/cont_02_04_041_m.png" class="imgMO" aria-describedby="cont_02_04_041_m" alt="">
+                                            <div id="cont_02_04_041_m" class="blind">
+                                                <p>인원선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 결제금액이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다. 열차선택 탭에는 16:10 - A1031 열차가 결정되어있다. 인원선택은 어른1명 좌석은 2-8D 구매방식은 일반승차권이 결정되어 있다.
+                                                상단 타이틀(결제)옆에는 남은 시간(15:52)이 표시되어 있다.
+                                                운임 11,000원, 합계금액 11,000원, 투입금액 0원, 거스름돈 0원이 표시되고 있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "현금이나 신용카드를 넣어주십시오."라는 문구가 있다.
+                                                </p>
+                                            </div> -->
+                                            <div class="imgTit">05. 결제 (현금, 카드)</div>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_042.png" aria-describedby="cont_02_04_042" alt="승차권 및 영수증 수령 확인"><!-- 20251217 수정 -->
+                                            <div id="cont_02_04_042" class="blind">
+                                                <p>인원선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 결제금액이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다. 열차선택 탭에는 16:10 - A1031 열차가 결정되어있다. 인원선택은 어른1명 좌석은 2-8D 구매방식은 일반승차권이 결정되어 있다.
+                                                상단 타이틀(결제)옆에는 남은 시간(15:53)이 표시되어 있다.
+                                                운임 11,000원, 합계금액 11,000원, 투입금액 0원, 거스름돈 0원이 표시되고 있다.
+                                                영수증발행 버튼이 나타나있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "승차권을 반드시 가져가십시오."라는 문구가 있다.
+                                                </p>
+                                            </div>
+                                            <!-- <img src="/common/images/contents/cont_02_04_042_m.png" class="imgMO" aria-describedby="cont_02_04_042_m" alt="">
+                                            <div id="cont_02_04_042_m" class="blind">
+                                                <p>인원선택을 하는 화면이며 도착역/열차선택/인원선택/죄석선택/구매방식/결제금액이라는 탭중에 결제금액이 선택되어 있다. 
+                                                도착역 탭에는 인천공항1터미널이 결정되어 있다. 열차선택 탭에는 16:10 - A1031 열차가 결정되어있다. 인원선택은 어른1명 좌석은 2-8D 구매방식은 일반승차권이 결정되어 있다.
+                                                상단 타이틀(결제)옆에는 남은 시간(15:53)이 표시되어 있다.
+                                                운임 11,000원, 합계금액 11,000원, 투입금액 0원, 거스름돈 0원이 표시되고 있다.
+                                                영수증발행 버튼이 나타나있다.
+                                                하단에 이전과 처음으로 갈수있는 버튼이 있다.
+                                                최하단에는 "승차권을 반드시 가져가십시오."라는 문구가 있다.
+                                                </p>
+                                            </div> -->
+                                            <div class="imgTit">06. 승차권 및 영수증 수령</div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 역 이동 동선안내 -->
+                            <div class="tabCont">
+
+                                <!-- 20260128 추가 -->
+                                <div class="comImgWrap">
+                                    <div class="imgGroup">
+                                        <div class="imgArea noBdr">
+                                            <img src="/common/images/contents/cont_02_04_043.png" aria-describedby="cont_02_04_043" alt="인천공항 도착층에서 공항철도 찾아오시는 길">
+                                            <div id="cont_02_04_043" class="blind">
+                                                <p>
+                                                    인천공항 도착층에서 공항철도 찾아오시는 길(1,2 터미널 공통) <br>
+                                                    1층에 도착하여 엘리베이터나 에스컬레이터를 이용하여 지하1층에 도착 후 승차표를 구입. <br>
+                                                    게이트를 지나서 다시 엘리베이터나 에스컬레이터를 이용하여 지하4층에 있는 타는 곳으로 이동
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea noBdr">
+                                            <img src="/common/images/contents/cont_02_04_044.png" aria-describedby="cont_02_04_044" alt="서울역 KTX, 외부 출구에서 공항철도 직통열차 찾아오시는 길">
+                                            <div id="cont_02_04_044" class="blind">
+                                                <p>
+                                                    서울역 KTX, 외부 출구에서 공항철도 직통열차 찾아오시는 길 <br>
+                                                    1~14번 출구를 통해 들어온 후, 엘리베이터나 에스컬레이트를 이용하여 1층에서 2층으로 이동. <br>
+                                                    KTX대합실을 지나 에스컬레이터나 엘리베이터를 이용하여 지하2층 도심공항터미널로 이동. <br>
+                                                    15번 출구를 통해 들어오는 경우는 에스컬레이터를 타고 지하2층 도심공항터미널로 이동. <br>
+                                                    게이트를 지나서 다시 엘리베이터를 이용하여 지하7층에 있는 타는 곳으로 이동
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="imgArea noBdr">
+                                            <img src="/common/images/contents/cont_02_04_045.png" aria-describedby="cont_02_04_045" alt="서울역 1,4호선, GTX에서 공항철도 직통열차 찾아오시는 길">
+                                            <div id="cont_02_04_045" class="blind">
+                                                <p>
+                                                    1,4호선이나 GTX를 타고 온 경우 엘리베이터나 에스컬레이터를 타고 지하1층에서 지하3층으로 이동하여 게이트를 빠져나감. <br>
+                                                    에스컬레이터나 엘리베이터를 타고 지하2층으로 이동하여 승차권을 구입한 후 게이트를 지나 엘리베이터를 이용하여 지하7층 타는 곳으로 이동
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //20260128 추가 -->
+                                
+                                <!-- 20260128 위 내용으로 교체
+                                <div class="tabInTab freeW">
+                                    <div class="inTabSwiper swiper-container">
+                                        <ul class="inTabMenu swiper-wrapper">
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName on" title="선택 된 탭 내 탭메뉴">서울역</button></li>
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName" title="탭내 탭메뉴">인천공항1터미널</button></li>
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName" title="탭내 탭메뉴">인천공항2터미널</button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="inTabContianer">
+                                        <div class="inTabCont on">
+                                            
+                                            <div class="comImgWrap">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_043.png" aria-describedby="cont_02_04_043" alt="서울역 승차객 b2 동선안내">
+                                                        <div id="cont_02_04_043" class="blind">
+                                                            <p>서울역 승차객-B2<br>
+                                                                A.직통열차 승카게이트 진입 후 엘리베이터나 에스컬레이터를 이용하면 직통열차 승강장(지하7층, B7)으로 이동할 수 있습니다.<br>
+
+                                                                이미지 설명 : 상단좌측엔 직통열차 승차게이트를 지나면 좌측에 엘리베이터, 우측에 에스컬레이터가 있다. 상단 중앙엔 AREX인포메이션이 있으며 우측엔 출국심사장과 도심공항터미널 전용게이트(입구/출구)가 있다. 
+                                                                직통열차 승차게이트 옆과 도심공항터미널 전용게이트 열에는 직통열차 자동발매기가 있다. 좌측에 엘리베이터와 1층에서 지하2층으로 내려오는 에스컬레이터가 있으며 우측에는 지하 3층으로 내려가는 에스컬레이터가 있다.<br>
+
+                                                                설명 : 도심공항터미널(코리안에어, 아시아나 항공, 제주에어, 티웨이, EASTAR'JET, 진에어) 출구로 나와 직진하여 직통열차 자동발매기를 지나면 우측에 진통열차 승차게이트가 있으며, 
+                                                                게이트를 지나 좌측에 엘리베이터나 우측에 에스컬레이터를 타고 지하 7층까지 갈 수 있습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_044.png" aria-describedby="cont_02_04_044" alt="서울역 하차객 b3 동선안내">
+                                                        <div id="cont_02_04_044" class="blind">
+                                                            <p>서울역 하차객-B3<br>
+                                                                이미지 설명 : 중앙 좌에서 우측으로 선이 그어져 있고(지나갈 수 없음) 선의 중좌와 중우에 하차게이트가 있다. 선위를 기준으로 좌측에 엘리베이터(A)가 있고 위쪽에 에스컬레이터(A)가 있어 지하7층에서 지하3층으로 올라올 수 있다.
+                                                                선의 아래쪽으로 좌하에는 일반열차 자동발매기(B)가 있고 게이트 좌/우 두개 사이에도 자동발매기가 있다. 좌측 게이트아래, 좌하 자동발매기 우하쪽에 AREX인포메이션이 있다. 
+                                                                노란색 선으로 엘리베이터 및 에스컬레이터를 타고 직통열차 도착여객이 하차게이트를 통해 나가는 방향을 그리고 있다.<br>
+
+                                                                A. 지하 3층(B3) 도착 후 게이트로 나가서 지상2층으로 이동하시면 KTX를 이용할 수 있습니다.<br>
+                                                                B. 지하철 이용고객은 자동발매기에서 1회용 교통카드를 구매후 이용할 수 있습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_045.png" aria-describedby="cont_02_04_045" alt="서울역 b7 승강장 동선안내">
+                                                        <div id="cont_02_04_045" class="blind">
+                                                            <p>서울역 B7 승강장-B7<br>
+                                                                이미지 설명 : 직통열차 승강장이 좌우에 펼쳐저 있으며 우측상단에 우측이 인천공항1터미널 방향임을 나타내고 있다.
+                                                                승강장 중앙에는 엘리베이터가 2기가 있고 엘리베이터 좌우에 에스컬레이터가 있다. 승강장 하단에는 열차가 대기해 있으며 1호차(좌)~6(우)호차까지 있다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="inTabCont">
+                                            
+                                            <div class="comImgWrap">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_046.png" aria-describedby="cont_02_04_046" alt="인천공항1터미널역 승차객 b1 동선안내">
+                                                        <div id="cont_02_04_046" class="blind">
+                                                            <p>인천공항1터미널역 승차객-B1<br>
+                                                                이미지 설명 : 교통센터를 표현하고 있다.
+                                                                교통센터의 좌상에는 일반열차(동편) 승차게이트와 인포메이션이 있고, 우상에는 직통열차(서편) 승차가이트가 있다. 직통열차 승차게이트 내부에 엘리베이터와 지하4층으로 가는 에스컬레이터가 있다. 
+                                                                직통열차 승차게이트 옆에는 직통열차 자동발매기가 있다.
+                                                                중앙에는 CGV가 있고 중앙 하단에는 입구가 있는데 공항터미널로 출국장3F, 입국장1F표시가 되어있다. 노란색 화살표 선으로 중앙 하단에 입구에서부터 우측 상단 직통열차 승차게이트까지 가는 길을 표시하고 있다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_047.png" aria-describedby="cont_02_04_047" alt="인천공항1터미널역 승차객 b4 승강장 동선안내">
+                                                        <div id="cont_02_04_047" class="blind">
+                                                            <p>인천공항 1터미널역 B4승강장-B4<br>
+                                                                이미지 설명 : 열차승강장을 나타내는 이미지. 중앙에 좌에서 우로 열차 승강장이 있다. 승강장 좌측으로는 서울역방향이며 우측으로는 인천공항2터미널 방향이다.
+                                                                승강장의 좌측은 일반열차 승강장이며 중앙(A)에는 엘리베이터와 에스컬레이터가 있으며 우측에는 직통열차 승강장이 있다.
+                                                                승강장 아래 중앙에는 좌측부터 우측까지 1~6호차가 그려져 있다. 중앙(A)부분 바로 아래는 3호차가 있고 1~2호차는 일반열차 승강장쪽으로 넘어가 있다.<br>
+                                                                A. 1,2호차 타승객은 3호차를 통해 승차하신 후 이동할 수 있습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="inTabCont">
+                                            
+                                            <div class="comImgWrap">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_048.png" aria-describedby="cont_02_04_048" alt="인천공항2터미널역 승차객 b1 동선안내">
+                                                        <div id="cont_02_04_048" class="blind">
+                                                            <p>인천공항2터미널역 승차객-B1<br>
+                                                                교통센터를 나타낸 이미지
+                                                                이미지설명 : 이미지 상단에는 서울버스, 우측끝에는 경기버스, 좌측끝에는 지방버스를 나타내고 있다.
+                                                                교통센터 좌상단은 일반열차영역으로 승차게이트가 2개 잇고 우상단도 일반열차영역으로 승차게이트가 2개 있다. 
+                                                                중앙에는 AREA인포메이션이 존재한다.
+                                                                좌하단에는 직통열차영역이며 영역 상단에 승차게이트가 있다. 영역 우상단에 엘리베이터가 하단에 에스컬레이터가 있고 영역 밖 우측에 직통열차 자동발매기가 있다.
+                                                                우하단에도 직통열차영역이며 영역 상단에 승차게이트가 있다. 영역 좌상단에 엘리베이터가 하단에 에스컬레이터가 있고 영역 밖 좌측에 직통열차 자동발매기가 있다.
+                                                                중앙 하단에는 공항터미널과 출국장(3F) 및 입국장(1F)표시가 있다. 노란색 화살표로 중앙하단에서 좌우하단 직통열차의 승차게이트까지 그려져 있다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="imgArea noBdr">
+                                                        <img src="/common/images/contents/cont_02_04_049.png" aria-describedby="cont_02_04_049" alt="인천공항2터미널역 승차객 b3 동선안내">
+                                                        <div id="cont_02_04_049" class="blind">
+                                                            <p>인천공항2터미널역 B3 승강장-B3<br>
+                                                                이미지 설명 : 열차승강장을 나타내는 이미지. 하단에서 좌에서 우로 열차 승강장이 있다. 승강장 좌측으로는 서울역 방향으로 표시되어있다. 
+                                                                승강장 좌우측에 에스컬레이터가 있으며 그것보다 조금 중앙쪽 좌우로 엘리베이터가 있다.
+                                                                승강장 위쪽 중앙에 직통열차가 좌측1호차부터 우측 6호차까지 배치되어있다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            
+                            <!-- 승차권확인/열차탑승 -->
+                            <div class="tabCont">
+
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_050.png" alt="직통열차승차권, 출발역(시간)-&gt;도착역(시간), qr코드(관련번호)와 어른, 호차가 기재 된 티켓 일러스트">
+                                            <!-- <img src="/common/images/contents/cont_02_04_050_m.png" class="imgMO" alt=""> -->
+                                            <div class="imgTit">01. 승차권 발매</div>
+                                            <ul class="imgTxtList">
+                                                <li>PC 홈페이지에서 홈티켓 인쇄</li>
+                                                <li>모바일 홈페이지에서 QR 모바일 승차권 확인</li>
+                                                <li>iOS/Android 앱의 '승차권 확인'에서 QR 모바일 승차권 확인</li>
+                                                <li>역에서 승차권 현장 발매(자동발매기)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_051.png" alt="qr코드 스캔하는 곳을 보여주는 게이트의 qr스캐너 일러스트">
+                                            <!-- <img src="/common/images/contents/cont_02_04_051_m.png" class="imgMO" alt=""> -->
+                                            <div class="imgTit">02. QR code 스캔</div>
+                                            <ul class="imgTxtList">
+                                                <li>해당 역 게이트의 QR 스캐너에 QR 코드를 스캔 합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_052.png" alt="게이트 스캐너 사이를 지나가고 있는 사람 일러스트(직통열차 방향)">
+                                            <!-- <img src="/common/images/contents/cont_02_04_052_m.png" class="imgMO" alt=""> -->
+                                            <div class="imgTit">03. 게이트 통과</div>
+                                            <ul class="imgTxtList">
+                                                <li>게이트의 문이 열리면 통과할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- 승차권 재발행 -->
+                            <div class="tabCont">
+                                
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_053.png" class="imgPC" alt="승차권 재발행을 하는 화면에서 승차일을 선택함으로 여정을 선택할 수 있습니다.">
+                                            <img src="/common/images/contents/cont_02_04_053_m.png" class="imgMO" alt="승차권 재발행을 하는 화면에서 승차일을 선택함으로 여정을 선택할 수 있습니다.">
+                                            <div class="imgTit">01. 여정 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>재발행을 원하는 여정을 선택합니다.</li>
+                                                <li>하나의 여정만 단독 선택할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_054.png" class="imgPC" alt="승차권 정보 하단에 재발행 버튼이 있습니다. 해당 재발행 버튼을 클릭합니다.">
+                                            <img src="/common/images/contents/cont_02_04_054_m.png" class="imgMO" alt="승차권 정보 하단에 재발행 버튼이 있습니다. 해당 재발행 버튼을 클릭합니다.">
+                                            <div class="imgTit">02. 도착역 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>여정 목록 하단의 "재발행" 버튼을 클릭합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_055.png" class="imgPC" alt="레이어 팝업이 화면에 출력되며 내부 QR코드가 새로 생성되어 있습니다. 팝업 하단의 인쇄 버튼을 클릭합니다.">
+                                            <img src="/common/images/contents/cont_02_04_055_m.png" class="imgMO" alt="레이어 팝업이 화면에 출력되며 내부 QR코드가 새로 생성되어 있습니다.">
+                                            <div class="imgTit">03. 홈티켓 인쇄</div>
+                                            <ul class="imgTxtList">
+                                                <li>"재발행" 시 QR코드가 새로 생성됩니다.</li>
+                                                <li>새로 생성된 QR코드가 표시된 홈티켓을 인쇄해야 게이트를 통과할 수 있습니다.</li>
+                                            </ul>
+                                            <p class="imgTxtB"><span class="colorRed">* "재발행" 이전의 홈티켓은 사용할 수 없습니다.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- 승차권-상품 변경 -->
+                            <div class="tabCont">
+                                
+                                <div class="tabInTab freeW">
+                                    <div class="inTabSwiper swiper-container swiper-container-initialized swiper-container-horizontal">
+                                        <ul class="inTabMenu swiper-wrapper" style="transition-duration: 0ms;">
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName on" title="선택 된 탭 내 탭메뉴">할인변경</button></li>
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName" title="탭내 탭메뉴">열차변경</button></li>
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName" title="탭내 탭메뉴">좌석변경</button></li>
+                                            <li class="inTabItem swiper-slide"><button type="button" class="inTabName" title="탭내 탭메뉴">상품변경</button></li>
+                                        </ul>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                                    <div class="inTabContianer">
+                                        <div class="inTabCont on">
+
+                                            <div class="comImgWrap abBder col2">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_056.png" class="imgPC" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 할인변경을 선택합니다.">
+                                                        <img src="/common/images/contents/cont_02_04_056_m.png" class="imgMO" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 할인변경을 선택합니다.">
+                                                        <div class="imgTit">01. ‘할인변경’ 선택</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>원하는 승차권의 여정의 ‘할인변경’을 선택합니다.</li>
+                                                            <li>여정단위로 선택할 수 있습니다.</li>
+                                                            <li>“할인변경” 버튼을 클릭하면 “할인선택” 팝업창이 표시됩니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_057.png" class="imgPC" alt="할인변경 팝업이 생성되며 상단에 호차와 좌석을 선택하고 할인종류를 입력합니다. 할인종류에는 어른(할인없음), 어린이, 경로, 장애인, 국가유공자, 교환번호 등이 있습니다. 팝업 하단에는 확인 버튼이 있습니다.">
+                                                        <img src="/common/images/contents/cont_02_04_057_m.png" class="imgMO" alt="할인변경 팝업이 생성되며 상단에 호차와 좌석을 선택하고 할인종류를 입력합니다. 할인종류에는 어른(할인없음), 어린이, 경로, 장애인, 국가유공자, 교환번호 등이 있습니다. 팝업 하단에는 확인 버튼이 있습니다.">
+                                                        <div class="imgTit">02. 좌석별 할인적용</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>변경을 원하는 좌석을 선택하여 할인을 적용합니다.</li>
+                                                            <li>기 입력된 할인은 다른 종류의 할인으로 변경할 수 없습니다.</li>
+                                                            <li>변경되는 할인의 종류에 따라 환불을 받으시거나 추가결제를 하실 수 있습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_058.png" class="imgPC" alt="할인이 적용된 화면이 출력되며 여정에는 열차번호, 탑승인원, 열차좌석, 상품, 운임, 할인 및 상품 등에 대한 정보와 하단에 종합적인 승차권, 상품, 변경 수수료 및 총 결제금액이 출력되고, 위 예약정보를 결재 진행 할지에 대한 여부와 해외통화 결제 혹은 원화결제를 선택 할 수 있다. 하단에 취소 및 확인 버튼이 있다.">
+                                                        <img src="/common/images/contents/cont_02_04_058_m.png" class="imgMO" alt="할인이 적용된 화면이 출력되며 여정에는 열차번호, 탑승인원, 열차좌석, 상품, 운임, 할인 및 상품 등에 대한 정보와 하단에 종합적인 승차권, 상품, 변경 수수료 및 총 결제금액이 출력되고, 위 예약정보를 결재 진행 할지에 대한 여부와 해외통화 결제 혹은 원화결제를 선택 할 수 있다. 하단에 취소 및 확인 버튼이 있다.">
+                                                        <div class="imgTit">03. 환불 &amp; 변경수수료 결제</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>할인이 적용되어 운임이 할인되었을 경우 반환금액을 환불처리 됩니다.</li>
+                                                            <li>승차권 변경은 3회까지 가능하며, 2회 이상 변경 시 수수료가 발생합니다.</li>
+                                                            <li>(변경 수수료는 열차 출발 당일 2회 이상 변경하는 경우에 한하여 발생)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="inTabCont">
+                                            
+                                            <div class="comImgWrap abBder col2">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_059.png" class="imgPC" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 열차변경을 선택합니다.">
+                                                        <img src="/common/images/contents/cont_02_04_059_m.png" class="imgMO" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 열차변경을 선택합니다.">
+                                                        <div class="imgTit">01. ‘열차변경’ 선택</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>원하는 승차권의 여정의 ‘열차변경’을 선택합니다.</li>
+                                                            <li>여정단위로 선택할 수 있습니다.</li>
+                                                            <li>“열차변경” 버튼을 누르면 “열차 조회“ 페이지로 이동합니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_060.png" class="imgPC" aria-describedby="cont_02_04_060" alt="열차조회 및 예약 선택 화면">
+                                                        <div id="cont_02_04_060" class="blind">
+                                                            <p>출발역, 도착역, 날짜, 인원으로 입력되고 검색 버튼에 의해 조회된 열차들이 나열된다. 열차는 번호와 출발역과 출발시간, 도착역과 도착시간 그리고 소요시간이 표현되며 열차정보마다 우측에 예약 버튼이 있다
+                                                                매진이 임박한 경우 예약 버튼에 매진입박이라는 메시지가 노출된다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_060_m.png" class="imgMO" aria-describedby="cont_02_04_060_m" alt="열차조회 및 예약 선택 화면">
+                                                        <div id="cont_02_04_060_m" class="blind">
+                                                            <p>출발역, 도착역, 날짜, 인원으로 입력되고 검색 버튼에 의해 조회된 열차들이 나열된다. 열차는 번호와 출발역과 출발시간, 도착역과 도착시간 그리고 소요시간이 표현되며 열차정보마다 우측에 예약 버튼이 있다
+                                                                매진이 임박한 경우 예약 버튼에 매진입박이라는 메시지가 노출된다.</p>
+                                                        </div>
+                                                        <div class="imgTit">02. 열차조회 및 ‘예약’ 선택</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>원하는 조건을 입력 후 조회된 열차를 선택합니다.</li>
+                                                            <li>‘탑승인원’은 변경할 수 없습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_061.png" class="imgPC" aria-describedby="cont_02_04_061" alt="‘열차변경’ 내용확인 화면">
+                                                        <div id="cont_02_04_061" class="blind">
+                                                            <p>변경 이전과 변경 이후 여정의 정보들이 화면에 출력되는데 승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 확인 할 수 있다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_061_m.png" class="imgMO" aria-describedby="cont_02_04_061_m" alt="‘열차변경’ 내용확인 화면">
+                                                        <div id="cont_02_04_061_m" class="blind">
+                                                            <p>변경 이전과 변경 이후 여정의 정보들이 화면에 출력되는데 승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 확인 할 수 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">03. ‘열차변경’ 내용확인</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>열차변경 전과 후의 상세 내용을 확인합니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_062.png" class="imgPC" aria-describedby="cont_02_04_062" alt="‘변경수수료’ 결제 화면">
+                                                        <div id="cont_02_04_062" class="blind">
+                                                            <p>승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 보고 하단에 승차권 비용, 상품 비용, 변경 수수료 및 총 결제 금액을 확인 할 수 있다.
+                                                                하단에는 위 예약정보를 결제진행 하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_062_m.png" class="imgMO" aria-describedby="cont_02_04_062_m" alt="‘변경수수료’ 결제 화면">
+                                                        <div id="cont_02_04_062_m" class="blind">
+                                                            <p>승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 보고 하단에 승차권 비용, 상품 비용, 변경 수수료 및 총 결제 금액을 확인 할 수 있다.
+                                                                하단에는 위 예약정보를 결제진행 하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">04. ‘변경수수료’ 결제</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>열차 변경 시 수수료가 발생할 경우 수수료를 결제하는 화면으로 이동하여 수수료를 결제 후 열차가 변경됩니다.</li>
+                                                            <li>승차권 변경은 3회까지 가능하며, 2회 이상 변경 시 수수료가 발생합니다.</li>
+                                                            <li>(변경 수수료는 열차 출발 당일 2회 이상 변경하는 경우에 한하여 발생)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="inTabCont">
+                                            
+                                            <div class="comImgWrap abBder col2">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_063.png" class="imgPC" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 좌석변경을 선택합니다.">
+                                                        <img src="/common/images/contents/cont_02_04_063_m.png" class="imgMO" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 좌석변경을 선택합니다.">
+                                                        <div class="imgTit">01. ‘좌석변경’ 선택</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>원하는 승차권의 여정의 ‘좌석변경’을 선택합니다.</li>
+                                                            <li>여정단위로 선택할 수 있습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_064.png" class="imgPC" aria-describedby="cont_02_04_064" alt="‘좌석 선택 팝업 화면">
+                                                        <div id="cont_02_04_064" class="blind">
+                                                            <p>좌석변경이라는 타이틀을 가진 팝업이 노출된다. 해당 열차가 가지고 있는 호차가 탭화면으로 노출되고 해당 호차를 선택하면 순방향, 역방향, 선택불가 범례와 함께 각 좌석이 열차의 좌석 모양 및 순서대로 보여진다.
+                                                            좌석은 한라인이 1A~1D 형태로 되어있으며 뒷자라는 2A~2D 형태로 이어진다. 하단에 선택좌석이 2/5석 선택 형태로 노출되며 우측에 내가 선택한 좌석(5A, 6B)이 보여진다. 최하단에는 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_064_m.png" class="imgMO" aria-describedby="cont_02_04_064_m" alt="좌석 선택 팝업 화면">
+                                                        <div id="cont_02_04_064_m" class="blind">
+                                                            <p>좌석변경이라는 타이틀을 가진 팝업이 노출된다. 해당 열차가 가지고 있는 호차가 탭화면으로 노출되고 해당 호차를 선택하면 순방향, 역방향, 선택불가 범례와 함께 각 좌석이 열차의 좌석 모양 및 순서대로 보여진다.
+                                                            좌석은 한라인이 1A~1D 형태로 되어있으며 뒷자라는 2A~2D 형태로 이어진다. 하단에 선택좌석이 2/5석 선택 형태로 노출되며 우측에 내가 선택한 좌석(5A, 6B)이 보여진다. 최하단에는 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">02. 좌석 선택</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>원하는 조건을 입력 후 조회된 열차를 선택합니다.</li>
+                                                            <li>‘탑승인원’은 변경할 수 없습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_065.png" class="imgPC" aria-describedby="cont_02_04_065" alt="‘좌석변경’ 내용확인 팝업 화면">
+                                                        <div id="cont_02_04_065" class="blind">
+                                                            <p>승차권 변경 확인이라는 타이틀을 가진 팝업이 노출된다. 좌석변경에 대한 테이블에는 변경 전 호차와 좌석 그리고 변경 후 호차와 좌석에 대한 정보가 있고 하단에 확인버튼이 있다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_065_m.png" class="imgMO" aria-describedby="cont_02_04_065_m" alt="‘좌석변경’ 내용확인 팝업 화면">
+                                                        <div id="cont_02_04_065_m" class="blind">
+                                                            <p>승차권 변경 확인이라는 타이틀을 가진 팝업이 노출된다. 좌석변경에 대한 테이블에는 변경 전 호차와 좌석 그리고 변경 후 호차와 좌석에 대한 정보가 있고 하단에 확인버튼이 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">03. ‘좌석변경’ 내용확인</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>열차변경 전과 후의 상세 내용을 확인합니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_066.png" class="imgPC" aria-describedby="cont_02_04_066" alt="‘변경수수료’ 결제 화면">
+                                                        <div id="cont_02_04_066" class="blind">
+                                                            <p>승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 보고 하단에 승차권 비용, 상품 비용, 변경 수수료 및 총 결제 금액을 확인 할 수 있다.
+                                                                하단에는 위 예약정보를 결제진행 하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_066_m.png" class="imgMO" aria-describedby="cont_02_04_066_m" alt="‘변경수수료’ 결제 화면">
+                                                        <div id="cont_02_04_066_m" class="blind">
+                                                            <p>승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 보고 하단에 승차권 비용, 상품 비용, 변경 수수료 및 총 결제 금액을 확인 할 수 있다.
+                                                                하단에는 위 예약정보를 결제진행 하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">04. ‘변경수수료’ 결제</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>열차 변경 시 수수료가 발생할 경우 수수료를 결제하는 화면으로 이동하여 수수료를 결제 후 열차가 변경됩니다.</li>
+                                                            <li>승차권 변경은 3회까지 가능하며, 2회 이상 변경 시 수수료가 발생합니다.</li>
+                                                            <li>(변경 수수료는 열차 출발 당일 2회 이상 변경하는 경우에 한하여 발생)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="inTabCont">
+                                            
+                                            <div class="comImgWrap abBder col2">
+                                                <div class="imgGroup">
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_067.png" class="imgPC" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 상품변경을 선택합니다.">
+                                                        <img src="/common/images/contents/cont_02_04_067_m.png" class="imgMO" alt="해당 페이지의 여정 정보 하단에 4개의 버튼이 있으며, 각각 좌로부터 열차변경, 좌석변경, 할인변경, 상품변경 버튼이 있으며 그 중 세번째 상품">
+                                                        <div class="imgTit">01. ‘상품변경’ 선택</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>원하는 승차권의 여정의 ‘상품변경’을 선택합니다.</li>
+                                                            <li>여정단위로 선택할 수 있습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_068.png" class="imgPC" aria-describedby="cont_02_04_068" alt="상품수량 변경 화면">
+                                                        <div id="cont_02_04_068" class="blind">
+                                                            <p>상품화면에서 내가 구입한 상품과 옵션등이 나열되며 각 상품들을 삭제하거나 수량들을 조절 할 수 있고 우측에 그에대한 가격이 보여지고 그 아래 내가 변경한 상품 전체의 금액이 있다.
+                                                               그 아래 추천상품 목록이 있고 각 상품은 상품이미지와 상품이름, 원래 가격, 할인된 가격, 기간할인 및 날짜가 노출되며 품절된 경우 그 정보도 노출된다. 
+                                                            </p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_068_m.png" class="imgMO" aria-describedby="cont_02_04_068_m" alt="상품수량 변경 화면">
+                                                        <div id="cont_02_04_068_m" class="blind">
+                                                            <p>상품화면에서 내가 구입한 상품과 옵션등이 나열되며 각 상품들을 삭제하거나 수량들을 조절 할 수 있고 우측에 그에대한 가격이 보여지고 그 아래 내가 변경한 상품 전체의 금액이 있다.
+                                                               그 아래 추천상품 목록이 있고 각 상품은 상품이미지와 상품이름, 원래 가격, 할인된 가격, 기간할인 및 날짜가 노출되며 품절된 경우 그 정보도 노출된다. </p>
+                                                        </div>
+                                                        <div class="imgTit">02. 상품수량 변경</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>상품취소는 전체취소 또는 개수 변경이 가능한다.</li>
+                                                            <li>결제 취소가 완료되면 카드 결제취소는 즉시 취소되며 카드사에 따라 2~3일 소요될 수있습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_069.png" class="imgPC" aria-describedby="cont_02_04_069" alt="추가 상품 구매 화면">
+                                                        <div id="cont_02_04_069" class="blind">
+                                                            <p>추천상품 목록을 통해 추가 상품을 구매 할 수 있고 각 상품은 상품이미지와 상품이름, 원래 가격, 할인된 가격, 기간할인 및 날짜가 노출되며 품절된 경우 그 정보도 노출된다. 해당 상품을 클릭하면 팝업을
+                                                                통해 해당 상품 정보를 볼 수 있으며 담기 버튼을 통해 상품을 담을 수 있다. 화면의 하단에는 취소 및 확인 버튼이 있다.
+                                                            </p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_069_m.png" class="imgMO" aria-describedby="cont_02_04_069_m" alt="추가 상품 구매 화면">
+                                                        <div id="cont_02_04_069_m" class="blind">
+                                                            <p>추천상품 목록을 통해 추가 상품을 구매 할 수 있고 각 상품은 상품이미지와 상품이름, 원래 가격, 할인된 가격, 기간할인 및 날짜가 노출되며 품절된 경우 그 정보도 노출된다. 해당 상품을 클릭하면 팝업을
+                                                                통해 해당 상품 정보를 볼 수 있으며 담기 버튼을 통해 상품을 담을 수 있다. 화면의 하단에는 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">03. 추가 상품 구매</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>추가 구매하고자 하는 상품을 클릭하여 상품의 상세내용을 확인합니다.</li>
+                                                            <li>상품 상세화면에서 상품의 옵션 또는 개수를 선택 후 ‘담기’ 버튼을 눌러서 상품을 담습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="imgArea">
+                                                        <img src="/common/images/contents/cont_02_04_070.png" class="imgPC" aria-describedby="cont_02_04_070" alt="환불 &amp; 결제 화면">
+                                                        <div id="cont_02_04_070" class="blind">
+                                                            <p>승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 보고 하단에 승차권 비용, 상품 비용, 변경 수수료 및 총 결제 금액을 확인 할 수 있다.
+                                                                하단에는 위 예약정보를 결제진행 하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <img src="/common/images/contents/cont_02_04_070_m.png" class="imgMO" aria-describedby="cont_02_04_070_m" alt="환불 &amp; 결제 화면">
+                                                        <div id="cont_02_04_070_m" class="blind">
+                                                            <p>승차일, 출발역(출발시간), 도착역(도착시간), 상품여부, 예약번호, 열차번호, 탑승인원, 열차좌석 및 상품등에 대한 정보를 보고 하단에 승차권 비용, 상품 비용, 변경 수수료 및 총 결제 금액을 확인 할 수 있다.
+                                                                하단에는 위 예약정보를 결제진행 하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                                        </div>
+                                                        <div class="imgTit">04. 환불 &amp; 결제</div>
+                                                        <ul class="imgTxtList">
+                                                            <li>상품변경 전과 변경 후의 상세 내용을 확인합니다.</li>
+                                                            <li>상품 수량 변경에 따라 차액을 환불처리 하거나 추가 결제할 수 있습니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- 승차권 반환 -->
+                            <div class="tabCont">
+                                
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_071.png" class="imgPC" aria-describedby="cont_02_04_071" alt="승차권 반환 화면">
+                                            <div id="cont_02_04_071" class="blind">
+                                                <p>승차권 반환 화면에서 여정을 보면 출발역(출발시간), 도착역(도착시간), 및 상품여부와 좌석 정보가 있다. 좌석별로 선택가능하며 호차와 좌석, 할인정보, 운임, 할인, 결재금액이 나타나있다.
+                                                    구입한 상품이 있는경우 상품정보가 이미지, 결재여부, 상품명, 옵션, 가격 및 수량으로 보여지며 하단에 반환버튼이 있다.
+                                                </p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_071_m.png" class="imgMO" aria-describedby="cont_02_04_071_m" alt="승차권 반환 화면">
+                                            <div id="cont_02_04_071_m" class="blind">
+                                                <p>승차권 반환 화면에서 여정을 보면 출발역(출발시간), 도착역(도착시간), 및 상품여부와 좌석 정보가 있다. 좌석별로 선택가능하며 호차와 좌석, 할인정보, 운임, 할인, 결재금액이 나타나있다.
+                                                    구입한 상품이 있는경우 상품정보가 이미지, 결재여부, 상품명, 옵션, 가격 및 수량으로 보여지며 하단에 반환버튼이 있다.</p>
+                                            </div>
+                                            <div class="imgTit">01. 승차권 선택 후 ‘반환’ 클릭</div>
+                                            <ul class="imgTxtList">
+                                                <li>반환을 원하는 승차권을 선택합니다.</li>
+                                                <li>하나의 여정안에 여러 승차권을 선택할 수 있습니다.</li>
+                                                <li>여정 목록 하단의 "반환" 버튼을 클릭합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_072.png" class="imgPC" aria-describedby="cont_02_04_072" alt="반환 내역 화면">
+                                            <div id="cont_02_04_072" class="blind">
+                                                <p>반환 내역 확인 화면이 나타나며 여정을 보면 출발역(출발시간), 도착역(도착시간), 및 상품여부와 좌석 정보가 있다. 좌석별로 선택가능하며 호차와 좌석, 결재금액, 수수료 및 반환금액이 나타나있다.
+                                                    구입한 상품이 있는경우 상품정보가 이미지, 결재여부, 상품명, 옵션, 가격 및 수량으로 보여지며 하단에 결제 합계, 반환수수료 및 총 반환금액이 표시되어 있다. 더 하단에는 위 예약정보를 결제진행 
+                                                    하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_072_m.png" class="imgMO" aria-describedby="cont_02_04_072_m" alt="반환 내역 화면">
+                                            <div id="cont_02_04_072_m" class="blind">
+                                                <p>반환 내역 확인 화면이 나타나며 여정을 보면 출발역(출발시간), 도착역(도착시간), 및 상품여부와 좌석 정보가 있다. 좌석별로 선택가능하며 호차와 좌석, 결재금액, 수수료 및 반환금액이 나타나있다.
+                                                    구입한 상품이 있는경우 상품정보가 이미지, 결재여부, 상품명, 옵션, 가격 및 수량으로 보여지며 하단에 결제 합계, 반환수수료 및 총 반환금액이 표시되어 있다. 더 하단에는 위 예약정보를 결제진행 
+                                                    하시겠습니까?라는 문구와 함께 예약통화 결제 혹은 원화결제를 선택할 수 있으며 최하단에 취소 및 확인 버튼이 있다.</p>
+                                            </div>
+                                            <div class="imgTit">02. 반환내역 확인</div>
+                                            <ul class="imgTxtList">
+                                                <li>팝업으로 표시된 반환할 승차권의 내용을 확인합니다.</li>
+                                                <li>수수료가 있을 경우 수수료를 확인합니다.</li>
+                                                <li>승차권 구매시 결제한 금액보다 수수료가 클 경우 수수료를 결제하는 화면으로 이동하여 수수료를 결제합니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- 상품 결제취소 -->
+                            <div class="tabCont">
+                                
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_073.png" class="imgPC" aria-describedby="cont_02_04_073" alt="이용내역/영수증-상품 화면">
+                                            <div id="cont_02_04_073" class="blind">
+                                                <p>날짜 기간으로 조회를 해서 해당 기간에 구입한 상품을 확인 할 수 있다. 해당 상품은 검색된 여정의 상세보기를 통해 확인할 수 있다. 해당 상품은 
+                                                    이미지와 구입여부, 상품명, 옵션, 가격 및 수량정보가 있으며 우측에 결제취소 혹은 영수증 버튼이 있다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_073_m.png" class="imgMO" aria-describedby="cont_02_04_073_m" alt="이용내역/영수증-상품 화면">
+                                            <div id="cont_02_04_073_m" class="blind">
+                                                <p>날짜 기간으로 조회를 해서 해당 기간에 구입한 상품을 확인 할 수 있다. 해당 상품은 검색된 여정의 상세보기를 통해 확인할 수 있다. 해당 상품은 
+                                                    이미지와 구입여부, 상품명, 옵션, 가격 및 수량정보가 있으며 우측에 결제취소 혹은 영수증 버튼이 있다.</p>
+                                            </div>
+                                            <div class="imgTit">01. 이용내역/영수증 조회 – ‘상품’으로 이동</div>
+                                            <ul class="imgTxtList">
+                                                <li>승차권 &gt; 이용내역/영수증 조회 &gt; 상품으로 이동합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_074.png" class="imgPC" aria-describedby="cont_02_04_074" alt="상품 결제취소 화면">
+                                            <div id="cont_02_04_074" class="blind">
+                                                <p>이용내역에 나온 여정에는 승차일, 구매일, 출발역(출발시간), 도착역(도착시간), 상품구매여부 및 상세/간략보기 버튼이 있다. 또 주문번호와 구입한 상품정보가 노출되는데 각 상품의 이미지, 결제여부, 상품명, 옵션, 가격 및 수량이 있으며
+                                                    우측에 결제최소 및 영수증 버튼이 있다. 결제취소를 하기위해서는 해당 상품의 결제 취소버튼을 눌러야 한다.
+                                                </p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_074_m.png" class="imgMO" aria-describedby="cont_02_04_074_m" alt="상품 결제취소 화면">
+                                            <div id="cont_02_04_074_m" class="blind">
+                                                <p>이용내역에 나온 여정에는 승차일, 구매일, 출발역(출발시간), 도착역(도착시간), 상품구매여부 및 상세/간략보기 버튼이 있다. 또 주문번호와 구입한 상품정보가 노출되는데 각 상품의 이미지, 결제여부, 상품명, 옵션, 가격 및 수량이 있으며
+                                                    우측에 결제최소 및 영수증 버튼이 있다. 결제취소를 하기위해서는 해당 상품의 결제 취소버튼을 눌러야 한다.</p>
+                                            </div>
+                                            <div class="imgTit">02. 상품 ‘결제취소’ 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>상품의 ‘결제취소’ 버튼을 클릭합니다.</li>
+                                                <li>열차 출발 전 15분까지는 결제취소가 가능합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_075.png" class="imgPC" aria-describedby="cont_02_04_075" alt="상품 취소 및 수량 변경 화면">
+                                            <div id="cont_02_04_075" class="blind">
+                                                <p>결제 취소 팝업에는 결제취소라는 타이틀이 있으며 열차가 출발하면 상품취소를 할 수 없습니다라는 텍스트가 노출된다. 상품정보 타이틀과 함께 상품명과 옵션 및 상품삭제 혹은 수량을 조절할 수 있으며 하단에 취소 및 확인 버튼이 있다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_075_m.png" class="imgMO" aria-describedby="cont_02_04_075_m" alt="상품 취소 및 수량 변경 화면">
+                                            <div id="cont_02_04_075_m" class="blind">
+                                                <p>결제 취소 팝업에는 결제취소라는 타이틀이 있으며 열차가 출발하면 상품취소를 할 수 없습니다라는 텍스트가 노출된다. 상품정보 타이틀과 함께 상품명과 옵션 및 상품삭제 혹은 수량을 조절할 수 있으며 하단에 취소 및 확인 버튼이 있다.</p>
+                                            </div>
+                                            <div class="imgTit">03. 상품취소 및 수량 변경 </div>
+                                            <ul class="imgTxtList">
+                                                <li>상품취소는 전체취소 또는 개수 변경이 가능한다.</li>
+                                                <li>결제 취소가 완료되면 카드 결제취소는 즉시 취소되며 카드사에 따라 2~3일 소요될 수있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- 상품 반환 -->
+                            <div class="tabCont">
+                                
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_076.png" class="imgPC" aria-describedby="cont_02_04_076" alt="이용내역/영수증-상품 화면">
+                                            <div id="cont_02_04_076" class="blind">
+                                                <p>날짜 기간으로 조회를 해서 해당 기간에 구입한 상품을 확인 할 수 있다. 해당 상품은 검색된 여정의 상세보기를 통해 확인할 수 있다. 해당 상품은 
+                                                    이미지와 구입여부, 상품명, 옵션, 가격 및 수량정보가 있으며 우측에 반품신청 혹은 영수증 버튼이 있다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_076_m.png" class="imgMO" aria-describedby="cont_02_04_076_m" alt="이용내역/영수증-상품 화면">
+                                            <div id="cont_02_04_076_m" class="blind">
+                                                <p>날짜 기간으로 조회를 해서 해당 기간에 구입한 상품을 확인 할 수 있다. 해당 상품은 검색된 여정의 상세보기를 통해 확인할 수 있다. 해당 상품은 
+                                                    이미지와 구입여부, 상품명, 옵션, 가격 및 수량정보가 있으며 우측에 반품신청 혹은 영수증 버튼이 있다.</p>
+                                            </div>
+                                            <div class="imgTit">01. 이용내역/영수증 조회 – ‘상품’으로 이동</div>
+                                            <ul class="imgTxtList">
+                                                <li>승차권 &gt; 이용내역/영수증 조회 &gt; 상품으로 이동합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_077.png" class="imgPC" aria-describedby="cont_02_04_077" alt="상품 반품신청 화면">
+                                            <div id="cont_02_04_077" class="blind">
+                                                <p>이용내역에 나온 여정에는 승차일, 구매일, 출발역(출발시간), 도착역(도착시간), 상품구매여부 및 상세/간략보기 버튼이 있다. 또 주문번호와 구입한 상품정보가 노출되는데 각 상품의 이미지, 결제여부, 상품명, 옵션, 가격 및 수량이 있으며
+                                                    우측에 반품신청 및 영수증 버튼이 있다. 반품신청를 하기위해서는 해당 상품의 결제 반품신청버튼을 눌러야 한다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_077_m.png" class="imgMO" aria-describedby="cont_02_04_077_m" alt="상품 반품신청 화면">
+                                            <div id="cont_02_04_077_m" class="blind">
+                                                <p>이용내역에 나온 여정에는 승차일, 구매일, 출발역(출발시간), 도착역(도착시간), 상품구매여부 및 상세/간략보기 버튼이 있다. 또 주문번호와 구입한 상품정보가 노출되는데 각 상품의 이미지, 결제여부, 상품명, 옵션, 가격 및 수량이 있으며
+                                                    우측에 반품신청 및 영수증 버튼이 있다. 반품신청를 하기위해서는 해당 상품의 결제 반품신청버튼을 눌러야 한다.</p>
+                                            </div>
+                                            <div class="imgTit">02. 상품 ‘반품신청’ 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>상품을 수령한 상품은 ‘반품신청’을 클릭하여 반품할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_078.png" class="imgPC" aria-describedby="cont_02_04_078" alt="반품사유 팝업 화면">
+                                            <div id="cont_02_04_078" class="blind">
+                                                <p>상품 반품신청 타이틀이 있는 팝업에는 "사용흔적이 없는 상품만 교횐/반품이 가능합니다. 회수된 상품을 검수한 후 문제가 발견되면 고객님께 연락을 드립니다."라는 텍스트가 노출된다. 
+                                                    반품신청 상품 및 수량선택이라는 타이틀과 함께 상품명과 옵션 및 상품삭제 혹은 수량을 조절할 수 있으며  반품사유를 선택하게 되어있다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_078_m.png" class="imgMO" aria-describedby="cont_02_04_078_m" alt="반품사유 팝업 화면">
+                                            <div id="cont_02_04_078_m" class="blind">
+                                                <p>상품 반품신청 타이틀이 있는 팝업에는 "사용흔적이 없는 상품만 교횐/반품이 가능합니다. 회수된 상품을 검수한 후 문제가 발견되면 고객님께 연락을 드립니다."라는 텍스트가 노출된다. 
+                                                    반품신청 상품 및 수량선택이라는 타이틀과 함께 상품명과 옵션 및 상품삭제 혹은 수량을 조절할 수 있으며  반품사유를 선택하게 되어있다.</p>
+                                            </div>
+                                            <div class="imgTit">03. 반품사유</div>
+                                            <ul class="imgTxtList">
+                                                <li>반품사유를 작성하고, 가까운 반품처를 선택하여 반품신청합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_079.png" class="imgPC" aria-describedby="cont_02_04_079" alt="반품신청 완료 화면">
+                                            <div id="cont_02_04_079" class="blind">
+                                                <p>상품 반품신청 타이틀이 있는 팝업에는 "상품 교횐/반품 신청이 접수되었습니다. 반품신청 완료 후 반품처로 상품을 직접 가지고 오시면 상품상태를 확인 후 반품처리 됩니다."라는 문구가 있으며,
+                                                    반품처에는 해당 지역과 판매처, 그리고 고객센터 전화번호가 안내되며 하단에 확인버튼이 있다.
+                                                </p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_079_m.png" class="imgMO" aria-describedby="cont_02_04_079_m" alt="반품신청 완료 화면">
+                                            <div id="cont_02_04_079_m" class="blind">
+                                                <p>상품 반품신청 타이틀이 있는 팝업에는 "상품 교횐/반품 신청이 접수되었습니다. 반품신청 완료 후 반품처로 상품을 직접 가지고 오시면 상품상태를 확인 후 반품처리 됩니다."라는 문구가 있으며,
+                                                    반품처에는 해당 지역과 판매처, 그리고 고객센터 전화번호가 안내되며 하단에 확인버튼이 있다.</p>
+                                            </div>
+                                            <div class="imgTit">04. 반품신청 완료</div>
+                                            <ul class="imgTxtList">
+                                                <li>반품신청 완료 후 반품처로 상품을 직접 가지고 오시면 상품상태를 확인 후 반품처리 합니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- 영수증 발행 -->
+                            <div class="tabCont">
+                                
+                                <div class="comImgWrap abBder col2">
+                                    <div class="imgGroup">
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_080.png" class="imgPC" aria-describedby="cont_02_04_080" alt="이용내역/영수증-조회 화면">
+                                            <div id="cont_02_04_080" class="blind">
+                                                <p>날짜 기간으로 조회를 해서 해당 기간에 여정을 확인 할 수 있다. 해당 여정은 승차일, 구매일, 출발역(출발시간), 도착역(도착시간) 및 상세보기/간략보기 버튼이 있으며
+                                                    상세보기를 클릭하면 아래로 해당 호차를 선택할 수 있고 호자별로 호차, 좌석, 운임, 할인 및 결제를 확인 할 수 있다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_080_m.png" class="imgMO" aria-describedby="cont_02_04_080_m" alt="이용내역/영수증-조회 화면">
+                                            <div id="cont_02_04_080_m" class="blind">
+                                                <p>날짜 기간으로 조회를 해서 해당 기간에 여정을 확인 할 수 있다. 해당 여정은 승차일, 구매일, 출발역(출발시간), 도착역(도착시간) 및 상세보기/간략보기 버튼이 있으며
+                                                    상세보기를 클릭하면 아래로 해당 호차를 선택할 수 있고 호자별로 호차, 좌석, 운임, 할인 및 결제를 확인 할 수 있다.</p>
+                                            </div>
+                                            <div class="imgTit">01. 이용내역/영수증 조회로 이동</div>
+                                            <ul class="imgTxtList">
+                                                <li>영수증을 원하시는 구매일자를 조회합니다.</li>
+                                                <li>조회 시작일로부터 최대 3개월동안의 예약내역을 조회할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_081.png" class="imgPC" aria-describedby="cont_02_04_081" alt="승차권 선택 화면">
+                                            <div id="cont_02_04_081" class="blind">
+                                                <p>확인한 여정은 승차일, 구매일, 출발역(출발시간), 도착역(도착시간) 및 상세보기/간략보기 버튼이 있으며
+                                                    상세보기를 클릭하면 아래로 해당 호차를 선택할 수 있고 호자별로 호차, 좌석, 운임, 할인 및 결제를 확인 할 수 있고, 
+                                                    상품도 이미지, 결제여부, 상품명, 옵션, 가격 및 수량과 함께 확인 할 수 있다. 영수증을 발행하기 위해 각 호차 및 상품을 선택한다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_081_m.png" class="imgMO" aria-describedby="cont_02_04_081_m" alt="승차권 선택 화면">
+                                            <div id="cont_02_04_081_m" class="blind">
+                                                <p>확인한 여정은 승차일, 구매일, 출발역(출발시간), 도착역(도착시간) 및 상세보기/간략보기 버튼이 있으며
+                                                    상세보기를 클릭하면 아래로 해당 호차를 선택할 수 있고 호자별로 호차, 좌석, 운임, 할인 및 결제를 확인 할 수 있고, 
+                                                    상품도 이미지, 결제여부, 상품명, 옵션, 가격 및 수량과 함께 확인 할 수 있다. 영수증을 발행하기 위해 각 호차 및 상품을 선택한다.</p>
+                                            </div>
+                                            <div class="imgTit">02. 승차권 선택</div>
+                                            <ul class="imgTxtList">
+                                                <li>영수증 발행을 원하는 승차권을 선택합니다.</li>
+                                                <li>승차권 선택 시 선택한 승차권 영수증이 발행됩니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_082.png" class="imgPC" aria-describedby="cont_02_04_082" alt="영수증 선택 안내 화면">
+                                            <div id="cont_02_04_082" class="blind">
+                                                <p>확인한 여정은 승차일, 구매일, 출발역(출발시간), 도착역(도착시간) 및 상세보기/간략보기 버튼이 있으며
+                                                    상세보기를 클릭하면 아래로 해당 호차를 선택할 수 있고 호자별로 호차, 좌석, 운임, 할인 및 결제를 확인 할 수 있고, 
+                                                    상품도 이미지, 결제여부, 상품명, 옵션, 가격 및 수량과 함께 확인 할 수 있다. 
+                                                    영수증을 발행하기 위해 각 호차 및 상품을 선택한 후, 하단 항목을 선택하고 아래 영수증 확인 버튼을 누르세요라는 텍스트 아래 개별영수증 혹은 통합 영수증 버튼을 클릭한다.</p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_082_m.png" class="imgMO" aria-describedby="cont_02_04_082_m" alt="영수증 선택 안내 화면">
+                                            <div id="cont_02_04_082_m" class="blind">
+                                                <p>확인한 여정은 승차일, 구매일, 출발역(출발시간), 도착역(도착시간) 및 상세보기/간략보기 버튼이 있으며
+                                                    상세보기를 클릭하면 아래로 해당 호차를 선택할 수 있고 호자별로 호차, 좌석, 운임, 할인 및 결제를 확인 할 수 있고, 
+                                                    상품도 이미지, 결제여부, 상품명, 옵션, 가격 및 수량과 함께 확인 할 수 있다. 
+                                                    영수증을 발행하기 위해 각 호차 및 상품을 선택한 후, 하단 항목을 선택하고 아래 영수증 확인 버튼을 누르세요라는 텍스트 아래 개별영수증 혹은 통합 영수증 버튼을 클릭한다.</p>
+                                            </div>
+                                            <div class="imgTit">03. 개별영수증, 통합영수증 버튼</div>
+                                            <ul class="imgTxtList">
+                                                <li>여정 목록 하단의 ＂개별영수증” 또는 “통합영수증＂ 버튼을 클릭합니다.</li>
+                                                <li>개별영수증 : 선택한 승차권을 개별 영수증으로 발행</li>
+                                                <li>통합영수증 : 선택한 승차권을 하나의 영수증으로 발행</li>
+                                            </ul>
+                                        </div>
+                                        <div class="imgArea">
+                                            <img src="/common/images/contents/cont_02_04_083.png" class="imgPC" aria-describedby="cont_02_04_083" alt="영수증 조회 팝업 화면">
+                                            <div id="cont_02_04_083" class="blind">
+                                                <p>영수증 조회 팝업에는 영수증(상태)이라는 타이틀과 열차번호, 출발역(출발시간), 도착역(도착시간) 및 좌석 수를 확인 할 수 있다.
+                                                    세부적으로는 승인번호, 승인일시, 결제종류, 카드사, 카드번호, 할부개월, 결제, 수수료, 반환금액 등을 확인 할 수 있다.
+                                                </p>
+                                            </div>
+                                            <img src="/common/images/contents/cont_02_04_083_m.png" class="imgMO" aria-describedby="cont_02_04_083_m" alt="영수증 조회 팝업 화면">
+                                            <div id="cont_02_04_083_m" class="blind">
+                                                <p>영수증 조회 팝업에는 영수증(상태)이라는 타이틀과 열차번호, 출발역(출발시간), 도착역(도착시간) 및 좌석 수를 확인 할 수 있다.
+                                                    세부적으로는 승인번호, 승인일시, 결제종류, 카드사, 카드번호, 할부개월, 결제, 수수료, 반환금액 등을 확인 할 수 있다.</p>
+                                            </div>
+                                            <div class="imgTit">04. 영수증 조회 및 인쇄</div>
+                                            <ul class="imgTxtList">
+                                                <li>선택한 여정 혹은 승차권의 내용을 확인합니다.</li>
+                                                <li>"인쇄" 버튼을 눌러 영수증을 발행합니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comSubBtm">
+                        <div class="subBtmArea">
+                            <dl class="manager">
+                                <dt>담당부서</dt>
+                                <dd>
+                                    <ul>
+                                        <li>영업계획처</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <ul class="btmList">
+                                <li class="phone">1599-7788</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //layoutContArea -->
+
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            
+
+            <div class="cptFooter">
+                <div class="footArea">
+                    <div class="copyArea">
+                        <div class="quickGroup">
+                            <ul>
+                                <li class="hglt"><a href="javascript:void(0)">공항철도</a></li>
+                                <li><a href="javascript:void(0)">여객운송약관</a></li>
+                                <li><a href="javascript:void(0)">누리집 이용약관</a></li>
+                                <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                            </ul>
+                        </div>
+                        <div class="copyGroup">
+                            <div class="infoArea">
+                                <ul>
+                                    <li class="add">(22694) 인천광역시 서구 검바위로 46 (검암동) 공항철도(주)</li>
+                                    <li class="tel">전화 <span>1599-7788</span></li>
+                                    <li class="fax">팩스 <span>032-745-8899</span></li>
+                                    <li class="name">대표자 : 박대수</li>
+                                    <li class="lcn">사업자등록번호 : 101-81-68490</li>
+                                </ul>
+                            </div>
+                            <div class="copyBox">
+                                <p>Copyright (C) 2025 by AIRPORT RAILROAD Co., Ltd. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 20260331 수정 -->
+                    <div class="markArea">
+                        <ul>
+                            <li><img src="/common/images/common/eprivacy.svg" alt="eprivacy mark"></li>
+                            <li><img src="/common/images/common/wa_mark.svg" alt="wa mark"></li>
+                        </ul>
+                    </div>
+                    <!-- //20260331 수정 -->
+                </div>
+            </div>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

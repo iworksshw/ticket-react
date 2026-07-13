@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <title>티켓 검색</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comTicketSearch.scss
+    -->
+
+    <!-- 티켓 검색 -->
+    <div class="comTicketSearch">
+        <ul class="srhList">
+            <li class="srhItem">
+                <dl class="srhBox">
+                    <dt class="tit"><label for="srh001">출발역</label></dt>
+                    <dd class="desc"><input type="text" placeholder="어디서 출발하세요?" id="srh001"></dd>
+                </dl>
+                <button class="btnChange">출발역/도착역 바꾸기</button>
+                <dl class="srhBox">
+                    <dt class="tit"><label for="srh002">도착역</label></dt>
+                    <dd class="desc"><input type="text" placeholder="어디로 갈까요?" id="srh002"></dd>
+                </dl>
+            </li>
+            <li class="srhItem">
+                <dl class="srhBox">
+                    <dt class="tit"><label for="srh003">날짜</label></dt>
+                    <dd class="desc"><input type="text" placeholder="언제 떠나실 건가요?" id="srh003"></dd>
+                </dl>
+            </li>
+            <li class="srhItem">
+                <dl class="srhBox">
+                    <dt class="tit"><label for="srh004">인원</label></dt>
+                    <dd class="desc"><input type="text" placeholder="몇명에서 가시나요?" id="srh004"></dd>
+                </dl>
+
+                <button class="btnSearch" disabled="">열차 조회</button>
+            </li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>

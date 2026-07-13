@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/swiper.js"></script>
+    <script src="/common/js/common.js"></script>
+    <title>Tab</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/module/_modTab.scss
+    -->
+
+    <!-- 탭 : 2개 (half - 각 50%) -->
+    <div class="modTab">
+        <div class="tabSwiper">
+            <ul class="tabMenu half"><!-- 2개일 때 half 클래스 사용 → 각 탭 50% 너비 -->
+                <li class="tabItem"><button type="button" class="tabName on" title="선택 된 탭메뉴">Tab Name 01</button></li><!-- on : 선택된 탭 -->
+                <li class="tabItem"><button type="button" class="tabName" title="탭메뉴">Tab Name 02</button></li>
+            </ul>
+        </div>
+        <div class="tabContainer">
+            <div class="tabCont on"><!-- on : 현재 활성화된 탭 콘텐츠 -->
+                Contents Area 0-0
+            </div>
+            <div class="tabCont">
+                Contents Area 0-1
+            </div>
+        </div>
+    </div>
+
+    <!-- 탭 : 3개 이상 (toMob - 모바일에서 Swiper 슬라이드) -->
+    <div class="modTab">
+        <div class="tabSwiper swiper-container toMob"><!-- toMob : 모바일에서만 Swiper 활성화 -->
+            <ul class="swiper-wrapper tabMenu">
+                <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">Tab Name 01</button></li>
+                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">Tab 02</button></li>
+                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">Tab 03</button></li>
+                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">Tab 04</button></li>
+                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">Tab 05</button></li>
+            </ul>
+        </div>
+        <div class="tabContainer">
+            <div class="tabCont on">Contents Area 0-0</div>
+            <div class="tabCont">Contents Area 0-1</div>
+            <div class="tabCont">Contents Area 0-2</div>
+            <div class="tabCont">Contents Area 0-3</div>
+            <div class="tabCont">Contents Area 0-4</div>
+        </div>
+    </div>
+
+    <!-- 탭 : 숫자 뱃지(.num) / 비활성화(disabled) 확장 예시 -->
+    <div class="modTab">
+        <div class="tabSwiper swiper-container toMob">
+            <ul class="swiper-wrapper tabMenu">
+                <li class="tabItem swiper-slide">
+                    <button type="button" class="tabName on" title="선택 된 탭메뉴">Tab Name 01 <span class="num">123</span></button>
+                </li>
+                <li class="tabItem swiper-slide">
+                    <button type="button" class="tabName" title="탭메뉴">Tab 02 <span class="num">45</span></button>
+                </li>
+                <li class="tabItem swiper-slide">
+                    <button type="button" class="tabName" title="탭메뉴">Tab 03 <span class="num">0</span></button>
+                </li>
+                <li class="tabItem swiper-slide">
+                    <button type="button" class="tabName" title="탭메뉴 비활성" disabled>Tab 04</button><!-- disabled : 비활성화 탭 -->
+                </li>
+            </ul>
+        </div>
+        <div class="tabContainer">
+            <div class="tabCont on">Contents Area 0-0</div>
+            <div class="tabCont">Contents Area 0-1</div>
+            <div class="tabCont">Contents Area 0-2</div>
+        </div>
+    </div>
+
+    <!-- 탭 안 탭 (tabInTab) / sticky / swiperDirt 확장 예시 -->
+    <div class="modTab">
+        <div class="tabSwiper swiper-container toMob">
+            <ul class="swiper-wrapper tabMenu">
+                <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">Tab 01</button></li>
+                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">Tab 02</button></li>
+                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">Tab 03</button></li>
+            </ul>
+        </div>
+        <div class="tabContainer">
+            <div class="tabCont on">
+
+                <!-- 내부 탭 기본 -->
+                <div class="tabInTab">
+                    <div class="inTabSwiper swiper-container">
+                        <div class="swiper-wrapper inTabMenu">
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName on" title="선택 된 내부탭">Inner Tab 01</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Inner Tab 02</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Inner Tab 03</button></div>
+                        </div>
+                    </div>
+                    <div class="inTabContainer">
+                        <div class="inTabCont on">Inner Contents 0-0</div>
+                        <div class="inTabCont">Inner Contents 0-1</div>
+                        <div class="inTabCont">Inner Contents 0-2</div>
+                    </div>
+                </div>
+
+                <!-- 내부 탭 sticky + swiperDirt (탭이 많아 넘칠 때 방향 버튼) -->
+                <div class="tabInTab sticky"><!-- sticky : 스크롤 시 탭 메뉴 상단 고정 -->
+                    <div class="inTabSwiper swiper-container">
+                        <div class="swiper-wrapper inTabMenu">
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName on" title="선택 된 내부탭">Sticky Inner 01</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Sticky Inner 02</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Sticky Inner 03</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Sticky Inner 04</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Sticky Inner 05</button></div>
+                        </div>
+                        <div class="swiperDirt"><!-- 탭 항목이 많아 스크롤 필요 시 표시 -->
+                            <div class="dirtBox prev"><button type="button" class="btnDirt swiper-button-prev">이전</button></div>
+                            <div class="dirtBox next"><button type="button" class="btnDirt swiper-button-next">다음</button></div>
+                        </div>
+                    </div>
+                    <div class="inTabContainer">
+                        <div class="inTabCont on">Sticky Inner Contents 0-0</div>
+                        <div class="inTabCont">Sticky Inner Contents 0-1</div>
+                        <div class="inTabCont">Sticky Inner Contents 0-2</div>
+                        <div class="inTabCont">Sticky Inner Contents 0-3</div>
+                        <div class="inTabCont">Sticky Inner Contents 0-4</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tabCont">
+                <!-- 내부 탭 기본 -->
+                <div class="tabInTab">
+                    <div class="inTabSwiper swiper-container">
+                        <div class="swiper-wrapper inTabMenu">
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName on" title="선택 된 내부탭">Inner Tab 01</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Inner Tab 02</button></div>
+                            <div class="inTabItem swiper-slide"><button type="button" class="inTabName" title="내부탭">Inner Tab 03</button></div>
+                        </div>
+                    </div>
+                    <div class="inTabContainer">
+                        <div class="inTabCont on">Tab02 Inner Contents 0-0</div>
+                        <div class="inTabCont">Tab02 Inner Contents 0-1</div>
+                        <div class="inTabCont">Tab02 Inner Contents 0-2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabCont">Contents Area 0-2</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">드롭다운2 (푸터)</div>
+<div class="guideCont">
+<div class="gText">
+    드롭다운2 (푸터 패밀리사이트) 입니다.
+    <br>더 좋은 형태가 나오면 업데이트 바랍니다.
+    <br>css는 _cptDropdown2.scss를 참고바랍니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<!-- 드롭다운 공통 -->
+<div class="comDropdown2">
+    <div class="dropArea">
+        <button class="btnDrop" type="button">
+            푸터의패밀리사이트
+            <img src="/common/images/common/ico_arrow_up.png" alt="">
+        </button>
+        <ul class="dropMenu">
+            <li><a href="#">한줄로만 들어가용</a></li>
+            <li><a href="#">한줄로만 들어가용</a></li>
+            <li><a href="#">두줄은이렇게늘어나요오오오오오오오옹</a></li>
+        </ul>
+    </div>
+</div>
+<!--// 드롭다운 공통 -->
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+
+</div>
+</div>
+
+
+<script>
+
+/* run(); 함수와 충돌이 있어서 소스가 길어짐, 사용시에는 아래의 run 함수 한줄 제거 후 사용하기 */
+
+/* run() 함수가 있으면 실행 => 소스 가져가서 쓰실땐 아래 run 함수 제거 후 사용 해주세요. */
+if (typeof run === "function") run();
+
+
+
+/* 드롭다운2 초기화 */
+function initDropdowns() {
+    const dropdowns = document.querySelectorAll(".comDropdown2");
+
+    dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector(".btnDrop");
+        const menu = dropdown.querySelector(".dropMenu");
+        if (!btn || !menu) return;
+
+        // 초기 상태
+        btn.setAttribute("title", "열림");
+        menu.hidden = true;
+
+        // 닫기
+        const close = () => {
+            btn.setAttribute("title", "열림");
+            menu.hidden = true;
+            btn.classList.remove("open");
+        };
+
+        // 열기
+        const open = () => {
+            // 드롭다운 2개일때, 하나만 열리도록 처리
+            dropdowns.forEach(d => {
+                if (d !== dropdown) {
+                    const b = d.querySelector(".btnDrop");
+                    const m = d.querySelector(".dropMenu");
+                    if (b && m) {
+                        b.setAttribute("title", "열림");
+                        m.hidden = true;
+                        b.classList.remove("open");
+                    }
+                }
+            });
+
+            // 자기 자신 열기
+            btn.setAttribute("title", "닫힘");
+            menu.hidden = false;
+            btn.classList.add("open");
+
+        };
+
+        // 토글 메뉴 클릭
+        const toggle = () => (btn.getAttribute("title") === "닫힘" ? close() : open());
+        btn.addEventListener("click", e => { 
+            e.stopPropagation(); 
+            toggle(); 
+        });
+
+        // 외부 클릭 시 닫기
+        document.addEventListener("click", e => { 
+            if (!dropdown.contains(e.target)) close(); 
+        });
+
+        // 드롭다운 메뉴 마지막에서 tab키 누르면 닫기
+        const items = menu.querySelectorAll("li a, li button, li [tabindex]:not([tabindex='-1'])");
+        if (items.length > 0) {
+            const lastItem = items[items.length - 1];
+            lastItem.addEventListener("keydown", e => {
+                if (e.key === "Tab" && !e.shiftKey) { 
+                    close(); 
+                }
+            });
+        }
+
+    });
+}
+// DOM 준비 시 초기화
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDropdowns);
+} else {
+    initDropdowns();
+}
+
+</script>

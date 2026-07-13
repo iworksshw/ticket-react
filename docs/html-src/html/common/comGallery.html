@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+    <title>갤러리</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comGallery.scss
+    -->
+
+    <!-- 갤러리 : 콘텐츠 내 이미지 그룹 -->
+    <div class="comGallery">
+        <ul class="gallList">
+            <li class="gallItem">
+                <div class="gallGroup">
+                    <ul class="imgList">
+                        <li class="imgItem"><button type="button" class="imgBtn" onclick="openGallery('sample01',0)"><img src="/common/images/contents/cont_04_03_01_001.jpg" alt="회의실 AREX B1-1의 우측면 모습"></button></li>
+                        <li class="imgItem"><button type="button" class="imgBtn" onclick="openGallery('sample01',1)"><img src="/common/images/contents/cont_04_03_01_002.jpg" alt="회의실 AREX B1-1의 정면 모습"></button></li>
+                        <li class="imgItem"><button type="button" class="imgBtn" onclick="openGallery('sample01',2)"><img src="/common/images/contents/cont_04_03_01_003.jpg" alt="회의실 AREX B1-1의 좌측면 모습"></button></li>
+                    </ul>
+                    <p class="imgTxt"><em>AREX B1-1</em> 삼성 전자칠판(85인치), 빔프로젝터</p>
+                </div>
+            </li>
+            <li class="gallItem">
+                <div class="gallGroup">
+                    <ul class="imgList">
+                        <li class="imgItem"><button type="button" class="imgBtn" onclick="openGallery('sample01',3)"><img src="/common/images/contents/cont_04_03_01_004.jpg" alt="회의실 AREX B1-2의 우측면 모습"></button></li>
+                        <li class="imgItem"><button type="button" class="imgBtn" onclick="openGallery('sample01',4)"><img src="/common/images/contents/cont_04_03_01_005.jpg" alt="회의실 AREX B1-2의 정면 모습"></button></li>
+                        <li class="imgItem"><button type="button" class="imgBtn" onclick="openGallery('sample01',5)"><img src="/common/images/contents/cont_04_03_01_006.jpg" alt="회의실 AREX B1-2의 좌측면 모습"></button></li>
+                    </ul>
+                    <p class="imgTxt"><em>AREX B1-2</em> 삼성 전자칠판(75인치), 빔프로젝터</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 갤러리 : 팝업 슬라이드(스와이퍼) -->
+    <div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea">
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button type="button" class="btnPopClose" onclick="closePopup('sample01');"><span class="blind">팝업 닫기</span></button>
+                        <div class="popTitle">회의실 사진</div>
+                        <div class="popCont">
+                            <!-- 팝업 컨텐츠 영역 -->
+                            <div class="comGallery">
+                                <div class="gallPop swiper-container">
+                                    <ul class="swiper-wrapper popImgList">
+                                        <li class="swiper-slide popImgItem" tabindex="0">
+                                            <div class="imgBox"><img src="/common/images/contents/cont_04_03_01_001.jpg" alt="회의실 AREX B1-1의 우측면 모습"></div>
+                                            <p class="imgTxt"><em>AREX B1-1</em> 삼성 전자칠판(85인치), 빔프로젝터</p>
+                                        </li>
+                                        <li class="swiper-slide popImgItem" tabindex="0">
+                                            <div class="imgBox"><img src="/common/images/contents/cont_04_03_01_002.jpg" alt="회의실 AREX B1-1의 정면 모습"></div>
+                                            <p class="imgTxt"><em>AREX B1-1</em> 삼성 전자칠판(85인치), 빔프로젝터</p>
+                                        </li>
+                                        <li class="swiper-slide popImgItem" tabindex="0">
+                                            <div class="imgBox"><img src="/common/images/contents/cont_04_03_01_003.jpg" alt="회의실 AREX B1-1의 좌측면 모습"></div>
+                                            <p class="imgTxt"><em>AREX B1-1</em> 삼성 전자칠판(85인치), 빔프로젝터</p>
+                                        </li>
+                                    </ul>
+                                    <div class="swiperDirt">
+                                        <button type="button" class="prev"><span class="blind">이전 이미지</span></button>
+                                        <button type="button" class="next"><span class="blind">다음 이미지</span></button>
+                                    </div>
+                                    <div class="swiper-pagination-fraction"></div>
+                                </div>
+                            </div>
+                            <!-- //팝업 컨텐츠 영역 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

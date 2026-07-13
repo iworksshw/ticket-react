@@ -1,0 +1,33 @@
+/* ----- 셀렉트 ----- */
+.iptSlt {
+    width: 100%; height: 50px; padding: 0 16px; color: var(--text-color-G900, #111); font-size: rem(16px); font-weight: 400; line-height: normal; border-radius: 8px; border: 1px solid var(--border-color-G300, #D6DBE1);
+    background:#fff url(/common/images/common/ic_24_down_arr.svg) right 16px center no-repeat; cursor:pointer;
+    //&:read-only {background: var(--bg-color-G100, #F8F9FC);}
+    &:disabled {color: var(--text-color-G500, #808892); background: var(--bg-color-G100, #F8F9FC);}
+    @include media ('mobile') {
+        font-size: rem(15px);
+    }
+    &.lg {
+        height: 61px; font-size: rem(18px);
+        @include media ('mobile') {
+            font-size: rem(17px);
+        }
+    }
+    &.sm {
+        height: 40px; padding: 0 12px; font-size: rem(14px); background:#fff url(/common/images/common/ic_20_down_arr.svg) right 12px center no-repeat;
+    }
+
+    &.frmMd {
+        width:328px; min-width:328px;
+        @include media ('mobile') {
+            width:100%; min-width:auto;
+        }
+    }
+
+    &.tiny {
+        width:200px; min-width:200px;
+        @include media ('mobile') {
+            width:100%; min-width:auto;
+        }
+    }
+}

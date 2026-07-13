@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>열차 시각표</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comSchedule.scss
+    -->
+
+    <!-- 열차 시각표 -->
+    <div class="comSchedule">
+        <div class="optButton">
+            <div class="buttons">
+                <button type="button" class="sched">전체열차 시간표</button>
+                <button type="button" class="print">프린트</button>
+            </div>
+        </div>
+
+        <div class="schedTable">
+            <div class="comTableBasic left">
+                <table>
+                    <caption>열차시각표(평일)_서울역 방면</caption>
+                    <colgroup>
+                        <col style="width:100px;" class="pcBlind">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="pcBlind">시간</th>
+                            <th><span>서울역</span> 방면</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pcBlind">종착</td>
+                            <td>
+                                <ul class="frmGroup">
+                                    <li class="frmChoBox"><input id="chk01" type="checkbox" class="iptChk sm blue" checked=""><label for="chk01" class="iptLbl"><span>서울</span>(일반열차)</label></li>
+                                    <li class="frmChoBox"><input id="chk02" type="checkbox" class="iptChk sm green" checked=""><label for="chk02" class="iptLbl"><span>디지털미디어시티</span>(일반열차)</label></li>
+                                    <li class="frmChoBox"><input id="chk03" type="checkbox" class="iptChk sm red" checked=""><label for="chk03" class="iptLbl">직통열차</label></li>
+                                    <li class="frmChoBox"><input id="chk04" type="checkbox" class="iptChk sm black" checked=""><label for="chk04" class="iptLbl">전체</label></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pcBlind">5</td>
+                            <td class="arg01">
+                                <div class="minCov">
+                                    <span class="blue on">23</span>
+                                    <span class="green on">31</span>
+                                    <span class="red on">58</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pcBlind">6</td>
+                            <td class="arg01">
+                                <div class="minCov">
+                                    <span class="green on">01</span>
+                                    <span class="blue on">07</span>
+                                    <span class="red on">12</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

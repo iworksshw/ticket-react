@@ -1,0 +1,98 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "공항철도",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/gnb.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    url: "../../",
+                    subTitle: "나의 쿠폰함",
+                    deps: [
+                        {
+                            label: '마이페이지',
+                            items: [
+                                {text: '승차권', href: 'javascript:void(0)'},
+                                {text: '직통열차', href: 'javascript:void(0)'},
+                                {text: '일반열차', href: 'javascript:void(0)'},
+                                {text: '고객서비스', href: 'javascript:void(0)'},
+                                {text: '고객센터', href: 'javascript:void(0)'}
+                            ]
+                        },
+                        {
+                            label: '나의 쿠폰함',
+                            items: [
+                                {text: '직통열차 소개', href: 'javascript:void(0)'},
+                                {text: '직통열차 시간표', href: 'javascript:void(0)'},
+                                {text: '직통열차 운임안내', href: 'javascript:void(0)'},
+                                {text: '직통열차 승차권구입 안내', href: 'javascript:void(0)'},
+                                {text: '도심공항터미널', href: 'javascript:void(0)'}
+                            ]
+                        }
+                    ]
+                }) %>
+
+                <div class="layoutContArea">
+                    <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+
+
+                    <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                 
+                    <div class="comSubBtm">
+                        <div class="subBtmArea">
+                            <dl class="manager">
+                                <dt>담당부서</dt>
+                                <dd>
+                                    <ul>
+                                        <li>영업계획처</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <ul class="btmList">
+                                <li class="phone">1599-7788</li>
+                            </ul>
+                        </div>
+                    </div> 
+                    
+                </div>
+                
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

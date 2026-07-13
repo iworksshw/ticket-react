@@ -1,0 +1,208 @@
+//문의내역
+.comRequestList {
+    width:100%; position:relative;
+
+    .noList {
+        display:flex; flex-flow: column; align-items: center; justify-content: flex-start;
+
+        li {
+            width:100%; position:relative; padding:32px 28px; border:1px solid var(--border-color-G300); border-radius:12px;
+
+            p {
+                width:100%; text-align:center; font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G700);
+            }
+        }
+    }
+
+    .hasList {
+        display:flex; flex-flow: column; align-items: center; justify-content: flex-start; gap:20px;
+
+        li {
+            display:block; width:100%; border:1px solid var(--border-color-G300); border-radius:12px; background:#fff; padding-bottom:28px; position: relative;
+
+            .stat {
+                display:inline-block; padding: 4px 16px; text-align:center; border-radius:40px; font-weight:600;
+                &.ing {
+                    background:var(--bg-color-B100); color:var(--text-color-B500);
+
+                    @include media('mobile') {
+                        font-size: rem(15px);
+                    }
+                }
+                &.comp {
+                    background:var(--color-secondary-dark-blue-400); color:#fff;
+                }
+                &.answer {
+                    border-radius: 40px; border: 1px solid var(--color-primary-blue-300); background: #fff; padding: 2px 16px; color: var(--text-color-B500, #107AF2); font-size: rem(16px); font-weight: 600; line-height: 160%;
+
+                    @include media('mobile') {
+                        font-size: rem(15px);
+                    }
+                }
+
+                @include media('mobile') {
+                    padding: 2px 20px;
+                }
+            }
+
+            .answerBox {
+                padding: 20px; border-radius: 12px; background: var(--bg-color-B100); width: 100%;
+
+                .area {
+                    display: flex; gap: 16px; flex-direction: row; align-items: flex-start; width: 100%;
+
+                    .txt {
+                        display: flex; flex-direction: column; gap: 8px; max-width: 804px;
+
+                        .tit {
+                            color: var(--text-color-G900); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+
+                            @include media('mobile') {
+                                font-size: rem(17px);
+                            }
+                        }
+                        .date {
+                            color: var(--text-color-G600); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%;
+
+                            @include media('mobile') {
+                                font-size: rem(15px);
+                            }
+                        }
+                    }
+
+                    @include media('mobile') {
+                        flex-direction: column; gap: 8px;
+                    }
+                }
+
+                @include media('mobile') {
+                    padding: 12px; margin-bottom: 24px;
+                }
+            }
+
+            .trig {
+                width:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; padding:32px 28px 0 28px; gap:20px; text-align:left;
+
+                .left {
+                    width:calc(100% - 161px); display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:20px;
+
+                    .tit {
+                        font-size:rem(20px); font-weight:700; line-height:160%; color:var(--text-color-G900);
+
+                        @include media('mobile') {
+                            font-size:rem(18px);
+                        }
+                    }
+
+                    @include media('mobile') {
+                        flex-direction: column; align-items: flex-start; gap: 12px; width: 100%;
+                    }
+                }
+                .right {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:20px; padding-right:12px; width:141px;
+
+                    span {
+                        &.date {
+                            font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+
+                            @include media('mobile') {
+                                font-size:rem(15px);
+                            }
+                        }
+
+                        &.trigIco {
+                            display:inline-block; width:24px; height:24px;
+                            position:relative;
+
+                            &::after {
+                                content:''; position:absolute; top:50%;left:0; width:24px; height:24px; background:url(/common/images/common/ic_24_calBtn.svg) 50% 50% no-repeat; transform:translateY(-50%) rotate(90deg);
+
+                                @include media('mobile') {
+                                    content: '더보기'; transform: translateY(0) rotate(0); width: 0; height: 0; text-decoration: underline; color: var(--text-color-G700); font-size: rem(15px); font-weight: 400; line-height: 160%;
+                                }
+                            }
+                        }
+                    }
+
+                    @include media('mobile') {
+                        justify-content: space-between; width: 100%; position: absolute; left: 20px; bottom: 30px; width: calc(100% - 40px);
+                    }
+                }
+
+                @include media('mobile') {
+                    padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 12px;
+                }
+            }
+            .listCont {
+                display:none; padding-top:24px; border-top:1px solid var(--border-color-G300); width:calc(100% - 56px); margin: 24px auto 0;
+
+                .inner {
+                    width:100%; display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:20px;
+
+                    .detail {
+                        font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G700);
+
+                        @include media('mobile') {
+                            font-size:rem(17px);
+                        }
+                    }
+
+                    .opt {
+                        width:100%; display:flex; flex-flow: row nowrap; align-items: end; justify-content: end;
+
+                        button {
+                            padding:8px 16px; width:max-content; text-align:center; height:38px; border-radius:8px; border:1px solid var(--border-color-G400);
+
+                            @include media('mobile') {
+                                font-size: rem(14px); margin-bottom: 24px;
+                            }
+                        }
+                    }
+
+                    @include media('mobile') {
+                        gap: 16px;
+                    }
+                }
+
+                @include media('mobile') {
+                    margin: 0 auto; padding-top: 12px; width:calc(100% - 40px);
+                }
+            }
+
+            &.on {
+
+                border:1px solid var(--color-secondary-dark-blue-400);
+
+                .listCont {
+                    display:block;
+                }
+
+                .trig {
+                    .right {
+                        span {
+                            &.trigIco {
+                                &::after {
+                                    transform:translateY(-50%) rotate(-90deg);
+
+                                    @include media('mobile') {
+                                        content: '접기'; transform: translateY(0) rotate(0); width: 0; height: 0; text-decoration: underline; color: var(--text-color-G700); font-size: rem(15px); font-weight: 400; line-height: 160%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media('mobile') {
+                padding-bottom: 40px;
+            }
+        }
+    }
+    & + .comBtnGroup {
+        margin-top: 40px;
+        @include media('mobile') {
+            margin-top: 32px;
+        }
+    }
+}

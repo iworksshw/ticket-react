@@ -1,0 +1,456 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">열차시간 선택</div>
+                    <div class="popCont timeSelect">
+                        <!-- 팝업 컨텐츠 영역 --> 
+                        
+                        <div class="comCalendarMin">
+                            <div class="inner">
+
+                                <div class="optionArea">
+                                    <div class="monthOption">
+                                        <ul>
+                                            <li class="prev">
+                                                <button type="button">이전달</button>
+                                            </li>
+                                            <li class="date">
+                                                <p>
+                                                    <span class="year">2025</span>년
+                                                    <span class="month">08</span>월
+                                                </p>
+                                            </li>
+                                            <li class="next">
+                                                <button type="button">다음달</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="calendar">
+                                    <table>
+                                        <caption>월요일 화요일 수요일 목요일 금요일 토요일 일요일에 관한 표</caption>
+                                        <colgroup>
+                                            <col span="7" style="width: 14.28%;"> <!-- 20251217 수정 -->
+                                        </colgroup>
+
+                                        <thead>
+                                            <tr>
+                                                <th class="sun">일</th>
+                                                <th>월</th>
+                                                <th>화</th>
+                                                <th>수</th>
+                                                <th>목</th>
+                                                <th>금</th>
+                                                <th class="sat">토</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <!--=========================-->
+                                            <!--==========WEEK1==========-->
+                                            <!--=========================-->
+                                            <tr>
+                                                <td class="sun prev">
+                                                    <input type="radio" name="date" id="date96">
+                                                    <label for="date96"></label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date97" class="prev" disabled>
+                                                    <label for="date97">29</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date98" class="prev" disabled>
+                                                    <label for="date98">30</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date99" class="prev" disabled>
+                                                    <label for="date99">31</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date01" disabled>
+                                                    <label for="date01">1</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date02" disabled>
+                                                    <label for="date02">2</label>
+                                                </td>
+                                                <td class="sat">
+                                                    <input type="radio" name="date" id="date03" disabled>
+                                                    <label for="date03">3</label>
+                                                </td>
+                                            </tr>
+                                            
+
+                                            <!--=========================-->
+                                            <!--==========WEEK2==========-->
+                                            <!--=========================-->
+                                            <tr>
+                                                <td class="sun">
+                                                    <input type="radio" name="date" id="date04" disabled>
+                                                    <label for="date04">4</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date05" disabled>
+                                                    <label for="date05">5</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date06" disabled>
+                                                    <label for="date06">6</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date07" disabled>
+                                                    <label for="date07">7</label>
+                                                </td>
+                                                <td>
+                                                    <input type="radio" name="date" id="date08" checked>
+                                                    <label for="date08">8</label>
+                                                </td>
+                                                <td class="today"><!--오늘날짜-->
+                                                    <input type="radio" name="date" id="date09">
+                                                    <label for="date09">9</label>
+                                                </td>
+                                                <td class="sat">
+                                                    <input type="radio" name="date" id="date10">
+                                                    <label for="date10">10</label>
+                                                </td>
+                                            </tr>
+
+                                            <!--=========================-->
+                                            <!--==========WEEK3==========-->
+                                            <!--=========================-->
+                                            <tr>
+                                                <td class="sun">
+                                                    <input type="radio" name="date" id="date11">
+                                                    <label for="date11">11</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date12">
+                                                    <label for="date12">12</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date13" checked> <!--20251028 구분을 위한 체크표시 추가--> 
+                                                    <label for="date13">13</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date14">
+                                                    <label for="date14">14</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date15">
+                                                    <label for="date15">15</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date16">
+                                                    <label for="date16">16</label>
+                                                </td>
+                                                <td class="sat">
+                                                    <input type="radio" name="date" id="date17">
+                                                    <label for="date17">17</label>
+                                                </td>
+                                            </tr>
+
+                                            <!--=========================-->
+                                            <!--==========WEEK4==========-->
+                                            <!--=========================-->
+                                            <tr>
+                                                <td class="sun">
+                                                    <input type="radio" name="date" id="date18">
+                                                    <label for="date18">18</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date19">
+                                                    <label for="date19">19</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date20">
+                                                    <label for="date20">20</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date21">
+                                                    <label for="date21">21</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date22">
+                                                    <label for="date22">22</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date23">
+                                                    <label for="date23">23</label>
+                                                </td>
+                                                <td class="sat">
+                                                    <input type="radio" name="date" id="date24">
+                                                    <label for="date24">24</label>
+                                                </td>
+                                            </tr>
+
+                                            <!--=========================-->
+                                            <!--==========WEEK5==========-->
+                                            <!--=========================-->
+                                            <tr>
+                                                <td class="sun">
+                                                    <input type="radio" name="date" id="date25">
+                                                    <label for="date25">25</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date26">
+                                                    <label for="date26">26</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date27">
+                                                    <label for="date27">27</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date28">
+                                                    <label for="date28">28</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date29">
+                                                    <label for="date29">29</label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date30">
+                                                    <label for="date30">30</label>
+                                                </td>
+                                                <td class="sat">
+                                                    <input type="radio" name="date" id="date31">
+                                                    <label for="date31">31</label>
+                                                </td>
+                                            </tr>
+
+                                            <!-- 6주 영역 추가 20251023-->
+                                            <!--=========================-->
+                                            <!--==========WEEK6==========-->
+                                            <!--=========================-->
+                                            <tr>
+                                                <td class="sun">
+                                                    <input type="radio" name="date" id="date32">
+                                                    <label for="date32"></label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date33">
+                                                    <label for="date33"></label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date34">
+                                                    <label for="date34"></label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date35">
+                                                    <label for="date35"></label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date36">
+                                                    <label for="date36"></label>
+                                                </td>
+                                                <td class="">
+                                                    <input type="radio" name="date" id="date37">
+                                                    <label for="date37"></label>
+                                                </td>
+                                                <td class="sat">
+                                                    <input type="radio" name="date" id="date38">
+                                                    <label for="date38"></label>
+                                                </td>
+                                            </tr>   
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="timetable">
+                                    <em>시간선택</em>
+                                    <div class="timeGroup swiper-container">
+                                        <div class="directGroup">
+                                            <button class="btnDirect prev">한시간뒤로</button>
+                                            <button class="btnDirect next">한시간후로</button>
+                                        </div>
+                                        <ul class="swiperTime swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time01" checked>
+                                                <label for="time01">01시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time02">
+                                                <label for="time02">02시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time03">
+                                                <label for="time03">03시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time04">
+                                                <label for="time04">04시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time05">
+                                                <label for="time05">05시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time06">
+                                                <label for="time06">06시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time07">
+                                                <label for="time07">07시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time08">
+                                                <label for="time08">08시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time09">
+                                                <label for="time09">09시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time10">
+                                                <label for="time10">10시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time11">
+                                                <label for="time11">11시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time12">
+                                                <label for="time12">12시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time13">
+                                                <label for="time13">13시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time14">
+                                                <label for="time14">14시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time15">
+                                                <label for="time15">15시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time16">
+                                                <label for="time16">16시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time17">
+                                                <label for="time17">17시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time18">
+                                                <label for="time18">18시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time19">
+                                                <label for="time19">19시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time20">
+                                                <label for="time20">20시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time21">
+                                                <label for="time21">21시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time22">
+                                                <label for="time22">22시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time23">
+                                                <label for="time23">23시</label>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <input type="radio" name="time" id="time24">
+                                                <label for="time24">24시</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                     <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let timeTabSlide = timeTable();
+    timeTabSlide.slideTo(3);
+});
+</script>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

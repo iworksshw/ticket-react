@@ -1,0 +1,141 @@
+@use "@/styles/etc/mixin" as *;
+
+/* --------------------------- Footer --------------------------- */
+.cptFooter {
+    width:100%; border-top:1px solid var(--border-color-G300); padding:40px 0;
+
+    .footArea {
+        width:100%; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: space-between;
+        max-width: 1280px; margin:0 auto; position:relative; padding: 0 40px;
+
+        @include media ('tablet') {
+            flex-flow:column; align-items: center; padding: 0 20px;
+        }
+
+        @include media ('mobile') {
+            flex-flow:column; align-items: flex-start; padding: 0 16px;
+        }
+        .copyArea {
+            width:60%;
+            @include media ('tablet') {
+                width:100%;
+            }
+            .quickGroup {
+                > ul {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px; 
+                    @include media ('tablet') {
+                        justify-content: center;
+                    }
+                    @include media ('mobile') {
+                        flex-flow: row wrap; justify-content: flex-start;
+                    }
+
+                    li {
+                        width:max-content; font-size:rem(18px); font-weight:400; position:relative; padding-right:12px; line-height:160%;
+                        @include media ('mobile') {
+                            font-size:rem(17px);
+                        }
+                        &:last-of-type {
+                            padding-right:0; 
+
+                            &::after {
+                                background: none;
+                            }
+                        }
+
+                        &::after {
+                            content:''; position:absolute; right:0px; top:50%; transform:translateY(-50%); width:1px; height:10px; background:var(--border-color-G400)
+                        }
+
+                        &.hglt {
+                            > a {
+                                //color:var(--color-primary-blue-500); font-weight:400;
+                            }
+                        }
+                        &:nth-child(4) a {
+                            color:var(--color-primary-blue-500); font-weight:500;
+                        }
+                    }
+                }
+            }
+
+            .copyGroup {
+                margin-top:20px;
+                .infoArea {
+                    > ul {
+                        display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:12px;
+                        @include media ('tablet') {
+                            justify-content: center;
+                        }
+                        @include media ('mobile') {
+                            justify-content: flex-start;
+                        }
+
+                        li {
+                            width:max-content; font-size:rem(16px); font-weight:400; position:relative; padding-right:12px; color:var(--text-color-G600); line-height:160%;
+                            @include media ('mobile') {
+                                font-size:rem(15px);
+                            }
+                            &:last-of-type {
+                                padding-right:0;
+
+                                &::after {
+                                    background: none;
+                                }
+                            }
+
+                            &::after {
+                                content:''; position:absolute; right:0px; top:50%; transform:translateY(-50%); width:1px; height:10px; background:var(--border-color-G400)
+                            }
+                           
+                            &.fax {
+                                padding-right:0;
+                                @include media ('tablet') {
+                                    padding-right:12px; 
+                                }
+                                &::after {
+                                    display:none;
+                                    @include media ('tablet') {
+                                        display:block;
+                                    }
+                                }
+                            }
+                            span {
+                                font-weight:400; color:#111; padding-left:4px;
+                            }
+                        }
+                    }
+                }
+
+                .copyBox {
+                    margin-top:20px;
+
+                    > p {
+                        font-size:rem(14px); color:var(--text-color-G500); font-weight:400; line-height:160%;
+                        @include media ('tablet') {
+                            text-align:center; margin-bottom: 24px;
+                        }
+                        @include media ('mobile') {
+                            text-align:left; font-size:rem(12px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .markArea {
+
+            ul {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px;
+
+                > li {
+                    &:first-of-type {width:45px; height:45px;}/*temporary red color use*/
+                    &:last-of-type {
+                        width:70px; height:45px;/*temporary red color use*/
+                    }
+                    img {width: 100%;}
+                }
+            }
+        }
+    }
+}

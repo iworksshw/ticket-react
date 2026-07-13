@@ -1,0 +1,86 @@
+//취소수수료
+.comCharge {
+    width:100%; position:relative;
+
+    .title {
+        font-size:rem(24px); font-weight:600; line-height:150%; color:var(--text-color-B500);
+
+        @include media ('mobile') {
+            font-size:rem(22px);
+        }
+    }
+
+    .dateCalcu {
+        width:100%; position:relative; padding: 28px; background:var(--bg-color-G100); border-radius:12px; margin-top:12px;
+
+        ul {
+            display:flex; flex-flow :row nowrap; align-items: center; justify-content: center; gap:20px;
+            @include media ('mobile') {
+                flex-flow:column; align-items: flex-start; justify-content: flex-start; gap:8px;
+            }
+
+            li {
+                width:100%; display:flex; flex-flow: row nowrap; align-items: center ;justify-content: flex-start; gap:16px;
+
+                @include media ('mobile') {
+                    flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:12px;
+                }
+
+                .inner {
+                    width:100%; display:flex; flex-flow: row nowrap; align-items: center ;justify-content: flex-start; gap:16px;
+                }
+
+                span {
+                    font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900);
+
+                    @include media ('mobile') {
+                        width:45px; font-size: rem(17px);
+                    }
+                }
+
+                .frmGroup {
+                    margin:0;
+                    @include media ('mobile') {
+                        width:100%;
+                    }
+
+                    .frmBox {
+                        input[type='text'] {
+                            width:160px;
+
+                            @include media ('mobile') {
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+
+                button.btn {
+                    @include media ('mobile') {
+                        display:block; width:100%;
+                    }
+                }
+            }
+        }
+
+        .tui-datepicker-input {
+            margin-left:0;
+
+            @include media ('mobile') {
+                width:100%;
+            }
+        }
+
+        #datepicker-container02 {
+            margin-left:-100px;
+
+            .tui-datepicker {
+                position:fixed;
+            }
+        }
+
+        @include media ('mobile') {
+            padding: 20px 16px;
+        }
+    }
+}

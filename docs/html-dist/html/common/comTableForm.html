@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <title>Table : Form</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comTableForm.scss
+        scss/form/_frmGroup.scss
+        scss/form/_frmBox.scss
+        scss/form/_iptText.scss
+        scss/form/_iptTextArea.scss
+        scss/public/_pubText.scss
+        scss/value/_varEtc.scss
+    -->
+    <div class="comTableForm">
+        <table class="formTable">
+            <caption>신청자명, 휴대폰번호, 이메일, 사업자명, 회의명, 사용인원, 요청사항, 결제총금액을 포함한 표</caption><!-- 20251128 수정 -->
+            <colgroup>
+                <col style="width: 240px;">
+                <col style="width: auto;">
+            </colgroup>
+
+            <tbody>
+                <tr>
+                    <th>
+                        <span class="required">*</span>신청자명
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="신청자명 입력">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>휴대폰 번호
+                    </th>
+                    <td>
+                        <div class="frmGroup gap04">
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="휴대폰번호 첫번째 세자리">
+                            </div>
+                            <span>-</span>
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="휴대폰번호 두번째 세자리 또는 네자리">
+                            </div>
+                            <span>-</span>
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="휴대폰번호 마지막 네자리">
+                            </div>
+                        </div>
+                        <em class="pubInfoText varColorRed">
+                            ※ 회의 당일 30분전 도어락 비밀번호 4자리가 발송되어니 실제 이용자의 휴대전화번호를 필히 입력하시기 바랍니다.
+                        </em>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>이메일
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="이메일주소 입력">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>사업자명
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="사업자명 입력">
+                        </div>
+                        <div class="pubInfoText">
+                            ※ 회의실 입구 디지털 사이니지 안내용
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>회의명
+                    </th>
+                    <td>
+                        <div class="frmBox frmMd">
+                            <input type="text" class="iptText" title="회의명 입력">
+                        </div>
+                        <div class="pubInfoText">
+                            ※ 회의실 입구 디지털 사이니지 안내용
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span class="required">*</span>사용인원
+                    </th>
+                    <td>
+                        <div class="frmGroup gap08 moFull">
+                            <div class="frmBox frmTini">
+                                <input type="text" class="iptText" title="사용예정 인원 입력">
+                            </div>
+                            <span class="mR32">명</span>
+                        </div>
+                        <div class="pubInfoText">
+                            ※ 최대 00명
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        요청사항
+                    </th>
+                    <td>
+                        <textarea name="" id="" class="iptTextArea" placeholder="요청 사항을 입력해 주세요." title="요청사항 입력"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

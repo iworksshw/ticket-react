@@ -1,0 +1,190 @@
+//열차시각표
+.comSchedule {
+    width:100%; position:relative;
+
+    .optButton {
+        display:flex; flex-flow: row nowrap; align-items: center; justify-content: end;
+
+        @include media (875px) {
+            justify-content: center;
+        }
+
+        .buttons {
+            display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px;
+
+            @include media (875px) {
+                gap:0;
+            }
+
+            @include media (875px) {
+                width:100%;
+            }
+
+            button {
+                position:relative; background:#fff; border:1px solid var(--text-color-G500); border-radius:8px; padding:12px 48px 12px 20px;
+                font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G800);
+
+                &::after {
+                    content:''; position:absolute; top:50%; right:20px; width:24px; height:24px; transform:translateY(-50%);
+                }
+
+                &.sched {
+                    &::after {
+                        background:url(/common/images/common/ic_24_download_blk.svg)0 0 no-repeat;
+                    }
+
+                    @include media (875px) {
+                        width:100%;
+
+                        &::after {
+                            right:auto; left:50%; transform:translate(-50%,-50%); margin-left:52px;
+                        }
+                    }
+                }
+
+                &.print {
+                    &::after {
+                        background:url(/common/images/common/ic_24_print.svg)0 0 no-repeat;
+                    }
+
+                    @include media (875px) {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+
+    .schedTable {
+        margin-top:32px; display:flex; flex-flow: row nowrap; align-items:flex-start; justify-content: flex-start;
+        @include media (875px) {
+            flex-flow:column; margin-top:24px;
+        }
+        .pcBlind {
+            display:none;
+
+            & + th {
+                border-left:0;
+            }
+
+            & + td {
+                border-left:0;
+            }
+
+            @include media (875px) {
+                display:table-cell; width:80px;
+
+                & + th {
+                    border-left:0;
+                }
+
+                & + td {
+                    border-left:0;
+                }
+            }
+        }
+
+        .comTableBasic {
+            margin-top:0;
+
+            @include media (875px) {
+                table {
+                    width:100%;
+                }
+            }
+
+            & + .comTableBasic {
+                th {
+                    &:first-of-type {
+                        border-left:1px solid var(--border-color-G300);
+                    }
+                }
+                td {
+                    &:first-of-type {
+                        border-left:1px solid var(--border-color-G300);
+                    }
+                }
+
+                @include media (875px) {
+                    margin-top:24px;
+
+                    th {
+                        &:first-of-type {
+                            border-left:none;
+                        }
+                    }
+                    td {
+                        &:first-of-type {
+                            border-left:none;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                td {
+                    line-height:1;
+
+                    .frmGroup {
+                        flex-flow: row wrap; gap:16px;
+                    }
+                }
+            }
+
+            &.left {
+                width:46.6666666%;
+                @include media (875px) {
+                    width:100%;
+                }
+                .minCov {
+                    justify-content: end;
+
+                    @include media (875px) {
+                        justify-content: flex-start;
+                    }
+                }
+            }
+
+            &.right {
+                width:53.3333334%;
+                @include media (875px) {
+                    width:100%;
+                }
+            }
+
+            .minCov {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap: 12px;
+
+                @include media (875px) {
+                    flex-flow: row wrap; gap: 8px;
+                }
+
+                span {
+                    font-size:rem(18px); font-weight:400; color:var(--text-color-G500);
+
+                    @include media ('mobile') {
+                        font-size: rem(17px);
+                    }
+                }
+
+                .blue {
+                    &.on {
+                        color:var(--color-primary-blue-700); font-weight:600;
+                    }
+                }
+
+                .green {
+                    &.on {
+                        color:#CE46E0; font-weight:600;
+                    }
+                }
+
+                .red {
+                    &.on {
+                        color:#dd3500; font-weight:600;
+                    }
+                }
+            }
+        }
+    }
+}

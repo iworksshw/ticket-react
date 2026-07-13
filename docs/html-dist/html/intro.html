@@ -1,0 +1,121 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+<!-- 레이아웃 -->
+<div class="lytIntro">
+    <div class="introTop">
+        <div class="introTopCont">
+            <div class="logo">A'REX Airport Railroad</div>
+            <div class="lang">
+                <button class="btnLang" title="현재 언어 및 클릭 시 언어 선택">한국어</button>
+                <ul class="langList">
+                    <li class="langItem" title="언어 선택"><a href="#">ENGLISH</a></li>
+                    <li class="langItem" title="언어 선택"><a href="#">中國語(简体)</a></li>
+                    <li class="langItem" title="언어 선택"><a href="#">中國語(繁體)</a></li>
+                    <li class="langItem" title="언어 선택"><a href="#">日本語</a></li>
+                    <li class="langItem" title="언어 선택"><a href="#">한국어</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="introContainer">
+        <div class="cptIntro">
+            <h1 class="blind">공항철도 기업누리집 및 영업누리집 바로가기</h1>
+            <div class="introArea">
+                <div class="introL">
+                    <div class="arexGroup">
+                        <i class="eyebrow">About AREX</i>
+                        <h2 class="title">공항철도 소개</h2>
+                        <p class="text">기업소개, 전자조달, 촬영신청</p>
+                        <a class="more" href="#">공항철도 소개 바로가기</a> <!-- 20260324 수정 -->
+                    </div>
+                </div>
+                <div class="introR">
+                    <div class="arexGroup">
+                        <i class="eyebrow">AREX Service</i>
+                        <h2 class="title">공항철도 이용</h2>
+                        <p class="text">직통열차 예매, 열차이용정보, 고객의 소리</p>
+                        <a class="more" href="#">공항철도 이용 바로가기</a> <!-- 20260324 수정 -->
+                    </div>
+                    <div class="reservateGroup">
+                        <div class="stationLine">
+                            <div class="left">
+                                <label for="departure">출발역</label>
+                                <input type="text" id="departure" placeholder="어디서 출발하세요?" readonly>
+                            </div>
+                            <div class="center">
+                                <button type="button" class="stnChange">
+                                    <span class="blind">출발역/도착역 좌우 변경 버튼</span>
+                                </button>
+                            </div>
+                            <div class="right">
+                                <label for="arrival">도착역</label>
+                                <input type="text" id="arrival" placeholder="어디로 갈까요?" readonly>
+                            </div>
+                        </div>
+                        <div class="infoLine">
+                            <div class="iptArea">
+                                <label for="pax">인원</label>
+                                <input type="text" id="pax" placeholder="몇명이서 가시나요?">
+                            </div>
+                            <div class="iptArea">
+                                <label for="date">날짜</label>
+                                <input type="text" id="date" placeholder="언제 떠나실 건가요?">
+                            </div>
+                            <button type="button" class="btnArea">직통열차 조회</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

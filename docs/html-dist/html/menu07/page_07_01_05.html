@@ -1,0 +1,183 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytMember">
+    <div class="memberArea">
+
+        <!-- 상단영역 -->
+        <div class="memberTop">
+            <!-- Top -->
+            <div class="topArea">
+                <div class="logoArea"><a href="javascript:void(0)"><img src="/common/images/common/ic_142_logo.svg" alt="arex 로고"></a></div>
+                <div class="langArea">
+                    <div class="comDropdown">
+                        <div class="dropArea">
+                            <button class="btnDrop" type="button">
+                                한국어
+                            </button>
+                            <ul class="dropMenu">
+                                <li><a href="javascript:void(0)">영어</a></li>
+                                <li><a href="javascript:void(0)">중국어</a></li>
+                                <li><a href="javascript:void(0)">일본어</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 20250922 버튼 추가 -->
+                    <button class="closeBtn" type="button">
+                        <span class="blind">전체메뉴 닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="memberContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="memberSubCont">
+
+                <div class="cptLogin">
+                    <div class="loginArea">
+                        <div class="loginTop">
+                            <strong class="eyebrow">공항철도 회원가입</strong>
+                            <h1 class="loginHeadline">필수 정보 입력</h1>
+                            <p class="loginHeadText">가입을 위해 인증번호와 필수 정보를 입력해주세요.</p>
+                        </div>
+                        <div class="loginCont">
+                            
+                            <!-- 필수정보입력 영역 -->
+                            <div class="comLog">
+                                <div class="fnTxtCont">
+                                    <p class="fnTxt">고객님 이메일(<em>id@domain.com</em>)로 회원가입을 위한 <!-- 20251222 br 삭제 -->
+                                        <em>‘인증번호’</em>를 발송했습니다.<br>
+                                        인증메일 유효시간은 메일 수신일 기준 <em>30분 이내</em>입니다.
+                                    </p>
+                                </div>
+                                <div class="fnCont">
+                                    <div class="fnGroup">
+                                        <div class="labelBox">
+                                            <label for="authCodeRe">인증번호</label>
+                                        </div>
+                                        <div class="frmGroup error">
+                                            <div class="frmBox">
+                                                <input type="text" class="iptText lg" id="authCodeRe" placeholder="인증번호 6자리" name="authCodeRe" title="인증번호 6자리 입력" aria-describedby="authCodeReError">
+                                                <button class="btnReset">텍스트 지우기</button>
+                                                <span class="errMsg" id="authCodeReError">유효하지 않은 인증번호입니다.</span>                                       
+                                            </div>
+                                            <button type="button" class="btn dkLine lg">인증번호 재전송</button>                                          
+                                        </div>
+                                    </div>
+                                    <div class="fnGroup">
+                                        <div class="labelBox">
+                                            <label for="password">비밀번호</label>
+                                        </div>
+                                        <div class="frmGroup">
+                                            <div class="frmBox">
+                                                <input type="password" class="iptText lg" id="password" placeholder="비밀번호를 입력해주세요." name="password" title="비밀번호 입력"><!-- 20251128 수정 -->
+                                                <button class="btnReset">텍스트 지우기</button>
+                                            </div>
+                                        </div>
+                                        <div class="chkGroup">
+                                            <div class="chkItem chkBlue">10~20자</div> <!-- 클래스명 => chkGray : off 기본 / chkBlue : on 상태 -->
+                                            <div class="chkItem chkGray">영문</div>
+                                            <div class="chkItem chkGray">숫자</div>
+                                            <div class="chkItem chkGray">특수문자</div>
+                                        </div>
+                                    </div>
+                                    <div class="fnGroup">
+                                        <div class="labelBox">
+                                            <label for="passwordCfm">비밀번호 확인</label>
+                                        </div>
+                                        <div class="frmGroup error">
+                                            <div class="frmBox">
+                                                <input type="password" class="iptText lg" id="passwordCfm" placeholder="비밀번호를 입력해주세요." name="passwordCfm" aria-describedby="passwordCfmError" title="비밀번호 재확인 입력">
+                                                <button class="btnReset">텍스트 지우기</button>
+                                                <span class="errMsg" id="passwordCfmError">비밀번호가 일치하지 않습니다.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="btmBtn">
+                                <button type="button" class="btn dkBlue lg">회원가입 완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 20250922 삭제-->
+        <!-- <div class="memberFooter">
+            <div class="footerArea">
+                <ul class="btmMenuList">
+                    <li class="btmItem"><a href="javascript:void(0)" class="link">여객운송약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">누리집 이용약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">개인정보보처리방침</a></li>
+                </ul>
+                <div class="copyright">
+                    Copyright (C) 2025 by AIRPORT RAILROAD Co., Ltd. All rights reserved.
+                </div>
+            </div>
+        </div> -->
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

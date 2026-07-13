@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <title>달력/캘린더</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/ex/_comBoardCard.scss
+    -->
+    <div class="comCalendar">
+        <div class="inner">
+
+            <div class="optionArea">
+                <div class="monthOption">
+                    <ul>
+                        <li class="prev">
+                            <button type="button"></button>
+                        </li>
+                        <li class="date">
+                            <p>
+                                <span class="year">2025</span>년
+                                <span class="month">08</span>월
+                            </p>
+                        </li>
+                        <li class="next">
+                            <button type="button"></button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="infoOption">
+                    <div class="leftBox">
+                        <p class="month"><span>8월</span> 시행횟수 : </p>
+                        <p class="count"> <span>158</span>건</p>
+                    </div>
+                    <div class="rightBox">
+                        <p>
+                            <span class="blue"></span>
+                            <span class="purple"></span>
+                            예약가능
+                        </p>
+                        <p>
+                            <span class="gray"></span>
+                            마감
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar">
+                <table>
+                    <caption>월요일 화요일 수요일 목요일 금요일에 관한 표</caption>
+                    <colgroup>
+                        <col span="7" width="14.28%">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th class="sat">토</th>
+                            <th class="sun">일</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!--=========================-->
+                        <!--==========WEEK1==========-->
+                        <!--=========================-->
+                        <tr>
+                            <td class="expired prev weekday">
+                                <span class="day">28</span>
+                                <!-- <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul> -->
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired prev weekday">
+                                <span class="day">29</span>
+                                <!-- <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul> -->
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired prev weekday">
+                                <span class="day">30</span>
+                                <!-- <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul> -->
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired prev weekday">
+                                <span class="day">31</span>
+                                <!-- <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul> -->
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired weekday">
+                                <span class="day">1</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button">마감</button> -->
+                            </td>
+                            <td class="expired weekend">
+                                <span class="day">2</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span>
+                                        (<span>
+                                            <span>30</span>/
+                                            <span>30</span>명
+                                        </span>)
+                                        <span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button">개별예약</button> -->
+                            </td>
+                            <td class="expired weekend">
+                                <span class="day">3</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span>
+                                        (<span>
+                                            <span>30</span>/
+                                            <span>30</span>명
+                                        </span>)
+                                        <span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button">개별예약</button> -->
+                            </td>
+                        </tr>
+                        
+
+                        <!--=========================-->
+                        <!--==========WEEK2==========-->
+                        <!--=========================-->
+                        <tr>
+                            <td class="expired weekday">
+                                <span class="day">4</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired weekday">
+                                <span class="day">5</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired weekday">
+                                <span class="day">6</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="expired weekday">
+                                <span class="day">7</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <!-- <button type="button"></button> -->
+                            </td>
+                            <td class="today end weekday">
+                                <span class="day">8</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">마감</button>
+                            </td>
+                            <td class="weekend end">
+                                <span class="day">9</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">30</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">마감</button>
+                            </td>
+                            <td class="weekend">
+                                <span class="day">10</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button>
+                            </td>
+                        </tr>
+
+                        <!--=========================-->
+                        <!--==========WEEK3==========-->
+                        <!--=========================-->
+                        <tr>
+                            <td class="weekday">
+                                <span class="day">11</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button>
+                            </td>
+                            <td class="weekday end">
+                                <span class="day">12</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">마감</button>
+                            </td>
+                            <td class="weekday">
+                                <span class="day">13</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">14</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">15</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekend">
+                                <span class="day">16</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button>
+                            </td>
+                            <td class="weekend">
+                                <span class="day">17</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button>
+                            </td>
+                        </tr>
+
+                        <!--=========================-->
+                        <!--==========WEEK4==========-->
+                        <!--=========================-->
+                        <tr>
+                            <td class="weekday">
+                                <span class="day">18</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">19</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">20</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">21</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">22</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekend">
+                                <span class="day">23</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button>
+                            </td>
+                            <td class="weekend">
+                                <span class="day">24</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button>
+                            </td>
+                        </tr>
+
+                        <!--=========================-->
+                        <!--==========WEEK5==========-->
+                        <!--=========================-->
+                        <tr>
+                            <td class="weekday">
+                                <span class="day">25</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">26</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">27</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">28</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekday">
+                                <span class="day">29</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>3</span>(<span>10:10</span>)<span>마감</span>
+                                    </li>
+                                </ul>
+                                <button type="button">단체예약</button> 
+                            </td>
+                            <td class="weekend">
+                                <span class="day">30</span>
+                                <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button>
+                            </td>
+                            <td class="next weekend">
+                                <span class="day">1</span>
+                                <!-- <ul class="finList">
+                                    <li class="finish">
+                                        코스<span>5</span><span class="cnt">(<span class="hglt">15</span>/<span>30</span>명)</span>
+                                    </li>
+                                </ul>
+                                <button type="button">개별예약</button> -->
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

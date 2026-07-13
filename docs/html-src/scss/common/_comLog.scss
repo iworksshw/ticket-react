@@ -1,0 +1,70 @@
+//로그인 폼
+.comLog {
+
+    .fnTxtCont {
+        border-radius: 8px; background: var(--bg-color-G200); padding: 24px; margin-bottom: 32px;
+        .fnTxt {
+            color: var(--text-color-G800); font-size: rem(18px); font-weight: 400; line-height: 160%;
+            em {
+                color: var(--text-color-B500); font-weight: 600;
+            }
+            @include media('mobile') {
+                font-size: rem(17px); word-break: keep-all;
+            }
+        }
+    }
+
+    .fnCont {
+        display: flex; flex-direction: column; gap: 32px;
+        .fnGroup {
+            width: 100%;
+
+            .labelBox {
+                width: 100%;
+                label {
+                    width: 100%; color: #000; font-size: rem(16px); font-weight: 500; line-height: normal;
+                    @include media('mobile') {
+                        font-size: rem(15px);
+                    }
+                }
+                .btnLine {color: var(--border-color-G600); font-size: rem(15px); font-weight: 400; line-height: normal; vertical-align: baseline; white-space: nowrap;}
+                + .frmGroup {
+                    margin-top: 4px;
+                }
+            }
+
+            .chkGroup {
+                display: flex; flex-direction: row; gap: 16px; margin-top: 8px;
+                .chkItem {
+                    img {
+                        margin-right: 8px;
+                    }
+                    &.chkBlue {
+                        display: inline-block; color: var(--text-color-B500);
+
+                        &::before {
+                            content: ""; display: inline-block; width: 20px; height: 20px;
+                            background: url(/common/images/common/ic_20_tiny_chk_on.svg) no-repeat center center; vertical-align: middle; margin-right: 8px;
+                        }
+
+                    }
+                    &.chkGray {
+                        color: var(--text-color-G500);
+
+                        &::before {
+                            content: ""; display: inline-block; width: 20px; height: 20px;
+                            background: url(/common/images/common/ic_20_fnChk_off.svg) no-repeat center center; vertical-align: middle; margin-right: 8px;
+                        }
+
+                    }
+                    @include media('mobile') {
+                        font-size: rem(15px);
+                    }
+                }
+            }
+            .fnChoGroup {
+                display: flex; flex-direction: row; padding: 16px; gap: 32px;
+            }   
+        }
+    }
+}

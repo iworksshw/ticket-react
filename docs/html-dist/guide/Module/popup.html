@@ -1,0 +1,141 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">팝업</div>
+<div class="guideCont">
+<div class="gText">
+        - 팝업은 .sm, .md, .lg, .tini 크기별로 있으며, 해당 클래스를 추가 하여 종류를 더 다양하게 할 수 있습니다.
+    <br> - 하단 css에서 주석을 풀면 scale motion이 동작합니다.
+    <br> - script는 common.js에 있습니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<button type="button" class="btn blue" onclick="openPopup('sample01');">팝업열기</button>
+
+<div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">Title</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        <a href="#">Contents Link</a>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area<br>
+                        Popup Contents Area
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+
+                     <!-- 팝업 하단 영역 -->
+                    <div class="popBtm">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn gLine">취소</button>
+                                <button type="button" class="btn blue">쿠폰번호 등록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+setTimeout(function(){
+    tabMenuInit(); //모드 탭 함수
+},500)
+</script>
+<!-- //가이드 그룹 -->
+    
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <title>Button</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/etc/_btn.scss
+        scss/common/_comBtnGroup.scss
+    -->
+    <!-- 버튼 기본/색깔/크기 + 옵션 -->
+    <button type="button" class="btn blue lg">기본,파랑,Large</button>
+    <button type="button" class="btn blue lg" disabled>기본,파랑,Large</button>
+    <button type="button" class="btn dkLine lg">기본,검은라인,Large</button>
+    <button type="button" class="btn dkLine lg" disabled>기본,검은라인,Large</button>
+    <button type="button" class="btn gLine lg">기본,회색라인,Large</button>
+    <button type="button" class="btn gLine lg" disabled>기본,회색라인,Large</button>
+    <br>
+    <button type="button" class="btn blue md">기본,파랑,Medium</button>
+    <button type="button" class="btn blue md" disabled>기본,파랑,Medium</button>
+    <button type="button" class="btn dkLine md">기본,검은라인,Medium</button>
+    <button type="button" class="btn dkLine md" disabled>기본,검은라인,Medium</button>
+    <button type="button" class="btn gLine md">기본,회색라인,Medium</button>
+    <button type="button" class="btn gLine md" disabled>기본,회색라인,Medium</button>
+    <br>
+    <button type="button" class="btn blue sm">기본,파랑,small</button>
+    <button type="button" class="btn blue sm" disabled>기본,파랑,small</button>
+    <button type="button" class="btn dkLine sm">기본,검은라인,small</button>
+    <button type="button" class="btn dkLine sm" disabled>기본,검은라인,small</button>
+    <button type="button" class="btn gLine sm">기본,회색라인,small</button>
+    <button type="button" class="btn gLine sm" disabled>기본,회색라인,small</button>
+
+    <!-- 버튼 정렬 -->
+    <div class="comBtnGroup">
+        <div class="alignL">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn blue lg">서명하기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+        </div>
+        <div class="alignC">
+            <button type="button" class="btn blue lg">저장</button>
+            <button type="button" class="btn dkLine lg">승인하기</button>
+        </div>
+        <div class="alignR">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+            <button type="button" class="btn blue lg">저장</button>
+        </div>
+    </div>
+    <div class="comBtnGroup">
+        <div class="alignL">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn blue lg">서명하기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+        </div>
+        <div class="alignC">
+            <button type="button" class="btn blue lg">저장</button>
+            <button type="button" class="btn dkLine lg">승인하기</button>
+        </div>
+        <div class="alignR"></div>
+    </div>
+    <div class="comBtnGroup">
+        <div class="alignL">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn blue lg">서명하기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+        </div>
+        <div class="alignR">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+            <button type="button" class="btn blue lg">저장</button>
+        </div>
+    </div>
+    <div class="comBtnGroup">
+        <div class="alignL"></div>
+        <div class="alignC">
+            <button type="button" class="btn blue lg">저장</button>
+            <button type="button" class="btn dkLine lg">승인하기</button>
+        </div>
+        <div class="alignR">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+            <button type="button" class="btn blue lg">저장</button>
+        </div>
+    </div>
+    <div class="comBtnGroup">
+        <div class="alignL" data-mo-cols="2-1">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn blue lg">서명하기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+        </div>
+    </div>
+    <div class="comBtnGroup">
+        <div class="alignC" data-mo-cols="2-2">
+            <button type="button" class="btn blue lg">저장</button>
+            <button type="button" class="btn dkLine lg">승인하기</button>
+        </div>
+    </div>
+    <div class="comBtnGroup">
+        <div class="alignR" data-mo-cols="1-2">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+            <button type="button" class="btn blue lg">저장</button>
+        </div>
+    </div>
+
+    <!-- 고정 크기 버튼 -->
+    <div class="comBtnGroup">
+        <div class="alignC cta" data-mo-cols="1">
+            <button type="button" class="btn dkLine xl">미리보기</button>
+            <button type="button" class="btn blue xl">서명하기</button>
+            <button type="button" class="btn gLine xl">취소</button>
+        </div>
+    </div>
+
+    <div class="comBtnGroup">
+        <div class="alignC cta" data-mo-cols="1-2">
+            <button type="button" class="btn dkLine xl">미리보기</button>
+            <button type="button" class="btn blue xl">서명하기</button>
+            <button type="button" class="btn gLine xl">취소</button>
+        </div>
+    </div>
+
+    <div class="comBtnGroup">
+        <div class="alignC cta" data-mo-cols="2-1">
+            <button type="button" class="btn dkLine xl">미리보기</button>
+            <button type="button" class="btn blue xl">서명하기</button>
+            <button type="button" class="btn gLine xl">취소</button>
+        </div>
+    </div>
+
+    <div class="comBtnGroup">
+        <div class="alignC cta" data-mo-cols="2-2">
+            <button type="button" class="btn dkLine xl">미리보기</button>
+            <button type="button" class="btn blue xl">서명하기</button>
+            <button type="button" class="btn gLine xl">취소</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+//해외통화 결제 카드
+.comPay {
+    .cardList {
+        display: flex; flex-direction: row; gap: 20px; border-radius: 12px; background: var(--bg-color-G100); padding: 20px;
+
+        .item {
+            width: 33.333%; //cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+            &.visa {
+                img {filter: grayscale(100%); opacity: 0.5;}
+            }
+        }
+
+        @include media('mobile') {
+            gap: 8px;
+        }
+    }
+
+    .payChange {
+        display: flex; justify-content: center; margin-top: 20px;
+
+        a {
+            display: inline-block; border-bottom: 1px solid var(--border-color-G400); color: var(--text-color-G700);
+            font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            @include media('mobile') {
+                font-size: rem(15px);
+            }
+        }
+
+        @include media('mobile') {
+            margin-top: 12px;
+        }
+    }
+}

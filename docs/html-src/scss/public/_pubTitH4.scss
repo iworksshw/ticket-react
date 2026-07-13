@@ -1,0 +1,41 @@
+//H4 타이틀
+.pubTitH4 {
+    width: 100%; margin-top: 32px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;
+    &:first-child {margin-top: 0;}
+    
+    &.box {
+        border-radius: 8px; background: var(--bg-color-B100); padding: 20px 28px; margin: 40px 0 28px 0;
+        h4 {
+            padding-left: 0;
+            &::before {display: none;}
+        }
+    }
+    h4 {
+        padding-left: 24px; color: var(--text-color-G900); font-size: rem(20px); font-style: normal; font-weight: 700; line-height: 160%; position: relative;
+        &::before {content:""; width: 16px; height: 16px; background: url(/common/images/common/ic_16_tit_h4.svg) center no-repeat; display: block; position: absolute; left: 0; top: 8px;}
+    }
+
+    @include media('mobile') {
+        display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px;
+        h4 {
+            padding-left: 22px; font-size: rem(18px);
+            &::before {top: 6px;}
+        }
+    }
+    
+    &:has(.alignR) {
+        display: flex; align-items: center; justify-content: space-between;
+        .alignR {
+            span {
+                font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+                @include media ('mobile') {
+                    font-size:rem(15px); font-weight:500;
+                }
+            }
+            .change {
+                font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+                min-height: 24px; background: url(/common/images/common/ic_24_change.svg) left center no-repeat;
+            }
+        }
+    }
+}

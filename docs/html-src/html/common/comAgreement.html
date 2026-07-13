@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>약관 동의</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comAgreement.scss
+    -->
+
+    <!-- 약관 동의 -->
+    <div class="comAgreement">
+        <div class="agreeInner">
+            <div class="checkArea">
+                <div class="frmGroup">
+                    <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">개인정보 수집/이용 동의</label></div>
+                </div>
+            </div>
+            <div class="descArea">
+                <div class="descBox">
+                    [개인정보의 수집 및 이용 목적]<br>
+                    승차권 예약발매서비스 이용​<br><br>
+
+                    [개인정보 수집 항목]<br>
+                    카드번호, 유효기간​<br><br>
+
+                    [개인정보의 보유 및 이용기간]<br>
+                    계약 또는 청약철회 등에 관한 기록 (보존기간 : 5년) : 전자상거래 등에서의 소비자 보호에 관한 법률​<br>
+
+                    대금결제 및 재화 등의 공급에 관한 기록 (보존기간 : 5년) : 전자상거래 등에서의 소비자 보호에 관한 법률​<br>
+
+                    소비자의 불만 또는 분쟁처리에 관한 기록 (보존기간 : 3년) : 전자상거래 등에서의 소비자 보호에 관한 법률​<br><br>
+
+                    ▶개인정보 수집 및 이용 동의 거부​<br>
+
+                    개인정보 수집 및 이용 동의를 거부하실 수 있습니다. 다만, 이 경우 승차권 예약 서비스 이용이 제한될 수 있습니다.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comAgreement">
+        <div class="agAll">
+            <div class="frmGroup">
+                <div class="frmChoBox">
+                    <input id="agreeAll" type="checkbox" class="iptChk lg txt">
+                    <label for="agreeAll" class="iptLbl">전체동의</label>
+                </div>
+            </div>
+        </div>
+        <div class="frmInner">
+            <ul>
+                <li>
+                    <div class="frmGroup">
+                        <div class="frmChoBox">
+                            <input id="chk01" type="checkbox" class="iptChk tiny">
+                            <label for="chk01" class="iptLbl">
+                                <span>[필수]</span> 홈페이지 이용약관 동의
+                            </label>
+                        </div>
+                    </div>
+                    <div class="showDesc">
+                        <button type="button" class="btn btnText ico" onclick="openPopup('sample01');">내용보기</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="frmGroup">
+                        <div class="frmChoBox">
+                            <input id="chk02" type="checkbox" class="iptChk tiny">
+                            <label for="chk02" class="iptLbl">
+                                <span>[필수]</span> 개인정보 수집/이용 동의
+                            </label>
+                        </div>
+                    </div>
+                    <div class="showDesc">
+                        <button type="button" class="btn btnText ico" onclick="openPopup('sample01');">내용보기</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="frmGroup">
+                        <div class="frmChoBox">
+                            <input id="chk03" type="checkbox" class="iptChk tiny">
+                            <label for="chk03" class="iptLbl">
+                                <span>[선택]</span> 메일수신에 동의 (다양한 공항철도 정보 제공)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="showDesc">
+                        <button type="button" class="btn btnText ico" onclick="openPopup('sample01');">내용보기</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="pubRefer sm">
+        전체 동의에는 필수 및 선택 정보수집에 대한 동의가 포함되어 있으며, 개별적인 동의 선택도 가능합니다. 선택항목에 대한 동의를 거부하시더라도 필수 서비스 이용은 가능합니다.
+    </p>
+
+    <!-- 2025.09.15 팝업-->
+    <div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                        <div class="popTitle">홈페이지 이용약관</div>
+                        <div class="popCont">
+                            <!-- 팝업 컨텐츠 영역 -->
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            <a href="#">Contents Link</a>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area
+                            <!-- //팝업 컨텐츠 영역 -->
+                        </div>
+
+                        <!-- 팝업 하단 영역 -->
+                        <!-- <div class="popBtm division">
+                            <div class="align">
+                                <button type="button" class="btn blue">Blusdf</button>
+                                <button type="button" class="btn red">Red</button>
+                                <button type="button" class="btn purple">Purple</button>
+                                <button type="button" class="btn dark">Dark</button>
+                                <button type="button" class="btn blue" disabled>Disabled</button>
+                            </div>
+                            <div class="align">
+                                <button type="button" class="btn gLine">Gray Line</button>
+                                <button type="button" class="btn blLine">Blue lLine</button>
+                                <button type="button" class="btn dkLine">Dark Line</button>
+                                <button type="button" class="btn dkLine" disabled>Disabled</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comAgreement">
+        <div class="agreeInner">
+            <div class="checkArea">
+                <div class="frmGroup">
+                    <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">개인정보 수집 및 이용 동의</label></div>
+                </div>
+            </div>
+            <div class="descArea">
+                <div class="descBox">
+                    공항철도는 체험학습 운영을 위해 아래와 같이 개인정보를 수집하고 있습니다.​<br>
+                    개인정보의 수집 및 이용 목적​<br>
+                    공항철도는 수집한 개인정보를 다음의 목적을 위해서만 사용하며, 아래 목적 외에는 사용하지 않습니다.​<br>
+                    - 체험학습 진행​<br>
+                    수집하는 개인 정보의 항목​<br>
+                    - 필수: 인솔자 정보(성명, 전화번호, 이메일 주소), 참석자 정보(성명, 성별)​<br>
+                    개인정보 보유 기간​<br>
+                    - 체험학습 종료 시까지​<br>
+                    귀하는 위와 같은 개인정보 수집·이용에 동의하지 않으실 수 있습니다. 단, 수집되는 개인정보는 체험학습 진행을 위한 필수정보로 미동의 시 체험학습을 신청하실 수 없습니다.​
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comAgreement">
+        <div class="agAll">
+            <div class="frmGroup">
+                <div class="frmChoBox">
+                    <input id="agreeAll" type="checkbox" class="iptChk lg txt">
+                    <label for="agreeAll" class="iptLbl">전체동의</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chkAllInner">
+            <div class="agreeInner">
+                <div class="checkArea">
+                    <div class="frmGroup">
+                        <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">개인정보 수집 및 이용 동의</label></div>
+                    </div>
+                </div>
+                <div class="descArea">
+                    <div class="descBox">
+                        공항철도는 체험학습 운영을 위해 아래와 같이 개인정보를 수집하고 있습니다.​<br>
+                        개인정보의 수집 및 이용 목적​<br>
+                        공항철도는 수집한 개인정보를 다음의 목적을 위해서만 사용하며, 아래 목적 외에는 사용하지 않습니다.​<br>
+                        - 체험학습 진행​<br>
+                        수집하는 개인 정보의 항목​<br>
+                        - 필수: 인솔자 정보(성명, 전화번호, 이메일 주소), 참석자 정보(성명, 성별)​<br>
+                        개인정보 보유 기간​<br>
+                        - 체험학습 종료 시까지​<br>
+                        귀하는 위와 같은 개인정보 수집·이용에 동의하지 않으실 수 있습니다. 단, 수집되는 개인정보는 체험학습 진행을 위한 필수정보로 미동의 시 체험학습을 신청하실 수 없습니다.​
+                    </div>
+                </div>
+            </div>
+            
+            <div class="agreeInner">
+                <div class="checkArea">
+                    <div class="frmGroup">
+                        <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">개인정보 수집 및 이용 동의</label></div>
+                    </div>
+                </div>
+                <div class="descArea">
+                    <div class="descBox">
+                        공항철도는 체험학습 운영을 위해 아래와 같이 개인정보를 수집하고 있습니다.​<br>
+                        개인정보의 수집 및 이용 목적​<br>
+                        공항철도는 수집한 개인정보를 다음의 목적을 위해서만 사용하며, 아래 목적 외에는 사용하지 않습니다.​<br>
+                        - 체험학습 진행​<br>
+                        수집하는 개인 정보의 항목​<br>
+                        - 필수: 인솔자 정보(성명, 전화번호, 이메일 주소), 참석자 정보(성명, 성별)​<br>
+                        개인정보 보유 기간​<br>
+                        - 체험학습 종료 시까지​<br>
+                        귀하는 위와 같은 개인정보 수집·이용에 동의하지 않으실 수 있습니다. 단, 수집되는 개인정보는 체험학습 진행을 위한 필수정보로 미동의 시 체험학습을 신청하실 수 없습니다.​
+                    </div>
+                </div>
+            </div>
+
+            <div class="agreeInner">
+                <div class="checkArea">
+                    <div class="frmGroup">
+                        <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk sm"><label for="chk401" class="iptLbl">개인정보 수집 및 이용 동의</label></div>
+                    </div>
+                </div>
+                <div class="descArea">
+                    <div class="descBox">
+                        공항철도는 체험학습 운영을 위해 아래와 같이 개인정보를 수집하고 있습니다.​<br>
+                        개인정보의 수집 및 이용 목적​<br>
+                        공항철도는 수집한 개인정보를 다음의 목적을 위해서만 사용하며, 아래 목적 외에는 사용하지 않습니다.​<br>
+                        - 체험학습 진행​<br>
+                        수집하는 개인 정보의 항목​<br>
+                        - 필수: 인솔자 정보(성명, 전화번호, 이메일 주소), 참석자 정보(성명, 성별)​<br>
+                        개인정보 보유 기간​<br>
+                        - 체험학습 종료 시까지​<br>
+                        귀하는 위와 같은 개인정보 수집·이용에 동의하지 않으실 수 있습니다. 단, 수집되는 개인정보는 체험학습 진행을 위한 필수정보로 미동의 시 체험학습을 신청하실 수 없습니다.​
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="comAgreement">
+        <div class="agreeInner">
+            <div class="checkArea">
+                <div class="frmGroup">
+                    <div class="frmChoBox"><input id="chk402" type="checkbox" class="iptChk sm"><label for="chk402" class="iptLbl"><em>[필수]</em> 개인정보 수집/이용 동의</label></div>
+                </div>
+                <div class="showDesc">
+                    <button type="button" class="btn btnText ico" onclick="openPopup('sample01');">내용보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

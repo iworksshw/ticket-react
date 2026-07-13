@@ -1,0 +1,114 @@
+@use "@/styles/etc/mixin" as *;
+
+//영수증 상단
+.comReceipt {
+    display: flex; flex-direction: column;
+
+    .receiptBox {
+        margin-top: 40px;
+        @include media ('mobile') {
+            margin-top: 32px;
+        }
+        .logoImg {
+            img {
+                width: 80px;
+            }
+        }
+        .txt {
+            color: var(--text-color-G900); text-align: center; font-size: rem(40px); font-weight: 600; line-height: 140%; margin-top: 12px;
+
+            em {
+                color: var(--text-color-B500); font-weight: 700; line-height: 160%; font-size: rem(20px);
+
+                @include media ('mobile') {
+                    font-size: rem(18px);
+                }
+            }
+
+            @include media ('mobile') {
+                font-size: rem(26px);
+            }
+        }
+        .num {
+            color: var(--text-color-G900); font-size: rem(20px); font-weight: 700; line-height: 160%;
+        }
+        .info {
+            color: var(--text-color-G900); font-size: rem(20px); font-weight: 700; line-height: 160%;
+
+            .seat {
+                color: var(--text-color-B500); font-weight: 700; line-height: 160%; font-size: rem(20px);
+
+                @include media ('mobile') {
+                    font-size: rem(18px); display: block;
+                }
+            }
+
+            @include media ('mobile') {
+                font-size: rem(18px);
+            }
+        }
+    }
+
+    .receiptListGroup {
+        width: 100%; margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px;
+        .item {
+            width: 100%;
+            .receiptList {
+                width: 100%; display: flex; justify-content: space-between;
+                dt {
+                    color: var(--text-color-G600, #565B64); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; text-align: left; display: flex; align-items: center;
+                }
+                dd {
+                    color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; text-align: right; display: flex; align-items: center;
+                }
+            }
+        }
+        @include media('mobile') {
+            margin-top: 20px; gap: 8px;
+            .item {
+                .receiptList {
+                    dt {
+                        font-size: rem(15px);
+                    }
+                    dd {
+                        font-size: rem(15px);
+                    }
+                }
+            }
+        }
+    }
+    .receiptTotal {
+        width: 100%; margin-top: 24px; padding: 24px 0; border-top: 1px solid var(--color-gray-900, #111); border-bottom: 1px dashed var(--border-color-G400, #B9C1C9); display: flex; justify-content: space-between;
+        dt {
+            color: var(--text-color-G900, #111); font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; display: flex; align-items: center;
+        }
+        dd {
+            color: var(--text-color-B500, #107AF2); font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%; display: flex; align-items: center;
+        }
+        @include media('mobile') {
+             margin-top: 20px; padding: 20px 0;
+             dt {
+                font-size: rem(15px);
+            }
+            dd {
+                font-size: rem(20px);
+            }
+        }
+    }
+    .receiptCmt {
+        width: 100%; margin-top: 24px;
+        p {
+            color: var(--text-color-G600, #565B64); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%;
+            & + p {margin-top: 12px;}
+        }
+        em {
+            color: var(--text-color-B500, #107AF2); font-weight: 600;
+        }
+        @include media('mobile') {
+            margin-top: 20px;
+            p {
+                font-size: rem(15px);
+            }
+        }
+    }
+}

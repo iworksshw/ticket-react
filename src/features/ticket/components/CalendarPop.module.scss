@@ -1,0 +1,193 @@
+@use "@/styles/etc/mixin" as *;
+//팝업 달력
+.comCalendarMin {
+    width:100%; position:relative;
+
+    .inner {
+        .optionArea  {
+            width:100%; margin-bottom:20px;
+
+            .monthOption {
+                ul {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:12px;
+
+                    li {
+                        &.prev {
+                            button {
+                                width:25px; height:25px; border:1px solid var(--border-color-G300); border-radius:50%;
+                                background:#fff url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
+                                font-size:0;
+                                &:disabled {background:#ccc url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat; opacity: 0.4; cursor: auto;}
+                            }
+
+                        }
+
+                        &.date {
+                            p {
+                                font-size:rem(22px); font-weight:600; line-height:150%; color:var(--text-color-G900);
+
+                                @include media ('mobile') {
+                                    font-size:rem(20px);
+                                }
+                            }
+                        }
+
+                        &.next {
+                            button {
+                                width:25px; height:25px; border:1px solid var(--border-color-G300); border-radius:50%;
+                                background:#fff url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
+                                transform:rotate(180deg); font-size:0;
+                                &:disabled {background:#ccc url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat; opacity: 0.4; cursor: auto;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .calendar {
+            width:100%; height:331px;
+            table {
+                width:100%;
+
+                thead {
+                    tr {
+                        th {
+                            height:45px; line-height:45px; font-size:rem(18px); font-weight:600; color:var(--text-color-G800);
+
+                            &.sun {
+                                color:var(--color-danger-500);
+                            }
+
+                            &.sat {
+                                color:var(--color-primary-blue-500);
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            position:relative; height:45px; line-height:45px; font-size:rem(18px); font-weight:400; color:var(--text-color-G800);
+
+                            &.prev {
+                                color:var(--text-color-G500);
+                            }
+
+                            label {
+                                display:block; max-width:45px; height:45px; border-radius:50%; background:#fff; margin:0 auto; text-align:center;
+                                font-size:rem(18px); font-weight:400; color:var(--text-color-G800); cursor:pointer;
+
+                                @include media ('mobile') {
+                                    font-size:rem(17px);
+                                }
+                            }
+
+                            input {
+                                position:absolute; top:0 ;left:0; width:1px; height:1px;
+
+                                &:checked + label {
+                                    background: var(--bg-color-DB500); color:#fff; font-weight:600;
+                                }
+                                &:disabled + label {color: var(--text-color-G500, #808892);}
+                                &.prev + label {color: var(--text-color-G500);}
+
+                                &:focus-visible + label {
+                                    outline: 2px solid blue;
+                                }
+                            }
+
+                            &.today {
+                                label {
+                                    color:var(--text-color-B500);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .timetable {
+            width:100%; margin-top: 12px; padding:24px 0; position:relative; display:flex; flex-flow:column; gap:16px; border-top: 1px solid var(--border-color-G300, #D6DBE1);
+
+            @include media ('mobile') {
+                margin-top: 8px; padding:20px 0;
+            }
+
+            em {
+                font-size:rem(20px); font-weight:700; line-height:160%; color:#000;
+
+                @include media ('mobile') {
+                    font-size:rem(20px);
+                }
+            }
+
+            .timeGroup {
+                width:100%; padding: 0 37px; position:relative;
+                .directGroup {
+                    button {
+                        position:absolute; top:50%; transform:translateY(-50%);
+                        width:25px; height:25px; border:1px solid var(--border-color-G300); border-radius:50%;
+                        background:#fff url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
+                        font-size:0; z-index:3;
+
+                        &.next {
+                            transform: translateY(-50%) rotate(180deg); right:0;
+                        }
+
+                        &.prev {
+                            left:0;
+                        }
+                    }
+
+                    &::before {
+                        content:''; position:absolute; top:0; left:0; width:37px; height:45px; background:#fff; z-index:2;
+                    }
+
+                    &::after {
+                        content:''; position:absolute; top:0; right:0; width:37px; height:45px; background:#fff; z-index:2;
+                    }
+
+                    @include media ('mobile') {
+                        display:none;
+                    }
+                }
+
+                .swiperTime {
+                    width:calc(100% - 72px); position:relative; display:flex; overflow-x:auto; scroll-behavior:smooth;
+                    @include media ('mobile') {
+                        margin:0; width:100%;
+                    }
+
+                    li {
+                        position:relative; width:80px; flex-shrink:0; margin-left: 8px;
+                        &:first-child {margin-left: 0;}
+
+                        label {
+                            display:block; width:80px; height:45px; line-height:45px; text-align:center; border-radius:30px; background:var(--bg-color-G200);
+                            font-size:rem(18px); font-weight:400; cursor:pointer;
+
+                            @include media ('mobile') {
+                                font-size:rem(17px);
+                            }
+                        }
+
+                        input {
+                            position:absolute; top:0; left:0; width:1px; height:1px;
+                            &:focus-visible + label {
+                                outline: 2px solid blue;
+                            }
+
+                            &:checked + label {
+                                background:var(--bg-color-DB500); color:#fff; font-weight:600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

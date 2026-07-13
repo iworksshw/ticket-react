@@ -1,0 +1,12 @@
+//체크/라디오 폼 가운데 정렬
+.pubCenterChk {
+    margin-top: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+
+    .frmGroup .frmChoBox {
+        width: 100%; flex-wrap: wrap; align-self: flex-start;
+
+        span.text {
+            width: 100%; padding-left: 32px; font-size: 0.875rem; font-style: normal; font-weight: 500; line-height: 160%;
+        }
+    }
+}

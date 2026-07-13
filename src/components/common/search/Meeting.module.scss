@@ -1,0 +1,123 @@
+@use "@/styles/etc/mixin" as *;
+
+//이력조회검색바
+.comMeeting {
+
+    .meetingArea {
+
+        .meetingDate {
+            border-radius: 12px; background: var(--bg-color-G100); display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 28px 0; margin-bottom: 32px;
+
+            .tit {
+                color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%; margin-right: 16px; margin-left: 16px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                @include media ('tablet') {
+                    font-size: rem(17px); margin-left: 0;
+                }
+            }
+
+            &.ticket {
+                @include media('tablet'){
+                    .fnGroupWrap {
+                        flex-wrap: wrap; row-gap: 8px;
+
+                        :global(.tui-datepicker-input) {
+                            width: 100% !important;
+                        }
+
+                        :global(.frmGroup) {
+                            &:nth-child(1) {
+                                width: calc(100% - 30px);
+                            }
+                            &:nth-child(3) {
+                                width: 100%;
+                            }
+                            &:nth-child(4) {
+                                margin-left: 0; flex-wrap: wrap; gap: 8px;
+                                :global(.frmChoBox) {width: 100%;}
+                            }
+                        }
+                    }
+                }
+            }
+
+            :global(.tui-datepicker-input) {
+                @include media ('tablet') {
+                    width: 100% !important;
+                }
+            }
+
+            .fnGroupWrap {
+                display: flex; flex-direction: row; align-items: center; flex-wrap: wrap;
+
+                :global(.frmGroup) {
+                    width: 200px; margin-top: 0;
+
+                    &.frmGroupBe {
+                        @include media ('tablet') {
+                            width: 90%;
+
+                            :global(.tui-datepicker-input) {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &.frmGroupAf {
+                        @include media ('tablet') {
+                            width: 100%;
+
+                            :global(.tui-datepicker-input) {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &:global(:has(.frmChoBox)) {
+                        width: max-content; margin-left: 16px;
+                    }
+                }
+
+                .deco {
+                    margin: 0 8px; color: var(--text-color-G900); font-size: rem(17px); font-weight: 400; line-height: 160%;
+                }
+
+                @include media ('tablet') {
+                    margin: 8px 0 12px 0; width: 100%; row-gap: 8px;
+
+                    > div {
+                        &:nth-child(1) {
+                            width: calc(100% - 30px) !important;
+                        }
+                        &:nth-child(3) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @include media ('mobile') {
+                    > div {
+                        &:nth-child(1) {
+                            width: calc(100% - 30px);
+                        }
+                    }
+                }
+            }
+
+            :global(.btn) {
+                margin-left: 32px;
+                @include media ('tablet') {
+                    width: 100%; margin-left: 0;
+                }
+            }
+
+            @include media ('tablet') {
+                flex-direction: column; align-items: flex-start; justify-content: flex-start; margin-top: -16px; margin-bottom: 20px; padding: 20px 16px;
+            }
+        }
+    }
+}

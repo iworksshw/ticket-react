@@ -1,0 +1,22 @@
+@use "@/styles/etc/mixin" as *;
+
+//이용약관 팝업
+.comAgreePop {
+    width:100%; position:relative;
+
+    .tabSwiper {
+        ul {
+            margin-bottom:24px !important;
+
+            li {
+                button {
+                    font-weight:600 !important;
+                }
+            }
+        }
+    }
+
+    .agText {
+        font-size:rem(18px); color:var(--text-color-G800); font-weight:400; line-height:160%; margin-top:12px; overflow-wrap: anywhere;
+    }
+}

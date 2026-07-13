@@ -1,0 +1,96 @@
+//티켓 정보 상자
+.comTicketBox {
+    width:100%; position:relative; padding:32px 40px; border-radius:12px; background:var(--bg-color-G100); margin-top:60px;
+
+    @include media ('mobile') {
+        padding:24px 20px; margin-top:40px;
+    }
+
+    .boxArea {
+        position:relative;
+
+        .boxHeader {
+            width:100%; padding-bottom:12px; border-bottom:1px solid var(--border-color-G300); margin-bottom:16px;
+
+            h4 {
+                font-size:rem(20px); font-weight:700; line-height:160%;
+            }
+        }
+
+        .boxTitle {
+            font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-B500); margin-bottom:8px;
+        }
+
+        .boxList {
+            display:flex; flex-flow: column; gap:4px; margin-bottom:20px;
+
+            li {
+                padding-left:15px; position:relative;
+
+                &::before {
+                    content:''; width:3px; height:3px; border-radius:50%; position:absolute; top:11px; left:4px; background:var(--text-color-G500);
+                }
+
+                em {
+                    color:var(--text-color-G900); font-weight:600;
+                }
+                .colorRed {
+                    color: var(--color-danger-500, #EF2B2A);
+                }
+                .colorBlue {
+                    color: var(--text-color-B500, #107AF2);
+                }
+                a.line {
+                    color: var(--text-color-B500, #107AF2); font-size: 1rem; font-style: normal; font-weight: 400; line-height: 150%; border-bottom: 1px solid var(--border-color-B500, #107AF2); display: inline-block;
+
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom:0;
+            }
+        }
+
+        .listWrap {
+            display: flex; flex-direction: row; align-items: center; justify-content: space-between; 
+
+            @include media ('mobile') {
+                flex-direction: column; gap: 16px;
+            }
+        }
+    }
+
+    &.type02 {
+        padding: 24px 20px; margin-top:24px;
+    }
+
+    &.type03 {
+        margin:0;
+
+        .boxList {
+            li {
+                padding-left:0;
+                &::before {
+                    display:none;
+                }
+            }
+        }
+    }
+
+    .txt {
+        text-align:center; font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G600);
+
+        @include media('mobile') {
+            font-size: rem(17px);
+        }
+    }
+
+    & + .comTicket {
+        .ticketChk {
+            margin-top: 28px;
+            @include media('mobile') {
+                margin-top: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>상품 반품</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comReturn.scss
+    -->
+
+    <!-- 상품 반품 -->
+    <div class="comReturn">
+        <div class="txtBox">
+            <p class="tit">열차가 출발하면 상품취소를 할 수 없습니다.</p>
+        </div>
+        <div class="contBox">
+            <p class="topTit">상품정보</p>
+            <div class="comTicketGoods">
+                <ul class="goodsList">
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">
+                                <span>5,000원 충전된 교통카드 / </span>
+                                <span class="colorBlue">옵션1, 옵션2</span>
+                                <button type="button" class="btnDel"><span class="blind">상품삭제</span></button>
+                            </dt>
+                            <dd class="desc">
+                                <div class="pubIncDec">
+                                    <button type="button" class="btnNum minus" disabled="">-1</button>
+                                    <span class="textNum">0<span class="blind">개</span></span>
+                                    <button type="button" class="btnNum plus">+1</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

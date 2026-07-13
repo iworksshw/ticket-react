@@ -1,0 +1,134 @@
+//콘텐츠 내 정보 상자
+.comInfoBox {
+    width: 100%; margin-top: 32px; padding: 50px 60px; border-radius: 12px; border: 4px solid var(--color-primary-blue-200, #CBE8FF); background: #FFF;
+    &:first-child {margin-top: 0;}
+    .boxArea {
+        width: 100%; min-height: 120px; padding-left: 160px; display: flex; align-items: flex-start; justify-content: space-between; gap: 40px;
+        .infoCont {
+            .infoBox {
+                .tit {
+                    color: var(--text-color-G900, #111); font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;
+                    em {color: var(--text-color-B500, #107AF2); font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;}
+                }
+                .desc {
+                    margin-top: 12px; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+                }
+            }
+            .descList {
+                .descItem {
+                    padding-left: 21px; margin-top: 8px; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; position: relative;
+                    &:first-child {margin-top: 0;}
+                    &::before {content:""; width: 5px; height: 5px; border-radius: 50%; background: var(--color-primary-blue-400, #329CFF); display: block; position: absolute; left: 8px; top: 12px;}
+                    .pubCaption {margin-top: 4px;}
+                    @include media('mobile') {
+                        padding-left: 17px; font-size: rem(17px);
+                        &::before {left: 4px; top: 12px;}
+                    }
+                }
+            }
+        }
+        .infoBtn {
+            display: flex; justify-content: flex-end; flex-shrink: 0; flex-grow: 0; align-self: center;
+
+            @include media('mobile') {
+                justify-content: center; margin: 0 auto;
+            }
+        }
+    }
+    &Img {
+        display: flex; flex-direction: row; gap: 40px;
+        @include media('mobile') {
+            flex-direction: column;
+        }
+        .boxArea {
+            padding-left: 0; justify-content: flex-start;
+            .imgGroup {
+                width: 420px; min-width: 420px;
+                .imgArea {
+                    @include media('mobile') {
+                        width: 100%;
+                    }
+                    img {
+                        border-radius: 12px; width: 100%; vertical-align: middle;
+                    }
+
+                }
+                @include media('mobile') {
+                    width: 100%; min-width: auto;
+                }
+            }
+            @include media('mobile') {
+                width: 100%; padding-top: 0 !important;
+            }
+        }
+    }
+    @include media('mobile') {
+        padding: 32px 24px;
+        .boxArea {
+            min-height: auto; padding-left: 0; padding-top: 120px; flex-wrap: wrap; justify-content: flex-start; gap: 20px;
+        }
+    }
+    /* 아이콘 목록 */
+    .icon001 {background: url(/common/images/common/ic_120_box_001.png) left center no-repeat;} //직통열차 > 직통열차 소개
+    .icon002 {background: url(/common/images/common/ic_120_box_002.png) left center no-repeat;} //직통열차 > 직통열차 운임안내 STEP1
+    .icon003 {background: url(/common/images/common/ic_120_box_003.png) left center no-repeat;} //직통열차 > 직통열차 운임안내 STEP2
+    .icon004 {background: url(/common/images/common/ic_120_box_004.png) left center no-repeat;} //직통열차 > 직통열차 운임안내 STEP3
+    .icon005 {background: url(/common/images/common/ic_120_box_005.png) left center no-repeat;} //직통열차 > 도심공항터미널 > 도심공항터미널 이용안내
+    .icon006 {background: url(/common/images/common/ic_120_box_010.png) left center no-repeat;} //고객서비스 > 체험학습 > 체험학습 이용안내, 고객서비스 > 체험학습 > 프로그램
+    .icon007 {background: url(/common/images/common/ic_120_box_015.png) left center no-repeat;} //고객서비스 > 회의실 > 회의실 이용안내
+    //.icon014 {background: url(/common/images/common/ic_120_box_014.png) left center no-repeat;} //고객서비스 > 유실물센터 (다른방식으로 변경)
+    .icon008 {background: url(/common/images/common/ic_120_box_016.png) left center no-repeat;} //일반열차 > 승차권구입 안내
+    .icon017 {background: url(/common/images/common/ic_120_box_017.png) left center no-repeat;} //고객서비스 > 소비자중심경영 > ccm 개요
+    .icon018 {background: url(/common/images/common/ic_120_box_018.png) left center no-repeat;} //고객서비스 > 소비자중심경영 > ccm 개요
+    .icon019 {background: url(/common/images/common/ic_120_box_019.png) left center no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    .icon020 {background: url(/common/images/common/ic_120_box_020.png) left 40px top no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    .icon021 {background: url(/common/images/common/ic_120_box_021.png) left 40px top no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    .icon022 {background: url(/common/images/common/ic_120_box_022.png) left 40px top no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    .icon023 {background: url(/common/images/common/ic_120_box_023.png) left 40px top no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    .icon024 {background: url(/common/images/common/ic_120_box_024.png) left 40px top no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    @include media('mobile') {
+        .icon001 {background: url(/common/images/common/ic_120_box_001.png) center top / 100px no-repeat;} //직통열차 > 직통열차 소개
+        .icon002 {background: url(/common/images/common/ic_120_box_002.png) center top / 100px no-repeat;} //직통열차 > 직통열차 운임안내 STEP1
+        .icon003 {background: url(/common/images/common/ic_120_box_003.png) center top / 100px no-repeat;} //직통열차 > 직통열차 운임안내 STEP2
+        .icon004 {background: url(/common/images/common/ic_120_box_004.png) center top / 100px no-repeat;} //직통열차 > 직통열차 운임안내 STEP3
+        .icon005 {background: url(/common/images/common/ic_120_box_005.png) center top / 100px no-repeat;} //직통열차 > 도심공항터미널 > 도심공항터미널 이용안내
+        .icon006 {background: url(/common/images/common/ic_120_box_010.png) center top / 100px no-repeat;} //고객서비스 > 체험학습 > 체험학습 이용안내, 고객서비스 > 체험학습 > 프로그램
+        .icon007 {background: url(/common/images/common/ic_120_box_015.png) center top / 100px no-repeat;} //고객서비스 > 회의실 > 회의실 이용안내
+        //.icon014 {background: url(/common/images/common/ic_120_box_014.png) center top / 100px no-repeat;} //고객서비스 > 유실물센터
+        .icon008 {background: url(/common/images/common/ic_120_box_016.png) center top / 100px no-repeat;} //반열차 > 승차권구입 안내
+        .icon017 {background: url(/common/images/common/ic_120_box_017.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 개요
+        .icon018 {background: url(/common/images/common/ic_120_box_018.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 개요
+        .icon019 {background: url(/common/images/common/ic_120_box_019.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 개요
+        .icon020 {background: url(/common/images/common/ic_120_box_020.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+        .icon021 {background: url(/common/images/common/ic_120_box_021.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+        .icon022 {background: url(/common/images/common/ic_120_box_022.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+        .icon023 {background: url(/common/images/common/ic_120_box_023.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+        .icon024 {background: url(/common/images/common/ic_120_box_024.png) center top / 100px no-repeat;} //고객서비스 > 소비자중심경영 > ccm 주요활동
+    }
+
+    &:has(.icon014) {
+        padding: 0; background: #F2F8FE; border: 0;
+        .icon014 {
+            padding: 50px 490px 50px 60px; background: url(/common/images/contents/cont_04_05_002.png) right 30px bottom no-repeat; flex-wrap: wrap; gap: 28px;
+            @include media('tablet') {
+                padding: 50px 380px 50px 60px; background: url(/common/images/contents/cont_04_05_002.png) right 30px bottom / 300px no-repeat;
+            }
+            .infoCont {
+                width: 100%;
+                .desc {
+                    em {color: var(--text-color-B500); font-weight: 600;}
+                }
+            }
+            @include media('mobile') {
+                padding: 32px 24px 177px 24px; background: url(/common/images/contents/cont_04_05_002.png) center bottom / 260px no-repeat;
+            }
+        }
+    }
+
+    //예외처리
+    @at-root {
+        .comTitH2 + .comInfoBox {margin-top: 12px;}
+        .comTitH3 + .comInfoBox {margin-top: 12px;}
+        .comTitH4 + .comInfoBox {margin-top: 12px;}
+    }
+}

@@ -1,0 +1,130 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">탑승인원 선택</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        
+                        <div class="comTicketPass">
+                            <ul class="passengersList">
+                                <li class="item">
+                                    <div class="alignL">
+                                        <span>어른<i>(13세 이상)</i></span>
+                                    </div>
+                                    <div class="alignR">
+                                        <div class="pubIncDec">
+                                            <button class="btnNum minus" disabled>-1</button>
+                                            <span class="textNum">0<span class="blind">명</span></span>
+                                            <button class="btnNum plus">+1</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="alignL">
+                                        <span>어린이<i>(만6세 ~ 만12세)</i></span>
+                                    </div>
+                                    <div class="alignR">
+                                        <div class="pubIncDec">
+                                            <button class="btnNum minus" disabled>-1</button>
+                                            <span class="textNum">0<span class="blind">명</span></span>
+                                            <button class="btnNum plus">+1</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 열차 티켓 전용 정보박스 -->
+                        <div class="comTicketBox type02">
+                            <div class="boxArea">
+                                <ul class="boxList">
+                                    <li class="item">예약인원은 어른, 어린이를 포함하여 <em>총 12명</em>까지 선택 가능합니다.</li>
+                                    <li class="item">어린이는 탑승일 기준 만 6세 ~ 만 12세까지 입니다.</li>
+                                    <li class="item">보호자 1인이 동반하는 유아가 1인을 초과하거나 좌석이 필요한 경우 어린이로 승차권을 구매하셔야 합니다.</li>
+                                    <li class="item">휠체어 좌석은 현장구매만 가능합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                     <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

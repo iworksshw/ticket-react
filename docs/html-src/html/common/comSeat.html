@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>좌석변경</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comSeat.scss
+    -->
+
+    <!-- 좌석변경 -->
+    <div class="comSeat">
+        <div class="seatWrap">
+            <!-- 필터 -->
+            <div class="seatFilter">
+                <div class="filterBox">
+                    <p><img src="/common/images/common/ic_50_seat_dft.svg" alt=""></p>
+                    <p class="txt">순방향</p>
+                </div>
+                <div class="filterBox">
+                    <p><img src="/common/images/common/ic_50_seat_dft_re.svg" alt=""></p>
+                    <p class="txt">역방향</p>
+                </div>
+                <div class="filterBox">
+                    <p><img src="/common/images/common/ic_50_seat_chk.svg" alt=""></p>
+                    <p class="txt">선택불가</p>
+                </div>
+            </div>
+            <!-- 좌석 목록 -->
+            <div class="seatBox" role="list" aria-label="좌석 목록"> <!-- 20251217 수정 -->
+                <div class="seatArea">
+                    <!-- 1번째줄 -->
+                    <div class="seatRow">
+                        <div class="defaultArea">
+                            <!-- 역방향 -->
+                            <!-- 선택 불가능한 좌석 -->
+                            <div class="seat seatRe" role="img" aria-label="선택 불가능한 좌석"> <!-- 20251217 수정 -->
+                                <span class="notSltSeat notSltSeatRe"></span>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="1Dre" aria-label="1D 역방향 좌석">
+                                <label for="1Dre"><span>1D</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="2Dre" aria-label="2D 역방향 좌석" disabled=""><!-- disabled : 이미 예약 된 좌석 -->
+                                <label for="2Dre"><span>2D</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="3Dre" aria-label="3D 역방향 좌석" disabled="">
+                                <label for="3Dre"><span>3D</span></label>
+                            </div><!-- disabled : 이미 예약 된 좌석 -->
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="4Dre" aria-label="4D 역방향 좌석">
+                                <label for="4Dre"><span>4D</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="5Dre" aria-label="5D 역방향 좌석">
+                                <label for="5Dre"><span>5D</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="6Dre" aria-label="6D 역방향 좌석">
+                                <label for="6Dre"><span>6D</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="7Dre" aria-label="7D 역방향 좌석">
+                                <label for="7Dre"><span>7D</span></label>
+                            </div>
+                            <!-- 순방향 -->
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="8D" aria-label="8D 순방향 좌석">
+                                <label for="8D"><span>8D</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="9D" aria-label="9D 순방향 좌석">
+                                <label for="9D"><span>9D</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="10D" aria-label="10D 순방향 좌석">
+                                <label for="10D"><span>10D</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="11D" aria-label="11D 순방향 좌석">
+                                <label for="11D"><span>11D</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="12D" aria-label="12D 순방향 좌석">
+                                <label for="12D"><span>12D</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="13D" aria-label="13D 순방향 좌석">
+                                <label for="13D"><span>13D</span></label>
+                            </div>                                                                  
+                            <!-- 화면에 보이지 않는 공백 좌석 -->
+                            <div class="seat" aria-hidden="true">
+                                <span class="seatEmpty"></span>
+                            </div>                                                              
+                        </div>
+                    </div>
+                    <!-- 2번째줄 -->
+                    <div class="seatRow">
+                        <div class="defaultArea">
+                            <!-- 역방향 -->
+                            <!-- 화면에 보이지 않는 공백 좌석 -->
+                            <div class="seat" aria-hidden="true">
+                                <span class="seatEmpty"></span>
+                            </div>      
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="1Cre" aria-label="1C 역방향 좌석">
+                                <label for="1Cre"><span>1C</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="2Cre" aria-label="2C 역방향 좌석">
+                                <label for="2Cre"><span>2C</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="3Cre" aria-label="3C 역방향 좌석">
+                                <label for="3Cre"><span>3C</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="4Cre" aria-label="4C 역방향 좌석">
+                                <label for="4Cre"><span>4C</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="5Cre" aria-label="5C 역방향 좌석">
+                                <label for="5Cre"><span>5C</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="6Cre" aria-label="6C 역방향 좌석">
+                                <label for="6Cre"><span>6C</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="7Cre" aria-label="7C 역방향 좌석">
+                                <label for="7Cre"><span>7C</span></label>
+                            </div>
+                            <!-- 순방향 -->
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="8C" aria-label="8C 순방향 좌석">
+                                <label for="8C"><span>8C</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="9C" aria-label="9C 순방향 좌석">
+                                <label for="9C"><span>9C</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="10C" aria-label="10C 순방향 좌석">
+                                <label for="10C"><span>10C</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="11C" aria-label="11C 순방향 좌석">
+                                <label for="11C"><span>11C</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="12C" aria-label="12C 순방향 좌석">
+                                <label for="12C"><span>12C</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="13C" aria-label="13C 순방향 좌석">
+                                <label for="13C"><span>13C</span></label>
+                            </div>
+                            <!-- 화면에 보이지 않는 공백 좌석 -->
+                            <div class="seat" aria-hidden="true">
+                                <span class="seatEmpty"></span>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- 통로 방향 -->
+                    <div class="aisle"><span aria-hidden="true"></span></div><!-- class : aisleRe => 통로 방향 반대로 바뀜 -->
+                    <!-- 3번째줄 -->
+                    <div class="seatRow">
+                        <div class="defaultArea">
+                            <!-- 화면에 보이지 않는 공백 좌석 -->
+                            <div class="seat" aria-hidden="true">
+                                <span class="seatEmpty"></span>
+                            </div>  
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="1Bre" aria-label="1B 역방향 좌석">
+                                <label for="1Bre"><span>1B</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="2Bre" aria-label="2B 역방향 좌석">
+                                <label for="2Bre"><span>2B</span></label>
+                            </div>  
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="3Bre" aria-label="3B 역방향 좌석">
+                                <label for="3Bre"><span>3B</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="4Bre" aria-label="4B 역방향 좌석">
+                                <label for="4Bre"><span>4B</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="5Bre" aria-label="5B 역방향 좌석">
+                                <label for="5Bre"><span>5B</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="6Bre" aria-label="6B 역방향 좌석">
+                                <label for="6Bre"><span>6B</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="7Bre" aria-label="7B 역방향 좌석">
+                                <label for="7Bre"><span>7B</span></label>
+                            </div>
+                            <!-- 순방향 -->
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="8B" aria-label="8B 순방향 좌석">
+                                <label for="8B"><span>8B</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="9B" aria-label="9B 순방향 좌석">
+                                <label for="9B"><span>9B</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="10B" aria-label="10B 순방향 좌석">
+                                <label for="10B"><span>10B</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="11B" aria-label="11B 순방향 좌석">
+                                <label for="11B"><span>11B</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="12B" aria-label="12B 순방향 좌석">
+                                <label for="12B"><span>12B</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="13B" aria-label="13B 순방향 좌석">
+                                <label for="13B"><span>13B</span></label>
+                            </div>
+                            <!-- 화면에 보이지 않는 공백 좌석 -->
+                            <div class="seat" aria-hidden="true">
+                                <span class="seatEmpty"></span>
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- 4번째줄 -->
+                    <div class="seatRow">
+                        <div class="defaultArea">
+                            <!-- 역방향 -->
+                            <!-- 화면에 보이지 않는 공백 좌석 -->
+                            <div class="seat" aria-hidden="true">
+                                <span class="seatEmpty"></span>
+                            </div>  
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="1Are" aria-label="1A 역방향 좌석">
+                                <label for="1Are"><span>1A</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="2Are" aria-label="2A 역방향 좌석">
+                                <label for="2Are"><span>2A</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="3Are" aria-label="3A 역방향 좌석">
+                                <label for="3Are"><span>3A</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="4Are" aria-label="4A 역방향 좌석">
+                                <label for="4Are"><span>4A</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="5Are" aria-label="5A 역방향 좌석">
+                                <label for="5Are"><span>5A</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="6Are" aria-label="6A 역방향 좌석">
+                                <label for="6Are"><span>6A</span></label>
+                            </div>
+                            <div class="seat seatRe">
+                                <input type="checkbox" class="blind" id="7Are" aria-label="7A 역방향 좌석">
+                                <label for="7Are"><span>7A</span></label>
+                            </div>
+                            <!-- 순방향 -->
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="8A" aria-label="8A 순방향 좌석">
+                                <label for="8A"><span>8A</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="9A" aria-label="9A 순방향 좌석">
+                                <label for="9A"><span>9A</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="10A" aria-label="10A 순방향 좌석">
+                                <label for="10A"><span>10A</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="11A" aria-label="11A 순방향 좌석">
+                                <label for="11A"><span>11A</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="12A" aria-label="12A 순방향 좌석">
+                                <label for="12A"><span>12A</span></label>
+                            </div>
+                            <div class="seat seatFo">
+                                <input type="checkbox" class="blind" id="13A" aria-label="13A 순방향 좌석">
+                                <label for="13A"><span>13A</span></label>
+                            </div>
+                            <!-- 선택 불가능한 좌석 -->
+                            <div class="seat seatRe" role="img" aria-label="선택 불가능한 좌석"> <!-- 20251217 수정 -->
+                                <span class="notSltSeat notSltSeatFo"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 선택좌석 -->
+    <div class="comSeat">
+        <div class="seatWrap">
+            <div class="sltInfo">
+                <div class="left">
+                    <p class="txtGray">선택좌석</p>
+                    <p class="txtBlack">
+                        <span class="checked">2</span>
+                        <em class="txtBlack">/</em>
+                        <span class="default">5</span>
+                        <em class="txtBlack">석</em>
+                    </p>
+                    <p class="txtBlack txtLast">선택</p>
+                </div>
+                <div class="right">
+                    <p class="seatChkd">5A</p>
+                    <p class="seatChkd">6B</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

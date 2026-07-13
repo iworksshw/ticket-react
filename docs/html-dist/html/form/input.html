@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/common.js"></script>
+    <script src="/common/js/tui-date-picker.js"></script>
+    <title>Input</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/form/_frmGroup.scss
+        scss/form/_frmBox.scss
+        scss/form/_iptText.scss
+        scss/form/_frmSearch.scss
+        scss/common/_comDatePicker.scss
+    -->
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="frmGroup">
+        <div class="frmBox frmTini">
+            <input type="text" class="iptText" title="이름" placeholder="기본" />
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmBox frmXs">
+            <input type="text" class="iptText" title="이름" placeholder="기본" />
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmBox frmSm">
+            <input type="text" class="iptText" title="이름" placeholder="기본" />
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmBox frmMd">
+            <input type="text" class="iptText" title="이름" placeholder="기본" />
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmBox frmLg">
+            <input type="text" class="iptText" title="이름" placeholder="기본" />
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmBox frmXL">
+            <input type="text" class="iptText" title="이름" placeholder="기본" />
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="frmGroup">
+        <div class="frmBox">
+            <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" title="텍스트 입력" />
+            <button class="btnReset">텍스트 지우기</button>
+        </div>
+        <div class="frmBox">
+            <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" disabled />
+            <button class="btnReset">텍스트 지우기</button>
+        </div>
+        <div class="frmBox">
+            <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" readonly />
+            <button class="btnReset">텍스트 지우기</button>
+        </div>
+    </div>
+    <div class="frmGroup error">
+        <div class="frmGroupRow">
+            <div class="frmBox">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+            </div>
+            <div class="frmBox">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+            </div>
+            <div class="frmBox">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+            </div>
+        </div>
+        <span class="errMsg line">긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용</span>
+    </div>
+    <div class="frmGroup">
+        <div class="frmGroupRow">
+            <div class="frmBox error">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+                <span class="errMsg">개별 메시지 내용</span>
+            </div>
+            <div class="frmBox">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+                <span class="errMsg">개별 메시지 내용</span>
+            </div>
+            <div class="frmBox error">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+                <span class="errMsg">개별 메시지 내용</span>
+            </div>
+        </div>
+    </div>
+    <div class="frmGroup error">
+        <div class="frmGroupRow">
+            <div class="frmBox frmMd">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+            </div>
+            <div class="frmBox frmMd">
+                <input type="text" class="iptText" placeholder="기본" title="텍스트 입력" />
+                <button class="btnReset">텍스트 지우기</button>
+            </div>
+        </div>
+        <span class="errMsg line">긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용 긴 메시지 내용</span>
+    </div>
+
+    <div class="frmGroup">
+        <div class="frmBox error">
+            <input type="text" class="iptText" placeholder="에러" title="텍스트 입력" />
+            <button class="btnReset">텍스트 지우기</button>
+            <span class="errMsg">메시지 내용</span>
+        </div>
+    </div>
+
+    <!-- datepicker -->
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input type="text" id="datepicker-input" aria-label="Date-Time">
+            <div id="datepicker-container" style="margin-top: -1px;"></div>
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmSm">
+            <input type="text" id="datepicker-input01" aria-label="Date-Time">
+            <div id="datepicker-container01" style="margin-top: -1px;"></div>
+        </div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmMd">
+            <input type="text" id="datepicker-input02" aria-label="Date-Time">
+            <div id="datepicker-container02" style="margin-top: -1px;"></div>
+        </div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+            <input type="text" id="datepicker-input03" aria-label="Date-Time">
+            <div id="datepicker-container03" style="margin-top: -1px;"></div>
+        </div>
+    </div>
+
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input id="startpicker-input" type="text" aria-label="Date">
+            <div id="startpicker-container" style="margin-left: -1px;"></div>
+        </div>
+        <div class="textBox deco">~</div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input id="endpicker-input" type="text" aria-label="Date">
+            <div id="endpicker-container" style="margin-left: -1px;"></div>
+        </div>
+    </div>
+
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+            <input id="startpicker-input02" type="text" aria-label="Date">
+            <div id="startpicker-container02" style="margin-left: -1px;"></div>
+        </div>
+        <div class="textBox deco">~</div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+            <input id="endpicker-input02" type="text" aria-label="Date">
+            <div id="endpicker-container02" style="margin-left: -1px;"></div>
+        </div>
+    </div>
+
+    <script>
+    //단일
+    datePicker("datepicker-input","datepicker-container");
+    datePicker("datepicker-input01","datepicker-container01");
+    datePicker("datepicker-input02","datepicker-container02");
+    datePicker("datepicker-input03","datepicker-container03");
+
+    //기간
+    datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+    datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");
+    </script>
+
+</body>
+</html>

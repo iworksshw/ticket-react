@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>로그인</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/component/_cptLogin.scss
+    -->
+
+    <!-- 로그인 -->
+    <div class="cptLogin">
+        <div class="loginArea">
+            <div class="loginTop">
+                <h1 class="loginHeadline">로그인</h1>
+            </div>
+            <div class="loginCont">
+                <div class="loginIptGroup">
+                    <div class="frmGroup">
+                        <label for="loginId" class="blind">아이디(이메일)</label>
+                        <div class="frmBox error">
+                            <input id="loginId" type="text" class="iptText lg" title="아이디(이메일) 입력" placeholder="아이디(이메일)를 입력해주세요.">
+                            <button type="button" class="btnReset"><span class="blind">입력 지우기</span></button>
+                            <span class="errMsg">아이디(이메일)를 입력해주세요.</span>
+                        </div>
+                    </div>
+                    <div class="frmGroup">
+                        <label for="loginPw" class="blind">비밀번호</label>
+                        <div class="frmBox error">
+                            <input id="loginPw" type="password" class="iptText lg" title="비밀번호 입력" placeholder="비밀번호를 입력해주세요.">
+                            <button type="button" class="btnReset"><span class="blind">입력 지우기</span></button>
+                            <span class="errMsg">비밀번호를 입력해주세요.(영문, 숫자 조합 10~20자)</span>
+                        </div>
+                    </div>
+                    <div class="frmGroup">
+                        <div class="frmChoBox">
+                            <input id="chk001" type="checkbox" class="iptChk">
+                            <label for="chk001" class="iptLbl">아이디 저장</label>
+                        </div>
+                    </div>
+                    <div class="loginBtn">
+                        <button type="button" class="btn dkBlue lg" disabled>로그인</button>
+                    </div>
+                    <div class="loginBtmMenu">
+                        <ul class="btmMenuList">
+                            <li class="btmItem"><a href="javascript:void(0)">간편회원가입</a></li>
+                            <li class="btmItem"><a href="javascript:void(0)">회원가입여부 확인</a></li>
+                            <li class="btmItem"><a href="javascript:void(0)">비밀번호 재설정</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="loginSns">
+                    <dl class="snsGroup">
+                        <dt class="snsTitle">SNS 계정으로 로그인</dt>
+                        <dd class="snsCont">
+                            <ul class="snsList">
+                                <li class="snsItem naver"><a href="javascript:void(0)" class="link" target="_blank" title="새 창 열림">네이버</a></li>
+                                <li class="snsItem google"><a href="javascript:void(0)" class="link" target="_blank" title="새 창 열림">구글</a></li>
+                                <li class="snsItem kakao"><a href="javascript:void(0)" class="link" target="_blank" title="새 창 열림">카카오톡</a></li>
+                                <li class="snsItem apple"><a href="javascript:void(0)" class="link" target="_blank" title="새 창 열림">애플</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

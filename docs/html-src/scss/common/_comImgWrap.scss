@@ -1,0 +1,275 @@
+//이미지 리스트
+.comImgWrap {
+    margin-top: 32px;
+    &:first-child {margin-top: 0;}
+    .imgGroup {
+        width: 100%; display: flex; align-items: stretch; flex-wrap: wrap; gap: 60px;
+        .imgArea {
+            flex: 0 0 100%; overflow: hidden; line-height: 1; text-align: center;
+            img {
+                width: 100%; max-width: 100%; border: 1px solid var(--border-color-G300, #D6DBE1); border-radius: 12px; display: block; overflow: hidden;
+                &.imgPC {display: block;}
+                &.imgMO {display: none;}
+                &.noneBorder {border: none;}
+            }
+            .imgTxt {
+                margin-top: 12px; font-size: rem(16px); color: var(--text-color-G800, #24272D); line-height: 160%; text-align: center; word-break: keep-all; display: inline-block;
+
+                a {
+                    &[target="_blank"] {
+                        &::after {
+                            content: ''; display: inline-block; width: 16px; height: 16px; background: url('/common/images/common/ic_16_link.svg') no-repeat 50% 50%; vertical-align: middle; padding-left: 4px;
+                        }
+                    }
+                }
+            }
+            &.noBdr {
+                img {border: 0;}
+            }
+        }
+    }
+
+    &.abBder {
+        &.col2 {
+            .imgGroup {
+                gap: 60px 36px;
+                .imgArea {
+                    flex: 0 0 calc(50% - 18px);
+                }
+            }
+            @include media('mobile') {
+                .imgGroup {
+                    gap: 40px;
+                    .imgArea {
+                        flex: 0 0 100%;
+                    }
+                }
+            }
+        }
+        .imgGroup {
+            .imgArea {
+                img {
+                    border: 1px solid var(--border-color-G300, #D6DBE1) !important; border-radius: 16px !important;
+                }
+            }
+        }
+    }
+    .rightBox {
+        width: 100%;
+    }
+    @include media('mobile') {
+        margin-top: 24px;
+        &:first-child {margin-top: 0;}
+        .imgGroup {
+            gap: 40px;
+            .imgArea {
+                img {
+                    &.imgPC {display: none;}
+                    &.imgMO {display: block;}
+                }
+                .imgTxt {
+                    font-size: rem(15px);
+                }
+            }
+        }
+    }
+    &.col2 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(50% - 12px);
+            }
+            &.g60 {
+                gap: 60px 40px;
+                .imgArea {
+                    img {border: 0;}
+                    flex: 0 0 calc(50% - 20px);
+                }
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    .imgTit {margin-top: 8px;}
+                    img ~ .imgTit {margin-top:32px;}
+                    flex: 0 0 100%;
+                }
+                &.g60 {
+                    gap: 40px;
+                    .imgArea {
+                        flex: 0 0 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.col3 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(33.3333% - 16px);
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+    &.col4 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(25% - 18px);
+            }
+            &.card {
+                .imgArea {
+                    img {border-radius: 0; border: 1px solid var(--border-color-G300, #D6DBE1);}
+                }
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+    &.col5 {
+        .imgGroup {
+            gap: 32px 24px;
+            .imgArea {
+                img {border: 0;}
+                flex: 0 0 calc(20% - 19.2px);
+            }
+        }
+        @include media('mobile') {
+            .imgGroup {
+                gap: 24px;
+                .imgArea {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+
+    .imgTit {
+        margin-bottom: 12px; color: var(--color-primary-blue-900, #0A4991); text-align: left; font-size: rem(22px); font-style: normal; font-weight: 600; line-height: 150%;
+        &:last-child {margin-bottom: 0;}
+    }
+    img ~ .imgTit {margin-top:32px;}
+
+    .imgTxtList {
+        li {
+            padding-left: 21px; margin-top: 8px; text-align: left; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; position: relative;
+            &:first-child {margin-top: 0;}
+            &::before {content:""; width: 5px; height: 5px; border-radius: 50%; background: var(--color-primary-blue-400, #329CFF); display: block; position: absolute; left: 8px; top: 12px;}
+            .pubCaption {margin-top: 4px;}
+            @include media('mobile') {
+                padding-left: 17px;
+                &::before {left: 4px; top: 12px;}
+            }
+        }
+    }
+    .imgTxtB {
+        margin-top: 8px; text-align: left; color: var(--text-color-G800, #24272D); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
+    }
+
+
+    // 제휴카드
+    &.card5 {
+        .imgGroup {
+            .imgArea {
+                img {
+                    border-radius: 8px;
+
+                    @include media('mobile') {
+                        border-radius: 4px;
+                    }
+                }
+
+                .imgTxt {
+                    @include media('mobile') {
+                        margin-top: 4px;
+                    }
+                }
+
+                @include media('mobile') {
+                    flex: 0 0 calc(50% - 8px);
+                }
+            }
+            @include media('mobile') {
+                row-gap: 24px; column-gap: 16px;
+            }
+        }
+    }
+    // 이미지 & 텍스트 가로 버전
+    &.imgTxtBox {
+        display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 40px;
+        .imgGroup {
+            width: 580px;
+            .imgArea {
+                width: 580px;
+                @include media('tablet') {
+                    width: 100%;
+                }
+            }
+            @include media('tablet') {
+                width: 100%;
+            }
+        }
+        @include media('tablet') {
+            flex-direction: column; gap: 32px;
+        }
+    }
+
+    // 이미지 & 텍스트 가로 버전 2
+    &.imgTxtBox2 {
+        display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; gap: 12px 40px;
+        .imgGroup {
+            width: 384px;
+            .imgArea {
+                width: 580px;
+                @include media('tablet') {
+                    width: 100%;
+                }
+            }
+            @include media('tablet') {
+                width: 100%;
+            }
+        }
+        @include media('tablet') {
+            flex-direction: column;
+        }
+    }
+
+    // 이미지 & 텍스트 가로 버전 3
+
+    &.imgTxtBox3 {
+        display:flex; flex-direction: row; justify-content: flex-start; gap:40px;
+        .imgGroup {
+            width: 580px;
+            .imgArea {
+                width: 580px;
+                @include media('tablet') {
+                    width: 100%;
+                }
+            }
+            @include media('tablet') {
+                width: 100%;
+            }
+        }
+        @include media('tablet') {
+            flex-direction: column;
+        }
+    }
+}

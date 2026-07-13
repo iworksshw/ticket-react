@@ -1,0 +1,52 @@
+//H3 타이틀
+.pubTitH3 {
+     position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; margin: 40px 0 20px;
+    &:first-child {margin-top: 0;}
+
+    @include media ('mobile') {
+        align-items: flex-end; margin:40px 0 16px; flex-wrap: wrap;
+    }
+    h3 {
+        font-size:rem(24px); font-weight:600; line-height:150%; color:var(--text-color-G900);
+        .pubCaption {margin-top: 0;}
+        @include media ('mobile') {
+            font-size:rem(18px); font-weight:700;
+        }
+    }
+
+    .alignR {
+        span {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            @include media ('mobile') {
+                font-size:rem(15px); font-weight:500;
+            }
+        }
+        .change {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            min-height: 24px; background: url(/common/images/common/ic_24_change.svg) left center no-repeat;
+        }
+
+        .train {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            min-height: 24px; background: url(/common/images/common/ic_24_train.svg) left center no-repeat;
+        }
+
+        .request {
+            font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
+            min-height: 24px; background: url(/common/images/common/ic_24_write.svg) left center no-repeat;
+        }
+    }
+
+    em {
+        color:var(--text-color-B500); font-weight:600;
+    }
+    & + .comTitH4 {
+        margin-top: 0;
+    }
+    & + .cptMeeting {
+        margin-top: 40px;
+    }
+    & + form:has(.cptMeeting) {
+        margin-top: 40px;
+    }
+}

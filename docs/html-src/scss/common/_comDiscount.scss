@@ -1,0 +1,128 @@
+//할인선택
+.comDiscount {
+
+    .ticketInfo {
+        width:100%; position:relative;  margin-bottom:24px;
+
+        .inner {
+            width:100%; position:relative; border-radius:12px; overflow:hidden; height:90px;
+            display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
+
+            @include media ('mobile') {
+                flex-flow:column; height:auto;
+            }
+
+            .seatPlan {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:24px;
+                background:var(--bg-color-B500); height:100%; padding: 0 24px;
+
+                @include media ('mobile') {
+                    width:100%; padding: 8px 24px; justify-content: center;
+                }
+
+                span {
+                    font-size:rem(20px); font-weight:700; line-height:160%; color:#fff;
+                    display: inline-block; width: max-content;
+
+                    @include media ('mobile') {
+                        font-size:rem(17px);
+                    }
+
+                    &.carNum {
+                        display:inline-block; position:relative; 
+                        &::before {
+                            content:''; position:absolute; top:50%; right:-12px; width:1px; height:10px; background:#fff; transform:translateY(-50%);
+                        }
+                    }
+                }
+            }
+
+            .price {
+                display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-end; gap:20px;
+                background:var(--bg-color-G200); height:100%; padding:16px 24px; width:100%;
+
+                @include media ('mobile') {
+                    padding:16px 12px; justify-content: center; gap:8px;
+                }
+
+                div {
+                    display:flex; flex-flow: column; align-items: end; justify-content: end; gap:4px;
+                    @include media ('mobile') {
+                        align-items: center; justify-content: center;
+                    }
+
+                    span {
+                        font-size:rem(16px); font-weight:400; line-height:160%; color:var(--text-color-G600);
+                        @include media ('mobile') {
+                            font-size:rem(14px);
+                        }
+                    }
+
+                    p {
+                        font-size:rem(16px); font-weight:600; line-height:160%; color:var(--text-color-G900);
+                        @include media ('mobile') {
+                            font-size:rem(15px);
+                        }
+                    }
+
+                    &.subtract {
+                        width:32px; height:32px; border-radius:50%;
+                        background:var(--bg-color-G300) url(/common/images/common/ic_24_subtract.svg)50% 50% no-repeat;
+                    }
+
+                    &.equal {
+                        width:32px; height:32px; border-radius:50%;
+                        background:var(--bg-color-G300) url(/common/images/common/ic_24_equal.svg)50% 50% no-repeat;
+                    }
+
+                    &.regular {
+                        width:80px;
+                    }
+
+                    &.discount {
+                        width:80px;
+                    }
+
+                    &.finalPrice {
+                        width:80px;
+
+                        p {
+                            color:var(--text-color-B500);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .comApplicant {
+        tbody {
+            tr {
+                th {
+                    > div {
+                        position: relative;
+                    }
+                    input {
+                        position:absolute; left: 0; top: 0;
+                    }
+                    .iptLbl {display: flex;}
+                }
+
+                td {
+                    button:not(.affList) {
+                        display:inline-block; padding:0 20px; text-align:center; line-height:50px; height:50px; 
+                        font-size:rem(16px); font-weight:500; color:var(--text-color-G800); border:1px solid var(--text-color-G500); border-radius:8px; word-break: keep-all;
+
+                        @include media ('mobile') {
+                            font-size: rem(15px); 
+
+                            &.affCardInfo {
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

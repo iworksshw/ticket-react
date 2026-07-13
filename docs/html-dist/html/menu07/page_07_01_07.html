@@ -1,0 +1,195 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytMember">
+    <div class="memberArea">
+
+        <!-- 상단영역 -->
+        <div class="memberTop">
+            <!-- Top -->
+            <div class="topArea">
+                <div class="logoArea"><a href="javascript:void(0)"><img src="/common/images/common/ic_142_logo.svg" alt="arex 로고"></a></div>
+                <div class="langArea">
+                    <div class="comDropdown">
+                        <div class="dropArea">
+                            <button class="btnDrop" type="button">
+                                한국어
+                            </button>
+                            <ul class="dropMenu">
+                                <li><a href="javascript:void(0)">영어</a></li>
+                                <li><a href="javascript:void(0)">중국어</a></li>
+                                <li><a href="javascript:void(0)">일본어</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 20250922 버튼 추가 -->
+                    <button class="closeBtn" type="button">
+                        <span class="blind">전체메뉴 닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="memberContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="memberSubCont">
+
+                <div class="cptLogin">
+                    <div class="loginArea">
+                        <div class="loginTop">
+                            <strong class="eyebrow">공항철도 회원가입</strong>
+                            <h1 class="loginHeadline">비회원 데이터 이전 안내</h1>
+                            <p class="loginHeadText">가입하신 이메일로 고객님의 ‘비회원 승차권이용 실적’이 있습니다. <br>
+                                고객님의 회원계정으로 이전되어 관리됩니다.</p>
+                        </div>
+                        <div class="loginCont">
+                            <div class="comTableBasic"> <!-- 20251222 sm추가 -->
+                                <table class="basic">
+                                    <caption>비회원 데이터 이전 목록_승차일자, 열차, 출발, 도착, 탑승인원을 포함한 표</caption><!-- 20251217 수정 -->
+                                    <!-- 20251217 수정 -->
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <!--// 20251217 수정 -->
+                                    <thead>
+                                        <tr>
+                                            <th>승차일자</th>
+                                            <th>열차</th>
+                                            <th>출발</th>
+                                            <th>도착</th>
+                                            <th>탑승인원</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- thead 있을때 -->
+                                        <tr>
+                                            <td>YYYY-<br>MM-DD</td> <!-- 20251222 태그 추가 -->
+                                            <td>A1023</td>
+                                            <td>서울역 (tt:mm)</td>
+                                            <td>인천국제공항 1터미널 (tt:mm)</td>
+                                            <td>어른 0명, 어린이 0명</td>
+                                        </tr>
+                                        <tr>
+                                            <td>YYYY-<br>MM-DD</td> <!-- 20251222 태그 추가 -->
+                                            <td>A1023</td>
+                                            <td>인천국제공항 1터미널 (tt:mm)</td>
+                                            <td>서울역 (tt:mm)</td>
+                                            <td>어른 0명, 어린이 0명</td>
+                                        </tr>                                              
+                                    </tbody>
+                                </table>                                                
+                            </div>
+                            <div class="pubRefer sm">이전 대상은 <em class="colorBlue">최근 48시간 전 및 이후 계획된 승차권 예약 정보</em>입니다.</div>
+                            <div class="btmBtn">
+                                <button type="button" class="btn dkLine lg">취소</button> <!-- 20251222 추가 -->
+                                <button type="button" class="btn dkBlue lg">확인</button>
+                            </div>
+
+                            <!-- 비회원데이터이전안내 영역 -->
+                            <!-- <div class="loginBox">
+                                <ul class="boxList">
+                                    <li class="boxItem">
+                                        <dl class="boxDl">
+                                            <dt class="boxDt">이메일 : </dt>
+                                            <box class="boxDd">id@domain.com</box>
+                                        </dl>
+                                    </li>
+                                    <li class="boxItem">
+                                        <dl class="boxDl">
+                                            <dt class="boxDt">데이터 : </dt>
+                                            <box class="boxDd">직통열차 승차권 비회원 예약내역</box>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pubRefer sm">전환하지 않은 데이터는 기존과 동일한 <비회원 승차권조회> 방식으로 확인하실 수 있습니다.</div>
+                            
+                            <div class="btmBtn">
+                                <button type="button" class="btn dkLine lg">이관 안함</button> //텍스트 수정 20251014
+                                <button type="button" class="btn dkBlue lg">데이터 이전</button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 20250922 삭제-->
+        <!-- <div class="memberFooter">
+            <div class="footerArea">
+                <ul class="btmMenuList">
+                    <li class="btmItem"><a href="javascript:void(0)" class="link">여객운송약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">누리집 이용약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">개인정보보처리방침</a></li>
+                </ul>
+                <div class="copyright">
+                    Copyright (C) 2025 by AIRPORT RAILROAD Co., Ltd. All rights reserved.
+                </div>
+            </div>
+        </div> -->
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

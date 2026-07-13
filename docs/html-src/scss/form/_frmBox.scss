@@ -1,0 +1,31 @@
+/* ----- 폼 박스 ----- */
+.frmBox {
+    width: 100%; display: flex; flex-wrap: wrap; position: relative;
+    &.maxCont {width: max-content;}
+    &.frmTini {width:100px; min-width:100px;}
+    &.frmXs {width:200px; min-width:200px;}
+    &.frmSm {width:300px; min-width:300px;}
+    &.frmMd {
+        width: 328px; min-width: 328px;
+        @include media ('mobile') {
+            width: 100%; min-width: 100%;
+        }
+    }
+    &.frmLg {
+        width: 400px; min-width: 400px;
+        @include media ('mobile') {
+            width: 100%; min-width: 100%;
+        }
+    }
+    &.frmXL {width:500px; min-width:500px;}
+    &:hover .btnReset {
+        display: block;
+    }
+    &.rdoBtn {align-items: center; height: 48px;} // 라디오 버튼 사용시 적용
+    .btnReset {
+        width: 24px; height: 24px; font-size: 0; background: url(/common/images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 13px;
+        display: none;
+    }
+    &:focus-within .btnReset {display: block;}
+    .btnReset:focus {display: block;}
+}

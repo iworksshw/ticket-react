@@ -1,0 +1,145 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+    </div>
+</div>
+
+<!-- 팝업영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">승차권 예약정보 확인</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="comTicketInfo"> <!-- addClass : view - 티켓형태로 보여짐 -->
+                            <div class="infoTop">
+                                <div class="infoL">
+                                    <ul class="infoName">
+                                        <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li>  <!-- 20251028 텍스트 변경 -->
+                                        <li class="item"><span>열차번호</span><span class="em">A1026</span></li>
+                                    </ul>
+                                    <div class="stationBox">
+                                        <div class="station">
+                                            <span class="name">인천공항 1터미널</span>
+                                            <span class="time">05:23</span>
+                                        </div>
+                                        <div class="station">
+                                            <span class="name">서울역</span>
+                                            <span class="time">06:07</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="infoCont on">
+                                <ul class="infoList">
+                                    <li class="item">
+                                        <dl class="info">
+                                            <dt class="tit">탑승인원</dt>
+                                            <dd class="desc">어른 3명, 어린이 2명</dd>
+                                        </dl>
+                                        <dl class="info">
+                                            <dt class="tit">열차좌석</dt>
+                                            <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)</dd>
+                                        </dl>
+                                    </li>
+                                    
+                                    <li class="item">
+                                        <dl class="info">
+                                            <dt class="tit">상품</dt>
+                                            <dd class="desc">5,000원 충전된 교통카드 (1개)
+                                                <br>10,000원 충전된 교통카드 (1개)</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        
+                        <em class="pubText varTextC">예약하신 정보로 결제를 진행하시겠습니까?</em>
+
+                        <div class="pubCenterChk">
+                            <div class="frmGroup">
+                                <div class="frmChoBox">
+                                    <input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">해외통화 결제</label>
+                                    <span class="text varColorBlue">*마스터카드만 사용 가능</span> <!-- 20260115 추가 -->
+                                </div>
+                                <div class="frmChoBox">
+                                    <input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">원화(KRW) 결제</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm division">
+                        <div class="alignC">
+                            <div class="btnBox cta">
+                                <button type="button" class="btn dkLine">취소</button>
+                                <button type="button" class="btn blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

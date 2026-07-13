@@ -1,0 +1,136 @@
+/* --------------------------- 게시판 리스트 --------------------------- */
+.comBoardList{
+    width:100%;
+    table{
+        width: 100%; border-spacing:0; border-collapse: collapse; table-layout: fixed; border-top: 1px solid var(--text-color-G900); background: #fff;
+        thead {
+            border-bottom: 1px solid var(--border-color-G300); background: var(--bg-color-G100);
+            tr {
+                th {
+                    color: var(--text-color-G900); text-align: center; font-size: rem(20px); font-weight: 700; line-height: 160%;
+                    padding: 16px 10px; 
+                }
+            }
+        }
+        tbody {
+            width: 100%;
+            tr{
+                border-bottom: 1px solid var(--border-color-G300); width: 100%;
+                th {
+                    @include media('mobile'){
+                        display: none;
+                    }
+                }
+                td{
+                    color: var(--text-color-G600); text-align: center; font-size: rem(18px); font-weight: 400; line-height: 160%; width: 100%;
+                    &.bdDivision {
+                        color: var(--text-color-G900);
+
+                        @include media('mobile'){
+                            font-size: rem(17px); text-align: left;
+
+                            &::before {
+                                content: '[';
+                            }
+                            &::after {
+                                content: ']';
+                            }                            
+                        }
+                    }
+                    &.bdTitle {
+                        .link {
+                            width: 100%; 
+                            .title{
+                                display: flex; align-items: center; overflow: hidden;
+                                a {
+                                    color: var(--text-color-G900); padding: 16px 20px; text-align: left;
+                                    &:focus {
+                                        box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, 1);
+                                    }
+                                    @include line1();
+                                    @include media('mobile'){
+                                        font-size: rem(17px); padding: 0; display: block;
+                                    }
+                                }
+                                .num{
+                                    margin-left:8px; color: #4053FF; font-size: rem(16px); font-weight: 600; line-height:26px;
+                                    @include media('tablet'){
+                                        margin-left:3px; font-size: rem(14px); line-height: 19px; vertical-align: top;
+                                    }
+                                }
+                                .icons{
+                                    width: max-content; margin-left:12px; display:flex;
+                                    @include media('tablet'){
+                                        margin-left: 5px; display: flex; flex-direction: column;
+                                    }
+                                    @include media('mobile'){
+                                        display: none;
+                                    }
+                                    .icon {
+                                        width:26px; height:26px; margin-right:4px; font-size:0; border-radius:8px; display:flex; position:relative;
+                                        &:last-child {margin-right:0;}
+                                        &.new{background:#ff9900 url(/common/images/common/ico_list_new.svg) center / 26px no-repeat;}
+                                        &.file{background:#FF5ADB url(/common/images/common/ico_list_file.svg) center / 26px no-repeat;}
+                                        &.secret{justify-content: center; background:#01C880 url(/common/images/common/ico_list_secr.svg) center / 11px no-repeat;}
+                                        @include media('mobile'){
+                                            margin-right: 4px; display: inline;
+                                            &.new{padding:17px 17px 0 0; border-radius:5px; background:url(/common/images/common/ico_list_new.svg) center / 17px no-repeat;}
+                                            &.file{padding:17px 10px 0 0; background:url(/common/images/common/ico_list_file_m.svg) center / 9.7px no-repeat;}
+                                            &.secret{padding:17px 11px 0 0; background:url(/common/images/common/ico_list_secr_m.svg) center 6px / 11.6px no-repeat;}
+                                        }
+                                    }
+                                }
+                                @include media('mobile'){
+                                }
+                            }
+                        }
+                        @include media('mobile'){
+                            margin-bottom: 4px;
+                        }
+                    }
+                    &.name {
+                        color: var(--text-color-G900, #111);
+                        @include media('mobile'){
+                            margin-right: 12px;  width: max-content;
+                        }
+                    }
+                    &.date {
+                        @include media('mobile'){
+                            margin-right: 12px;  width: max-content;
+                        }
+                    }
+                    &.view {
+                        @include media('mobile'){
+                            width: max-content;
+                        }
+                    }
+                    .colorOrange {font-weight: 600; color: var(--color-secondary-orange-500, #FF6F3F);}
+                    .colorBlue {font-weight: 600; color: var(--text-color-B500, #107AF2)}
+                    .colorGray {font-weight: 600; color: var(--text-color-G500, #808892)}
+                    @include media('mobile'){
+                        font-size: rem(15px); 
+                    }                      
+                }
+                @include media('tablet'){
+                    width: 100%; position: relative; padding: 28px 0;
+                } 
+                @include media('mobile'){
+                    padding: 12px 0; display: flex; flex-direction: row; flex-wrap: wrap; 
+                }             
+            }
+        }
+        @include media('mobile'){
+            display: flex;
+            thead{
+                display: none;
+            }            
+            tbody{
+                display: flex; flex-wrap: wrap;
+            }
+            colgroup {
+                display: none;
+            }
+        }   
+
+    }
+}

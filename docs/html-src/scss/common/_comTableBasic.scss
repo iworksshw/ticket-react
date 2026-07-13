@@ -1,0 +1,370 @@
+//테이블 : 기본/* --------------------------- Data Table --------------------------- */
+
+.comTableBasic {
+    width: 100%; margin-top: 14px; border-top: 1px solid var(--text-color-G900); overflow: auto;
+    &:first-child {margin-top: 0;}
+
+    &.sm table {min-width: 560px;}
+    &.md table {min-width: 768px;}
+    &.lg table {min-width: 1024px;}
+    &.xl table {min-width: 1200px;} 
+
+    .mView {display: none;}
+   
+    table {
+        width: 100%; border-collapse: collapse; table-layout: fixed;
+        th {
+            background: var(--bg-color-G100);
+
+            &:last-child {border-right: none;}
+        }
+        .lineR {border-right-color: var(--border-color-G300);}
+        // rowspan 일 경우 td:last-child border-right 적용
+        .rowLineR {border-right: 1px solid var(--border-color-G300);}
+
+        thead {
+            border-bottom: 1px solid var(--border-color-G300); background: var(--bg-color-G100); width: 100%;
+            tr {
+                &:first-child {
+                    border-top: 0px solid transparent;
+                }
+                &:nth-child(2) {
+                    border-top: 1px solid var(--border-color-G300);
+                }
+
+                th {
+                    color: var(--text-color-G900, #111); font-size: rem(18px); font-weight: 600; line-height:160%; padding: 16px; border-right: 1px solid var(--border-color-G300);
+
+                    @include media("mobile"){ 
+                        padding: 12px; font-size: rem(17px);
+                    }                
+                }
+            }
+        }
+        tbody {
+            th {
+                color: var(--text-color-G900); font-size: rem(18px); font-weight: 600; line-height: 160%; padding: 16px; 
+                border-bottom: 1px solid var(--border-color-G300); border-right: 1px solid var(--border-color-G300);
+
+                @include media("mobile"){
+                    font-size: rem(17px); padding: 12px;
+                }
+
+                em {
+                    font-weight:600;
+                }
+            }
+            td {
+                color: var(--text-color-G800); font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%; text-align: center; padding: 16px; border-bottom: 1px solid var(--border-color-G300); border-right: 1px solid var(--border-color-G300); border-left: 1px solid var(--border-color-G300); background: #fff;
+
+                @include media("mobile"){
+                    padding: 12px; font-size: rem(17px);
+                }
+                
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                &.txtCont {
+                    text-align: left;
+                }
+                .txtBtn {text-decoration: underline; text-underline-position: under;}
+                .mark {
+                    height: 24px; padding: 0 8px; border-radius: 4px; line-height: 24px; font-size: rem(12px); font-weight: 600; color: #fff;display: inline-block; vertical-align: middle;
+                    &.orange {background: var(--Point-Orange);}
+                    &.blue {background: var(--Point-Blue);}
+                    &.mint {background: var(--Point-Primary2);}
+                }
+
+                // .txtList {
+                //     width: 100%; margin-top: 12px; margin-bottom: 12px;
+                //     &:first-child {margin-top: 0;}
+                //     &:last-child {margin-bottom: 0;}
+                // }
+                // .colorBlue {color: var(--text-color-B500); font-weight: 600;}
+                // em {font-weight: 600;}
+
+
+                &.tbBcy {padding: 0; height: 62px;}
+                /*2025.09.29 항목추가*/
+                &.price {
+                    color: var(--text-color-G800); font-weight: 600;
+                }                
+                &.plus {
+                    color:var(--text-color-B500); font-weight:600;
+                }
+                &.minus {
+                    color:var(--color-danger-500); font-weight:600;
+                }
+
+                /* 승차권 예약하기 */
+                .btnBicycle {
+                    width: 100%; height: 100%; border: 2px solid #fff; background: #fff;
+                    &.on {
+                        border: 2px solid var(--border-color-B500, #107AF2); background: var(--bg-color-B100, #EEF7FF);
+                    }
+                }
+
+                /*2025.11.06 마이페이지 카드정보 예외*/
+                &.flexArrange {
+
+                    font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G800);
+
+                    .numTxt {
+                        display: inline;
+                    }                     
+
+                    button {
+                        width:24px; height:24px; background:url(/common/images/common/ic_24_trashcan.svg)50% 50% no-repeat;
+                    }
+                }
+            }
+
+            /*2025.11.06추가*/
+            tr{
+                &.border {
+                    th {
+                        border-bottom: 1px solid var(--text-color-G900);
+                    }
+                    td {
+                        border-bottom: 1px solid var(--text-color-G900);
+                    }
+                }
+            }
+        }
+        .frm {
+            padding: 13px 5px;
+        }
+        .left {padding-left: 16px; text-align: left;}
+        .link[target=_blank] {
+            width: max-content; padding-right: 20px; background: url(/common/images/common/ic_16_new_window.svg) right center no-repeat; display: inline-block;
+        }
+
+        img {max-width: 100%;}
+
+        @include media("mobile"){   
+            //min-width: 800px;
+        }
+    }   
+
+    @include media("mobile"){
+        margin-top: 12px;
+
+        width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
+
+        &.mgH20 {margin-top: 12px;}
+        &.mgH32 {margin-top: 24px;}
+        .pcView {display: none;}
+        .mView {display: block;}
+
+        .tableArea { 
+            width: calc(100% + 16px); overflow: auto;
+        }
+    }
+
+    // 모바일 
+    @include media("tablet"){
+
+        &Mo {
+            overflow: hidden;
+
+            table, thead, tbody, th, td, tr {
+                display: flex; width: 100%;
+            }
+            thead {
+                display: flex; width: 120px;
+                tr {
+                    th {
+                        border-bottom: 1px solid var(--border-color-G300); display: flex; justify-content: center;
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            tbody {
+                display: flex;
+                tr {
+                    td {
+                        border-left: none; border-right: none; display: flex; justify-content: center;
+                        &:last-child {
+                            border-left: 1px solid var(--border-color-G300);
+                        }
+                    }
+                }
+            }
+            tr {
+                display: flex; flex-direction: column; 
+            }
+
+            td {
+                &:nth-child(1) {
+                 
+                }
+                &:nth-child(2) {
+                  
+                }
+            }
+        }
+
+    }
+
+    &.tablePc {
+        display: block; margin-top: 32px;
+
+        table tbody tr td {
+            &:first-child {
+                background: var(--bg-color-G100);
+            }
+        }
+        
+        @include media("mobile"){
+            display: none;
+        }
+    }
+
+    &.tableMo1 {
+        display: none;
+        @include media("mobile"){
+            display: block; margin-top: 24px;
+
+            table tbody tr td {
+                &:first-child {
+                    background: var(--bg-color-G100);
+                }
+            }
+        }
+    }
+
+    &.tableMo2 {
+        display: none;
+        @include media("mobile"){
+            display: block; margin-top: 24px;
+
+            table tbody tr td {
+                &:first-child {
+                    background: var(--bg-color-G100);
+                }
+            }            
+        }
+    }
+
+
+    &.type02 {
+
+        table {
+            @include media ('mobile') {
+                table-layout: auto; display:block;
+            }
+        }
+
+        thead {
+            @include media ('mobile') {
+                display:none;
+            }
+        }
+        tbody {
+            @include media ('mobile') {
+                display:block; width:100%;
+            }
+
+            tr {
+                @include media ('mobile') {
+                    display:block; width:100%;
+                }
+            }
+
+            th {
+                @include media ('mobile') {
+                    width:100%; display:block; background:#fff; border-bottom:0; padding:20px 20px 0 20px; text-align:left;
+                }
+            }
+            td {
+                /*2025.11.06 마이페이지 카드정보 예외*/
+                &.flexArrange {
+                    
+                    @include media ('mobile') {
+                        justify-content: start;
+                    }
+
+                    .numTxt {
+                        display: inline;
+                    }                     
+
+                    font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G800);
+
+                    button {
+                        width:24px; height:24px; background:url(/common/images/common/ic_24_trashcan.svg)50% 50% no-repeat;
+                    }
+
+                    span {
+                        @include media ('mobile') {
+                            font-size: rem(17px);
+                        }
+                    }
+
+                    > p {
+                        @include media ('mobile') {
+                            font-size: rem(17px);
+                        }
+                    }
+                }
+
+                @include media ('mobile') {
+                    display:block; width:100%; margin-top:8px; padding-top:0; text-align:left; border-left:0; border-right:0;
+                }
+
+                &:first-of-type {
+                    @include media ('mobile') {
+                        border-bottom:0; font-size:rem(17px); font-weight:600; color:var(--text-color-G900); padding-bottom:0; margin-top:20px;
+                    }
+                }
+
+                &:last-of-type {
+                    @include media ('mobile') {
+                        padding-bottom:20px;
+                    }
+                }
+            }
+
+            /*2025.11.06추가*/
+            tr{
+                &.border {
+                    th {
+                        border-bottom: 1px solid var(--text-color-G900);
+                    }
+                    td {
+                        border-bottom: 1px solid var(--text-color-G900);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tableHeader {
+    margin: 32px 0 12px 0; display: flex; flex-direction: column; gap: 32px;
+    .date {
+        border-radius: 12px; background: var(--bg-color-G100); padding: 28px 0; color: var(--text-color-G900); font-size: rem(22px); font-weight: 600; line-height: 150%; display: flex; justify-content: center; align-items: center;
+        @include media("mobile"){
+            font-size: rem(20px); padding: 20px 16px;
+        }
+    } 
+    .count {
+        display: flex; flex-direction: row; justify-content: flex-end; align-items: center; font-size: rem(18px); font-weight: 600; line-height: 160%; color: var(--text-color-B500);
+        .deco {
+            color: var(--text-color-G800); margin: 0 5px;
+        }
+        .use {
+            display: inline-block; color: var(--text-color-G800);
+        }
+        @include media("mobile"){
+            font-size: rem(17px);
+        }
+    }
+    @include media("mobile"){
+        gap: 24px; margin: 24px 0 12px 0;
+    }
+}

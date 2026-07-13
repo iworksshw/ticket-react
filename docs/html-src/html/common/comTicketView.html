@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>승차권 상세</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/common/_comTicketView.scss
+    -->
+
+    <!-- 승차권 상세 -->
+    <div class="comTicketView">
+        <div class="ticketCov swiper-container">
+            <div class="ticketWrap swiper-wrapper">
+                <div class="ticBox swiper-slide">
+                    <p class="pageCnt">
+                        <span class="current">1</span>/
+                        <span class="total">2</span>
+                    </p>
+                    <div class="ticPage">
+                        <div class="ticHead">
+                            <p class="dateInfo">
+                                출발일 (Date of Departure)
+                                <span>2025-12-12</span>
+                            </p>
+                            <p class="title">
+                                직통열차 승차권<br>
+                                <span>(Express Ticket)</span>
+                            </p>
+                            <p class="logo">
+                                <img src="/common/images/common/logo_160_arex.svg" alt="">
+                            </p>
+                        </div>
+                        <div class="ticBody">
+                            <div class="infoTop">
+                                <div class="trainInfo">
+                                    <div class="moInfo">
+                                        <span>2025-10-05</span>
+                                        <span>A1026</span>
+                                    </div>
+                                    <div class="depart">
+                                        <span class="forMo">
+                                            <span class="stn">서울역</span>
+                                            <span class="stnEng">Seoul Station</span>
+                                        </span>
+                                        <span class="time">07:30</span>
+                                    </div>
+                                    <div class="arrow"><span class="blind">화살표</span></div>
+                                    <div class="destination">
+                                        <span class="forMo">
+                                            <span class="stn">인천공항1터미널</span>
+                                            <span class="stnEng">Incheon Int'l Airport Terminal 1</span>
+                                        </span>
+                                        <span class="time">08:14</span>
+                                    </div>
+                                </div>
+                                <div class="qrBox">
+                                    <div class="qrArea">
+                                        <img src="/common/images/common/qrSample.png" alt="">
+                                        <div class="printed"><span>인쇄완료</span></div>
+                                    </div>
+                                    <span class="qrNum">910907-251027-00032-91</span>
+                                </div>
+                            </div>
+                            <div class="infoBot">
+                                <p class="carNSeat">
+                                    <span class="hglt">2호차</span><span class="space slash">(Car)</span>
+                                    <span class="hglt">8A</span><span class="space">(Seats)</span>
+                                </p>
+                                <p class="cate">
+                                    <span class="ctSlash">어른 (Adult)</span>
+                                    <span>순방향 (Forward)</span>
+                                </p>
+                                <p class="train">
+                                    <span>열차번호(Train No.)</span>
+                                    <span class="carNum">A1010</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ticPagination">
+                            <div class="arrBox">
+                                <a href="javascript:void(0)" class="btnArrow prev"><span class="blind">이전슬라이드</span></a>
+                                <div class="swiper-pagination"></div>
+                                <a href="javascript:void(0)" class="btnArrow next"><span class="blind">다음슬라이드</span></a>
+                            </div>
+                        </div>
+                        <div class="ticFoot">
+                            <p class="text">
+                                열차 출발시각 <span>3분 전</span> 까지 <br>승강장에 도착하셔야 합니다.
+                                <span class="eng">Arrive at the platform at least 3 minutes before departure time.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

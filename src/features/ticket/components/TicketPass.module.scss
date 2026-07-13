@@ -1,0 +1,28 @@
+@use "@/styles/etc/mixin" as *;
+
+//탑승인원선택
+.comTicketPass{
+    .passengersList {
+        width:100%; position:relative; display:flex; flex-flow:column; gap:20px;
+
+        li {
+            width:100%; position:relative;
+            display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+            .alignL {
+                span {
+                    font-size:rem(18px); font-weight:600; line-height:160%; color:var(--text-color-G900);
+                    @include media ('mobile') {
+                        font-size:rem(17px);
+                    }
+                    
+                    i {
+                        display:inline-block; vertical-align:middle; margin-left:4px; font-style: normal; font-size:rem(16px); font-weight:400; color:var(--text-color-G600); 
+                        @include media ('mobile') {
+                            font-size:rem(15px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/common.js"></script>
+    <title>승차권 UI</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/ex/_comBoardCard.scss
+    -->
+    
+    <div class="comTicketH3">
+        <h3>승차권 기본</h3>
+    </div>
+    <div class="comTicket">
+        <div class="ticketInfo"> <!-- addClass : view - 티켓형태로 보여짐 -->
+            <div class="infoTop">
+                <div class="infoL">
+                    <ul class="infoName">
+                        <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li> <!-- 20251028 텍스트 변경 -->
+                        <li class="item"><span>열차번호</span><span class="em">A1026</span></li>
+                    </ul>
+                    <div class="stationBox">
+                        <div class="station">
+                            <span class="name">인천공항 1터미널</span>
+                            <span class="time">(05:23)</span>
+                        </div>
+                        <div class="station">
+                            <span class="name">서울역</span>
+                            <span class="time">(06:07)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoCont on">
+                <ul class="infoList">
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">탑승인원</dt>
+                            <dd class="desc">어른 3명, 어린이 2명</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">열차좌석</dt>
+                            <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">열차좌석</dt>
+                            <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)
+                                <br>4호차 (8D, 9A)</dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">운임</dt>
+                            <dd class="desc">65,000원</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">할인</dt>
+                            <dd class="desc"><span class="colorBlue">-14,500원</span></dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">상품</dt>
+                            <dd class="desc">5,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개)
+                                <br>10,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개)</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="comTicketH3">
+        <h3>승차권 리스트</h3>
+    </div>
+    <div class="comTicket">
+        <div class="ticketInfo list">
+            <div class="infoTop">
+                <div class="infoL">
+                    <ul class="infoName">
+                        <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li>
+                    </ul>
+                    <div class="infoRadio">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptChk" name="rdo001"><label for="rdo001" class="iptLbl">승차일 2025-10-06</label></div>
+                        </div>
+                    </div>
+                    <div class="stationBox">
+                        <div class="station">
+                            <span class="name">인천공항 1터미널</span>
+                            <span class="time">(05:23)</span>
+                        </div>
+                        <div class="station">
+                            <span class="name">서울역</span>
+                            <span class="time">(06:07)</span>
+                        </div>
+
+                        <div class="statusGroup">
+                            <span class="status goods">상품</span>
+                            <span class="status print">인쇄완료</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="infoR">
+                    <button type="button" class="btn gLine"><span class="more">상세보기</span><span class="simple">간략보기</span></button>
+                    <button type="button" class="btn dkBlue">승차권보기</button>
+                </div>
+            </div>
+            <div class="infoCont">
+                <ul class="infoList">
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">예약번호</dt>
+                            <dd class="desc">2508188599045</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">열차번호</dt>
+                            <dd class="desc">A1026</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">탑승인원</dt>
+                            <dd class="desc">어른 3명, 어린이 2명</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">열차좌석</dt>
+                            <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)
+                                <br>4호차 (8D, 9A)</dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">상품</dt>
+                            <dd class="desc">5,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개) <!-- 20251028 옵션추가 -->
+                                <br>10,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개)</dd>
+                        </dl>
+                    </li>
+                </ul>
+                
+                <ul class="infoList goods">
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit"><span>5,000원 충전된 교통카드 / </span> <span class="colorBlue">긴 옵션 내용1, 긴 옵션 내용2</span><button type="button" class="btnDel">상품삭제</button></dt>
+                            <dd class="desc">
+                                <div class="pubIncDec">
+                                    <button type="button" class="btnNum minus" disabled="">-1</button>
+                                    <span class="textNum">0<span class="blind">개</span></span>
+                                    <button type="button" class="btnNum plus">+1</button>
+                                </div>
+                                <div class="priceBox">
+                                    <!-- <span class="oldPrice">US $9.37</span> -->
+                                    <span class="price">
+                                        <span class="bold">US $9.01</span>
+                                        <span class="won">(₩10,000)</span>
+                                    </span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit"><span>5,000원 충전된 교통카드 / </span> <span class="colorBlue">긴 옵션 내용1, 긴 옵션 내용2</span><button type="button" class="btnDel">상품삭제</button></dt>
+                            <dd class="desc">
+                                <div class="pubIncDec">
+                                    <button type="button" class="btnNum minus" disabled="">-1</button>
+                                    <span class="textNum">0<span class="blind">개</span></span>
+                                    <button type="button" class="btnNum plus">+1</button>
+                                </div>
+                                <div class="priceBox">
+                                    <!-- <span class="oldPrice">US $9.37</span> -->
+                                    <span class="price">
+                                        <span class="bold">US $9.01</span>
+                                        <span class="won">(₩10,000)</span>
+                                    </span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <!-- 승차권+상품=총결제금액 -->
+                <div class="priceList type02">
+                    <dl class="info">
+                        <dt class="tit">승차권</dt>
+                        <dd class="desc">
+                            <span class="bold">50,500원</span> 
+                            <span class="won">(₩50,500)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info">
+                        <dt class="tit">상품</dt>
+                        <dd class="desc">
+                            <span class="bold">20,000원</span> 
+                            <span class="won">(₩20,000)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info total">
+                        <dt class="tit">총 결제 금액</dt>
+                        <dd class="desc">
+                            <span class="bold colorBlue">75,500원</span> 
+                            <span class="won">(₩75,500)</span>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="ticketDiscount">
+                    <ul class="discountList">
+                        <li class="discItem">
+                            <div class="infoBox">
+                                <div class="alignL">
+                                    <div class="frmGroup">
+                                        <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">
+                                            <span>5호차</span><span>6A</span><span class="colorBlue">어린이할인</span>
+                                        </label></div>
+                                    </div>
+                                </div>
+                                <div class="alignR">
+                                    <div class="cancelPrice">
+                                        <dl class="info">
+                                            <dt class="tit">운임</dt>
+                                            <dd class="desc">
+                                                <span class="bold">13,000원</span>
+                                                <span class="won">(₩13,000)</span>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info">
+                                            <dt class="tit">할인</dt>
+                                            <dd class="desc">
+                                                <span class="bold">500원</span>
+                                                <span class="won">(₩500)</span>
+                                            </dd>
+                                        </dl>
+                                        <dl class="info allPrice">
+                                            <dt class="tit">결제</dt>
+                                            <dd class="desc">
+                                                <span class="bold">12.500원</span>
+                                                <span class="won">(₩12.500)</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="discItem">
+                            <div class="infoBox">
+                                <div class="alignL">
+                                    <div class="frmGroup">
+                                        <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">
+                                            <span>5호차</span><span>6C</span><span class="colorBlue">경로할인</span>
+                                        </label></div>
+                                    </div>
+                                </div>
+                                <div class="alignR">
+
+                                    <div class="cancelPrice">
+                                        <dl class="info">
+                                            <dt class="tit">운임</dt>
+                                            <dd class="desc">
+                                                <span class="bold">13,000원</span>
+                                                <!-- <span class="won">(₩13,000)</span> -->
+                                            </dd>
+                                        </dl>
+                                        <dl class="info">
+                                            <dt class="tit">할인</dt>
+                                            <dd class="desc">
+                                                <span class="bold">500원</span>
+                                                <!-- <span class="won">(₩500)</span> -->
+                                            </dd>
+                                        </dl>
+                                        <dl class="info allPrice">
+                                            <dt class="tit">결제</dt>
+                                            <dd class="desc">
+                                                <span class="bold">12.500원</span>
+                                                <!-- <span class="won">(₩12.500)</span> -->
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="discItem">
+                            <div class="infoBox">
+                                <div class="alignL">
+                                    <div class="frmGroup">
+                                        <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">
+                                            <span>5호차</span><span>6D</span><span class="colorBlue">국가유공자할인</span>
+                                        </label></div>
+                                    </div>
+                                </div>
+                                <div class="alignR">
+
+                                    <div class="cancelPrice">
+                                        <dl class="info">
+                                            <dt class="tit">운임</dt>
+                                            <dd class="desc">
+                                                <span class="bold">13,000원</span>
+                                                <!-- <span class="won">(₩13,000)</span> -->
+                                            </dd>
+                                        </dl>
+                                        <dl class="info">
+                                            <dt class="tit">할인</dt>
+                                            <dd class="desc">
+                                                <span class="bold">500원</span>
+                                                <!-- <span class="won">(₩500)</span> -->
+                                            </dd>
+                                        </dl>
+                                        <dl class="info allPrice">
+                                            <dt class="tit">결제</dt>
+                                            <dd class="desc">
+                                                <span class="bold">12.500원</span>
+                                                <!-- <span class="won">(₩12.500)</span> -->
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ticketGoodsList">
+                    <ul class="goodsList half">
+                        <li class="item">
+                            <div class="itemBox">
+                                <div class="imgBox"><img src="/common/images/temp/temp_01_01_001.jpg" alt="5,000원 충전된 교통카드 이미지"></div>
+                                <div class="goodsTit">
+                                    <div class="eyebrow complete">결제완료</div> <!-- addClass - complete:결제완료, cancel:결제취소 -->
+                                    <div class="tit">5,000원 충전된 교통카드 / <span class="colorBlue">긴 텍스트의 옵션1, 긴 텍스트의 옵션2</span></div>
+                                </div>
+                                <div class="goodInfo">
+                                    <dl class="info">
+                                        <dt class="tit">가격</dt>
+                                        <dd class="desc">25,000원</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">수량</dt>
+                                        <dd class="desc">1개</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="itemBox">
+                                <div class="imgBox"><img src="/common/images/temp/temp_01_01_001.jpg" alt="5,000원 충전된 교통카드 이미지"></div>
+                                <div class="goodsTit">
+                                    <div class="eyebrow cancel">결제취소</div> <!-- addClass - complete:결제완료, cancel:결제취소 -->
+                                    <div class="tit">5,000원 충전된 교통카드 / <span class="colorBlue">긴 텍스트의 옵션1, 긴 텍스트의 옵션2</span></div>
+                                </div>
+                                <div class="goodInfo">
+                                    <dl class="info">
+                                        <dt class="tit">가격</dt>
+                                        <dd class="desc">25,000원</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">수량</dt>
+                                        <dd class="desc">1개</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="itemBox">
+                                <div class="imgBox"><img src="/common/images/temp/temp_01_01_001.jpg" alt="5,000원 충전된 교통카드 이미지"></div>
+                                <div class="goodsTit">
+                                    <div class="eyebrow complete">결제완료</div> <!-- addClass - complete:결제완료, cancel:결제취소 -->
+                                    <div class="tit">5,000원 충전된 교통카드 / <span class="colorBlue">긴 텍스트의 옵션1, 긴 텍스트의 옵션2</span></div>
+                                </div>
+                                <div class="goodInfo">
+                                    <dl class="info">
+                                        <dt class="tit">가격</dt>
+                                        <dd class="desc">25,000원</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">수량</dt>
+                                        <dd class="desc">1개</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="ticketGoodsList">
+                    <ul class="goodsList">
+                        <li class="item">
+                            <div class="itemBox">
+                                <div class="imgBox"><img src="/common/images/temp/temp_01_01_001.jpg" alt="5,000원 충전된 교통카드 이미지"></div>
+                                <div class="goodsTit">
+                                    <div class="tit">5,000원 충전된 교통카드 / <span class="colorBlue">긴 텍스트의 옵션1, 긴 텍스트의 옵션2</span></div>
+                                </div>
+                                <div class="goodInfo">
+                                    <dl class="info">
+                                        <dt class="tit">가격</dt>
+                                        <dd class="desc">
+                                            <span class="bold">US $9.01</span>
+                                            <span class="won">(₩25,000)</span>
+                                        </dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">수량</dt>
+                                        <dd class="desc">1개</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">반환금액</dt>
+                                        <dd class="desc">
+                                            <span class="bold">US $9.01</span>
+                                            <span class="won">(₩25,000)</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="itemBox">
+                                <div class="imgBox"><img src="/common/images/temp/temp_01_01_001.jpg" alt="5,000원 충전된 교통카드 이미지"></div>
+                                <div class="goodsTit">
+                                    <div class="tit">5,000원 충전된 교통카드 / <span class="colorBlue">긴 텍스트의 옵션1, 긴 텍스트의 옵션2</span></div>
+                                </div>
+                                <div class="goodInfo">
+                                    <dl class="info">
+                                        <dt class="tit">가격</dt>
+                                        <dd class="desc">
+                                            <span class="bold">25,000원</span>
+                                        </dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">수량</dt>
+                                        <dd class="desc">1개</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">반환금액</dt>
+                                        <dd class="desc">
+                                            <span class="bold">25,000원</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="priceList">
+                    <dl class="info">
+                        <dt class="tit">결제 합계</dt>
+                        <dd class="desc">
+                            <span class="bold">52,000원</span>
+                            <span class="won">(₩52,000)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info">
+                        <dt class="tit">반환수수료</dt>
+                        <dd class="desc">
+                            <span class="bold">3,000원</span>
+                            <span class="won">(₩3,000)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info total">
+                        <dt class="tit">총 반환금액</dt>
+                        <dd class="desc">
+                            <span class="colorBlue bold">49,000원</span>
+                            <span class="won">(₩49,000)</span>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="priceList minus">
+                    <dl class="info">
+                        <dt class="tit">결제 합계</dt>
+                        <dd class="desc">
+                            <span class="bold">52,000원</span>
+                            <span class="won">(₩52,000)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info">
+                        <dt class="tit">반환수수료</dt>
+                        <dd class="desc">
+                            <span class="bold">3,000원</span>
+                            <span class="won">(₩3,000)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info total">
+                        <dt class="tit">총 반환금액</dt>
+                        <dd class="desc">
+                            <span class="colorBlue bold">49,000원</span>
+                            <span class="won">(₩49,000)</span>
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="comTicketH3">
+        <h3>승차권 티켓모양</h3>
+    </div>
+
+    <div class="comTicket">
+        <div class="ticketInfo view"> <!-- addClass : view - 티켓형태로 보여짐 -->
+            <div class="infoTop">
+                <div class="infoL">
+                    <ul class="infoName">
+                        <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li> <!-- 20251028 텍스트 변경 -->
+                        <li class="item"><span>열차번호</span><span class="em">A1026</span></li>
+                    </ul>
+                    <div class="stationBox">
+                        <div class="station">
+                            <span class="name">인천공항 1터미널</span>
+                            <span class="time">(05:23)</span>
+                        </div>
+                        <div class="station">
+                            <span class="name">서울역</span>
+                            <span class="time">(06:07)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoCont on">
+                <ul class="infoList">
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">예약번호</dt>
+                            <dd class="desc">2508188599045</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">탑승인원</dt>
+                            <dd class="desc">어른 3명, 어린이 2명</dd>
+                        </dl>
+                        <dl class="info">
+                            <dt class="tit">열차좌석</dt>
+                            <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)
+                                <br>4호차 (8D, 9A)</dd>
+                        </dl>
+                    </li>
+                    <li class="item">
+                        <dl class="info">
+                            <dt class="tit">상품</dt>
+                            <dd class="desc">5,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개) <!-- 20251028 옵션추가 -->
+                                <br>10,000원 충전된 교통카드 <br class="onlyM">/ <span class="colorBlue">옵션1, 옵션2</span> (1개)</dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <!-- 승차권+상품=총결제금액 -->
+                <div class="priceList">
+                    <dl class="info">
+                        <dt class="tit">승차권</dt>
+                        <dd class="desc">
+                            <span class="bold">50,500원</span> 
+                            <span class="won">(₩50,500)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info">
+                        <dt class="tit">상품</dt>
+                        <dd class="desc">
+                            <span class="bold">20,000원</span> 
+                            <span class="won">(₩20,000)</span>
+                        </dd>
+                    </dl>
+                    <dl class="info total">
+                        <dt class="tit">총 결제 금액</dt>
+                        <dd class="desc">
+                            <span class="bold colorBlue">75,500원</span> 
+                            <span class="won">(₩75,500)</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/common.js"></script>
+    <title>승차권 분할 레이아웃</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/component/_cptTicketDivide.scss
+    -->
+
+    <!-- 승차권 분할 레이아웃 (좌 : 예약/결제정보, 우 : 결제금액) -->
+    <div class="cptTicketDivide">
+        <div class="divideArea">
+            <!-- 좌측 영역 -->
+            <div class="divideL">
+
+                <!-- 예약정보 + 승차권 -->
+                <div class="divideGroup">
+                    <div class="pubTitH3">
+                        <h3>예약정보</h3>
+                    </div>
+
+                    <div class="comTicketInfo"> <!-- addClass : view - 티켓형태로 보여짐 -->
+                        <div class="infoTop">
+                            <div class="infoL">
+                                <ul class="infoName">
+                                    <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li>
+                                    <li class="item"><span>열차번호</span><span class="em">A1026</span></li>
+                                </ul>
+                                <div class="stationBox">
+                                    <div class="station">
+                                        <span class="name">인천공항 1터미널</span>
+                                        <span class="time">05:23</span>
+                                    </div>
+                                    <div class="station">
+                                        <span class="name">서울역</span>
+                                        <span class="time">06:07</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infoCont on">
+                            <ul class="infoList">
+                                <li class="item">
+                                    <dl class="info">
+                                        <dt class="tit">탑승인원</dt>
+                                        <dd class="desc">어른 3명, 어린이 2명</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">열차좌석</dt>
+                                        <dd class="desc">5호차 (5D, 6A, 6B, 6C, 6D)</dd>
+                                    </dl>
+                                </li>
+                                <li class="item">
+                                    <dl class="info">
+                                        <dt class="tit">운임</dt>
+                                        <dd class="desc">65,000원</dd>
+                                    </dl>
+                                    <dl class="info">
+                                        <dt class="tit">할인</dt>
+                                        <dd class="desc"><span class="colorBlue">-14,500원</span></dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pubTitH3">
+                        <h3>해외통화 결제 카드</h3>
+                    </div>
+
+                    <!-- 해외통화 결제 카드 -->
+                    <div class="comPay">
+                        <ul class="cardList">
+                            <li class="item visa"><img src="/common/images/common/ic_240_visa.png" alt="비자카드"></li>
+                            <li class="item master"><img src="/common/images/common/ic_240_master.png" alt="마스터카드"></li>
+                        </ul>
+                        <p class="payChange"><a href="#">원화(KRW) 결제로 전환</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 우측 영역 -->
+            <div class="divideR">
+                <div class="divideGroup">
+                    <div class="pubTitH3">
+                        <h3>결제정보</h3>
+                    </div>
+
+                    <div class="comTicketPriceInfo">
+                        <dl class="info">
+                            <dt class="tit">승차권</dt>
+                            <dd class="desc">44,500원</dd>
+                        </dl>
+                        <dl class="info divLine">
+                            <dt class="tit">상품</dt>
+                            <dd class="desc">25,000원</dd>
+                        </dl>
+                        <dl class="info total">
+                            <dt class="tit">총 결제 금액</dt>
+                            <dd class="desc">69,500원</dd>
+                        </dl>
+                        <div class="comBtnGroup">
+                            <div class="alignC cta">
+                                <button type="button" class="btn dkLine lg">장바구니</button>
+                                <button type="button" class="btn blue lg">결제하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

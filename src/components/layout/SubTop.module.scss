@@ -1,0 +1,89 @@
+@use "@/styles/etc/mixin" as *;
+
+//서브 탑
+/* --------------------------- 서브 탑 --------------------------- */
+.cptSubTop {
+    width: 100%; padding: 50px 0 60px;
+    .subTopArea {
+        width: 100%; display: flex; flex-wrap: wrap; justify-content: center;
+    }
+    @include media('mobile') {
+        padding: 32px 0 40px;
+    }
+}
+
+/* --------------------------- 브레드크럼 --------------------------- */
+.comBreadCrumb {
+    width: 100%;
+    .bcArea {
+        width: 100%;
+        .bcList {
+            width: 100%; display: flex; justify-content: center;
+            .bcItem {
+                height: 26px; padding-left: 24px; position: relative;
+                &:first-child {
+                    padding-left: 0; background: none;
+                    a {width: 20px !important; height: 26px !important; font-size: 0 !important; background: url(/images/common/ic_20_bc_home.svg) center no-repeat; border-bottom: none;}
+                    &::before {display: none;}
+                }
+                &::before {content: ""; width: 1px; height: 10px; display: block; background: var(--border-color-G400, #B9C1C9); position: absolute; left: 12px; top: 8px;}
+                a {
+                    color: var(--text-color-G700, #3A3F49); font-size: rem(16px); font-weight: 400; line-height: normal; display: inline-block; vertical-align: middle;
+                }
+
+                // comDropdownLocn(위치이동형)이 브레드크럼 항목의 트리거 역할을 하므로,
+                // 전역 comDropdown/btnDrop 텍스트도 링크(a)와 동일하게 보이도록 맞춰준다.
+                :global(.comDropdown) {
+                    :global(.btnDrop) {
+                        color: var(--text-color-G700, #3A3F49); font-size: rem(16px); font-weight: 400; line-height: normal; background: transparent; border: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include media("mobile") {
+        .bcArea {
+            .bcList {
+                .bcItem {
+                    height: 24px; display: none;
+                    a {
+                        font-size: rem(15px);
+                    }
+                    &::before {top: 7px;}
+                    &:nth-child(2) {
+                        display: block;
+                        width: 38px; font-size: 0; background: url(/images/common/ic_14_bc_dot.svg) 24px center no-repeat;
+                        :global(.comDropdown) {
+                            display: none;
+                        }
+                    }
+                    &:first-child {
+                        width: 16px; height: 24px; display: block;
+                        a {width: 16px; height: 24px; display: block;}
+                    }
+                    &:last-child {
+                        width: max-content; background: none; display: block;
+                        :global(.comDropdown) {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//서브 탑 타이틀
+.comSubTitle {
+    width: 100%; margin-top: 20px;
+    .subTitleArea {
+        h1 {
+            width: 100%; color: var(--text-color-G900, #111); text-align: center; font-size: rem(50px); font-style: normal; font-weight: 700; line-height: 65px;
+        }
+    }
+    @include media('mobile') {
+        .subTitleArea {
+            h1 {font-size: 30px; line-height: 39px;}
+        }
+    }
+}

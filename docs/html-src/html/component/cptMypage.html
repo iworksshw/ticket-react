@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+    <title>마이페이지 대시보드</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/component/_cptMypage.scss
+    -->
+
+    <!-- 마이페이지 대시보드 -->
+    <div class="cptMypage">
+        <div class="boardingBox">
+            <!-- 탑승예정 승차권 (없을 때는 영역 삭제) -->
+            <div class="boardingArea">
+                <p class="tit ticketTit">나의 승차권정보</p>
+                <p class="expectTicket">탑승예정 승차권</p>
+                <div class="mypageSlide">
+                    <div class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="comTicketInfo view">
+                                    <div class="infoTop">
+                                        <div class="infoL">
+                                            <ul class="infoName">
+                                                <li class="item"><span>승차일</span><span class="em">2025-10-05</span></li>
+                                                <li class="item"><span>열차번호</span><span class="em">A1026</span></li>
+                                            </ul>
+                                            <div class="stationBox">
+                                                <div class="station">
+                                                    <span class="name">인천공항 1터미널</span>
+                                                    <span class="time">(05:23)</span>
+                                                </div>
+                                                <div class="station">
+                                                    <span class="name">서울역</span>
+                                                    <span class="time">(06:07)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="infoCont on">
+                                        <ul class="infoList">
+                                            <li class="item">
+                                                <dl class="info">
+                                                    <dt class="tit">탑승인원</dt>
+                                                    <dd class="desc">어른 3명, 어린이 2명</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="arrowBox">
+                        <button type="button" class="btnArrow prev"><span class="blind">이전 승차권</span></button>
+                        <button type="button" class="btnArrow next"><span class="blind">다음 승차권</span></button>
+                    </div>
+                    <div class="swiper-pagination">
+                        <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">3</span>
+                    </div>
+                </div>
+                <script>mypageSlide();</script>
+                <div class="ticketList">
+                    <p class="vaild"><a href="#">유효승차권</a></p>
+                    <p class="change"><a href="#">승차권 변경/반환</a></p>
+                    <p class="check"><a href="#">이용내역·영수증조회</a></p>
+                </div>
+            </div>
+            <!-- 나의 AREX 이용정보 -->
+            <div class="boardingArea">
+                <p class="tit"><span>나의 AREX 이용정보<em>(최근 1년)</em></span></p>
+                <div class="infoCont">
+                    <a href="#" class="box">
+                        <p class="txt">AREX 직통열차 이용실적</p>
+                        <p class="count"><span class="num">59</span>건</p>
+                    </a>
+                    <a href="#" class="box">
+                        <p class="txt">도심공항터미널 이용실적</p>
+                        <p class="count"><span class="num">2</span>건</p>
+                    </a>
+                    <a href="#" class="box">
+                        <p class="txt">보유한 할인쿠폰</p>
+                        <p class="count"><span class="num">+999</span>건</p>
+                    </a>
+                </div>
+            </div>
+            <!-- 나의 신청정보 -->
+            <div class="boardingArea">
+                <p class="tit">나의 신청정보</p>
+                <div class="myCont">
+                    <a href="#" class="box">
+                        <p class="txt">체험학습</p>
+                        <p class="count"><span class="blueTxt">5</span>건 / <span>10</span>건</p>
+                    </a>
+                    <a href="#" class="box">
+                        <p class="txt">회의실</p>
+                        <p class="count"><span class="blueTxt">5</span>건 / <span>10</span>건</p>
+                    </a>
+                    <a href="#" class="box">
+                        <p class="txt">고객의 소리</p>
+                        <p class="count"><span class="blueTxt">5</span>건 / <span>10</span>건</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="infoBox">
+            <div class="infoArea">
+                <p class="topTit">
+                    <span class="infoTxt">나의 기본정보</span>
+                    <button type="button" class="memberTxt">회원정보</button>
+                </p>
+                <div class="box">
+                    <p class="subTit">아이디(이메일)</p>
+                    <p class="desc">idid1234@naver.com</p>
+                </div>
+                <div class="box">
+                    <p class="subTit">SNS 간편로그인</p>
+                    <p class="desc">
+                        <span class="naver">Naver</span>
+                        <span class="google">Google</span>
+                        <span class="kakao">Kakao</span>
+                        <span class="apple">Apple</span>
+                    </p>
+                </div>
+                <div class="box">
+                    <p class="subTit">국적</p>
+                    <p class="desc">대한민국</p>
+                </div>
+            </div>
+            <div class="boxArea">
+                <a href="#">
+                    <p class="topTit">서울역 도심공항터미널<br>리워드 프로그램</p>
+                    <p class="baseTit">도심공항터미널 이용실적을 기준으로<br>리워드 할인쿠폰을 드립니다.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

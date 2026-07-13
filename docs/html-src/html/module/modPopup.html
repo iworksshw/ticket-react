@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/common/css/style.css">
+    <script src="/common/js/swiper.js"></script>
+    <script src="/common/js/common.js"></script>
+    <title>팝업</title>
+</head>
+<body>
+    <!--
+        SCSS
+        scss/module/_modPopup.scss
+    -->
+
+    <button type="button" class="btn blue" onclick="openPopup('sample01');">팝업열기</button>
+    <div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                        <div class="popTitle">Title</div>
+                        <div class="popCont">
+                            <!-- 팝업 컨텐츠 영역 -->
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            <a href="#">Contents Link</a>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area<br>
+                            Popup Contents Area
+                            <!-- //팝업 컨텐츠 영역 -->
+                        </div>
+
+                        <!-- 팝업 하단 영역 -->
+                        <div class="popBtm">
+                            <div class="alignC">
+                                <div class="btnBox cta">
+                                    <button type="button" class="btn gLine">취소</button>
+                                    <button type="button" class="btn blue">쿠폰번호 등록</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

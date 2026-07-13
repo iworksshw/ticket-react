@@ -1,0 +1,1216 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {margin-top: 60px; font-size:24px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+
+.g-in-body {background: #eee;}
+.gList {margin-bottom: 10px;}
+.gList .gItem {padding-left: 10px; position: relative; font-size: 14px;}
+.gList .gItem::before {content:"-"; position: absolute; left: 0px;}
+.gH3Tit {margin-top: 30px; margin-bottom: 10px; font-size: 18px; font-weight: 500;}
+.gH3Tit:first-child {margin-top: 0;}
+.gTable {margin-top: 20px;}
+.gTable + .gH3Tit {margin-top: 40px;}
+.guideTitle + .guideCont {margin-top: 30px;}
+.gTable table {width: 100%; table-layout: fixed; border-collapse: collapse;}
+.gTable table tr th {padding: 10px; font-size: 14px; text-align: center; font-weight: 500; border: 1px solid #ccc; background: #eee;}
+.gTable table tr td {padding: 5px 10px; font-size: 14px; vertical-align: top; border: 1px solid #ccc; background: #fff;}
+.gTable table tr td.ct {text-align: center;}
+.gTable table tr td.md {vertical-align: middle;}
+.red {color: #dc3545;}
+.blue {color: #0d6efd;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+    <div class="guideTitle">◎ 기본 정보</div>
+    <div class="guideCont">
+        <ul class="gList">
+            <li class="gItem">UI 지원 브라우저 : 엣지, 크롬, 파이어폭스, 사파리, 웨일브라우저 등 표준브라우저</li>
+            <li class="gItem">반응형 UI : PC, IOS, Android 등 다양한 기기에 최적의 사용자 경험을 제공할 수 있도록 구현</li>
+            <li class="gItem">디자인 최적화 해상도 : 메인 - 1920px, 서브 - 1280px</li>
+        </ul>
+
+        <div class="gH3Tit">DTD / language TYPE</div>
+        <ul class="gList">
+            <li class="gItem">DOCTYPE : DTD 선언시 앞에 공백이 오지 않도록 해야하며, 문서 최상단에 선언되어야 함.</li>
+        </ul>
+        <div class="gGroup">
+            <div class="gView" style="display: none;"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+<!DOCTYPE html>
+<html lang="ko"></textarea>
+            </div>
+        </div>
+
+
+        <div class="gH3Tit">ENCODING TYPE</div>
+        <div class="gGroup">
+            <div class="gView" style="display: none;"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></textarea>
+            </div>
+        </div>
+
+        <div class="gH3Tit">META TAG</div>
+        <div class="gGroup">
+            <div class="gView" style="display: none;"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta property="og:title" content="K">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/favicon/favicon.ico">
+<meta property="og:url" content="https://"></textarea>
+            </div>
+        </div>
+
+        <div class="gH3Tit">들여쓰기 규칙</div>
+        <ul class="gList">
+            <li class="gItem">마크업의 중첩이 깊어질때마다 자식 엘리먼트는 1탭씩 들여쓰고, 1탭의 공백은 4칸임.</li>
+        </ul>
+    </div>
+
+    <div class="guideTitle">◎ 폴더 및 파일 규칙</div>
+    <div class="guideCont">
+        <div class="gH3Tit">폴더 및 파일의 경로</div>
+        <ul class="gList">
+            <li class="gItem">기본 폴더 및 경로는 아래와 같으나 개발과 기획에 정해진 구조가 정의되어 있다면 그 구조 및 규칙을 사용한다.</li>
+        </ul>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:200px;">
+                    <col style="width:200px;">
+                    <col style="width:200px;">
+                    <col style="width:200px;">
+                    <col style="width:auto;">
+                </colgroup>
+                <caption>파일 및 폴더의 경로</caption>
+                <thead>
+                    <tr>
+                        <th colspan="4">경로/폴더</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>./</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            root 최상위 폴더
+                            <br>파일 : gulp관련 파일
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>./node_modules</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>gulp관련 node.js 폴더</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="29">/project</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>작업 폴더와 컴파일된 폴더로 구분</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="11">/dist</td>
+                        <td></td>
+                        <td></td>
+                        <td>컴파일된 폴더로 개발자가 참고하는 폴더</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">/common</td>
+                        <td></td>
+                        <td>공통부분으로 css, js, webfont가 있다</td>
+                    </tr>
+                    <tr>
+                        <td>/css</td>
+                        <td>작업공간의 모든 css가 이 폴더로 저장된다</td>
+                    </tr>
+                    <tr>
+                        <td>/js</td>
+                        <td>작업된 js의 최종 결과물이 이 폴더로 저장된다.</td>
+                    </tr>
+                    <tr>
+                        <td>/webfont</td>
+                        <td>웹폰트</td>
+                    </tr>
+                    <tr>
+                        <td>/guide</td>
+                        <td></td>
+                        <td>가이드 및 파일리스트</td>
+                    </tr>
+                    <tr>
+                        <td>/html_언어</td>
+                        <td></td>
+                        <td>작업된 html파일이 이 폴더에 컴파일된다.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">/images</td>
+                        <td></td>
+                        <td>이미지 폴더</td>
+                    </tr>
+                    <tr>
+                        <td>/common</td>
+                        <td>아이콘 및 공통 이미지</td>
+                    </tr>
+                    <tr>
+                        <td>/contents</td>
+                        <td>컨텐츠 페이지에서 고유로 사용되는 이미지</td>
+                    </tr>
+                    <tr>
+                        <td>/temp</td>
+                        <td>샘플 이미지로 운영에서는 사용되지 않는 이미지</td>
+                    </tr>
+
+
+                    
+                    <tr>
+                        <td rowspan="17">/src</td>
+                        <td></td>
+                        <td></td>
+                        <td>작업자 공간 폴더</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">/common</td>
+                        <td></td>
+                        <td>공통부분으로 css, js, webfont가 있다</td>
+                    </tr>
+                    <tr>
+                        <td>/css</td>
+                        <td>외부에서 가져온 css 파일 공간</td>
+                    </tr>
+                    <tr>
+                        <td>/js</td>
+                        <td>외부 js 및 내부에서 생성한 js파일 공간</td>
+                    </tr>
+                    <tr>
+                        <td>/webfont</td>
+                        <td>웹폰트</td>
+                    </tr>
+                    <tr>
+                        <td>/css</td>
+                        <td></td>
+                        <td>css 백업 공간</td>
+                    </tr>
+                    <tr>
+                        <td>/guide</td>
+                        <td></td>
+                        <td>가이드 및 파일리스트</td>
+                    </tr>
+                    <tr>
+                        <td>/html_언어</td>
+                        <td></td>
+                        <td>html 마크업 작업폴더</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">/images</td>
+                        <td></td>
+                        <td>이미지 폴더</td>
+                    </tr>
+                    <tr>
+                        <td>/common</td>
+                        <td>아이콘 및 공통 이미지</td>
+                    </tr>
+                    <tr>
+                        <td>/contents</td>
+                        <td>컨텐츠 페이지에서 고유로 사용되는 이미지</td>
+                    </tr>
+                    <tr>
+                        <td>/temp</td>
+                        <td>샘플 이미지로 운영에서는 사용되지 않는 이미지</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">/scss</td>
+                        <td></td>
+                        <td>scss 작업공간</td>
+                    </tr>
+                    <tr>
+                        <td>/common</td>
+                        <td>class의 접두사로 com을 사용하는 파일</td>
+                    </tr>
+                    <tr>
+                        <td>/component</td>
+                        <td>class의 접두사로 cpt를 사용하는 파일</td>
+                    </tr>
+                    <tr>
+                        <td>/layout</td>
+                        <td>class의 접두사로 lyt를 사용하는 파일</td>
+                    </tr>
+                    <tr>
+                        <td>/module</td>
+                        <td>class의 접두사로 mod를 사용하는 파일</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="gH3Tit">HTML 폴더 및 파일 규칙</div>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:300px;">
+                    <col style="width:300px;">
+                </colgroup>
+                <caption>네이밍 규칙</caption>
+                <thead>
+                    <tr>
+                        <th>설명</th>
+                        <th>잘못된 예</th>
+                        <th>올바른 예</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            - 파일 및 폴더의 이름은 숫자, 특수문자로 시작 할 수 없다. <br>
+                            - 파일 및 폴더의 이름안에 한글 및 영문 대문자를 포함 할 수 없다(scss파일, ejs폴더 제외)
+                        </td>
+                        <td>
+                            ./<span class="red">01M</span>enu/<br>
+                            <span class="red">./H</span>tml<span class="red">파일/</span><br>
+                            <span class="red">_</span>common.js
+                        </td>
+                        <td>
+                            <span class="blue">./menu01/</span><br>
+                            <span class="blue">./html/</span><br>
+                            <span class="blue">common.js</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 작업은 ./project/src/ 폴더에서만 하며, ./project/dist/ 폴더 내는 파일 삭제하는 경우를 제외하고 수정하지 않는다.
+                        </td>
+                        <td>
+                            <span class="red">./dist/common/style.css 파일 수정</span><br>
+                            <span class="red">./dist/images/common/map.png 파일 변경</span>
+                        </td>
+                        <td>
+                            <span class="blue">./src/scss/ 폴더 내 scss 파일 수정</span><br>
+                            <span class="blue">./src/images/common/map.png 파일 변경</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - html 내 include할 파일들은 [html_언어]의 [_ejs]폴더 내 ejs파일로 제작한다
+                        </td>
+                        <td>
+                            <span class="red">./src/html_kor/include/top.ejs</span>
+                        </td>
+                        <td>
+                            <span class="blue">./src/html_kor/_ejs/top.ejs</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - html은 [html_언어] 폴더에 맞게 만들되 뎁스별로 menu01, menu02, menu03 형식으로 한다<br>
+                            - 다만, depth1안에 없는 메뉴는 관련이름으로 생성한다.
+                        </td>
+                        <td>
+                            <span class="red">./src/html_kor/notice/</span><br>
+                            <span class="red">./src/html_kor/contectus/</span>
+                        </td>
+                        <td>
+                            <span class="blue">./src/html_kor/menu01/</span><br>
+                            <span class="blue">./src/html_kor/menu02/</span><br>
+                            <span class="blue">./src/html_kor/signup/</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 서브페이지 파일은 page_depth_타입_형태.html로 생성한다
+                        </td>
+                        <td>
+                            home > depth1Name > depth2Name > 자유게시판 - 리스트<br>
+                            <span class="red">menu03/page_1_2_list.html</span>
+                        </td>
+                        <td>
+                            home > depth1Name > depth2Name > 자유게시판 - 리스트<br>
+                            <span class="blue">menu03/page_03_03_02_list.html</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <div class="gH3Tit">이미지 폴더 및 파일 규칙</div>
+        <ul class="gList">
+            <li class="gItem">images 폴더는 common, contents, temp로 구성된다</li>
+        </ul>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:300px;">
+                    <col style="width:300px;">
+                </colgroup>
+                <caption>네이밍 규칙</caption>
+                <thead>
+                    <tr>
+                        <th>설명</th>
+                        <th>잘못된 예</th>
+                        <th>올바른 예</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            - common에는 각종 아이콘 및 사이트 전반에 공통으로 사용되는 이미지를 저장한다
+                        </td>
+                        <td>
+                            <span class="red">메인페이지의 배너 이미지</span><br>
+                            <span class="red">서브페이지의 도표 이미지</span>
+                        </td>
+                        <td>
+                            <span class="blue">각종 아이콘</span><br>
+                            <span class="blue">GNB/Footer CI</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - contents에는 각 페이지에서 사용되는 주로 공통이 아닌 이미지를 저장한다
+                        </td>
+                        <td>
+                            <span class="red">각종 아이콘</span><br>
+                            <span class="red">메인페이지의 배너 이미지</span>
+                        </td>
+                        <td>
+                            <span class="blue">메인페이지의 캐릭터 이미지</span><br>
+                            <span class="blue">서브페이지의 도표 이미지</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - temp에는 실제 사용하지 않는 샘플 이미지를 저장한다.
+                        </td>
+                        <td>
+                            <span class="red">각종 아이콘</span><br>
+                            <span class="red">메인페이지의 캐릭터 이미지</span>
+                        </td>
+                        <td>
+                            <span class="blue">메인페이지의 배너 이미지</span><br>
+                            <span class="blue">서브페이지의 게시판 썸네일 이미지</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 아이콘 이미지는 svg 파일 확장자를 사용한다. 복잡도가 있는 아이콘은 png를 사용한다.
+                        </td>
+                        <td>
+                            <span class="red">도표이미지.svg</span><br>
+                            <span class="red">셀렉트 화살표 이미지.png</span>
+                        </td>
+                        <td>
+                            <span class="blue">아이콘.svg</span><br>
+                            <span class="blue">복잡한 아이콘.png</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 복잡도가 있는 아이콘 및 투명도가 필요하거나 작은 크기의 이미지는 png 파일 확장자를 사용한다
+                        </td>
+                        <td>
+                            <span class="red">게시판 상세페이지에 사용되는 대표적인 이미지.png</span><br>
+                            <span class="red">화면에 큰 비율로 차지하는 이미지.png</span>
+                        </td>
+                        <td>
+                            <span class="blue">복잡한 아이콘.png</span><br>
+                            <span class="blue">반투명 이미지.png</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 사진같은 용도로 사용되는 이미지는 jpg 파일 확장자를 사용한다.
+                        </td>
+                        <td>
+                            <span class="red">아이콘.jpg</span><br>
+                            <span class="red">반투명 이미지.jpg</span>
+                        </td>
+                        <td>
+                            <span class="blue">게시판 상세페이지에 사용되는 대표적인 이미지.jpg</span><br>
+                            <span class="blue">화면에 큰 비율로 차지하는 이미지.jpg</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 아이콘 네이밍 규칙 : images/common/폴더에 저장하며 [ic_사이즈_용도_상태.png]파일로 구성한다.
+                        </td>
+                        <td>
+                            <span class="red">ic_24_more.jpg</span><br>
+                            <span class="red">icon_chk_on.png</span>
+                        </td>
+                        <td>
+                            <span class="blue">ic_24_more.png</span><br>
+                            <span class="blue">ic_16_chk_on.png</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 컨텐츠 이미지 네이밍 규칙 : images/contents/폴더에 저장하며 [cont_1depth_2depth_3depth_number.확장자 => cont_00_00_00_000.확장자] 형식으로 저장한다.
+                        </td>
+                        <td>
+                            <span class="red">sub_01_03_02_001.png</span><br>
+                            <span class="red">cont_2_21.jpg</span>
+                        </td>
+                        <td>
+                            <span class="blue">cont_01_03_02_001.png</span><br>
+                            <span class="blue">cont_02_021.jpg</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 샘플 이미지 : images/temp/폴더에 저장하며 [temp_자유.확장자] 형식으로 저장한다.
+                        </td>
+                        <td>
+                            <span class="red">thum02_back.png</span><br>
+                            <span class="red">notice_icon.jpg</span>
+                        </td>
+                        <td>
+                            <span class="blue">temp_board01.png</span><br>
+                            <span class="blue">temp_thum_02.jpg</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="gH3Tit">이미지 파일명 예약어</div>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:30%;">
+                    <col style="width:40%;">
+                    <col style="width:40%;">
+                </colgroup>
+                <caption>네이밍 규칙</caption>
+                <thead>
+                    <tr>
+                        <th>파일명</th>
+                        <th>설명</th>
+                        <th>샘플</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ic_</td>
+                        <td>아이콘</td>
+                        <td>ic_24_more.svg, ic_32_allmenu.svg</td>
+                    </tr>
+                    <tr>
+                        <td>cont_</td>
+                        <td>콘텐츠이미지</td>
+                        <td>cont_01_03_02_001.jpg, cont_04_001.png</td>
+                    </tr>
+                    <tr>
+                        <td>temp_</td>
+                        <td>샘플이미지</td>
+                        <td>temp_thum_01.png, temp_board_thum.jpg</td>
+                    </tr>
+                    <tr>
+                        <td>main_</td>
+                        <td>메인에서만 사용되는 이미지</td>
+                        <td>main_visual_01.png, main_banner_02.png</td>
+                    </tr>
+                    <tr>
+                        <td>_arr</td>
+                        <td>화살표</td>
+                        <td>ic_24_arr.svg, ic_42_arr_up.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_up</td>
+                        <td>위</td>
+                        <td>ic_42_arr_up.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_dn</td>
+                        <td>아래</td>
+                        <td>ic_24_slt_dn.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_chk</td>
+                        <td>체크박스</td>
+                        <td>ic_16_chk_on.svg, ic_16_chk_off.svg, ic_16_chk_dis_on.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_rdo</td>
+                        <td>라디오박스</td>
+                        <td>ic_16_rdo_on.svg, ic_16_rdo_off.svg, ic_16_rdo_dis_on.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_slt</td>
+                        <td>섹렉트</td>
+                        <td>ic_24_slt_dn.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_on</td>
+                        <td>checked</td>
+                        <td>ic_16_rdo_on.svg, ic_16_chk_on.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_off</td>
+                        <td>unchecked</td>
+                        <td>ic_16_rdo_off.svg, ic_16_chk_off.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_dis</td>
+                        <td>비활성화</td>
+                        <td>ic_16_rdo_dis_on.svg, ic_16_rdo_dis_off.svg</td>
+                    </tr>
+                    <tr>
+                        <td>_bg</td>
+                        <td>background</td>
+                        <td>main_visual_bg.jpg, top_visual_bg.png</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="gH3Tit">scss 폴더 및 파일 규칙</div>
+        <ul class="gList">
+            <li class="gItem">scss는 scss폴더에 일괄 저장한다</li>
+            <li class="gItem">기본은 style.scss로 규합한다.</li>
+        </ul>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:300px;">
+                    <col style="width:300px;">
+                </colgroup>
+                <caption>네이밍 규칙</caption>
+                <thead>
+                    <tr>
+                        <th>설명</th>
+                        <th>잘못된 예</th>
+                        <th>올바른 예</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            - ./scss/_font.scss : 폰트 관련 css로 내부에는 @font-face로 폰트를 불러오는 부분만 사용된다.
+                        </td>
+                        <td>
+                            <span class="red">input {}</span><br>
+                            <span class="red">.cptMain {}</span>
+                        </td>
+                        <td>
+                            <span class="blue">@font-face {}</span><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/_default.scss : base 및 reset 관련 css를 담고 있다
+                        </td>
+                        <td>
+                            <span class="red">.lytLayout {}</span><br>
+                            <span class="red">.btn.red {}</span>
+                        </td>
+                        <td>
+                            <span class="blue">input[type=radio] {}</span><br>
+                            <span class="blue">* {}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/common/_print.scss : 프린트시 사용되는 css로 프린트 할 때 달라지는 화면으로 구성하는 부분을 담고 있다
+                        </td>
+                        <td>
+                            <span class="red">모바일로 변할 때 화면 변경</span><br>
+                        </td>
+                        <td>
+                            <span class="blue">프린트 할 때 GNB, Footer 제거</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/common/_maxin.scss : 각종 scss 관련 함수 모음
+                        </td>
+                        <td>
+                            <span class="red">모바일로 변할 때 화면 변경</span><br>
+                        </td>
+                        <td>
+                            <span class="blue">@mixin, @function</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/common/_formBasic.scscs : 각종 input, button 및 form에 사용되는 css
+                        </td>
+                        <td>
+                            <span class="red">com, cpt, mod, lyt</span><br>
+                        </td>
+                        <td>
+                            <span class="blue">.iptText, .iptSlt, .frmGroup, 등</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/common/_common.scss : [_com+name.scss]를 import하는 허브로 사용
+                        </td>
+                        <td>
+                            <span class="red">_common.scss 내에 @import로 다른 _com파일 불러오는 것 외에 사용금지</span>
+                        </td>
+                        <td>
+                            <span class="blue">@import 'comBoardList';	//게시판 리스트</span><br>
+                            <span class="blue">@import 'comBoardView';	//게시판 상세</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/component/_component.scss : [_cpt+name.scss]를 import하는 허브로 사용
+                        </td>
+                        <td>
+                            <span class="red">_component.scss 내에 @import로 다른 _cpt파일 불러오는 것 외에 사용금지</span>
+                        </td>
+                        <td>
+                            <span class="blue">@import 'cptLogin';     //로그인</span><br>
+                            <span class="blue">@import 'cptLoading1';//로딩 타입1</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/layout/_layout.scss : 직접 사용하거나 [_lyt+name.scss]를 import하는 허브로 사용
+                        </td>
+                        <td></td>
+                        <td>
+                            <span class="blue">_layout.scss 내에 @import로 다른 _lyt파일 불러오거나 해당 파일에 직접 layout관련 CSS작성 가능</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - ./scss/module/_module.scss : [_mod+name.scss]를 import하는 허브로 사용
+                        </td>
+                        <td>
+                            <span class="red">_module.scss 내에 @import로 다른 _mod파일 불러오는 것 외에 사용금지</span>
+                        </td>
+                        <td>
+                            <span class="blue">@import 'modPopup';      //팝업</span><br>
+                            <span class="blue">@import 'modTab';           //탭</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 생성되는 scss 파일명은 사용하는 가장 상위 class name과 동일하다
+                            - 특별한 경우가 아니면 상위 클래스 하나에 scss 파일 하나만 담는다
+                        </td>
+                        <td>
+                            <span class="red">.cptAbout => _comAbout.scss</span>
+                            <span class="red">.comPaging, .comBoard => _board.scss</span>
+                        </td>
+                        <td>
+                            <span class="blue">.comPaging => _comPaging.scss</span><br>
+                            <span class="blue">.cptAbout => _cptAbout.scss</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - scss생성하는 파일은 이름의 접두사에 따라 각 폴더에 맞게 저장한다
+                        </td>
+                        <td>
+                            <span class="red">.comPaging => ./scss/component/_comPaging.scss</span>
+                            <span class="red">.cptLogin => ./scss/module/_cptLogin.scss</span>
+                        </td>
+                        <td>
+                            <span class="blue">.comPaging => ./scss/common/_comPaging.scss</span><br>
+                            <span class="blue">.cptLogin => ./scss/component/_cptLogin.scss</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            - 추가 스타일 파일이 필요한 경우 [style_용도.scss] 파일을 생성하고 용도에 해당하는 동일한 이름의 폴더를 생성한다.
+                        </td>
+                        <td>
+                            <span class="red">style2.scss 생성</span><br>
+                            <span class="red">style_cha.scss 생성후 기존 사용하던 common/comPaging.scss @import하기</span>
+                        </td>
+                        <td>
+                            <span class="blue">style_eng.scss => ./scss/eng/common.scss 파일 @import하기</span><br>
+                            <span class="blue">./scss/eng/common.scss => 기존 comPaging에 정의한 부분 수정</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             - eng등의 용도에 맞는 폴더 생성 후 _common.scss, _component.scss 등을 만들고 각종 com, cpt관련 scss 파일을 생성하여 관리한다.
+                        </td>
+                        <td>
+                            <span class="red">./scss/eng/_comPaging 만들고 style_eng.scss에서 @import 불가능</span>
+                        </td>
+                        <td>
+                            <span class="blue">./scss/eng/common/_common.scss 가능</span><br>
+                            <span class="blue">./scss/eng/_common.scss 가능</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="guideTitle">◎ CSS 네이밍 규칙</div>
+    <div class="guideCont">
+        <ul class="gList">
+            <li class="gItem">css 네이밍룰 : 카멜표기법 사용 (단어와 단어의 사이를 대문자로 구분, swiper등 플러그인 사용 예외)
+                ex:cptLogin, comPaging, comBoardBasic
+            </li>
+            <li class="gItem">접두사 : lyt, mod, cpt, com, frm, ipt, btn등</li>
+            <li class="gItem">종속개념 : 접두사는 상위 개념이 있으며 상위는 하위를 포함할 수 있지만 하위에 상위를 포함할 수 없음</li>
+            <li class="gItem">가장 상위 클래스는 [접두사 + 용도 + 영역] 형식으로 구성됨</li>
+        </ul>
+
+        <div class="gH3Tit">CSS 접두사</div>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:150px;">
+                    <col style="width:auto;">
+                    <col style="width:300px;">
+                </colgroup>
+                <caption>네이밍 규칙</caption>
+                <thead>
+                    <tr>
+                        <th>접두사</th>
+                        <th>설명</th>
+                        <th>샘플</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ct md">
+                            lyt + 이름
+                        </td>
+                        <td class="md">
+                            전체적인 공통 레이아웃을 정의하는데 사용, 기본 레이아웃은 1개지만 상황에 따라 2개이상 만들어 질 수 있다 <br>
+                            ex) 공통레이아웃, 통합로그인
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">.lytLayout, lytUnified</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            mod + 이름
+                        </td>
+                        <td class="md">
+                            특정 기능을 포함하며 내부에 1개 이상의 cpt를 포함할 수 있는 모듈<br>
+                            ex) 팝업, 아코디언, 탭메뉴 등
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">.modPopup, .modAccordian, .modTabMenu</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            cpt + 이름
+                        </td>
+                        <td class="md">
+                            콤포넌트 하나의 독립된 콘텐츠 덩어리, 혹은 com과 조합된 콘텐츠 덩어리<br>
+                            ex) 컨텐츠 페이지, 게시판 리스트 페이지, QnA, 등
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">.cptAbout, .cptBoardList, .cptQna</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            com + 이름
+                        </td>
+                        <td class="md">
+                            서로 다른 cpt안에 공통으로 들어가는 콘텐츠를 따로 묶어 표현하기 위해 만들어짐
+                            자주 반복되며 각 페이지에 걸처 공통으로 자주 들어가는 콘텐츠 묶음. <br>
+                            ex) 게시판 리스트, 댓글, 타이틀, 반복되는 콘텐츠, 등
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">.comBoardList, .comPaging, .comTextList</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            frm + 이름
+                        </td>
+                        <td class="md">
+                            com보다 더 반복으로 사용되는 작은 그룹으로 각종 form에 사용되는 부분<br>
+                            ex) 초기화 버튼이 있는 input text, 검색 + 버튼, radio group, 등
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">.frmGroup, frmChoBox, frmBox</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            ipt + 이름
+                        </td>
+                        <td class="md">
+                            사용자 정의에 맞게 사용되는 form<br>
+                            ex) 인풋박스, 체크박스, 라디오박스, 등
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">.iptText, .iptSlt, .iptChk, .iptRdo</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            class="btn 칼라 크기"
+                        </td>
+                        <td class="md">
+                            버튼의 최소 정의, 이후 칼라와 크기 class를 통해 색과 모양을 변경한다.<br>
+                            ex) CRUD버튼, 그룹상단 버튼, 테이블 내부 버튼, 등<br>
+                                칼라 : red, blue, dark, bLine, gLine, 등<br>
+                                크기 : xl, lg, md, sm, xs, 등<br>
+                                용도에 따른 변경 (테이블 내부) : .comTable .btn {버튼 형태를 새로 정의}
+                        </td>
+                        <td class="ct md">
+                            <span class="blue">class="btn blue lg"</span><br>
+                            <span class="blue">class="btn bLine md"</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="gH3Tit">CSS 접두사 종속관계 마크업 예시</div>
+        <div class="gGroup">
+<style>
+.lytGuideLayout {width: 96%; margin: 2%; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #efefef;}
+.lytGuideLayout .guideLayoutArea {}
+.lytGuideLayout .guideLayoutTop {}
+.lytGuideLayout .guideLayoutCont {}
+.lytGuideLayout .guideLayoutBtm {}
+
+.modGuideTab {width: 100%; margin-top: 10px; padding: 10px; color: #fff; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #aa50ff;;}
+.modGuideTab .guideTabText {width: 100%; margin-bottom: 10px; font-size: 16px; text-align: center;}
+.modGuideTab .guideTabMenuGroup {width: 100%; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #e6cbff; display: flex; gap: 5px;}
+.modGuideTab .guideTabMenuGroup .guideTabMenu button {width: 100px; padding: 5px 10px; color: #000; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #eee;}
+.modGuideTab .guideTabMenuGroup .guideTabMenu:first-child button {color: #fff; background: #aa50ff;}
+
+.cptGuideGnb {width: 100%; margin-top: 10px; padding: 10px; color: #fff; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #529ef5;}
+.cptGuideContents {width: 100%; margin-top: 10px; padding: 10px; color: #fff; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #529ef5;}
+.cptGuideContents .guideContText {width: 100%; margin-bottom: 10px; font-size: 16px; text-align: center;}
+.cptGuideFooter {width: 100%; margin-top: 10px; padding: 10px; color: #fff; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #529ef5;}
+
+.comGuideVisual {width: 100%; height: 100px; margin-top: 10px; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #c3ffb5;}
+.comGuideH1 {width: 100%; margin-top: 10px; padding: 10px; font-size: 32px; font-weight: 700; text-align: center;}
+.comGuideBc {width: 100%; margin-top: 10px; padding: 10px; font-size: 12px; text-align: right;}
+.comGuideGroupTop {width: 100%; margin-top: 10px; padding: 10px; color: #000; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #c3ffb5;}
+.comGuideBoardList {width: 100%; height: 100px; margin-top: 10px; color: #000; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #c3ffb5;}
+.comGuidePaging {width: 100%; margin-top: 10px; color: #000; padding: 10px; font-size: 16px; text-align: center; border: 1px solid #999; border-radius: 5px; background: #c3ffb5;}
+.comGuideBtnGroup {width: 100%; margin-top: 10px; display: flex; justify-content: flex-end; gap: 5px;}
+.comGuideBtnGroup .btn {height: 36px; padding: 0 10px; line-height: 1;}
+</style>
+            <div class="gView"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+<div class="lytGuideLayout">
+    lytGuideLayout
+    <div class="guideLayoutArea">
+        <div class="guideLayoutTop">
+            <div class="cptGuideGnb">
+                cptGuideGnb (상단 메뉴 영역)
+            </div>
+        </div>
+        <div class="guideLayoutCont">
+            <div class="comGuideVisual">
+                comGuideVisual (서브 비주얼 영역)
+            </div>
+            <div class="comGuideBc">
+                comGuideBc (home > depth1 > depth2 > depth3)
+            </div>
+            <div class="comGuideH1">
+                comGuideH1 (대 타이틀)
+            </div>
+            <div class="modGuideTab">
+                <div class="guideTabText">modGuideTab</div>
+                <ul class="guideTabMenuGroup">
+                    <li class="guideTabMenu"><button type="button">Tab Name</button></li>
+                    <li class="guideTabMenu"><button type="button">Tab Name</button></li>
+                </ul>
+                <div class="guideTabCont">
+                    <div class="cptGuideContents">
+                        <div class="guideContText">cptGuideContents</div>
+                        <div class="comGuideGroupTop">comGuideGroupTop (게시판 상단)</div>
+                        <div class="comGuideBoardList">comGuideBoardList (게시판 리스트)</div>
+                        <div class="comGuidePaging">comGuidePaging (<< < 1 2 3 4 5 > >>)</div>
+                        <div class="comGuideBtnGroup">
+                            <button class="btn red md">btn in comGuideBtnGroup</button>
+                            <button class="btn dark md">btn in comGuideBtnGroup</button>
+                            <button class="btn dkLine md">btn in comGuideBtnGroup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="guideLayoutBtm">
+            <div class="cptGuideFooter">
+                cptGuideFooter
+            </div>
+        </div>
+    </div>
+</div></textarea>
+            </div>
+        </div>
+
+        <div class="gH3Tit">CSS 그룹핑 클래스 네이밍</div>
+        <ul class="gList">
+            <li class="gItem">그룹 예시 : nameArea > nameSection > nameGroup > nameBox</li>
+            <li class="gItem">리스트 예시 (필요시) : nameList + nameItem, nameStep + nameItem (깊은 곳에서는 li에 따로 class를 부여하지 않아도 되지만 mod, cpt등에 사용할 시 가능한 li에도 class를 붙여 li 중복을 피해 사용)</li>
+            <li class="gItem">제목+내용 예시 : nameTit + nameDesc, nameTitle + nameMessage (nameCont같이 중복의 우려가 많은 class는 낮은 곳에 사용 할 경우 name이 중복되지 않게 주의)</li>
+        </ul>
+        
+        <div class="gH3Tit">CSS 속성 선언 순서</div>
+        <div class="gTable">
+            <table>
+                <colgroup>
+                    <col style="width:50%;">
+                    <col style="width:auto;">
+                </colgroup>
+                <caption>네이밍 규칙</caption>
+                <thead>
+                    <tr>
+                        <th>형태(상위 우선)</th>
+                        <th>속성(같은 구성 내 순서는 상관없음)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ct md">
+                            크기
+                        </td>
+                        <td class="ct md">
+                            width, height, max-width, min-height 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            여백, 들여쓰기
+                        </td>
+                        <td class="ct md">
+                            margin, margin-left, padding, padding-top 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            폰트, 칼라
+                        </td>
+                        <td class="ct md">
+                            font-size, color, font-family, font-weight 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            자간, 행간
+                        </td>
+                        <td class="ct md">
+                            line-height, letter-spacing 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            정렬
+                        </td>
+                        <td class="ct md">
+                            text-align, vertical-align 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            라인, 배경
+                        </td>
+                        <td class="ct md">
+                            border, border-radius, background 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            표시방식
+                        </td>
+                        <td class="ct md">
+                            display, visibility, overflow 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            표시방식(flex 일 때)
+                        </td>
+                        <td class="ct md">
+                            align-item, justify-content, flex, gap 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            위치
+                        </td>
+                        <td class="ct md">
+                            position, left, top, 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            변형, 왜곡
+                        </td>
+                        <td class="ct md">
+                            transform, translate, scale, rotate 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            모션, 애니메이션
+                        </td>
+                        <td class="ct md">
+                            translate, delay, animation 등
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ct md">
+                            기타
+                        </td>
+                        <td class="ct md">
+                            cursor, pointer-events, box-sizing 등
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+        <div class="gH3Tit">주석 처리 방식</div>
+
+        
+        -html 주석, 수정 후 주석, 수정 날짜 주석 표기 주기
+        -css  주석
+        -js   주석
+
+    </div>
+
+    <div class="guideTitle">◎ 주석 처리 규칙</div>
+    <div class="guideCont">
+        <div class="gH3Tit">html 주석</div>
+        <div class="gGroup">
+            <div class="gView" style="display: none;"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+<div class="on"><!-- 주석 한줄 : 해당 태그 및 클래스를 설명 할 때 사용 -->
+    <span>주석 한줄 짜리는 태그 옆에 붙여서 사용</span>
+</div>
+
+<!-- 여러줄에 대한 주석은 시작 태그 위와 끝 태그 아래에 사용 -->
+<ul class="">
+    <li>끝 주석은 시작 주석 앞에 //표시를 넣어 끝이란 것을 알림</li>
+</ul>
+<!-- //여러줄에 대한 주석은 시작 태그 위와 끝 태그 아래에 사용 -->
+
+<div>
+    수정된 사항의 주석은 옆에 날짜와 수정을 표시 <!-- 2025.08.29 수정 -->
+    <!-- 삭제는 전체 주석 처리 후 마지막에 날짜 및 삭제를 표시  2025.08.29 삭제 -->
+</div>
+</textarea>
+            </div>
+        </div>
+
+        <div class="gH3Tit">css 주석</div>
+        <div class="gGroup">
+            <div class="gView" style="display: none;"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+/* --------------------------- 게시판 리스트 (영역에 대한 설명) ---------------------------*/
+/* 작은영역에서만 사용 */
+//작업공간에서만 확인 필요할 때 사용 <= 이표시는 scss에서만 주석으로 가능하며 style.css에는 표시되지 않음
+수정 날짜 표시법 : YYYYMMDD 수정, 삭제, 추가
+</textarea>
+            </div>
+        </div>
+
+        <div class="gH3Tit">js 주석</div>
+        <div class="gGroup">
+            <div class="gView" style="display: none;"></div>
+            <div class="gCode">
+                <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+                <textarea class="codeGuide" style="display:none;">
+//라인 처음에 붙이면 아래 스크립트 묶음에 대한 설명
+function onAction() {
+    console.log("aaa");
+}
+
+onAction(); //옆에 붙이면 해당 스크립트에 대한 설명
+수정 날짜 표시법 : YYYYMMDD 수정, 삭제, 추가
+</textarea>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="guideTitle">◎ 퍼블리싱 사용 툴</div>
+    <div class="guideCont">
+        <div class="gH3Tit">Gulp : 스트리밍 빌드 시스템 (scss등 사용)</div>
+        - 소스 코드 유지보수의 편의를 위한 워크 플로우<br>
+        - CLI version: 2.3.0 <br>
+        - Local version: 4.0.2 <br>
+
+        <div class="gH3Tit">Gulp 사용방법</div>
+        - 터미널에서 gulp 사용으로 로컬서버 활성화해서 사용 <br>
+        - project/src/에서 작업하면 실제 산출물은 dist폴더에 쌓임 <br>
+        - gulpfile.js 참고
+
+        <div class="gH3Tit">Gulp 사용하지 않고 기존 레거시(정적 퍼블리싱) 방식으로 사용할 경우</div>
+        - src폴더는 무시, 최종 배포본인 dist 폴더에서 직접 작업
+
+    </div>
+
+    <div class="guideTitle">◎ 퍼블리싱 파일리스트</div>
+        <div class="gH3Tit">Filelist URL</div>
+        - 국문 : ./project/dist/guide/filelist.html <br>
+        - 일문 : ./project/dist/guide/filelist_jpn.html <br>
+        - 영문 : ./project/dist/guide/filelist_eng.html <br>
+        - 중국어 번체 : ./project/dist/guide/filelist_cht.html <br>
+        - 중국어 간체 : ./project/dist/guide/filelist_chs.html
+
+
+
+
+</div>
+
+
+
+<!-- //가이드 그룹 -->
+
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        

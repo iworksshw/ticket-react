@@ -1,0 +1,187 @@
+
+<style>
+@font-face {
+    font-family: 'D2Coding';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.guideBox {margin-top:40px;}
+.guideTitle {font-size:18px; font-weight:500;}
+.guideCont {margin-top:10px;}
+.gGroup {margin-top:20px;}
+.gText {font-size:14px;}
+.gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+</style>
+
+<div class="cptPubGuide">
+<div class="guideArea">
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">CRUD 사용 위치 (그리드, 테이블 아래)</div>
+<div class="guideCont">
+<div class="gText">
+    - 기본은 페이지 최하단에 사용
+    <br>- 좌측, 우측, 좌우측에 사용 가능
+    <br>- 버튼의 Class는 "btn"를 사용합니다.
+    <br>- addClass로 색깔 및 모양을 사용합니다. (blue, purple, bLine, gLine, 등)
+    <br>- 정렬기능 있는 태그를 빼지 않습니다. (alignL, alignC, alignR)
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<!-- 그리드/테이블 하단 버튼 양측 -->  
+<div class="comBtnGroup">
+    <div class="alignL">
+        <div class="btnBox">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn blue lg">서명하기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+        </div>
+    </div>
+    <div class="alignC">
+        <div class="btnBox">
+            <button type="button" class="btn blue lg">저장</button>
+            <button type="button" class="btn dkLine lg">승인하기</button>
+        </div>
+    </div>
+    <div class="alignR">
+        <div class="btnBox">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+            <button type="button" class="btn blue lg">저장</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="comBtnGroup">
+    <div class="alignL">
+        <div class="btnBox">
+            <button type="button" class="btn dkLine">미리보기</button>
+            <button type="button" class="btn blue">서명하기</button>
+            <button type="button" class="btn gLine">취소</button>
+        </div>
+    </div>
+    <div class="alignC">
+        <div class="btnBox">
+            <button type="button" class="btn blue">저장</button>
+            <button type="button" class="btn dkLine">승인하기</button>
+        </div>
+    </div>
+    <div class="alignR">
+        <div class="btnBox">
+            <button type="button" class="btn dkLine">미리보기</button>
+            <button type="button" class="btn gLine">취소</button>
+            <button type="button" class="btn blue">저장</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="comBtnGroup">
+    <div class="alignL">
+        <div class="btnBox">
+            <button type="button" class="btn dkLine sm">미리보기</button>
+            <button type="button" class="btn blue sm">서명하기</button>
+            <button type="button" class="btn gLine sm">취소</button>
+        </div>
+    </div>
+    <div class="alignC">
+        <div class="btnBox">
+            <button type="button" class="btn blue sm">저장</button>
+            <button type="button" class="btn dkLine sm">승인하기</button>
+        </div>
+    </div>
+    <div class="alignR">
+        <div class="btnBox">
+            <button type="button" class="btn dkLine sm">미리보기</button>
+            <button type="button" class="btn gLine sm">취소</button>
+            <button type="button" class="btn blue sm">저장</button>
+        </div>
+    </div>
+</div>
+        
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">고정형</div>
+<div class="guideCont">
+<div class="gText">
+    width가 정해져있는 고정형입니다.
+    <br>*샘플 1: 초대형 버튼 + (모바일) 모든 버튼이 100%인 경우
+    <br>*샘플 2: 큰 버튼 + (모바일) 첫번째 버튼은 100%, 두번째, 세번째 버튼은 50%인경우
+    <br>*샘플 3: 보통 버튼 + (모바일) 첫번째, 두번째 버튼은 50%, 세번째 버튼은 100%인경우
+    <br> - class btnBox 태그라인에 여러가지 변형 class 형태를 부여해 더 다양하게 만들 수 있습니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<!-- CTA버튼 -->  
+<div class="comBtnGroup">
+    <div class="alignC">
+        <div class="btnBox cta oneOne">
+            <button type="button" class="btn dkLine xl">미리보기</button>
+            <button type="button" class="btn blue xl">서명하기</button>
+            <button type="button" class="btn gLine xl">취소</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="comBtnGroup">
+    <div class="alignC">
+        <div class="btnBox cta oneTwo">
+            <button type="button" class="btn dkLine lg">미리보기</button>
+            <button type="button" class="btn blue lg">서명하기</button>
+            <button type="button" class="btn gLine lg">취소</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="comBtnGroup">
+    <div class="alignC">
+        <div class="btnBox cta twoOne">
+            <button type="button" class="btn dkLine">미리보기</button>
+            <button type="button" class="btn blue">서명하기</button>
+            <button type="button" class="btn gLine">취소</button>
+        </div>
+    </div>
+</div>
+<br>  
+<div class="comBtnGroup">
+    <div class="alignC">
+        <div class="btnBox cta">
+            <button type="button" class="btn dkLine sm">미리보기</button>
+            <button type="button" class="btn blue sm">서명하기</button>
+            <button type="button" class="btn gLine sm">취소</button>
+        </div>
+    </div>
+</div>
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+    
+</div>
+</div>
+
+    
+<script>
+    run();
+</script>
+    
+        

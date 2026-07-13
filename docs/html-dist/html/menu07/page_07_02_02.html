@@ -1,0 +1,599 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="K">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/favicon/favicon.ico">
+	<meta property="og:url" content="https://">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>공항철도</title>
+
+	<link rel="preload" as="style" href="/common/css/swiper.css">
+	<link rel="preload" as="style" href="/common/css/style.css">
+
+	<link rel="stylesheet" href="/common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="/common/css/tui-time-picker.css">	
+	<link rel="stylesheet" href="/common/css/swiper.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="/common/js/swiper.js"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/tui-date-picker.js"></script>
+	<script src="/common/js/tui-time-picker.js"></script>
+	
+	
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytMember">
+    <div class="memberArea">
+
+        <!-- 상단영역 -->
+        <div class="memberTop">
+            <!-- Top -->
+            <div class="topArea">
+                <div class="logoArea"><a href="javascript:void(0)"><img src="/common/images/common/ic_142_logo.svg" alt="arex 로고"></a></div>
+                <div class="langArea">
+                    <div class="comDropdown">
+                        <div class="dropArea">
+                            <button class="btnDrop" type="button">
+                                한국어
+                            </button>
+                            <ul class="dropMenu">
+                                <li><a href="javascript:void(0)">영어</a></li>
+                                <li><a href="javascript:void(0)">중국어</a></li>
+                                <li><a href="javascript:void(0)">일본어</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 20250922 버튼 추가 -->
+                    <button class="closeBtn" type="button">
+                        <span class="blind">전체메뉴 닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="memberContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="memberSubCont">
+
+                <div class="cptLogin">
+                    <div class="loginArea">
+                        <div class="loginTop">
+                            <h1 class="loginHeadline">회원 이용약관 재동의</h1>
+                            <p class="loginHeadText">공항철도 서비스 이용을 위해 <em>‘이용약관’</em>을 확인하고 재동의 해주세요.</p>
+                        </div>
+                        <div class="loginCont">
+                            
+                            <!-- 약관 영역 -->
+                            <div class="comAgreement">
+                                <div class="agAll">
+                                    <div class="frmGroup">
+                                        <div class="frmChoBox">
+                                            <input id="agreeAll" type="checkbox" class="iptChk lg txt">
+                                            <label for="agreeAll" class="iptLbl">전체동의</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frmInner">
+                                    <ul>
+                                        <li>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <input id="chk01" type="checkbox" class="iptChk tiny">
+                                                    <label for="chk01" class="iptLbl">
+                                                        <span>[필수]</span> 홈페이지 이용약관 동의
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="showDesc">
+                                                <button type="button" class="btn btnText ico" onclick="openPopup('terms01');">내용보기</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <input id="chk02" type="checkbox" class="iptChk tiny">
+                                                    <label for="chk02" class="iptLbl">
+                                                        <span>[필수]</span> 개인정보 수집/이용 동의
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="showDesc">
+                                                <button type="button" class="btn btnText ico" onclick="openPopup('terms02');">내용보기</button>
+                                            </div>
+                                        </li>
+                                        <!-- 251106 수정 -->
+                                        <li>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <input id="chk03" type="checkbox" class="iptChk tiny">
+                                                    <label for="chk03" class="iptLbl">
+                                                        <span>[선택]</span> 개인정보 수집/이용 동의
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="showDesc">
+                                                <button type="button" class="btn btnText ico" onclick="openPopup('terms03');">내용보기</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <input id="chk04" type="checkbox" class="iptChk tiny">
+                                                    <label for="chk04" class="iptLbl">
+                                                        <span>[선택]</span> 마케팅 활용 및 광고성 정보 수신
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="showDesc">
+                                                <button type="button" class="btn btnText ico" onclick="openPopup('terms04');">내용보기</button>
+                                            </div>
+                                        </li>    
+                                        <!--// 251106 수정 -->                                    
+                                    </ul>
+                                </div>
+
+                                <div class="agreeInfo">
+                                    <p>
+                                        전체 동의에는 필수 및 선택 정보수집에 대한 동의가 포함되어 있으며, 개별적인 동의 선택도 가능합니다. 선택항목에 대한 동의를 거부하시더라도 필수 서비스 이용은 가능합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="btmBtn">
+                                <button type="button" class="btn dkLine lg">취소</button>
+                                <button type="button" class="btn dkBlue lg">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 20250922 삭제-->
+        <!-- <div class="memberFooter">
+            <div class="footerArea">
+                <ul class="btmMenuList">
+                    <li class="btmItem"><a href="javascript:void(0)" class="link">여객운송약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">누리집 이용약관</a></li>
+                    <li class="btmItem"><a href="javascript:void(0)">개인정보보처리방침</a></li>
+                </ul>
+                <div class="copyright">
+                    Copyright (C) 2025 by AIRPORT RAILROAD Co., Ltd. All rights reserved.
+                </div>
+            </div>
+        </div> -->
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 251106 수정 -->
+<!-- 홈페이지 이용약관 -->
+<div id="terms01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('terms01');">닫기</button>
+                    <div class="popTitle">[필수] 홈페이지 이용약관</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <!-- 20251208 약관 변경 -->
+                        <div class="cptAgCover">
+                            <div class="titMain">
+                                제1장 총칙
+                            </div>
+
+                            <div class="tit02">
+                                제1조(목적)
+                            </div>
+
+                            <div class="desc">
+                                본 약관은 공항철도주식회사(이하 “회사”라 한다)의 누리집(모바일 포함), 직통열차 승차권 예약발매, 상품 구매, 회의실 등에서 제공하는 모든 서비스(이하 “서비스”라 한다)의 이용조건 및 절차, 이용자와 회사의 권리, 의무, 책임사항과 기타 필요한 사항을 규정함을 목적으로 한다.
+                            </div>
+
+                            <div class="tit02">
+                                제2조(용어의 정의)
+                            </div>
+
+                            <div class="desc">
+                                본 약관에서 사용하는 용어의 정의는 다음과 같다.
+                                <div class="desc02">
+                                    1. “서비스”란 이용자가 공항철도 누리집(www.arex.or.kr), 예약발매 누리집(www.airportrailroad.com), 모바일 애플리케이션(공항철도 직통열차) 상에서 체험학습, 회의실예약, 직통열차 승차권의 예약발매 및 승차권 확인 등 기타 부가 기능을 이용할 수 있도록 회사가 제공하는 서비스를 말한다.
+                                    <br>2. “상품판매 서비스”란 회사가 재화 또는 용역(이하 “재화 등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 온라인몰을 운영하는 사업자의 의미로도 사용한다.
+                                    <br>3. “이용자”란 약관에 따라 본 서비스를 이용하는 회원 및 비회원을 말한다.
+                                    <br>4. “회원”이란 회사가 정한 회원가입 절차에 따라 계정 등록을 마친 이용자로서 서비스를 이용할 수 있는 자를 말한다.
+                                    <br>5. “비회원”이란 회원가입을 하지 않고, 별도의 전자우편 인증 절차를 거쳐 본 서비스를 이용하는 이용자를 말한다.
+                                </div>
+                            </div>
+
+                            <div class="tit02">
+                                제3조(약관의 명시와 효력 및 변경)
+                            </div>
+
+                            <div class="desc">
+                                ① 본 약관은 누리집에 게시하거나 기타의 방법으로 이용자에게 공지함으로써 효력을 발생한다.
+                                <br>② 본 약관이 변경될 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 서비스의 초기화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지한다. 다만, 이용자에게 불리하게 약관내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지한다. 이 경우 회사는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 이용자가 알기 쉽도록 표시한다.
+                                <br>③ 회사가 제2항에 따라 통지하면, 회원은 공지일로부터 개정약관 시행일 7일 후까지 거부의사를 표시하지 아니하면 동의한 것으로 봅니다. 회원이 개정약관에 동의하지 않을 경우 회원은 제10조 제1항의 규정에 따라 회원을 탈퇴할 수 있다.
+                                <br>④ 상품판매 서비스와 관련한 약관의 명시와 설명 및 개정사항은 아래와 같다.
+                                <div class="desc02">
+                                    1. 상품판매 서비스는 이 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소(소비자의 불만을 처리할 수 있는 곳의 주소를 포함), 전화번호, 전자우편주소, 사업자등록번호, 통신판매업 신고번호, 개인정보관리책임자등을 이용자가 쉽게 알 수 있도록 예약발매 누리집(www.airportrailroad.com), 모바일 애플리케이션의 초기 서비스화면(전면)에 게시한다. 다만, 약관의 내용은 이용자가 연결화면을 통하여 볼 수 있도록 할 수 있다.
+                                    <br>2. 상품판매 서비스는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회, 배송책임, 환불조건 등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공하여 이용자의 확인을 구하여야 한다.
+                                    <br>3. 상품판매 서비스는 「전자상거래 등에서의 소비자보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「전자문서 및 전자거래기본법」, 「전자금융거래법」, 「전자서명법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」, 「방문판매 등에 관한 법률」, 「소비자기본법」 등 관련 법을 위배하지 않는 범위에서 이 약관을 개정할 수 있다.
+                                    <br>4. 상품판매 서비스 관련 약관을 개정할 경우에는 그 개정약관은 그 적용일자 이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에 대해서는 개정 전의 약관조항이 그대로 적용된다. 다만 이미 계약을 체결한 이용자가 개정약관 조항의 적용을 받기를 원하는 뜻을 제2항에 의한 개정약관의 공지기간 내에 온라인몰에 송신하여 온라인몰의 동의를 받은 경우에는 개정약관 조항이 적용된다.
+                                    <br>5. 이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제 등에 관한 법률, 공정거래위원회가 정하는 전자상거래 등에서의 소비자 보호지침 및 관계법령 또는 상관례에 따른다.
+                                </div>
+                            </div>
+
+                            <div class="titMain">
+                                제2장 회원의 가입 및 관리
+                            </div>
+
+                            <div class="tit02">
+                                제4조(회원가입절차)
+                            </div>
+
+                            <div class="desc02">
+                                ① 본 약관을 읽고 “이용약관에 동의합니다.”를 선택하고 “동의함” 버튼을 누르면 약관에 동의한 것으로 한다.
+                                <br>② 회원가입은 서비스 이용자가 제1항과 같이 동의한 후, 회사가 정한 온라인 회원가입 신청서에 회원 ID를 포함한 필수사항을 입력하고 전자우편으로 발송된 인증번호를 추가로 입력하는 방법으로 한다.
+                            </div>
+
+                            <div class="tit02">
+                                제5조(회원등록의 성립과 유보 및 거절)
+                            </div>
+
+                            <div class="desc">
+                                ① 회원등록은 제4조에 정한 절차에 의한 서비스 이용자의 회원가입 신청과 회사의 회원등록 승낙에 의하여 성립한다. 회사는 회원가입 신청자가 필수사항 등을 성실히 입력하여 가입신청을 완료하였을 때에는 필요한 사항을 확인한 후 지체 없이 이를 승낙하여야 한다.
+                                <br>② 회사는 아래 각 호에 해당하는 경우에는 회원등록의 승낙을 유보 또는 거절, 취소 할 수 있다.
+                                <div class="desc02">
+                                    1. 제공서비스 설비용량에 현실적인 여유가 없는 경우
+                                    <br>2. 서비스를 제공하기에는 기술적으로 문제가 있다고 판단되는 경우
+                                    <br>3. 기타 회사가 재정적, 기술적으로 필요하다고 인정하는 경우
+                                    <br>4. 가입신청서의 내용을 허위로 기재한 경우
+                                    <br>5. 기타 회사가 관련법령 등을 기준으로 하여 명백하게 사회질서 및 미풍양속에 반할 우려가 있음을 인정하는 경우
+                                </div>
+                            </div>
+
+                            <div class="tit02">
+                                제6조(회원 ID 등의 관리책임)
+                            </div>
+
+                            <div class="desc">
+                                ① 회원은 서비스 이용을 위한 회원 ID, 비밀번호의 관리에 대한 책임, 본인 ID의 제3자에 의한 부정사용 등 회원의 고의·과실로 인해 발생하는 모든 불이익에 대한 책임을 부담한다. 단, 이것이 회사의 고의·과실로 인하여 야기된 경우는 회사가 책임을 부담한다.
+                                <br>② 회원은 회원 ID, 비밀번호 및 추가정보 등을 도난당하거나 제3자가 사용하고 있음을 인지한 경우에는 즉시 본인의 비밀번호를 수정하는 등의 조치를 취하여야하며 즉시 이를 회사에 통보하여 회사의 안내를 따라야한다.
+                            </div>
+
+                            <div class="tit02">
+                                제7조(개인정보보호)
+                            </div>
+
+                            <div class="desc">
+                                ① 회사는 정보통신망법 및 개인정보보호법 등 관계 법령과 누리집 초기화면에 게시한 개인정보처리방침에 따라 이용자의 개인정보를 보호하기 위해 노력한다.
+                                <br>② 회사의 공식 사이트 이외에 링크된 사이트나 공식사이트 내에 포함된 제3자가 운영하는 웹페이지에서는 회사의 개인정보처리방침이 적용되지 않는다. 해당 사이트 및 웹페이지의 개인정보처리(취급)방침을 확인할 책임은 회원에게 있으며, 회사는 이에 대하여 책임을 부담하지 않는다.
+                            </div>
+
+                            <div class="tit02">
+                                제8조(개인정보의 수집 제한)
+                            </div>
+
+                            <div class="desc">
+                                ① 회사는 관련 법령 및 본 약관에 해당하는 사유로 개인정보를 수집하는 경우에는 그 목적에 필요한 최소한의 개인정보를 수집하여야 한다. 이 경우 최소한의 개인정보 수집이라는 입증책임은 회사가 부담한다.
+                                <br>② 회사는 정보주체의 동의를 받아 개인정보를 수집하는 경우 필요한 최소한의 정보 외의 개인정보 수집에는 동의하지 아니할 수 있다는 사실을 구체적으로 알리고 개인정보를 수집하여야 한다.
+                                <br>③ 회사는 정보주체가 필요한 최소한의 정보 외의 개인정보 수집에 동의하지 아니한다는 이유로 정보주체에게 재화 또는 서비스의 제공을 거부하여서는 아니 된다.
+                            </div>
+
+                            <div class="tit02">
+                                제9조(회원정보의 변경)
+                            </div>
+
+                            <div class="desc">
+                                ① 회원은 회원관리 메뉴를 통하여 언제든지 본인의 개인정보를 열람하고 수정할 수 있다. 다만, 서비스 관리를 위해 반드시 필요한 전자우편의 변경을 원하는 경우 탈퇴 후 재가입하여야 한다.
+                                <br>② 회원은 가입 시 등록한 정보가 변경되었을 경우 즉시 회원정보 메뉴에서 이를 변경하여야하며, 회사는 회원이 회원정보를 변경하지 아니하여 발생한 손해에 대하여 책임을 부담하지 않는다.
+                            </div>
+
+                            <div class="tit02">
+                                제10조(탈퇴 및 이용계약의 해지)
+                            </div>
+
+                            <div class="desc">
+                                ① 탈퇴하고자 하는 회원은 해당 서비스 누리집의 회원정보에서 탈퇴를 신청할 수 있다.
+                                <br>② 제1항의 경우에 예약, 발매한 승차권 또는 기타 부가서비스를 통해 구입한 상품이나 서비스가 있는 경우에는 탈퇴신청이 불가할 수 있으며 이 경우에는 이용을 완료한 후, 또는 환불한 후에 탈퇴 신청을 하여야한다.
+                                <br>③ 회사는 개인정보처리방침에 명시한 보유기간에 따라 회원자격을 상실시킬 수 있다.
+                                <br>④ 회원이 탈퇴를 신청할 경우 회사는 관련법 및 회사의 개인정보처리방침에 따라 회사가 회원정보를 보유하는 경우를 제외하고, 재가입 방지를 위해 일정기간 이후 회원의 모든 데이터를 소멸한다.
+                            </div>
+
+                            <div class="tit02">
+                                제11조(손해배상책임 및 법정손해배상의 청구)
+                            </div>
+
+                            <div class="desc">
+                                정보주체는 회사가 관련법령 및 본 약관을 위반한 행위로 손해를 입으면 회사에게 손해배상을 청구할 수 있으며 손해배상 청구금액은 개인정보 보호법 등 관련법령에 따른다. 이 경우 회사는 고의 또는 과실이 없음을 입증하지 아니하면 책임을 면할 수 없다.
+                            </div>
+
+                            <div class="titMain">
+                                제3장 서비스의 이용
+                            </div>
+
+                            <div class="tit02">
+                                제12조(서비스 이용)
+                            </div>
+
+                            <div class="desc">
+                                ① 서비스 이용은 회사의 서비스 사용승낙 이후부터 가능하다.
+                                <br>② 만 14세 미만의 미성년자는 회원 가입을 제한한다.
+                                <br>③ 서비스 이용시간은 회사의 업무상 또는 기술상 불가능한 경우를 제외하고는 연중무휴 1일 24시간(00:00-24:00)으로 함을 원칙으로 한다. 다만, 서비스설비의 정기점검 등의 사유로 회사가 서비스를 특정범위로 분할하여 별도로 날짜와 시간을 정할 수 있다.
+                            </div>
+
+                            <div class="tit02">
+                                제13조(서비스 내용변경 통지 등)
+                            </div>
+
+                            <div class="desc">
+                                ① 회사가 제공하는 서비스는 회사의 사정에 따라 그 내용이 변경되거나 종료 될 수 있다. 서비스가 종료된 경우 회사는 회원이 등록한 전자우편을 통하여 서비스 내용의 변경 사항 또는 종료를 통지 할 수 있다.
+                                <br>② 불특정 다수인을 상대로 통지할 필요가 있는 경우 공지사항 페이지를 통하여 공지할 수 있다.
+                                <br>③ 회원에게 중대한 영향을 미치는 사항과 유료서비스가 종료되는 경우는 등록된 전자우편을 통하여 개별통지 한다.
+                            </div>
+
+                            <div class="tit02">
+                                제14조(권리의 귀속 및 저작물의 이용)
+                            </div>
+
+                            <div class="desc">
+                                ① 이용자가 서비스 내에 게시한 게시물 등(이하 "게시물 등"이라 한다)의 저작권은 해당 게시물의 저작자에게 귀속된다.
+                                <br>② 게시물 등은 회사가 운영하는 인터넷 사이트 및 모바일 애플리케이션을 통해 노출될 수 있으며, 검색결과 내지 관련 프로모션 등에도 노출될 수 있다. 해당 노출을 위해 필요한 범위 내에서는 일부 수정, 복제, 편집되어 게시될 수 있다. 이 경우, 회사는 저작권법 규정을 준수하며, 이용자는 언제든지 고객센터 또는 각 서비스 내 관리기능을 통해 해당 게시물 등에 대해 삭제, 검색결과 제외, 비공개 등의 조치를 취할 수 있다.
+                                <br>③ 회사는 제2항 이외의 방법으로 회원의 게시물 등을 이용하고자 하는 경우에는 전화, 팩스, 전자우편 등을 통해 사전에 회원의 동의를 얻는다.
+                            </div>
+
+                            <div class="tit02">
+                                제15조(서비스 이용의 제한 및 중지)
+                            </div>
+
+                            <div class="desc">
+                                ① 회사는 아래 각 호의 1에 해당하는 사유가 발생한 경우에는 이용자의 서비스 이용을 제한하거나 중지시킬 수 있다.
+                                <div class="desc02">
+                                    1. 이용자가 회사 서비스의 운영을 고의·과실로 방해하는 경우
+                                    <br>2. 이용자가 제42조의 의무를 위반한 경우
+                                    <br>3. 서비스용 설비 점검, 보수 또는 공사로 인하여 부득이한 경우
+                                    <br>4. 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우
+                                    <br>5. 국가비상사태, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 서비스 이용에 지장이 있는 경우
+                                    <br>6. 기타 중대한 사유로 인하여 회사가 서비스 제공을 지속하는 것이 부적당 하다고 인정하는 경우
+                                </div>
+                                ② 회사는 전항의 규정에 의하여 서비스의 이용을 제한하거나 중지한 때에는 그 사유 및 제한 기간 등을 이용자에게 알려야 한다.
+                                <br>③ 제18조 제1항에 의해 회사가 회원과의 계약을 해지하고 탈퇴시키기로 결정한 경우 회사는 회원의 탈퇴 처리 전에 이를 통지하고, 회원은 회사의 통지를 받은 날로부터 30일 이내에 이에 대한 항변의 기회를 가진다.
+                                <br>④ 상품판매 서비스 중단에 관련한 사항은 아래와 같다.
+                                <div class="desc02">
+                                    1. 상품판매 서비스는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상한다. 단, 제1항의 사유 등 회사의 고의 또는 과실이 없는 경우는 그러하지 아니한다.
+                                    <br>2. 사업종목의 전환, 사업의 포기, 업체 간의 통합 등의 이유로 서비스를 제공할 수 없게 되는 경우에는 상품판매 서비스는 제13조에 정한 방법으로 이용자에게 통지하고 구매한 이용자에게 전액 환불한다.
+                                </div>
+                            </div>
+
+                            <div class="tit02">
+                                제16조(이용요금의 납입)
+                            </div>
+
+                            <div class="desc">
+                                ① 이용자는 회사가 제공하는 서비스 중 유료서비스를 이용하는 경우 이용대금을 납부한 후 서비스를 이용하는 것을 원칙으로 한다.
+                                <br>② 회사는 결제의 이행을 위하여 반드시 필요한 이용자의 개인정보를 추가적으로 요구할 수 있으며, 이용자는 회사가 요구하는 개인정보를 정확하게 제공하여야 한다.
+                                <br>③ 회사는 이용자가 허위 또는 부정확하게 제공한 개인정보로 인하여 이용자에게 발생하는 손해에 대하여 이용자의 손해를 배상할 책임을 부담하지 않는다.
+                            </div>
+
+                            <div class="tit02">
+                                제17조(이용요금의 환불 및 이의제기)
+                            </div>
+
+                            <div class="desc">
+                                이용요금의 환불 및 이의제기에 대한 사항은 콘텐츠별 서비스 약관에 따른다.
+                            </div>
+
+                            <div class="tit02">
+                                제18조(이용계약의 해지)
+                            </div>
+
+                            <div class="desc">
+                                ① 이용자가 제42조의 규정을 위반한 경우 회사는 일방적으로 본 계약을 해지할 수 있고, 이로 인하여 서비스 운영에 손해가 발생한 경우 이에 대한 민, 형사상 책임을 물을 수 있다.
+                                <br>② 유료서비스 이용계약의 해지는 이용자의 서비스 해지신청 및 회사의 승낙에 의해 성립한다. 회사가 승낙한 시점에 해지의 효과는 발생하며 환불할 금액이 있는 경우 제17조의 규정을 따른다.
+                                <br>③ 본 이용 계약이 해지된 경우 이용자의 “게시물 등” 본인 계정에 등록된 ‘게시물 등’ 일체는 삭제되지만 다른 이용자에 의해 스크랩되어 게시되거나 공용 게시판에 등록된 ‘게시물 등’은 삭제되지 않는다.
+                            </div>
+                        </div>      
+                        <!-- //20251208 약관 변경 -->                                  
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 개인정보 수집 및 이용(필수) -->
+<div id="terms02" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('terms02');">닫기</button>
+                    <div class="popTitle">[필수] 개인정보 수집 및 이용</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="pubTitH4">
+                            <h4>홈페이지 개인정보 수집 및 이용 안내</h4>
+                        </div>
+                        <div class="pubTitH4">
+                            <h4>[개인정보의 수집 목적 및 이용]</h4>
+                        </div>
+                        <div class="agText">
+                            가. 서비스 제공을 위한 계약의 이행<br>
+                            승차권 예약 및 발권, 회원 관리, 고지사항 전달, 콘텐츠 제공, 금융거래 본인인증 및 금융서비스<br>
+                            나. 회원 관리<br>
+                            회원 서비스 이용, 개인식별, 민원처리, 서비스 이용 통계
+                        </div>    
+                        <div class="pubTitH4">
+                            <h4>[개인정보 수집 항목]</h4>
+                        </div>
+                        <div class="agText">
+                            가. 회원가입 시<br>
+                            -필수항목 : 이메일(아이디), 비밀번호, 승차권 확인번호<br>
+                            -서비스 이용기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록
+                        </div> 
+                        <div class="pubTitH4">
+                            <h4>[개인정보의 보유 및 이용기간]</h4>
+                        </div>
+                        <div class="agText">
+                            가. 이용자가 제공한 개인정보는 홈페이지 탈퇴 즉시 파기됩니다.<br>
+                            나. 공항철도의 개인정보의 보유 기간 및 파기 절차는 공항철도 개인정보처리방침에 따릅니다.<br>
+                            다. 전자상거래등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존하여야 하는 기록은 일정 기간 보관 후 파기합니다.<br>
+                            -계약 또는 청약철회 등에 관한 기록 (보존기간 : 5년) : 전자상거래 등에서의 소비자 보호에 관한 법률<br>
+                            -대금결제 및 재화 등의 공급에 관한 기록 (보존기간 : 5년) : 전자상거래 등에서의 소비자 보호에 관한 법률<br>
+                            -소비자의 불만 또는 분쟁처리에 관한 기록 (보존기간 : 3년) : 전자상거래 등에서의 소비자 보호에 관한 법률<br>
+                            -홈페이지 방문에 관한 기록 (보존 기간: 3개월) : 통신비밀보호법<br>
+                            라. 전항의 규정에도 불구하고, 상법, 전자상거래 등에서의 소비자 보호에 관한 법률 등 관계법령의 규정에 따라 보존의 필요성이 있는 경우 혹은 요금의 정산, 소송 등 법적 분쟁에 대비하기 위하여 개인정보에 대한 계속적인 보유의 필요성이 있어 보유목적, 기간, 보유하는 개인정보 항목을 명시하여 고지한 경우 등은 이용자의 개인정보를 보관할 수 있습니다.
+                        </div> 
+                        <div class="pubTitH4">
+                            <h4>[개인정보 수집 및 이용 동의 거부]</h4>
+                        </div>
+                        <div class="agText">
+                            개인정보 수집·이용에 동의하지 않으실 수 있으며 필수정보 미동의 시 회원가입이 불가합니다.
+                        </div>                                                                                                             
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 개인정보 수집 및 이용(선택) -->
+<div id="terms03" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('terms03');">닫기</button>
+                    <div class="popTitle">[선택] 개인정보 수집 및 이용</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="pubTitH4">
+                            <h4>홈페이지 개인정보 수집 및 이용 안내</h4>
+                        </div>
+                        <div class="pubTitH4">
+                            <h4>[개인정보의 수집 목적 및 이용]</h4>
+                        </div>
+                        <div class="agText">
+                            가. 서비스 제공을 위한 계약의 이행<br>
+                            승차권 예약 및 발권, 회원 관리, 고지사항 전달, 콘텐츠 제공, 금융거래 본인인증 및 금융서비스<br>
+                            나. 회원 관리<br>
+                            회원 서비스 이용, 개인식별, 민원처리, 서비스 이용 통계
+                        </div>    
+                        <div class="pubTitH4">
+                            <h4>[개인정보 수집 항목]</h4>
+                        </div>
+                        <div class="agText">
+                            가. 회원가입 시<br>
+                            -선택항목 : 국적, 출생년도, 성별 , 전화번호<br>
+                            - (즐겨쓰는 카드 등록 시) 신용카드 번호, 유효기간
+                        </div> 
+                        <div class="pubTitH4">
+                            <h4>[개인정보의 보유 및 이용기간]</h4>
+                        </div>
+                        <div class="agText">
+                            - 홈페이지 탈퇴 즉시
+                        </div> 
+                        <div class="pubTitH4">
+                            <h4>[개인정보 수집 및 이용 동의 거부]</h4>
+                        </div>
+                        <div class="agText">
+                            선택항목 수집에 동의하지 않아도 회원가입이 가능하며, 선택정보를 입력하지 않아도 홈페이지 회원으로서 불이익은 없습니다.
+                        </div>                                                                                                             
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 마케팅 활용 및 광고성 정보 수신 -->
+<div id="terms04" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('terms04');">닫기</button>
+                    <div class="popTitle">[선택] 마케팅 활용 및 광고성 정보 수신</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="agText">
+                            동의하지 않아도 회원가입이 가능하며 회원정보 관리에서 동의 철회가 가능합니다.
+                        </div>                         
+                        <div class="pubTitH4">
+                            <h4>[이용목적]</h4>
+                        </div>
+                        <div class="agText">
+                            - 기타 새로운 서비스, 신상품이나 이벤트 정보 안내
+                        </div>                        
+                        <div class="pubTitH4">
+                            <h4>[수집(활용)항목]</h4>
+                        </div>    
+                        <div class="agText">
+                            - 이메일(아이디)
+                        </div> 
+                        <div class="pubTitH4">
+                            <h4>[이용기간]</h4>
+                        </div>
+                        <div class="agText">
+                            - 홈페이지 탈퇴 즉시<br>
+                            - 동의 철회 시 까지
+                        </div> 
+                        <div class="pubTitH4">
+                            <h4>[개인정보 수집 및 이용 동의 거부]</h4>
+                        </div>
+                        <div class="agText">
+                            위의 개인정보 목적 외 이용에 대한 동의를 거부할 권리가 있습니다. 동의를 거부할 경우 마케팅 활용 및 광고성 정보를 제공받지 못합니다.
+                        </div>                                                                                                             
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// 251106 수정 -->
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

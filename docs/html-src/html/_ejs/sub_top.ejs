@@ -1,0 +1,37 @@
+<%
+var url = locals.url ? locals.url : '../../';
+var subTitle = locals.subTitle ? locals.subTitle : '';
+var deps = locals.deps ? locals.deps : [];
+%>
+
+                <div class="cptSubTop">
+                    <div class="subTopArea">
+                        <div class="comBreadCrumb">
+                            <div class="bcArea">
+                                <ul class="bcList">
+                                    <li class="bcItem"><a href="/main">홈</a></li>
+                                    <% deps.forEach(function(dep){ %>
+                                    <li class="bcItem">
+                                        <div class="comDropdown comDropdownLocn">
+                                            <div class="dropArea">
+                                                <button type="button" class="btnDrop" title="열림"><%= dep.label %></button>
+                                                <ul class="dropMenu" style="display: none;">
+                                                    <% dep.items.forEach(function(item){ %>
+                                                    <li><a href="<%= item.href %>"><%= item.text %></a></li>
+                                                    <% }); %>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comSubTitle">
+                            <div class="subTitleArea">
+                                <h1><%= subTitle %></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>

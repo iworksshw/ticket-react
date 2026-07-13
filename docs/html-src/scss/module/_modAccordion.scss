@@ -1,0 +1,67 @@
+/* ----------------------------------- 아코디언 ----------------------------------- */
+.modAccordion {
+    width: 100%; 
+    .accoArea {}
+    
+    .qnaBox {
+        margin-top: 28px;
+        &:first-child {margin-top: 0;}
+
+        @include media('mobile') {
+            margin-top: 20px;
+            &:first-child {margin-top: 0;}
+        }
+
+        .question {
+            width: 100%; padding: 20px 28px; display: flex; flex-direction: row; align-items: flex-start; align-self: stretch; border-radius: 8px; background: var(--bg-color-B100, #EEF7FF);
+            color: var(--text-color-G800, #24272D); font-size: rem(20px); font-weight: 700; line-height: 160%; margin-top: 60px; position: relative; cursor: pointer; text-align: left;
+
+            &:first-child{margin-top: 0;}
+            &::before {
+                content: "Q."; display: inline-block; color: var(--text-color-B500, #107AF2); padding-right: 8px;
+                    
+            } 
+            &::after {
+                content:""; width: 24px; height: 24px; background: url(/common/images/common/ic_24_qna_up.svg) center no-repeat; display: block; position: absolute; right: 28px; top: calc(50% - 12px); transform: rotate(180deg); transition: all 0.3s;
+            }
+            &.on {
+                &::after {transform: rotate(0);}
+            }
+
+            @include media('mobile') {
+                margin-top: 40px; padding: 12px 60px 12px 16px; font-size: rem(18px); 
+                &::after {
+                    right: 16px;
+                }
+            }
+
+        }
+
+        .answer { 
+            font-size: 0; display: none; overflow: hidden;
+            
+            > * {
+                font-size: rem(18px);
+            }
+            
+            
+            .answerText {
+                width: 100%; padding: 28px 28px 32px; 
+                @include media('mobile') {
+                    padding: 20px 16px 20px;
+                }  
+            }
+        }
+
+    }
+
+    &.allOpen {
+        .qnaBox {
+            .question {
+                cursor: default;
+                &::after { display: none; }
+            }
+            .answer { display: block; }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+//텍스트 : 느낌표 아이콘
+.pubCaption {
+    margin-top: 12px; padding-left: 28px; color: var(--text-color-B500, #107AF2); font-size: rem(16px); font-style: normal; font-weight: 600; line-height: 160%; display: block; position: relative;
+    &::before {content:""; width: 24px; height: 24px; background: url(/common/images/common/ic_24_caption.svg) center no-repeat; display: block; position: absolute; left: 0; top: -1px;}
+    & + .pubCaption {margin-top: 8px;}
+    &.gray {
+        color: var(--text-color-G700, #3A3F49);
+        &::before {background: url(/common/images/common/ic_24_caption_gray.svg) center no-repeat;}
+    }
+}

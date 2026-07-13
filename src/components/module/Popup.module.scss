@@ -1,0 +1,194 @@
+@use "@/styles/etc/mixin" as *;
+
+//팝업
+/* ----------------------------------- 팝업 ----------------------------------- */
+.modPopup {
+    width:100%; height:100%; display:none; justify-content:center; align-items:center; position:fixed; left:0; top:0; z-index:9000;
+
+    &.on {
+        display:flex;
+        .popupDim { opacity:0; animation:popOpenDimd 0.2s linear forwards; }
+        .popupArea .popupInMotion { opacity:1; transform:scale(0.8); animation:popOpenScale 0.2s linear forwards; }
+    }
+    @keyframes popOpenDimd { to { opacity:1; } }
+    @keyframes popOpenScale {
+        from { opacity:0; transform:scale(0.8); }
+        to   { opacity:1; transform:scale(1); }
+    }
+
+    *::-webkit-scrollbar { width:6px; background:#fff; }
+    *::-webkit-scrollbar-thumb { background:rgba(87,87,87,0.54); border-radius:8px; overflow:hidden; }
+
+    .popupDim { width:100%; height:100%; font-size:0; background:rgba(0,0,0,0.8); position:fixed; left:0; top:0; }
+
+    &.tini .popupArea { max-width:400px; }
+    &.sm   .popupArea { max-width:580px; }
+    &.md   .popupArea { max-width:700px; }
+    &.lg   .popupArea { max-width:1000px; }
+    &.xl   .popupArea { max-width:1200px; }
+
+    &.tini {
+        .popupContArea { 
+            .popTitle {padding: 16px 80px 16px 24px;}
+            .popCont {padding: 40px 24px 24px 24px;}
+            .popBtm {padding: 24px;}
+         }
+    }
+
+    .popupArea {
+        width:100%; max-width:700px;
+        @include media('mobile') { max-width:100% !important; }
+    }
+
+    .popupContainer { overflow:hidden; border:1px solid #999; border-radius:20px; }
+
+    // flex 체인으로 magic number 없이 높이 자동 계산
+    .popupContArea {
+        display:flex; flex-direction:column;
+        max-height:calc(100vh - 80px); // 상하 40px씩 여백
+        position:relative; background:#fff;
+
+        .btnPopClose {
+            width:40px; height:40px; font-size:0; border:0;
+            background:url(/images/common/ic_24_close.svg) center no-repeat;
+            position:absolute; right:20px; top:10px; z-index:10;
+        }
+
+        .popTitle {
+            flex-shrink:0;
+            width:100%; min-height:60px; padding:16px 80px 16px 32px;
+            font-size:rem(24px); font-weight:600; color:#000; line-height:150%;
+            border-bottom:1px solid var(--border-color-G400); word-break:keep-all; background:#fff;
+            &.shadow { box-shadow:0 3px 10px 0 rgba(0,0,0,0.1); }
+            @include media('mobile') { font-size:rem(22px); }
+        }
+
+        // flex:1 + min-height:0 으로 남은 공간 채우며 스크롤
+        .popCont {
+            flex:1; min-height:0;
+            padding:32px 32px 24px; overflow-y:auto;
+            -webkit-overflow-scrolling:touch; // iOS 구형 관성 스크롤
+            overscroll-behavior:contain;      // 스크롤 체이닝 방지
+            scrollbar-gutter:stable;          // 스크롤바 공간 미리 확보 (레이아웃 쉬프트 방지)
+            background:#fff;
+
+            @include media('mobile') { padding:20px; }
+        }
+
+        .popBtm {
+            flex-shrink:0;
+            width:100%; padding:24px 32px;
+
+            @include media('mobile') {
+                padding:16px;
+                // iOS 홈 인디케이터 영역 침범 방지
+                padding-bottom:calc(16px + env(safe-area-inset-bottom));
+            }
+
+            > div {
+                > div {
+                    display:flex; flex-flow:row nowrap; align-items:center; justify-content:flex-start; gap:12px;
+                    button { width:160px; height:53px; line-height:53px; }
+
+                    @include media('mobile') {
+                        &.cta {
+                            &:has(.btn:nth-child(2)) {
+                                .btn, .btn.xl, .btn.lg, .btn.sm { width:100%; }
+                                &:has(.btn:nth-child(4)) { flex-wrap:wrap; }
+                            }
+                            .btn, .btn.xl, .btn.lg, .btn.sm { width:100%; flex-shrink:1; }
+                            &.oneOne {
+                                flex-wrap:wrap;
+                                .btn { width:100% !important; }
+                            }
+                            &.oneTwo {
+                                flex-wrap:wrap;
+                                .btn:nth-child(1) { width:100% !important; }
+                                .btn:nth-child(2), .btn:nth-child(3) { width:calc(50% - 4px) !important; }
+                            }
+                            &.twoOne {
+                                flex-wrap:wrap;
+                                .btn:nth-child(1), .btn:nth-child(2) { width:calc(50% - 4px) !important; }
+                                .btn:nth-child(3) { width:100% !important; }
+                            }
+                            &.twoTwo {
+                                flex-wrap:wrap;
+                                .btn:nth-child(n) { width:calc(50% - 4px) !important; }
+                            }
+                        }
+                    }
+                }
+
+                &.alignC > div {
+                    justify-content:center;
+                    &.printBox {
+                        .closeBtn { @include media('mobile') { width:100% !important; } }
+                        .printBtn { @include media('mobile') { display:none !important; } }
+                    }
+                }
+            }
+        }
+    }
+
+    &.fullCase {
+        .popupArea { @include media('pcs') { height:100dvh; max-height:100dvh; } }
+        .popupContainer { @include media('pcs') { height:100dvh; max-height:100dvh !important; border-radius:0 !important; } }
+        .popupContArea {
+            background:var(--bg-color-G100) !important;
+            @include media('pcs') { background:#fff !important; height:100dvh; max-height:100dvh !important; }
+            .popTitle { background:#fff !important; }
+            .popCont {
+                background:var(--bg-color-G100) !important;
+                @include media('pcs') { background:#fff !important; }
+            }
+            .popBtm { background:#fff !important; @include media('pcs') { display:none; } }
+        }
+    }
+
+    &.gall {
+        .popupArea {
+            max-width:800px;
+            .popupContainer .popupContArea .popCont { width:100%; padding:0; overflow:visible; }
+        }
+    }
+
+    // 모바일: 아래서 위로 올라오는 시트 형태
+    @include media('mobile') {
+        align-items:flex-end; // 팝업을 화면 하단 기준 정렬
+
+        // tini: 모바일에서도 PC처럼 center 고정 (바텀시트 제외)
+        &.tini {
+            align-items:center;
+            &.on .popupArea { animation:none; }
+            &.on .popupInMotion { animation:popOpenScale 0.2s linear forwards; transform:scale(0.8); }
+            .popupArea { transform:none; max-width:calc(100% - 40px) !important; }
+            .popupContainer { border-radius:20px; border-bottom:1px solid #999; }
+            .popupContArea { max-height:calc(100vh - 80px); max-height:calc(100dvh - 80px); }
+        }
+
+        &.on {
+            // translateY 애니메이션 (transform 방식 → 성능 우수, GPU 가속)
+            .popupArea { animation:upPop 0.5s cubic-bezier(0.32,0.72,0,1) forwards; }
+            // PC 스케일 애니메이션 비활성화
+            .popupInMotion { animation:none !important; opacity:1 !important; transform:none !important; }
+        }
+        @keyframes upPop {
+            from { transform:translateY(100%); }
+            to   { transform:translateY(0); }
+        }
+
+        .popupArea { transform:translateY(100%); } // 닫힌 초기 위치
+
+        .popupContainer {
+            border-radius:20px 20px 0 0; // 상단만 라운드
+            border-bottom:0;             // 바닥에 붙으므로 하단 border 제거
+        }
+
+        .popupContArea {
+            // dvh: iOS 주소창 상태 반영한 동적 뷰포트 (iOS 15.4+, Android Chrome 108+)
+            // vh 폴백: 구형 브라우저 대응 (cascade 이용 - dvh 미지원 시 무시됨)
+            max-height:calc(100vh - 100px);
+            max-height:calc(100dvh - 100px);
+        }
+    }
+}
