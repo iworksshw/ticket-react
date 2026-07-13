@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DGeXAQPT.js";import{t}from"./react-3W8R1pOO.js";t();var n=e(),r=({children:e,align:t=`alignC`,isCta:r=!1,moR:i=!1,moCols:a,className:o=``})=>{let s=[t,r&&`cta`,i&&`moR`].filter(Boolean).join(` `);return(0,n.jsx)(`div`,{className:`comBtnGroup ${o}`.trim(),children:(0,n.jsx)(`div`,{className:s,"data-mo-cols":a,children:e})})};export{r as t};

@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DGeXAQPT.js";import{t}from"./react-3W8R1pOO.js";t();var n=e(),r=({children:e,isError:t,errorMsg:r})=>(0,n.jsxs)(`div`,{className:`frmGroup ${t?`error`:``}`.trim(),children:[(0,n.jsxs)(`div`,{className:`frmGroupRow`,children:[e,` `]}),t&&r&&(0,n.jsx)(`span`,{className:`errMsg line`,children:r})]});export{r as t};

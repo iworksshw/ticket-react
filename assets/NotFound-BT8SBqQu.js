@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DGeXAQPT.js";import{u as t}from"./index-PRD1pcac.js";var n=e();function r(){return(0,n.jsxs)(`div`,{style:{textAlign:`center`,padding:`50px`},children:[(0,n.jsx)(`h3`,{children:`페이지를 찾을 수 없습니다. (404)`}),(0,n.jsx)(t,{to:`/`,children:`홈으로 돌아가기`})]})}export{r as default};
