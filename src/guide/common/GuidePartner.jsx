@@ -9,7 +9,7 @@ const samplePartners = [
     title: '카페 드 스카이',
     benefitLabel: '혜택',
     benefitDesc: '음료 가격의 10% 할인 (세트메뉴, 푸드, MD 상품 제외)',
-    image: '/images/common/logo_cafeSky.png',
+    image: '/ticket-react/images/common/logo_cafeSky.png',
     alt: '카페 드 스카이 로고',
   },
   {
@@ -17,7 +17,7 @@ const samplePartners = [
     title: '더 라운지',
     benefitLabel: '혜택',
     benefitDesc: '인천국제공항라운지 43.3% 할인',
-    image: '/images/common/logo_lounge.png',
+    image: '/ticket-react/images/common/logo_lounge.png',
     alt: '더 라운지 로고',
   },
 ];

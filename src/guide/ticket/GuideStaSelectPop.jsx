@@ -18,9 +18,9 @@ const terminals = [
     stationId: 'rdo002',
     title: '인천공항 1터미널',
     airlines: [
-      { id: 'air001', name: '아시아나항공', image: '/images/temp/test01.png', alt: '아시아나항공 로고' },
-      { id: 'air002', name: '제주항공', image: '/images/temp/test02.png', alt: '제주항공 로고' },
-      { id: 'air003', name: '티웨이항공', image: '/images/temp/test03.png', alt: '티웨이항공 로고' },
+      { id: 'air001', name: '아시아나항공', image: '/ticket-react/images/temp/test01.png', alt: '아시아나항공 로고' },
+      { id: 'air002', name: '제주항공', image: '/ticket-react/images/temp/test02.png', alt: '제주항공 로고' },
+      { id: 'air003', name: '티웨이항공', image: '/ticket-react/images/temp/test03.png', alt: '티웨이항공 로고' },
     ],
   },
   {
@@ -28,8 +28,8 @@ const terminals = [
     stationId: 'rdo003',
     title: '인천공항 2터미널',
     airlines: [
-      { id: 'air004', name: '이스타항공', image: '/images/temp/test04.png', alt: '이스타항공 로고' },
-      { id: 'air005', name: '아시아나항공', image: '/images/temp/test05.png', alt: '아시아나항공 로고' },
+      { id: 'air004', name: '이스타항공', image: '/ticket-react/images/temp/test04.png', alt: '이스타항공 로고' },
+      { id: 'air005', name: '아시아나항공', image: '/ticket-react/images/temp/test05.png', alt: '아시아나항공 로고' },
     ],
   },
 ];

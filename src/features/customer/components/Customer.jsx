@@ -7,21 +7,21 @@ import styles from './Customer.module.scss';
 
 const effectList = [
   {
-    icon: '/images/common/ic_120_box_017.png',
+    icon: '/ticket-react/images/common/ic_120_box_017.png',
     num: '01',
     title: '소비자',
     titleEn: 'Consumer',
     desc: '상품 및 서비스의 선택기준이 되는 정보를 제공받고, 소비자문제 발생 시 신속하고 합리적인 해결이 가능합니다.',
   },
   {
-    icon: '/images/common/ic_120_box_018.png',
+    icon: '/ticket-react/images/common/ic_120_box_018.png',
     num: '02',
     title: '기업',
     titleEn: 'company',
     desc: '상품과 서비스 수준을 소비자 관점으로 끊임없이 개선함으로써 대·내외 경쟁력을 강화할 수 있습니다.',
   },
   {
-    icon: '/images/common/ic_120_box_019.png',
+    icon: '/ticket-react/images/common/ic_120_box_019.png',
     num: '03',
     title: '공공',
     titleEn: 'Public',
@@ -35,13 +35,13 @@ function Customer() {
       <div className={styles.customerImg}>
         <img
           className={styles.imgPc}
-          src="/images/contents/cont_04_11_01.jpg"
+          src="/ticket-react/images/contents/cont_04_11_01.jpg"
           alt="고객 서비스 헌장"
           aria-describedby="cont_04_11_01"
         />
         <img
           className={styles.imgMo}
-          src="/images/contents/cont_04_11_02.jpg"
+          src="/ticket-react/images/contents/cont_04_11_02.jpg"
           alt=""
           aria-describedby="cont_04_11_01"
         />
@@ -63,8 +63,8 @@ function Customer() {
         className={styles.ccmImg}
         items={[
           {
-            srcPc: '/images/contents/cont_04_11_02_01.jpg',
-            srcMo: '/images/contents/cont_04_11_02_02.jpg',
+            srcPc: '/ticket-react/images/contents/cont_04_11_02_01.jpg',
+            srcMo: '/ticket-react/images/contents/cont_04_11_02_02.jpg',
             alt: '소비자중심경영(ccm) 설명',
           },
         ]}
@@ -75,7 +75,7 @@ function Customer() {
       </div>
       <div className={styles.logoArea}>
         <div className={styles.logoList}>
-          <img src="/images/common/logo_kftc.svg" alt="공정거래위원회 로고" />
+          <img src="/ticket-react/images/common/logo_kftc.svg" alt="공정거래위원회 로고" />
           <p className={styles.logoTxt}>
             <a href="https://www.ftc.go.kr/www/index.do" target="_blank" rel="noopener noreferrer" title="새 창 열림">
               인증기관
@@ -83,7 +83,7 @@ function Customer() {
           </p>
         </div>
         <div className={styles.logoList}>
-          <img src="/images/common/logo_kca.svg" alt="한국소비자원 로고" />
+          <img src="/ticket-react/images/common/logo_kca.svg" alt="한국소비자원 로고" />
           <p className={styles.logoTxt}>
             <a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer" title="새 창 열림">
               운영기관
@@ -132,7 +132,7 @@ function Customer() {
       </div>
       <InfoBox
         className={styles.certiArea}
-        imgSrc="/images/contents/cont_04_11_03_09.jpg"
+        imgSrc="/ticket-react/images/contents/cont_04_11_03_09.jpg"
         imgAlt="CCM 도입 선포식 행사에서 단체로 화이팅 자세를 취하고 있는 모습"
         desc={
           <ul className="pubTextList">
@@ -155,8 +155,8 @@ function Customer() {
       <ImgWrap
         items={[
           {
-            srcPc: '/images/contents/cont_04_11_03_01.jpg',
-            srcMo: '/images/contents/cont_04_11_03_02.jpg',
+            srcPc: '/ticket-react/images/contents/cont_04_11_03_01.jpg',
+            srcMo: '/ticket-react/images/contents/cont_04_11_03_02.jpg',
             alt: '소비자중심경영(ccm) 인증서(국문/영문)',
           },
         ]}

@@ -19,7 +19,7 @@
 
                 &.member {
                     &::before {
-                        content:''; position:absolute; top: 40px; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/images/common/ic_120_box_025.png)0 0 no-repeat;  background-size:contain;
+                        content:''; position:absolute; top: 40px; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/ticket-react/images/common/ic_120_box_025.png)0 0 no-repeat;  background-size:contain;
 
                         @include media ('mobile') {
                             width:100px; height:100px;
@@ -29,7 +29,7 @@
 
                 &.noMember {
                     &::before {
-                        content:''; position:absolute; top:40px; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/images/common/ic_120_box_026.png)0 0 no-repeat; background-size:contain;
+                        content:''; position:absolute; top:40px; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/ticket-react/images/common/ic_120_box_026.png)0 0 no-repeat; background-size:contain;
                         
                         @include media ('mobile') {
                             width:100px; height:100px;
@@ -73,7 +73,7 @@
                     label {
                         span {
                             &::before {
-                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/images/common/ic_120_box_025.png)0 0 no-repeat;  background-size:contain;
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/ticket-react/images/common/ic_120_box_025.png)0 0 no-repeat;  background-size:contain;
 
                                 @include media ('mobile') {
                                     width:100px; height:100px;
@@ -87,7 +87,7 @@
                     label {
                         span {
                             &::before {
-                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/images/common/ic_120_box_026.png)0 0 no-repeat; background-size:contain;
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/ticket-react/images/common/ic_120_box_026.png)0 0 no-repeat; background-size:contain;
                                 
                                 @include media ('mobile') {
                                     width:100px; height:100px;
@@ -101,7 +101,7 @@
                     label {
                         span {
                             &::before {
-                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/images/common/ic_120_box_027.png)0 0 no-repeat; background-size:contain;
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/ticket-react/images/common/ic_120_box_027.png)0 0 no-repeat; background-size:contain;
                                 
                                 @include media ('mobile') {
                                     width:100px; height:100px;
@@ -115,7 +115,7 @@
                     label {
                         span {
                             &::before {
-                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/images/common/ic_120_box_028.png)0 0 no-repeat; background-size:contain;
+                                content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:120px; height:120px; background:url(/ticket-react/images/common/ic_120_box_028.png)0 0 no-repeat; background-size:contain;
                                 
                                 @include media ('mobile') {
                                     width:100px; height:100px;

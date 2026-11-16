@@ -107,7 +107,7 @@
 
                             // 선택 불가능한 좌석
                             .notSltSeatRe {
-                                display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 2px 4px; background: url(/images/common/ic_50_seat_chk_re.svg) no-repeat center / contain; cursor: not-allowed;
+                                display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 2px 4px; background: url(/ticket-react/images/common/ic_50_seat_chk_re.svg) no-repeat center / contain; cursor: not-allowed;
 
                                 @include media('mobile') {
                                     transform: rotate(-90deg);
@@ -116,7 +116,7 @@
 
                             // 선택 불가능한 좌석
                             .notSltSeatFo {
-                                display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 2px 4px; background: url(/images/common/ic_50_seat_chk.svg) no-repeat center / contain; cursor: not-allowed;
+                                display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 2px 4px; background: url(/ticket-react/images/common/ic_50_seat_chk.svg) no-repeat center / contain; cursor: not-allowed;
 
                                 @include media('mobile') {
                                     transform: rotate(-90deg);
@@ -127,7 +127,7 @@
                             &.seatRe {
 
                                 label {
-                                    display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: url(/images/common/ic_50_seat_dft_re.svg) no-repeat center; cursor: pointer; transition: all 0.2s ease; 
+                                    display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: url(/ticket-react/images/common/ic_50_seat_dft_re.svg) no-repeat center; cursor: pointer; transition: all 0.2s ease; 
                                     margin: 2px 4px; padding-right: 4px; color: var(--text-color-G700); font-size: rem(16px); font-weight: 500; line-height: 160%; position: relative;
 
                                     span {
@@ -136,9 +136,9 @@
                                 }
                                 // 선택 된 좌석
                                 input:checked + label {
-                                    background: url(/images/common/ic_50_seat_slt_re.svg) no-repeat center / contain;
+                                    background: url(/ticket-react/images/common/ic_50_seat_slt_re.svg) no-repeat center / contain;
                                     &::after {
-                                        content:""; width: 18px; height: 18px; background: url(/images/common/ic_22_seat_checked.svg) center no-repeat; display: block; position: absolute; top: -4px; right: -6px; z-index: 3;
+                                        content:""; width: 18px; height: 18px; background: url(/ticket-react/images/common/ic_22_seat_checked.svg) center no-repeat; display: block; position: absolute; top: -4px; right: -6px; z-index: 3;
                                     }
 
                                     span {
@@ -148,7 +148,7 @@
 
                                 // 이미 예약 된 좌석
                                 input:disabled + label {
-                                    background: url(/images/common/ic_50_seat_chk_re.svg) no-repeat center / contain; cursor: not-allowed;
+                                    background: url(/ticket-react/images/common/ic_50_seat_chk_re.svg) no-repeat center / contain; cursor: not-allowed;
 
                                     span {
                                         //color: #fff;
@@ -160,7 +160,7 @@
                             &.seatFo{
 
                                 label {
-                                    display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: url(/images/common/ic_50_seat_dft.svg) no-repeat center; cursor: pointer; transition: all 0.2s ease; 
+                                    display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: url(/ticket-react/images/common/ic_50_seat_dft.svg) no-repeat center; cursor: pointer; transition: all 0.2s ease; 
                                     margin: 2px 4px; padding-left: 4px; color: var(--text-color-G700); font-size: rem(16px); font-weight: 500; line-height: 160%; position: relative;
 
                                     span {
@@ -169,9 +169,9 @@
                                 }
                                 // 선택 된 좌석
                                 input:checked + label {
-                                    background: url(/images/common/ic_50_seat_slt.svg) no-repeat center / contain;
+                                    background: url(/ticket-react/images/common/ic_50_seat_slt.svg) no-repeat center / contain;
                                     &::after {
-                                        content:""; width: 18px; height: 18px; background: url(/images/common/ic_22_seat_checked.svg) center no-repeat; display: block; position: absolute; top: -4px; right: -6px; z-index: 3;
+                                        content:""; width: 18px; height: 18px; background: url(/ticket-react/images/common/ic_22_seat_checked.svg) center no-repeat; display: block; position: absolute; top: -4px; right: -6px; z-index: 3;
                                     }
 
                                     span {
@@ -180,7 +180,7 @@
                                 }
                                 // 이미 예약 된 좌석
                                 input:disabled + label {
-                                    background: url(/images/common/ic_50_seat_chk.svg) no-repeat center / contain; cursor: not-allowed;
+                                    background: url(/ticket-react/images/common/ic_50_seat_chk.svg) no-repeat center / contain; cursor: not-allowed;
 
                                     span {
                                         //color: #fff;

@@ -65,19 +65,19 @@ function TicketSeat({
         <div className={styles.seatFilter}>
           <div className={styles.filterBox}>
             <p>
-              <img src="/images/common/ic_50_seat_dft.svg" alt="" />
+              <img src="/ticket-react/images/common/ic_50_seat_dft.svg" alt="" />
             </p>
             <p className={styles.txt}>순방향</p>
           </div>
           <div className={styles.filterBox}>
             <p>
-              <img src="/images/common/ic_50_seat_dft_re.svg" alt="" />
+              <img src="/ticket-react/images/common/ic_50_seat_dft_re.svg" alt="" />
             </p>
             <p className={styles.txt}>역방향</p>
           </div>
           <div className={styles.filterBox}>
             <p>
-              <img src="/images/common/ic_50_seat_chk.svg" alt="" />
+              <img src="/ticket-react/images/common/ic_50_seat_chk.svg" alt="" />
             </p>
             <p className={styles.txt}>선택불가</p>
           </div>

@@ -223,7 +223,7 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                     <label htmlFor="gnbSrchBox" className="blind">메뉴 검색</label>
                     <input id="gnbSrchBox" className={styles.srchInput} placeholder="메뉴 검색" ref={searchInputRef} />
                     <button className={styles.srchBtn} type="button" aria-label="검색 실행">
-                      <img src="/images/common/ic_26_srchBtn_b.svg" alt="" />
+                      <img src="/ticket-react/images/common/ic_26_srchBtn_b.svg" alt="" />
                     </button>
                   </div>
 
@@ -240,7 +240,7 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
 
                   <div className={styles.srchClose}>
                     <button type="button" className="srchCloseBtn" onClick={() => setSearchOpen(false)}>
-                      <img src="/images/common/ic_44_close_b.svg" alt="" />
+                      <img src="/ticket-react/images/common/ic_44_close_b.svg" alt="" />
                       <span className="blind">메뉴 검색 닫기</span>
                     </button>
                   </div>
@@ -250,11 +250,11 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
               {/* 검색/장바구니/개인정보 */}
               <div className={styles.quickArea}>
                 <button className={styles.srchBtn} type="button" onClick={openSearch}>
-                  <img src="/images/common/ic_26_srch.svg" alt="" />
+                  <img src="/ticket-react/images/common/ic_26_srch.svg" alt="" />
                   <span className="blind">메뉴검색 열기</span>
                 </button>
                 <button className={`${styles.cartBtn} ${hasCartItems ? styles.on : ''}`.trim()} type="button">
-                  <img src="/images/common/ic_26_cart.svg" alt="" />
+                  <img src="/ticket-react/images/common/ic_26_cart.svg" alt="" />
                   <span className="blind">장바구니</span>
                 </button>
 
@@ -263,7 +263,7 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                   triggerClassName="infoBtn"
                   trigger={
                     <>
-                      <img src="/images/common/ic_26_info.svg" alt="" />
+                      <img src="/ticket-react/images/common/ic_26_info.svg" alt="" />
                       <span className="blind">개인정보</span>
                     </>
                   }
@@ -280,7 +280,7 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                   ref={sitemapOpenBtnRef}
                   onClick={() => setSitemapOpen(true)}
                 >
-                  <img src="/images/common/ic_26_hamburger.svg" alt="pc 전체메뉴 열기" />
+                  <img src="/ticket-react/images/common/ic_26_hamburger.svg" alt="pc 전체메뉴 열기" />
                 </button>
                 <button
                   className={styles.moOpenBtn}
@@ -289,7 +289,7 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                   ref={moOpenBtnRef}
                   onClick={() => setMobileMenuOpen(true)}
                 >
-                  <img src="/images/common/ic_26_hamburger.svg" alt="모바일 전체메뉴 열기" />
+                  <img src="/ticket-react/images/common/ic_26_hamburger.svg" alt="모바일 전체메뉴 열기" />
                 </button>
 
                 <div className={`${styles.sitemap} ${sitemapOpen ? styles.active : ''}`.trim()}>
@@ -350,19 +350,19 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                     )}
                     <div className={styles.topArea}>
                       <button className="infoBtn" type="button">
-                        <img src="/images/common/ic_32_info_w.svg" alt="" />
+                        <img src="/ticket-react/images/common/ic_32_info_w.svg" alt="" />
                         <span className="blind">개인정보</span>
                       </button>
                       <button className={`${styles.cartBtn} ${hasCartItems ? styles.on : ''}`.trim()} type="button">
-                        <img src="/images/common/ic_32_cart_w.svg" alt="" />
+                        <img src="/ticket-react/images/common/ic_32_cart_w.svg" alt="" />
                         <span className="blind">장바구니</span>
                       </button>
                       <button className="globalBtn" type="button" onClick={() => setLangPopupOpen(true)}>
-                        <img src="/images/common/ic_32_global.svg" alt="" />
+                        <img src="/ticket-react/images/common/ic_32_global.svg" alt="" />
                         <span className="blind">언어 설정</span>
                       </button>
                       <button className="MoCloseBtn" type="button" onClick={closeMobileMenu}>
-                        <img src="/images/common/ic_32_moClose.svg" alt="" />
+                        <img src="/ticket-react/images/common/ic_32_moClose.svg" alt="" />
                         <span className="blind">모바일메뉴 닫기</span>
                       </button>
                     </div>
@@ -372,12 +372,12 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                     <div className={styles.topMenuArea}>
                       <p className={styles.list}>
                         <a href="javascript:void(0)">
-                          <img src="/images/common/ic_24_ticket_cir.svg" alt="" />승차권 예약
+                          <img src="/ticket-react/images/common/ic_24_ticket_cir.svg" alt="" />승차권 예약
                         </a>
                       </p>
                       <p className={styles.list}>
                         <a href="javascript:void(0)">
-                          <img src="/images/common/ic_24_myticket_cir.svg" alt="" />나의 승차권
+                          <img src="/ticket-react/images/common/ic_24_myticket_cir.svg" alt="" />나의 승차권
                         </a>
                       </p>
                     </div>
@@ -389,7 +389,7 @@ const Gnb = ({ navItems = defaultNavItems, variant = '', hasCartItems = true }) 
                         <label htmlFor="gnbSrchBox2" className="blind">메뉴를 검색해보세요.</label>
                         <input id="gnbSrchBox2" className={styles.srchInput} placeholder="메뉴를 검색해보세요." />
                         <button className={styles.srchBtn} type="button" aria-label="검색 실행">
-                          <img src="/images/common/ic_26_srchBtn_b.svg" alt="" />
+                          <img src="/ticket-react/images/common/ic_26_srchBtn_b.svg" alt="" />
                         </button>
                       </div>
                     </div>

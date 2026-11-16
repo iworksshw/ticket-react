@@ -7,7 +7,7 @@
     &.chkIco {
         &::before {
             content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:90px; height:90px; border-radius:50%;
-            background:var(--bg-color-B100) url(/images/common/ic_50_chk.svg)center center no-repeat;
+            background:var(--bg-color-B100) url(/ticket-react/images/common/ic_50_chk.svg)center center no-repeat;
 
             @include media("mobile") {
                 width:70px; height:70px;

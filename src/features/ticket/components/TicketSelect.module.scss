@@ -59,7 +59,7 @@
                                     position:relative; margin-right:12px; font-size:rem(20px); font-weight:600; line-height:150%; margin-bottom:0;
 
                                     &::after {
-                                        content:''; position:absolute; top:50%; right:-42px; width:30px; height:24px; background:url(/images/common/ic_30_arrow.svg)50% 50% no-repeat; transform:translateY(-50%);
+                                        content:''; position:absolute; top:50%; right:-42px; width:30px; height:24px; background:url(/ticket-react/images/common/ic_30_arrow.svg)50% 50% no-repeat; transform:translateY(-50%);
                                     }
                                 }
                             }
@@ -99,7 +99,7 @@
                         }
 
                         &::before {
-                            content:''; width:70px; height:10px; position:absolute; top:7px; left:50%; transform:translateX(-50%); background:url(/images/common/ic_70_arrow.svg)50% 50% no-repeat;
+                            content:''; width:70px; height:10px; position:absolute; top:7px; left:50%; transform:translateX(-50%); background:url(/ticket-react/images/common/ic_70_arrow.svg)50% 50% no-repeat;
 
                             @include media ('mobile') {
                                 content:'('; width:auto; height:auto; position:relative; top:auto; left:auto; transform:none; background:none;

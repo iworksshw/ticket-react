@@ -13,8 +13,8 @@ import './PayVisa.scss';
  */
 function PayVisa({
   cards = [
-    { type: 'visa', image: '/images/common/ic_240_visa.png', alt: '비자카드' },
-    { type: 'master', image: '/images/common/ic_240_master.png', alt: '마스터카드' },
+    { type: 'visa', image: '/ticket-react/images/common/ic_240_visa.png', alt: '비자카드' },
+    { type: 'master', image: '/ticket-react/images/common/ic_240_master.png', alt: '마스터카드' },
   ],
   payChangeLabel = '원화(KRW) 결제로 전환',
   onPayChange,

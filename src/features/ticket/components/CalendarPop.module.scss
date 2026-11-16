@@ -15,9 +15,9 @@
                         &.prev {
                             button {
                                 width:25px; height:25px; border:1px solid var(--border-color-G300); border-radius:50%;
-                                background:#fff url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
+                                background:#fff url(/ticket-react/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
                                 font-size:0;
-                                &:disabled {background:#ccc url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat; opacity: 0.4; cursor: auto;}
+                                &:disabled {background:#ccc url(/ticket-react/images/common/ic_20_calBtn.svg)50% 50% no-repeat; opacity: 0.4; cursor: auto;}
                             }
 
                         }
@@ -35,9 +35,9 @@
                         &.next {
                             button {
                                 width:25px; height:25px; border:1px solid var(--border-color-G300); border-radius:50%;
-                                background:#fff url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
+                                background:#fff url(/ticket-react/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
                                 transform:rotate(180deg); font-size:0;
-                                &:disabled {background:#ccc url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat; opacity: 0.4; cursor: auto;}
+                                &:disabled {background:#ccc url(/ticket-react/images/common/ic_20_calBtn.svg)50% 50% no-repeat; opacity: 0.4; cursor: auto;}
                             }
                         }
                     }
@@ -130,7 +130,7 @@
                     button {
                         position:absolute; top:50%; transform:translateY(-50%);
                         width:25px; height:25px; border:1px solid var(--border-color-G300); border-radius:50%;
-                        background:#fff url(/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
+                        background:#fff url(/ticket-react/images/common/ic_20_calBtn.svg)50% 50% no-repeat;
                         font-size:0; z-index:3;
 
                         &.next {

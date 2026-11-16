@@ -44,7 +44,7 @@ function GuideDropdown() {
           triggerClassName="infoBtn"
           trigger={
             <>
-              <img src="/images/common/ic_26_info.svg" alt="" />
+              <img src="/ticket-react/images/common/ic_26_info.svg" alt="" />
               <span className="blind">개인정보</span>
             </>
           }

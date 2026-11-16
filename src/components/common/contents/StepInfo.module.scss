@@ -15,20 +15,20 @@
             .eyebrow {width: 100%; color: var(--text-color-B500, #107AF2); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 600; line-height: 160%; display: block;}
             .tit {width: 100%; color: var(--text-color-G900, #111); text-align: center; font-size: rem(20px); font-style: normal; font-weight: 700; line-height: 160%; display: block;}
             .desc {width: 100%; margin-top: 12px; color: var(--text-color-G700, #3A3F49); text-align: center; font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; display: block;}
-            &.icon001 {background: url(/images/common/ic_120_box_002.png) center top no-repeat;}
-            &.icon002 {background: url(/images/common/ic_120_box_006.png) center top no-repeat;}
-            &.icon003 {background: url(/images/common/ic_120_box_007.png) center top no-repeat;}
-            &.icon004 {background: url(/images/common/ic_120_box_008.png) center top no-repeat;}
-            &.icon005 {background: url(/images/common/ic_120_box_009.png) center top no-repeat;}
-            &.icon006 {background: url(/images/common/ic_120_box_011.png) center top no-repeat;}
-            &.icon007 {background: url(/images/common/ic_120_box_012.png) center top no-repeat;}
-            &.icon008 {background: url(/images/common/ic_120_box_013.png) center top no-repeat;}
-            &.icon009 {background: url(/images/common/ic_120_box_001.png) center top no-repeat;}
-            &.icon010 {background: url(/images/common/ic_120_box_029.png) center top no-repeat;}
-            &.icon011 {background: url(/images/common/ic_120_box_005.png) center top no-repeat;}
-            &.icon012 {background: url(/images/common/ic_120_box_017.png) center top no-repeat;}
-            &.icon013 {background: url(/images/common/ic_120_box_030.png) center top no-repeat;}
-            &.icon014 {background: url(/images/common/ic_120_box_019.png) center top no-repeat;}
+            &.icon001 {background: url(/ticket-react/images/common/ic_120_box_002.png) center top no-repeat;}
+            &.icon002 {background: url(/ticket-react/images/common/ic_120_box_006.png) center top no-repeat;}
+            &.icon003 {background: url(/ticket-react/images/common/ic_120_box_007.png) center top no-repeat;}
+            &.icon004 {background: url(/ticket-react/images/common/ic_120_box_008.png) center top no-repeat;}
+            &.icon005 {background: url(/ticket-react/images/common/ic_120_box_009.png) center top no-repeat;}
+            &.icon006 {background: url(/ticket-react/images/common/ic_120_box_011.png) center top no-repeat;}
+            &.icon007 {background: url(/ticket-react/images/common/ic_120_box_012.png) center top no-repeat;}
+            &.icon008 {background: url(/ticket-react/images/common/ic_120_box_013.png) center top no-repeat;}
+            &.icon009 {background: url(/ticket-react/images/common/ic_120_box_001.png) center top no-repeat;}
+            &.icon010 {background: url(/ticket-react/images/common/ic_120_box_029.png) center top no-repeat;}
+            &.icon011 {background: url(/ticket-react/images/common/ic_120_box_005.png) center top no-repeat;}
+            &.icon012 {background: url(/ticket-react/images/common/ic_120_box_017.png) center top no-repeat;}
+            &.icon013 {background: url(/ticket-react/images/common/ic_120_box_030.png) center top no-repeat;}
+            &.icon014 {background: url(/ticket-react/images/common/ic_120_box_019.png) center top no-repeat;}
         }
     }
     @include media('mobile') {
@@ -50,20 +50,20 @@
                     }
                 }
 
-                &.icon001 {background: url(/images/common/ic_120_box_002.png) left 20px / 80px no-repeat;}
-                &.icon002 {background: url(/images/common/ic_120_box_006.png) left 20px / 80px no-repeat;}
-                &.icon003 {background: url(/images/common/ic_120_box_007.png) left 20px / 80px no-repeat;}
-                &.icon004 {background: url(/images/common/ic_120_box_008.png) left 20px / 80px no-repeat;}
-                &.icon005 {background: url(/images/common/ic_120_box_009.png) left 20px / 80px no-repeat;}
-                &.icon006 {background: url(/images/common/ic_120_box_011.png) left 20px / 80px no-repeat;}
-                &.icon007 {background: url(/images/common/ic_120_box_012.png) left 20px / 80px no-repeat;}
-                &.icon008 {background: url(/images/common/ic_120_box_013.png) left 20px / 80px no-repeat;}
-                &.icon009 {background: url(/images/common/ic_120_box_001.png) left 20px / 80px no-repeat;}
-                &.icon010 {background: url(/images/common/ic_120_box_029.png) left 20px / 80px no-repeat;}
-                &.icon011 {background: url(/images/common/ic_120_box_005.png) left 20px / 80px no-repeat;}
-                &.icon012 {background: url(/images/common/ic_120_box_017.png) left 20px / 80px no-repeat;}
-                &.icon013 {background: url(/images/common/ic_120_box_030.png) left 20px / 80px no-repeat;}
-                &.icon014 {background: url(/images/common/ic_120_box_019.png) left 20px / 80px no-repeat;}
+                &.icon001 {background: url(/ticket-react/images/common/ic_120_box_002.png) left 20px / 80px no-repeat;}
+                &.icon002 {background: url(/ticket-react/images/common/ic_120_box_006.png) left 20px / 80px no-repeat;}
+                &.icon003 {background: url(/ticket-react/images/common/ic_120_box_007.png) left 20px / 80px no-repeat;}
+                &.icon004 {background: url(/ticket-react/images/common/ic_120_box_008.png) left 20px / 80px no-repeat;}
+                &.icon005 {background: url(/ticket-react/images/common/ic_120_box_009.png) left 20px / 80px no-repeat;}
+                &.icon006 {background: url(/ticket-react/images/common/ic_120_box_011.png) left 20px / 80px no-repeat;}
+                &.icon007 {background: url(/ticket-react/images/common/ic_120_box_012.png) left 20px / 80px no-repeat;}
+                &.icon008 {background: url(/ticket-react/images/common/ic_120_box_013.png) left 20px / 80px no-repeat;}
+                &.icon009 {background: url(/ticket-react/images/common/ic_120_box_001.png) left 20px / 80px no-repeat;}
+                &.icon010 {background: url(/ticket-react/images/common/ic_120_box_029.png) left 20px / 80px no-repeat;}
+                &.icon011 {background: url(/ticket-react/images/common/ic_120_box_005.png) left 20px / 80px no-repeat;}
+                &.icon012 {background: url(/ticket-react/images/common/ic_120_box_017.png) left 20px / 80px no-repeat;}
+                &.icon013 {background: url(/ticket-react/images/common/ic_120_box_030.png) left 20px / 80px no-repeat;}
+                &.icon014 {background: url(/ticket-react/images/common/ic_120_box_019.png) left 20px / 80px no-repeat;}
             }
         }
     }

@@ -21,7 +21,7 @@ function GuideInfoBox() {
       <div style={{ marginBottom: '20px' }}>
         <h4>이미지 포함형</h4>
         <InfoBox
-          imgSrc="/images/contents/cont_03_04_08_01.jpg"
+          imgSrc="/ticket-react/images/contents/cont_03_04_08_01.jpg"
           imgAlt="정보 이미지"
           title="정보 제목"
           textList={[

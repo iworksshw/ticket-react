@@ -40,7 +40,7 @@
                             color:var(--text-color-B500);
 
                             &::before {
-                                background:url(/images/common/ico_120_cold.png) 0 0 no-repeat;
+                                background:url(/ticket-react/images/common/ico_120_cold.png) 0 0 no-repeat;
                                 background-size:contain;
                             }
                         }
@@ -52,7 +52,7 @@
                             border:1px solid var(--text-color-B500);
 
                             &::after {
-                                content:''; position:absolute; top:12px; right:12px; width:32px; height:32px; background:url(/images/common/ico_32_cold01.png)0 0 no-repeat;
+                                content:''; position:absolute; top:12px; right:12px; width:32px; height:32px; background:url(/ticket-react/images/common/ico_32_cold01.png)0 0 no-repeat;
                             }
                         }
                     }
@@ -64,7 +64,7 @@
                             color:var(--color-danger-500);
 
                             &::before {
-                                background:url(/images/common/ico_120_hot.png)  0 0 no-repeat;
+                                background:url(/ticket-react/images/common/ico_120_hot.png)  0 0 no-repeat;
                                 background-size:contain;
                             }
                         }
@@ -76,7 +76,7 @@
                             border:1px solid var(--color-danger-500);
 
                             &::after {
-                                content:''; position:absolute; top:12px; right:12px; width:32px; height:32px; background:url(/images/common/ico_32_hot02.png)0 0 no-repeat;
+                                content:''; position:absolute; top:12px; right:12px; width:32px; height:32px; background:url(/ticket-react/images/common/ico_32_hot02.png)0 0 no-repeat;
                             }
                         }
                     }
@@ -92,7 +92,7 @@
             display:block; width:100%; position:relative; padding-left:24px; font-weight:600; line-height:160%; color:var(--text-color-B500);
 
             &::before {
-                content:''; position:absolute; top:50%; left:0; width:24px; height:29px; transform:translateY(-50%); background:url(/images/common/ic_24_caption.svg)0 0 no-repeat;
+                content:''; position:absolute; top:50%; left:0; width:24px; height:29px; transform:translateY(-50%); background:url(/ticket-react/images/common/ic_24_caption.svg)0 0 no-repeat;
             }
         }
     }
@@ -113,7 +113,7 @@
 //         padding-left:42px; margin-bottom:20px; display: flex; gap: 32px; align-items: center; 
 
 //         &::before {
-//             content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:30px; height:30px; background:url(/images/common/ic_30_question.svg) 0 0 no-repeat;
+//             content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:30px; height:30px; background:url(/ticket-react/images/common/ic_30_question.svg) 0 0 no-repeat;
 //             @include media("mobile"){
 //                 top: 0px; left: 0px; transform: translateY(0);
 //             }

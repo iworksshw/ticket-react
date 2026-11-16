@@ -48,8 +48,8 @@
     // }
 
     .btnReload {
-        padding-left: 20px; font-size: rem(14px); color: var(--Gray-700); background: url(../../images/common/ic_16_reload.svg) left center no-repeat;
-        &.color {color: var(--Gray-500, #6F7176);background-image: url('../../images/common/ic_16_reload_b.svg');}
+        padding-left: 20px; font-size: rem(14px); color: var(--Gray-700); background: url(../../ticket-react/images/common/ic_16_reload.svg) left center no-repeat;
+        &.color {color: var(--Gray-500, #6F7176);background-image: url('../../ticket-react/images/common/ic_16_reload_b.svg');}
     }
 
     &.prediction {margin-top: 60px;}

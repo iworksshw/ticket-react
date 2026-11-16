@@ -89,8 +89,8 @@ function Complain({ onSubmit }) {
         title="칸번호는 어디에 있나요?"
         desc="출입문 및 객실안내 표기시 화면 우측 상단 혹은 열차와 열차 사이의 통로 위쪽을 확인해주세요."
         imgList={[
-          { src: '/images/contents/cont05_02_001.png', alt: '객차번호 안내 이미지 01' },
-          { src: '/images/contents/cont05_02_002.png', alt: '객차번호 안내 이미지 02' },
+          { src: '/ticket-react/images/contents/cont05_02_001.png', alt: '객차번호 안내 이미지 01' },
+          { src: '/ticket-react/images/contents/cont05_02_002.png', alt: '객차번호 안내 이미지 02' },
         ]}
       />
     </div>

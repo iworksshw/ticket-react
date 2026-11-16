@@ -32,7 +32,7 @@
 
                 &.sched {
                     &::after {
-                        background:url(/images/common/ic_24_download_blk.svg)0 0 no-repeat;
+                        background:url(/ticket-react/images/common/ic_24_download_blk.svg)0 0 no-repeat;
                     }
 
                     @include media (875px) {
@@ -46,7 +46,7 @@
 
                 &.print {
                     &::after {
-                        background:url(/images/common/ic_24_print.svg)0 0 no-repeat;
+                        background:url(/ticket-react/images/common/ic_24_print.svg)0 0 no-repeat;
                     }
 
                     @include media (875px) {

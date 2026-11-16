@@ -10,7 +10,7 @@
             em {
                 width: 100%; padding-left: 42px; font-size: rem(22px); font-weight: 600; line-height: 150%; color: var(--color-primary-blue-900); position: relative; 
                 &::before {
-                    content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 30px; height: 30px; background: url(/images/common/ic_30_question.svg) 0 0 no-repeat;
+                    content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 30px; height: 30px; background: url(/ticket-react/images/common/ic_30_question.svg) 0 0 no-repeat;
                 }
             }
             span {

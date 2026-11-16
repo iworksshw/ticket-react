@@ -17,7 +17,7 @@ function AuthLayout() {
               <div className="topArea">
                 <div className="logoArea">
                   <a href="/">
-                    <img src="/images/common/ic_142_logo.svg" alt="arex 로고" />
+                    <img src="/ticket-react/images/common/ic_142_logo.svg" alt="arex 로고" />
                   </a>
                 </div>
                 <div className="langArea">

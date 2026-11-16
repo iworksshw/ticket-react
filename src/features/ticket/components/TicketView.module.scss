@@ -81,7 +81,7 @@
                     }
 
                     .ticBody {
-                        padding:24px 20px; width:100%; height:230px; overflow:hidden; background:url(/images/common/ticketBg.png)0 0 no-repeat; background-size:contain;
+                        padding:24px 20px; width:100%; height:230px; overflow:hidden; background:url(/ticket-react/images/common/ticketBg.png)0 0 no-repeat; background-size:contain;
                         display:flex; flex-flow: column; gap:35px;
 
                         @include media ('pcs') {
@@ -196,7 +196,7 @@
                                     }
 
                                     &.arrow {
-                                        width:40px; height:40px; background:url(/images/common/ic_40_ticketArrow.svg)50% 50% no-repeat;
+                                        width:40px; height:40px; background:url(/ticket-react/images/common/ic_40_ticketArrow.svg)50% 50% no-repeat;
 
                                         @include media ('pcs') {
                                             display:none;
@@ -330,7 +330,7 @@
                         position:relative; width:120px; margin:16px auto 24px; height:32px; border-radius:20px; background:rgba(58,63,73,0.7); padding: 4px 8px;
 
                         a {
-                            width:24px; height:24px; position:absolute; top:50%; background:url(/images/common/ic_24_ticBtn.svg)50% 50% no-repeat; z-index:3;
+                            width:24px; height:24px; position:absolute; top:50%; background:url(/ticket-react/images/common/ic_24_ticBtn.svg)50% 50% no-repeat; z-index:3;
 
                             &.prev {
                                 left:8px; transform:translateY(-50%);

@@ -102,10 +102,10 @@
                 width: 100%; margin-top: 20px; display: flex; justify-content: center; gap: 24px;
                 .snsItem {
                     width: 70px; height: 70px;
-                    &.naver {background: url(/images/common/ic_70_sns_naver.png) center no-repeat;}
-                    &.google {background: url(/images/common/ic_70_sns_google.png) center no-repeat;}
-                    &.kakao {background: url(/images/common/ic_70_sns_kakao.png) center no-repeat;}
-                    &.apple {background: url(/images/common/ic_70_sns_apple.png) center no-repeat;}
+                    &.naver {background: url(/ticket-react/images/common/ic_70_sns_naver.png) center no-repeat;}
+                    &.google {background: url(/ticket-react/images/common/ic_70_sns_google.png) center no-repeat;}
+                    &.kakao {background: url(/ticket-react/images/common/ic_70_sns_kakao.png) center no-repeat;}
+                    &.apple {background: url(/ticket-react/images/common/ic_70_sns_apple.png) center no-repeat;}
                     .link {
                         width: 100%; height: 100%; font-size: 0; display: block;
                     }
@@ -122,10 +122,10 @@
                     gap: 20px;
                     .snsItem {
                         width: 60px; height: 60px;
-                        &.naver {background: url(/images/common/ic_70_sns_naver.png) center / 60px no-repeat;}
-                        &.google {background: url(/images/common/ic_70_sns_google.png) center / 60px no-repeat;}
-                        &.kakao {background: url(/images/common/ic_70_sns_kakao.png) center / 60px no-repeat;}
-                        &.apple {background: url(/images/common/ic_70_sns_apple.png) center / 60px no-repeat;}
+                        &.naver {background: url(/ticket-react/images/common/ic_70_sns_naver.png) center / 60px no-repeat;}
+                        &.google {background: url(/ticket-react/images/common/ic_70_sns_google.png) center / 60px no-repeat;}
+                        &.kakao {background: url(/ticket-react/images/common/ic_70_sns_kakao.png) center / 60px no-repeat;}
+                        &.apple {background: url(/ticket-react/images/common/ic_70_sns_apple.png) center / 60px no-repeat;}
                     }
                 }
             }
@@ -172,7 +172,7 @@
         .helpMsg {
             padding-left: 28px; color: var(--text-color-G700, #3A3F49); font-size: rem(16px); font-style: normal; font-weight: 500; line-height: 160%; position: relative;
             &::before {
-                content:""; width: 24px; height: 24px; background: url(/images/common/ic_24_help.svg) center no-repeat; display: block; position: absolute; left: 0; top: 0;
+                content:""; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_help.svg) center no-repeat; display: block; position: absolute; left: 0; top: 0;
             }
         }
         .text {

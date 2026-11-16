@@ -25,7 +25,7 @@
     }
     &.rdoBtn {align-items: center; height: 48px;} // 라디오 버튼 사용시 적용
     .btnReset {
-        width: 24px; height: 24px !important; padding: 0 !important; font-size: 0 !important; border: 0 !important; background: url(/images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 13px;
+        width: 24px; height: 24px !important; padding: 0 !important; font-size: 0 !important; border: 0 !important; background: url(/ticket-react/images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 13px;
         display: none;
     }
     &:focus-within .btnReset {display: block;}
@@ -99,7 +99,7 @@
                     }
 
                     &::before {
-                        content:''; position:absolute; top:50%;left:0; width:20px; height:20px; transform:translateY(-50%); background:url(/images/common/ico_20_attfile.svg) 0 0 no-repeat;
+                        content:''; position:absolute; top:50%;left:0; width:20px; height:20px; transform:translateY(-50%); background:url(/ticket-react/images/common/ico_20_attfile.svg) 0 0 no-repeat;
                     }
                 }
             }
@@ -123,7 +123,7 @@
 
             .fileDel {
                 position:absolute; top:50%; right:16px; transform:translateY(-50%);
-                width:24px; height:24px; padding: 0 !important; border: 0 !important; font-size:0; background:url(/images/common/ic_24_trashcan.svg) center no-repeat;
+                width:24px; height:24px; padding: 0 !important; border: 0 !important; font-size:0; background:url(/ticket-react/images/common/ic_24_trashcan.svg) center no-repeat;
             }
 
             @include media ('mobile') {
@@ -144,7 +144,7 @@
             }
 
             .addBtn {
-                width:52px; height:52px; padding:12px; font-size:0; background:url(/images/common/ic_24_plusbutton.svg) center no-repeat; border-radius:8px; border:1px solid var(--text-color-G500); cursor:pointer;
+                width:52px; height:52px; padding:12px; font-size:0; background:url(/ticket-react/images/common/ic_24_plusbutton.svg) center no-repeat; border-radius:8px; border:1px solid var(--text-color-G500); cursor:pointer;
             }
 
             &:has(input[type='file']:focus){
@@ -176,7 +176,7 @@
         
 
         &::after {
-            content:''; position:absolute; top:50%; right:0; width:16px; height:16px; background:url(/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
+            content:''; position:absolute; top:50%; right:0; width:16px; height:16px; background:url(/ticket-react/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
         }
 
         @include media ('mobile') {
@@ -197,7 +197,7 @@
                     // width:max-content;
 
                     &::after {
-                        content:''; position:absolute; top:50%; right:auto; left:0; width:16px; height:16px; background:url(/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
+                        content:''; position:absolute; top:50%; right:auto; left:0; width:16px; height:16px; background:url(/ticket-react/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
 
                         @include media ('mobile') {
                             top: 13px;
@@ -260,9 +260,9 @@
     }
     .errMsg {
         width: 100%; margin-top:8px; padding-left: 24px; color: var(--color-danger-500, #EF2B2A); font-size: rem(15px); font-weight: 400; line-height: 1.5; 
-        background: url(/images/common/ic_20_danger.svg) left 1px no-repeat; display: none;
+        background: url(/ticket-react/images/common/ic_20_danger.svg) left 1px no-repeat; display: none;
         &.line {
-            margin-left: 5px; margin-top:0; height: 48px; align-content: center; background: url(/images/common/ic_20_danger.svg) left 13px no-repeat;
+            margin-left: 5px; margin-top:0; height: 48px; align-content: center; background: url(/ticket-react/images/common/ic_20_danger.svg) left 13px no-repeat;
             &:first-child {margin-left: 0;}
         }
         &.inline {width: auto;display: none;background: none;padding-left: 0;margin-top: 0;align-self: center;}
@@ -286,7 +286,7 @@
 .frmSearch {
     width: 100%; position: relative;
     .btnSearch {
-        width: 24px; height: 24px; font-size: 0; background: url(/images/common/ic_24_search.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
+        width: 24px; height: 24px; font-size: 0; background: url(/ticket-react/images/common/ic_24_search.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
         @include media ('mobile') {
             width: 20px; height: 20px; top: 14px;
         }
@@ -298,14 +298,14 @@
             &::placeholder {color: var(--Gray-900);}
         }
         .btnSearch {
-            width: 40px; height: 40px; background: url(/images/common/ic_40_search.svg) center no-repeat; position: absolute; right: 0; top: 4px;
+            width: 40px; height: 40px; background: url(/ticket-react/images/common/ic_40_search.svg) center no-repeat; position: absolute; right: 0; top: 4px;
         }
         @include media ('mobile') {
             .iptText {
                 font-size: rem(18px);
             }
             .btnSearch {
-                width: 32px; height: 32px; background: url(/images/common/ic_32_search.svg) center no-repeat; right: 0; top: 8px;
+                width: 32px; height: 32px; background: url(/ticket-react/images/common/ic_32_search.svg) center no-repeat; right: 0; top: 8px;
             }
         }
     }
@@ -327,7 +327,7 @@
 /* checkbox */
 .iptChk {
     &+ .iptLbl {
-        background:url(/images/common/ic_24_chk_off.svg) left 1px no-repeat; cursor: pointer;
+        background:url(/ticket-react/images/common/ic_24_chk_off.svg) left 1px no-repeat; cursor: pointer;
         &.noText {padding-left: 24px; font-size: 0;}
 
         &.lblBold {
@@ -338,23 +338,23 @@
             font-weight:600;
         }
     }
-    &:checked + .iptLbl {background:url(/images/common/ic_24_chk_on.svg) left 1px no-repeat;}
-    &:indeterminate + .iptLbl {background:url(/images/common/ic_24_chk_off.svg) left center no-repeat;}
-    &:disabled + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/images/common/ic_24_chk_off_dis.svg) left 1px no-repeat;}
-    &:disabled:checked + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/images/common/ic_24_chk_on_dis.svg) left 1px no-repeat;}
-    &:disabled:indeterminate + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/images/common/ic_24_chk_ind_dis.svg) left 1px no-repeat;}
+    &:checked + .iptLbl {background:url(/ticket-react/images/common/ic_24_chk_on.svg) left 1px no-repeat;}
+    &:indeterminate + .iptLbl {background:url(/ticket-react/images/common/ic_24_chk_off.svg) left center no-repeat;}
+    &:disabled + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/ticket-react/images/common/ic_24_chk_off_dis.svg) left 1px no-repeat;}
+    &:disabled:checked + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/ticket-react/images/common/ic_24_chk_on_dis.svg) left 1px no-repeat;}
+    &:disabled:indeterminate + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/ticket-react/images/common/ic_24_chk_ind_dis.svg) left 1px no-repeat;}
     &:focus + .iptLbl {outline: auto;}
 
     &.lg {
         &+ .iptLbl {
-            min-height: 34px; padding-left: 32px; font-size: rem(20px); background:url(/images/common/ic_32_chk_off.svg) left 1px no-repeat;
+            min-height: 34px; padding-left: 32px; font-size: rem(20px); background:url(/ticket-react/images/common/ic_32_chk_off.svg) left 1px no-repeat;
             &.noText {padding-left: 32px; font-size: 0;}
         }
-        &:checked + .iptLbl {background:url(/images/common/ic_32_chk_on.svg) left 1px no-repeat;}
-        &:indeterminate + .iptLbl {background:url(/images/common/ic_32_chk_ind.svg) left center no-repeat;}
-        &:disabled + .iptLbl {background:url(/images/common/ic_32_chk_off_dis.svg) left 1px no-repeat;}
-        &:disabled:checked + .iptLbl {background:url(/images/common/ic_32_chk_on_dis.svg) left 1px no-repeat;}
-        &:disabled:indeterminate + .iptLbl {background:url(/images/common/ic_32_chk_ind_dis.svg) left 1px no-repeat;}
+        &:checked + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_on.svg) left 1px no-repeat;}
+        &:indeterminate + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_ind.svg) left center no-repeat;}
+        &:disabled + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_off_dis.svg) left 1px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_on_dis.svg) left 1px no-repeat;}
+        &:disabled:indeterminate + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_ind_dis.svg) left 1px no-repeat;}
         &:focus + .iptLbl {outline: auto;}
     }
 
@@ -370,19 +370,19 @@
 
     &.sm {
         &+ .iptLbl {
-            padding-left: 28px; font-size: rem(16px); background:url(/images/common/ic_20_chk_off.svg) left 3px no-repeat; color:var(--text-color-G900) !important; font-weight:400;
+            padding-left: 28px; font-size: rem(16px); background:url(/ticket-react/images/common/ic_20_chk_off.svg) left 3px no-repeat; color:var(--text-color-G900) !important; font-weight:400;
             &.noText {padding-left: 20px; font-size: 0;}
         }
-        &:checked + .iptLbl {background:url(/images/common/ic_20_chk_on.svg) left 2px no-repeat;}
-        &:indeterminate + .iptLbl {background:url(/images/common/ic_20_chk_ind.svg) left center no-repeat;}
-        &:disabled + .iptLbl {background:url(/images/common/ic_20_chk_off_dis.svg) left 2px no-repeat;}
-        &:disabled:checked + .iptLbl {background:url(/images/common/ic_20_chk_on_dis.svg) left 2px no-repeat;}
-        &:disabled:indeterminate + .iptLbl {background:url(/images/common/ic_20_chk_ind_dis.svg) left 2px no-repeat;}
+        &:checked + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_on.svg) left 2px no-repeat;}
+        &:indeterminate + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_ind.svg) left center no-repeat;}
+        &:disabled + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_off_dis.svg) left 2px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_on_dis.svg) left 2px no-repeat;}
+        &:disabled:indeterminate + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_ind_dis.svg) left 2px no-repeat;}
         &:focus + .iptLbl {outline: auto;}
 
         &:checked {
             &.blue {
-                & + .iptLbl {background:url(/images/common/ic_20_chk_on_blue.svg) left 2px no-repeat;}
+                & + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_on_blue.svg) left 2px no-repeat;}
                 & + label {
                     color:var(--color-primary-blue-700) !important; font-weight:600;
                 }
@@ -390,7 +390,7 @@
         }
         &:checked {
             &.green {
-                & + .iptLbl {background:url(/images/common/ic_20_chk_on_purple.svg) left 2px no-repeat;}
+                & + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_on_purple.svg) left 2px no-repeat;}
 
                 & + label {
                     color:#CE46E0 !important; font-weight:600;
@@ -400,7 +400,7 @@
 
         &:checked {
             &.red {
-                & + .iptLbl {background:url(/images/common/ic_20_chk_on_red.svg) left 2px no-repeat;}
+                & + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_on_red.svg) left 2px no-repeat;}
                 
                 & + label {
                     color:#dd3500 !important; font-weight:600;
@@ -410,7 +410,7 @@
         
         &:checked {
             &.black {
-                & + .iptLbl {background:url(/images/common/ic_20_chk_on_black.svg) left 2px no-repeat;}
+                & + .iptLbl {background:url(/ticket-react/images/common/ic_20_chk_on_black.svg) left 2px no-repeat;}
                 
                 & + label {
                     color:var(--text-color-G700); font-weight:600;
@@ -421,14 +421,14 @@
     //2025.09.15 추가
     &.tiny {
         &+ .iptLbl {
-            padding-left: 28px; font-size: rem(16px); background:url(/images/common/ic_20_tiny_chk_off.svg) left center no-repeat;
+            padding-left: 28px; font-size: rem(16px); background:url(/ticket-react/images/common/ic_20_tiny_chk_off.svg) left center no-repeat;
             @include media ('mobile') {
                 font-size:rem(15px);
             }
             &.noText {padding-left: 20px; font-size: 0;}
         }
         &:checked + .iptLbl {
-            background:url(/images/common/ic_20_tiny_chk_on.svg) left center no-repeat;
+            background:url(/ticket-react/images/common/ic_20_tiny_chk_on.svg) left center no-repeat;
 
             > span {
                 color:var(--color-primary-blue-500); font-weight:600;
@@ -442,34 +442,34 @@
 /* radio */
 .iptRdo {
     &+ .iptLbl {
-        background:url(/images/common/ic_24_rdo_off.svg) left 1px no-repeat;
+        background:url(/ticket-react/images/common/ic_24_rdo_off.svg) left 1px no-repeat;
         &.noText {padding-left: 24px; font-size: 0;}
     }
-    &:checked + .iptLbl {background:url(/images/common/ic_24_rdo_on.svg) left 1px no-repeat;}
-    &:disabled + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/images/common/ic_24_rdo_off_dis.svg) left 1px no-repeat;}
-    &:disabled:checked + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/images/common/ic_24_rdo_on_dis.svg) left 1px no-repeat;}
+    &:checked + .iptLbl {background:url(/ticket-react/images/common/ic_24_rdo_on.svg) left 1px no-repeat;}
+    &:disabled + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/ticket-react/images/common/ic_24_rdo_off_dis.svg) left 1px no-repeat;}
+    &:disabled:checked + .iptLbl {color:  var(--text-color-G500, #808892); background:url(/ticket-react/images/common/ic_24_rdo_on_dis.svg) left 1px no-repeat;}
     &:focus + .iptLbl {outline: auto;}
     
     &.lg {
         &+ .iptLbl {
-            min-height: 34px; padding-left: 40px; font-size: rem(18px); background:url(/images/common/ic_32_chk_off.svg) left 1px no-repeat; align-content: center;
+            min-height: 34px; padding-left: 40px; font-size: rem(18px); background:url(/ticket-react/images/common/ic_32_chk_off.svg) left 1px no-repeat; align-content: center;
             &.noText {padding-left: 32px; font-size: 0;}
         }
-        &:checked + .iptLbl {background:url(/images/common/ic_32_chk_on.svg) left 1px no-repeat;}
-        &:disabled + .iptLbl {background:url(/images/common/ic_32_chk_off_dis.svg) left 1px no-repeat;}
-        &:disabled:checked + .iptLbl {background:url(/images/common/ic_32_chk_on_dis.svg) left 1px no-repeat;}
-        &:disabled:indeterminate + .iptLbl {background:url(/images/common/ic_32_chk_ind_dis.svg) left 1px no-repeat;}
+        &:checked + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_on.svg) left 1px no-repeat;}
+        &:disabled + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_off_dis.svg) left 1px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_on_dis.svg) left 1px no-repeat;}
+        &:disabled:indeterminate + .iptLbl {background:url(/ticket-react/images/common/ic_32_chk_ind_dis.svg) left 1px no-repeat;}
         &:focus + .iptLbl {outline: auto;}
     }
 
     &.sm {
         &+ .iptLbl {
-            font-size: rem(16px); background:url(/images/common/ic_20_rdo_off.svg) left 4px no-repeat;
+            font-size: rem(16px); background:url(/ticket-react/images/common/ic_20_rdo_off.svg) left 4px no-repeat;
             &.noText {padding-left: 20px; font-size: 0;}
         }
-        &:checked + .iptLbl {background:url(/images/common/ic_20_rdo_on.svg) left 4px no-repeat;}
-        &:disabled + .iptLbl {background:url(/images/common/ic_20_rdo_off_dis.svg) left 4px no-repeat;}
-        &:disabled:checked + .iptLbl {background:url(/images/common/ic_20_rdo_on_dis.svg) left 4px no-repeat;}
+        &:checked + .iptLbl {background:url(/ticket-react/images/common/ic_20_rdo_on.svg) left 4px no-repeat;}
+        &:disabled + .iptLbl {background:url(/ticket-react/images/common/ic_20_rdo_off_dis.svg) left 4px no-repeat;}
+        &:disabled:checked + .iptLbl {background:url(/ticket-react/images/common/ic_20_rdo_on_dis.svg) left 4px no-repeat;}
         &:focus + .iptLbl {outline: auto;}
     }
 
@@ -478,7 +478,7 @@
 /* ----- 셀렉트 ----- */
 .iptSlt {
     width: 100%; height: 50px; padding: 0 16px; color: var(--text-color-G900, #111); font-size: rem(16px); font-weight: 400; line-height: normal; border-radius: 8px; border: 1px solid var(--border-color-G300, #D6DBE1);
-    background:#fff url(/images/common/ic_24_down_arr.svg) right 16px center no-repeat; cursor:pointer;
+    background:#fff url(/ticket-react/images/common/ic_24_down_arr.svg) right 16px center no-repeat; cursor:pointer;
     //&:read-only {background: var(--bg-color-G100, #F8F9FC);}
     &:disabled {color: var(--text-color-G500, #808892); background: var(--bg-color-G100, #F8F9FC);}
     @include media ('mobile') {
@@ -491,7 +491,7 @@
         }
     }
     &.sm {
-        height: 40px; padding: 0 12px; font-size: rem(14px); background:#fff url(/images/common/ic_20_down_arr.svg) right 12px center no-repeat;
+        height: 40px; padding: 0 12px; font-size: rem(14px); background:#fff url(/ticket-react/images/common/ic_20_down_arr.svg) right 12px center no-repeat;
     }
 
     &.frmMd {

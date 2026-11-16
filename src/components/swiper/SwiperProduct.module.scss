@@ -8,10 +8,10 @@
             position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; font-size: 0; border: 0; padding: 0; background-color: transparent; cursor: pointer;
 
             &.prev {
-                background-image: url(/images/common/ic_30_cir_arr_l.png); background-position: center; background-repeat: no-repeat; vertical-align: middle; width: 30px; height: 30px; left: 8px;
+                background-image: url(/ticket-react/images/common/ic_30_cir_arr_l.png); background-position: center; background-repeat: no-repeat; vertical-align: middle; width: 30px; height: 30px; left: 8px;
             }
             &.next {
-                background-image: url(/images/common/ic_30_cir_arr_r.png); background-position: center; background-repeat: no-repeat; vertical-align: middle; width: 30px; height: 30px; right: 8px;
+                background-image: url(/ticket-react/images/common/ic_30_cir_arr_r.png); background-position: center; background-repeat: no-repeat; vertical-align: middle; width: 30px; height: 30px; right: 8px;
             }
         }
     }

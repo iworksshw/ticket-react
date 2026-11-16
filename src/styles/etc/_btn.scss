@@ -102,21 +102,21 @@
     //외부링크
     &[target=_blank] {
         position: relative;
-        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_link_blank.svg);}
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/ticket-react/images/common/ic_24_link_blank.svg);}
     }
     &.blue[target=_blank] , &.dkBlue[target=_blank] {
         position: relative;
-        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_link_blank_w.svg);}
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/ticket-react/images/common/ic_24_link_blank_w.svg);}
     }
     //아이콘 예시 샘플
     &.downIcon {
         position: relative; 
-        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_download.svg);}
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/ticket-react/images/common/ic_24_download.svg);}
     }
 
     &.link {
         position: relative; 
-        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/images/common/ic_24_link_blank_w.svg);}
+        &::after {content:''; width: 24px; height: 24px; display: inline-block; vertical-align: text-top; margin-left: 4px; background: url(/ticket-react/images/common/ic_24_link_blank_w.svg);}
     }
 
     //2025.09.15 텍스트 타입 버튼 케이스 추가
@@ -124,7 +124,7 @@
         position:relative; min-height:auto; height:auto; padding: 0 20px 0 0; line-height:1; font-size:rem(14px); color:var(--text-color-G700); font-weight:400;
 
         &::after {
-            content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:16px; height:16px; background:url(/images/common/ico_desc.svg);
+            content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:16px; height:16px; background:url(/ticket-react/images/common/ico_desc.svg);
         }
     }
 }

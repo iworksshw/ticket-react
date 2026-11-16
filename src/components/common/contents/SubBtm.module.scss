@@ -10,7 +10,7 @@
             width: max-content; max-width: 100%; display: flex;
             dt {
                 width: max-content; padding-left: 28px; color: var(--text-color-G700, #3A3F49); font-size: rem(16px); font-style: normal; font-weight: 600; line-height: 160%; /* 25.6px */ position: relative; flex-shrink: 0;
-                &::before {content: ""; width: 24px; height: 24px; background: url(/common/images/common/ic_24_btm_manager.svg) center no-repeat; display: block; position: absolute; left: 0; top: 0;}
+                &::before {content: ""; width: 24px; height: 24px; background: url(/common/ticket-react/images/common/ic_24_btm_manager.svg) center no-repeat; display: block; position: absolute; left: 0; top: 0;}
             }
             dd {
                 
@@ -26,7 +26,7 @@
             width: max-content;
             li {
                 width: max-content; padding-left: 28px; color: var(--text-color-G700, #3A3F49); font-size: rem(16px); font-style: normal; font-weight: 600; line-height: 160%; /* 25.6px */ position: relative;
-                &::before {content: ""; width: 24px; height: 24px; background: url(/common/images/common/ic_24_btm_phone.svg) center no-repeat; display: block; position: absolute; left: 0; top: 0;}
+                &::before {content: ""; width: 24px; height: 24px; background: url(/common/ticket-react/images/common/ic_24_btm_phone.svg) center no-repeat; display: block; position: absolute; left: 0; top: 0;}
             }
         }
 

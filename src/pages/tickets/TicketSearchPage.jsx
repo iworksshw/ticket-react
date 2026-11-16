@@ -25,7 +25,7 @@ function buildAirlines(terminalId, count = 12) {
     return {
       id: `${terminalId}-airline-${i}`,
       name,
-      image: `/images/temp/test0${imageIndex}.png`,
+      image: `/ticket-react/images/temp/test0${imageIndex}.png`,
       alt: `${name} 로고`,
     };
   });

@@ -39,8 +39,8 @@
                             }
 
                             &::before {
-                                //content:''; position:absolute; top:50%; left:50%; width:32px; height:32px; transform:translate(-50%, -50%); background:url(/images/common/ic_32_chk_off.svg)50% 50% no-repeat; margin-left:-34px;
-                                content:''; width: 32px; height: 32px; background: url(/images/common/ic_32_chk_off.svg)50% 50% no-repeat; margin-right: 10px;
+                                //content:''; position:absolute; top:50%; left:50%; width:32px; height:32px; transform:translate(-50%, -50%); background:url(/ticket-react/images/common/ic_32_chk_off.svg)50% 50% no-repeat; margin-left:-34px;
+                                content:''; width: 32px; height: 32px; background: url(/ticket-react/images/common/ic_32_chk_off.svg)50% 50% no-repeat; margin-right: 10px;
                             }
                         }
 
@@ -49,7 +49,7 @@
                             &:checked {
                                 & + label {
                                     &::before {
-                                        background:url(/images/common/ic_32_chk_on.svg)50% 50% no-repeat;
+                                        background:url(/ticket-react/images/common/ic_32_chk_on.svg)50% 50% no-repeat;
                                     }       
                                 }
                             }
@@ -84,7 +84,7 @@
                     
                     button {
                         position:absolute; top:50%; transform:translateY(-50%); width:25px; height:25px; border-radius:50%;
-                        background:url(/images/common/ic_20_calBtn.svg) 50% 50% no-repeat; z-index:6; font-size:0;
+                        background:url(/ticket-react/images/common/ic_20_calBtn.svg) 50% 50% no-repeat; z-index:6; font-size:0;
                         border:1px solid var(--border-color-G300);
 
                         &.prev {
@@ -146,7 +146,7 @@
                                         font-size:rem(18px); font-weight:500; line-height:160%; color:var(--text-color-G900);
 
                                         &::before {
-                                            content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:24px; height:24px; background:url(/images/common/ic_24_plus.svg)50% 50% no-repeat;
+                                            content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:24px; height:24px; background:url(/ticket-react/images/common/ic_24_plus.svg)50% 50% no-repeat;
                                         }
 
                                     }
@@ -246,40 +246,40 @@
 
                         &.kakaopay {
                             label {
-                                background:url(/images/common/ic_kakaopay.svg)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_kakaopay.svg)50% 50% no-repeat;
                             }
                         }
                         &.paycopay {
                             label {
-                                background:url(/images/common/ic_paycopay.svg)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_paycopay.svg)50% 50% no-repeat;
                             }
                         }
                         &.alipay {
                             label {
-                                background:url(/images/common/ic_alipay.png)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_alipay.png)50% 50% no-repeat;
                                 background-size:113px 60px;
                             }
                         }
                         &.wechatpay {
                             label {
-                                background:url(/images/common/ic_wechatpay.png)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_wechatpay.png)50% 50% no-repeat;
                                 background-size:127px 50px;
                             }
                         }
                         &.kbpay {
                             label {
-                                background:url(/images/common/ic_kbpay.png)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_kbpay.png)50% 50% no-repeat;
                                 background-size:111px 29px;
                             }
                         }
                         &.samsungpay {
                             label {
-                                background:url(/images/common/ic_samsungpay.svg)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_samsungpay.svg)50% 50% no-repeat;
                             }
                         }
                         &.naverpay {
                             label {
-                                background:url(/images/common/ic_naverpay.png)50% 50% no-repeat;
+                                background:url(/ticket-react/images/common/ic_naverpay.png)50% 50% no-repeat;
                             }
                         }                        
                     }

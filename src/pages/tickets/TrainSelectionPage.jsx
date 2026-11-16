@@ -11,6 +11,7 @@ import TicketDiscountPage from '@/pages/tickets/TicketDiscountPage';
 import ProductDetailPage from '@/pages/tickets/ProductDetailPage';
 import TicketReturnFeePage from '@/pages/tickets/TicketReturnFeePage';
 import TicketChangeFeePage from '@/pages/tickets/TicketChangeFeePage';
+import TicketReserveInfoPage from '@/pages/tickets/TicketReserveInfoPage';
 import { useReservation } from '@/contexts/ReservationContext';
 import { getSelectableSeatIds, parseSeatId } from '@/features/ticket/seatMap';
 import { SEAT_FARE, ADULT_DISCOUNT_AMOUNT, CHILD_DISCOUNT_AMOUNT } from '@/features/ticket/discountRules';
@@ -67,7 +68,7 @@ function formatWon(amount) {
 const RECOMMEND_GOODS_LIST = [
   {
     id: 'recommend01',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '5,000원 충전된 교통카드 이미지',
     name: '5,000원 충전된 교통카드',
     oldPrice: '5,000원',
@@ -79,7 +80,7 @@ const RECOMMEND_GOODS_LIST = [
   },
   {
     id: 'recommend02',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '10,000원 충전된 교통카드 이미지',
     name: '10,000원 충전된 교통카드',
     price: '10,000원',
@@ -88,7 +89,7 @@ const RECOMMEND_GOODS_LIST = [
   },
   {
     id: 'recommend03',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '15,000원 충전된 교통카드 이미지',
     name: '15,000원 충전된 교통카드',
     oldPrice: '15,000원',
@@ -110,6 +111,7 @@ function TrainSelectionPage() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isReturnFeeOpen, setIsReturnFeeOpen] = useState(false);
   const [isChangeFeeOpen, setIsChangeFeeOpen] = useState(false);
+  const [isReserveInfoOpen, setIsReserveInfoOpen] = useState(false);
 
   const passengers = search?.passengers ?? DEFAULT_PASSENGERS;
 
@@ -293,7 +295,7 @@ function TrainSelectionPage() {
               <h3>결제정보</h3>
             </div>
 
-            <TicketPriceInfo priceList={paymentPriceList} />
+            <TicketPriceInfo priceList={paymentPriceList} onPay={() => setIsReserveInfoOpen(true)} />
           </>
         }
       />
@@ -321,6 +323,32 @@ function TrainSelectionPage() {
 
       <TicketReturnFeePage isOpen={isReturnFeeOpen} onClose={() => setIsReturnFeeOpen(false)} />
       <TicketChangeFeePage isOpen={isChangeFeeOpen} onClose={() => setIsChangeFeeOpen(false)} />
+
+      <TicketReserveInfoPage
+        isOpen={isReserveInfoOpen}
+        onClose={() => setIsReserveInfoOpen(false)}
+        date={search?.dateOnlyLabel || DEFAULT_DATE}
+        trainNo={train?.trainNo || DEFAULT_TRAIN_NO}
+        stations={stations}
+        headcountLabel={search?.headcountLabel || DEFAULT_HEADCOUNT}
+        seatSummary={formatSeatSummary(tickets)}
+        goodsList={goodsList.map((goods) => `${goods.name} (${goods.count}개)`)}
+        onConfirm={(paymentType) =>
+          navigate('/tickets/ticketPayment', {
+            state: {
+              paymentType,
+              date: search?.dateOnlyLabel || DEFAULT_DATE,
+              trainNo: train?.trainNo || DEFAULT_TRAIN_NO,
+              stations,
+              headcountLabel: search?.headcountLabel || DEFAULT_HEADCOUNT,
+              seatSummary: formatSeatSummary(tickets),
+              fare: discountSummary.fare,
+              discount: discountSummary.discount,
+              priceList: paymentPriceList,
+            },
+          })
+        }
+      />
     </>
   );
 }

@@ -24,7 +24,7 @@ const detailContent = (
       </li>
     </ul>
     <div className="editorImg">
-      <img src="/images/contents/cont_01_01_16_002.jpg" alt="티머니카드 서비스 안내" />
+      <img src="/ticket-react/images/contents/cont_01_01_16_002.jpg" alt="티머니카드 서비스 안내" />
     </div>
     <p className="boxTit">필수정보</p>
     <div className="editorTable">

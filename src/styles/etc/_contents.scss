@@ -3,11 +3,11 @@
 //텍스트 : 느낌표 아이콘
 .pubCaption {
     margin-top: 12px; padding-left: 28px; color: var(--text-color-B500, #107AF2); font-size: rem(16px); font-style: normal; font-weight: 600; line-height: 160%; display: block; position: relative;
-    &::before {content:""; width: 24px; height: 24px; background: url(/images/common/ic_24_caption.svg) center no-repeat; display: block; position: absolute; left: 0; top: -1px;}
+    &::before {content:""; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_caption.svg) center no-repeat; display: block; position: absolute; left: 0; top: -1px;}
     & + .pubCaption {margin-top: 8px;}
     &.gray {
         color: var(--text-color-G700, #3A3F49);
-        &::before {background: url(/images/common/ic_24_caption_gray.svg) center no-repeat;}
+        &::before {background: url(/ticket-react/images/common/ic_24_caption_gray.svg) center no-repeat;}
     }
 }
 
@@ -31,12 +31,12 @@
         width: 32px; height: 32px; font-size: 0; border-radius: 50%; border: 1px solid var(--border-color-G400, #B9C1C9); background: #fff;
         &:disabled {opacity: 0.3; cursor: auto;}
         &.minus {
-            background: url(/images/common/ic_24_minus.svg) center no-repeat;
-            &:disabled {background: var(--bg-color-G400) url(/images/common/ic_24_minus.svg) center no-repeat;}
+            background: url(/ticket-react/images/common/ic_24_minus.svg) center no-repeat;
+            &:disabled {background: var(--bg-color-G400) url(/ticket-react/images/common/ic_24_minus.svg) center no-repeat;}
         }
         &.plus {
-            background: url(/images/common/ic_24_plus.svg) center no-repeat;
-            &:disabled {background: var(--bg-color-G400) url(/images/common/ic_24_plus.svg) center no-repeat;}
+            background: url(/ticket-react/images/common/ic_24_plus.svg) center no-repeat;
+            &:disabled {background: var(--bg-color-G400) url(/ticket-react/images/common/ic_24_plus.svg) center no-repeat;}
         }
     }
     .textNum {
@@ -164,17 +164,17 @@
         }
         .change {
             font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
-            min-height: 24px; background: url(/images/common/ic_24_change.svg) left center no-repeat;
+            min-height: 24px; background: url(/ticket-react/images/common/ic_24_change.svg) left center no-repeat;
         }
 
         .train {
             font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
-            min-height: 24px; background: url(/images/common/ic_24_train.svg) left center no-repeat;
+            min-height: 24px; background: url(/ticket-react/images/common/ic_24_train.svg) left center no-repeat;
         }
 
         .request {
             font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
-            min-height: 24px; background: url(/images/common/ic_24_write.svg) left center no-repeat;
+            min-height: 24px; background: url(/ticket-react/images/common/ic_24_write.svg) left center no-repeat;
         }
     }
 
@@ -206,7 +206,7 @@
     }
     h4 {
         padding-left: 24px; color: var(--text-color-G900); font-size: rem(20px); font-style: normal; font-weight: 700; line-height: 160%; position: relative;
-        &::before {content:""; width: 16px; height: 16px; background: url(/images/common/ic_16_tit_h4.svg) center no-repeat; display: block; position: absolute; left: 0; top: 8px;}
+        &::before {content:""; width: 16px; height: 16px; background: url(/ticket-react/images/common/ic_16_tit_h4.svg) center no-repeat; display: block; position: absolute; left: 0; top: 8px;}
     }
 
     @include media('mobile') {
@@ -228,7 +228,7 @@
             }
             .change {
                 font-size:rem(16px); font-weight:500; line-height:160%; color:var(--text-color-G700); padding-left:28px;
-                min-height: 24px; background: url(/images/common/ic_24_change.svg) left center no-repeat;
+                min-height: 24px; background: url(/ticket-react/images/common/ic_24_change.svg) left center no-repeat;
             }
         }
     }

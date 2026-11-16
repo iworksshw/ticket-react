@@ -11,7 +11,7 @@
             display: flex; justify-content: center; align-items: center; margin: 20px 60px;
 
             .img {
-                width: 88px; height: 74px; background: url(/images/common/ic_88_coupon.png) center no-repeat; background-size: 100%;
+                width: 88px; height: 74px; background: url(/ticket-react/images/common/ic_88_coupon.png) center no-repeat; background-size: 100%;
             }
 
             @include media('mobile'){
@@ -97,15 +97,15 @@
                 cursor: auto; background: var(--bg-color-G200);
             }
             .imgCoupon {
-                display: block; width: 24px; height: 24px; background: url(/images/common/ic_24_present.png) center no-repeat; background-size: 100%;
+                display: block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_present.png) center no-repeat; background-size: 100%;
             }
 
             .imgExpiration {
-                display: block; width: 24px; height: 24px; background: url(/images/common/ic_24_chk.png) center no-repeat; background-size: 100%;
+                display: block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_chk.png) center no-repeat; background-size: 100%;
             }
 
             .imgGift {
-                display: block; width: 24px; height: 24px; background: url(/images/common/ic_24_gift.png) center no-repeat; background-size: 100%;
+                display: block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_gift.png) center no-repeat; background-size: 100%;
             }
 
             .blueTxt {

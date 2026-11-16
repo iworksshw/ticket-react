@@ -1,29 +1,29 @@
 //이미지 그룹 래퍼
 import ImgWrap from '@/components/common/contents/ImgWrap';
 
-const img1 = [{ srcPc: '/images/contents/cont_02_01_001.jpg', alt: '서울역 도심공항터미널 수화물 신청 이미지', caption: '이미지 캡션 1' }];
+const img1 = [{ srcPc: '/ticket-react/images/contents/cont_02_01_001.jpg', alt: '서울역 도심공항터미널 수화물 신청 이미지', caption: '이미지 캡션 1' }];
 
 const img2 = [
-  { srcPc: '/images/contents/cont_02_01_001.jpg', alt: '서울역 도심공항터미널 수화물 신청 이미지', caption: '이미지 캡션 1' },
-  { srcPc: '/images/contents/cont_02_01_002.jpg', alt: '서울역 도심공항터미널 열차 내부 이미지', caption: '이미지 캡션 2' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_001.jpg', alt: '서울역 도심공항터미널 수화물 신청 이미지', caption: '이미지 캡션 1' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_002.jpg', alt: '서울역 도심공항터미널 열차 내부 이미지', caption: '이미지 캡션 2' },
 ];
 
 const img3 = [
-  { srcPc: '/images/contents/cont_02_01_001.jpg', alt: '이미지1 설명', caption: '이미지 캡션 1' },
-  { srcPc: '/images/contents/cont_02_01_002.jpg', alt: '이미지2 설명', caption: '이미지 캡션 2' },
-  { srcPc: '/images/contents/cont_02_01_003.jpg', alt: '이미지3 설명', caption: '이미지 캡션 3' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_001.jpg', alt: '이미지1 설명', caption: '이미지 캡션 1' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_002.jpg', alt: '이미지2 설명', caption: '이미지 캡션 2' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_003.jpg', alt: '이미지3 설명', caption: '이미지 캡션 3' },
 ];
 
 const img4 = [
-  { srcPc: '/images/contents/cont_02_01_001.jpg', alt: '서울역 도심공항터미널 수화물 신청 이미지', caption: '이미지 캡션 1' },
-  { srcPc: '/images/contents/cont_02_01_002.jpg', alt: '서울역 도심공항터미널 열차 내부 이미지', caption: '이미지 캡션 2' },
-  { srcPc: '/images/contents/cont_02_01_003.jpg', alt: '열차 내부 객실 승무원 서비스 받는 이미지', caption: '이미지 캡션 3' },
-  { srcPc: '/images/contents/cont_02_01_004.jpg', alt: '열차 내 화장실 이미지', caption: '이미지 캡션 4' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_001.jpg', alt: '서울역 도심공항터미널 수화물 신청 이미지', caption: '이미지 캡션 1' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_002.jpg', alt: '서울역 도심공항터미널 열차 내부 이미지', caption: '이미지 캡션 2' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_003.jpg', alt: '열차 내부 객실 승무원 서비스 받는 이미지', caption: '이미지 캡션 3' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_004.jpg', alt: '열차 내 화장실 이미지', caption: '이미지 캡션 4' },
 ];
 
 const img5 = [
   ...img4,
-  { srcPc: '/images/contents/cont_02_01_005.jpg', alt: '열차 내 키즈칸(6호차) 이미지', caption: '이미지 캡션 5' },
+  { srcPc: '/ticket-react/images/contents/cont_02_01_005.jpg', alt: '열차 내 키즈칸(6호차) 이미지', caption: '이미지 캡션 5' },
 ];
 
 function GuideImgWrap() {
@@ -71,8 +71,8 @@ function GuideImgWrap() {
         <h4>PC/모바일 이미지 분리</h4>
         <ImgWrap
           items={[{
-            srcPc: '/images/contents/cont_02_01_001.jpg',
-            srcMo: '/images/contents/cont_02_01_001_mo.jpg',
+            srcPc: '/ticket-react/images/contents/cont_02_01_001.jpg',
+            srcMo: '/ticket-react/images/contents/cont_02_01_001_mo.jpg',
             alt: '서울역 도심공항터미널 수화물 신청 이미지',
             caption: '이미지 캡션 1',
           }]}

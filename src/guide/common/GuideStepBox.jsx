@@ -13,35 +13,35 @@ function GuideStepBox() {
         <StepBox
           steps={[
             {
-              icon: '/images/common/ic_60_ticket.png',
+              icon: '/ticket-react/images/common/ic_60_ticket.png',
               stepLabel: 'STEP 1.',
               title: '단계 제목',
               desc: '단계 설명 텍스트',
               descArea: ['세부 항목 1', '세부 항목 2'],
             },
             {
-              icon: '/images/common/ic_60_baggage.png',
+              icon: '/ticket-react/images/common/ic_60_baggage.png',
               stepLabel: 'STEP 2.',
               title: '단계 제목',
               desc: '단계 설명 텍스트',
               descArea: ['세부 항목 1', <><em>강조 항목</em> : 내용</>],
             },
             {
-              icon: '/images/common/ic_60_ticket.png',
+              icon: '/ticket-react/images/common/ic_60_ticket.png',
               stepLabel: 'STEP 3.',
               title: '단계 제목',
               desc: '단계 설명 텍스트',
               descArea: ['세부 항목 1', <><em>강조 항목</em> : 내용</>],
             },
             {
-              icon: '/images/common/ic_60_baggage.png',
+              icon: '/ticket-react/images/common/ic_60_baggage.png',
               stepLabel: 'STEP 4.',
               title: '단계 제목',
               desc: '단계 설명 텍스트',
               descArea: ['세부 항목 1', <><em>강조 항목</em> : 내용</>],
             },
             {
-              icon: '/images/common/ic_60_ticket.png',
+              icon: '/ticket-react/images/common/ic_60_ticket.png',
               stepLabel: 'STEP 5.',
               title: '단계 제목',
               desc: '단계 설명 텍스트',

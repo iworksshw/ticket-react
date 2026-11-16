@@ -182,11 +182,11 @@
                 }
                 &.prev {
                     padding-left: 8px; left: 0; top: 0; background: var(--white, linear-gradient(270deg, var(--color-alpha-base25, rgba(255, 255, 255, 0.25)) 0%, var(--color-alpha-base100, #FFF) 30%));
-                    .btnDirt {background: #fff url(/common/images/common/ic_20_tab_arr.svg) center no-repeat; transform: rotate(180deg);}
+                    .btnDirt {background: #fff url(/common/ticket-react/images/common/ic_20_tab_arr.svg) center no-repeat; transform: rotate(180deg);}
                 }
                 &.next {
                     padding-left: 24px; right: 0; top: 0; background: var(--white, linear-gradient(90deg, var(--color-alpha-base25, rgba(255, 255, 255, 0.25)) 0%, var(--color-alpha-base100, #FFF) 30%));
-                    .btnDirt {background: #fff url(/common/images/common/ic_20_tab_arr.svg) center no-repeat;}
+                    .btnDirt {background: #fff url(/common/ticket-react/images/common/ic_20_tab_arr.svg) center no-repeat;}
                 }
             }
         }

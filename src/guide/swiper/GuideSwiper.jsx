@@ -2,9 +2,9 @@
 import SwiperProduct from '@/components/swiper/SwiperProduct';
 
 const productImages = [
-  { src: '/images/contents/cont_01_01_16_001.jpg', alt: '라인프렌즈 한복 세로형 티머니카드 이미지 1' },
-  { src: '/images/contents/cont_01_01_16_001.jpg', alt: '라인프렌즈 한복 세로형 티머니카드 이미지 2' },
-  { src: '/images/contents/cont_01_01_16_001.jpg', alt: '라인프렌즈 한복 세로형 티머니카드 이미지 3' },
+  { src: '/ticket-react/images/contents/cont_01_01_16_001.jpg', alt: '라인프렌즈 한복 세로형 티머니카드 이미지 1' },
+  { src: '/ticket-react/images/contents/cont_01_01_16_001.jpg', alt: '라인프렌즈 한복 세로형 티머니카드 이미지 2' },
+  { src: '/ticket-react/images/contents/cont_01_01_16_001.jpg', alt: '라인프렌즈 한복 세로형 티머니카드 이미지 3' },
 ];
 
 function GuideSwiper() {

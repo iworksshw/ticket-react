@@ -18,14 +18,14 @@
                         position: absolute; z-index: 11;
 
                         &.prev {
-                            width: 24px; height: 24px; background: url(/images/common/ic_24_swiper_arr_l.png) center no-repeat; background-size: 100%; vertical-align: middle; left: 43%; bottom: 0;
+                            width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_swiper_arr_l.png) center no-repeat; background-size: 100%; vertical-align: middle; left: 43%; bottom: 0;
 
                             @include media ('tablet') {
                                 left: 36%;
                             }
                         }
                         &.next {
-                            width: 24px; height: 24px; background: url(/images/common/ic_24_swiper_arr_r.png) center no-repeat; background-size: 100%; vertical-align: middle; right: 43%; bottom: 0;
+                            width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_swiper_arr_r.png) center no-repeat; background-size: 100%; vertical-align: middle; right: 43%; bottom: 0;
 
                             @include media ('tablet') {
                                 right: 36%;
@@ -74,7 +74,7 @@
                 color: var(--text-color-B500); font-size: rem(18px); font-style: normal; font-weight: 500; line-height: 160%; margin-bottom: 8px;
 
                 &::before {
-                    content: ''; display: inline-block; width: 24px; height: 24px; background: url(/images/common/ic_24_ticket_b.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 8px;
+                    content: ''; display: inline-block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_ticket_b.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 8px;
                 }
 
                 @include media ('tablet') {
@@ -106,22 +106,22 @@
 
                     &.vaild {
                         &::before {
-                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/images/common/ic_24_ticket01.png) center no-repeat; background-size: 100%; vertical-align: middle;
+                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_ticket01.png) center no-repeat; background-size: 100%; vertical-align: middle;
                         }
                     }
                     &.change {
                         &::before {
-                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/images/common/ic_24_ticket02.png) center no-repeat; background-size: 100%; vertical-align: middle;
+                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_ticket02.png) center no-repeat; background-size: 100%; vertical-align: middle;
                         }
                     }
                     &.check {
                         &::before {
-                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/images/common/ic_24_ticket03.png) center no-repeat; background-size: 100%; vertical-align: middle;
+                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_ticket03.png) center no-repeat; background-size: 100%; vertical-align: middle;
                         }
                     }
                     &.booking {
                         &::before {
-                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/images/common/ic_24_ticket04.png) center no-repeat; background-size: 100%; vertical-align: middle;
+                            content: ''; display: inline-block; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_ticket04.png) center no-repeat; background-size: 100%; vertical-align: middle;
                         }
                     }
 
@@ -155,7 +155,7 @@
                         background: #FFF1E7;
 
                         &::after {
-                            content: ''; display: inline-block; width: 56px; height: 56px; background: url(/images/common/ic_56_ticket_subway.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 28px; bottom: 28px;
+                            content: ''; display: inline-block; width: 56px; height: 56px; background: url(/ticket-react/images/common/ic_56_ticket_subway.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 28px; bottom: 28px;
 
                             @include media ('tablet') {
                                 left: 16px; top: 16px; width: 36px; height: 36px;
@@ -166,7 +166,7 @@
                         background: #E4F6FA;
 
                         &::after {
-                            content: ''; display: inline-block; width: 56px; height: 56px; background: url(/images/common/ic_56_ticket_train.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 28px; bottom: 28px;
+                            content: ''; display: inline-block; width: 56px; height: 56px; background: url(/ticket-react/images/common/ic_56_ticket_train.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 28px; bottom: 28px;
 
                             @include media ('tablet') {
                                 left: 16px; top: 16px; width: 36px; height: 36px;
@@ -177,7 +177,7 @@
                         background: #FFEEFB;
 
                         &::after {
-                            content: ''; display: inline-block; width: 56px; height: 56px; background: url(/images/common/ic_56_ticket_coupon.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 28px; bottom: 28px;
+                            content: ''; display: inline-block; width: 56px; height: 56px; background: url(/ticket-react/images/common/ic_56_ticket_coupon.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 28px; bottom: 28px;
 
                             @include media ('tablet') {
                                 left: 16px; top: 16px; width: 36px; height: 36px;
@@ -224,7 +224,7 @@
                 display: flex; gap: 4px; align-items: center; color: var(--text-color-G600); font-size: rem(16px); font-weight: 400; line-height: 160%;  position: absolute; right: 0; top: 3px;
 
                 &::after {
-                    content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_24_link.png) center no-repeat; background-size: 100%; vertical-align: middle;
+                    content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_24_link.png) center no-repeat; background-size: 100%; vertical-align: middle;
                 }
 
                 &:hover {
@@ -244,22 +244,22 @@
 
                     &:nth-child(1) {
                         &::before {
-                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/images/common/ic_32_info01.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
+                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/ticket-react/images/common/ic_32_info01.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
                         }
                     }
                     &:nth-child(2) {
                         &::before {
-                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/images/common/ic_32_info02.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
+                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/ticket-react/images/common/ic_32_info02.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
                         }
                     }
                     &:nth-child(3) {
                         &::before {
-                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/images/common/ic_32_info03.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
+                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/ticket-react/images/common/ic_32_info03.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
                         }
                     }
                     &:nth-child(4) {
                         &::before {
-                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/images/common/ic_32_info04.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
+                            content: ''; display: inline-block; width: 32px; height: 32px; background: url(/ticket-react/images/common/ic_32_info04.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; left: 50%; top: 40px; transform: translateX(-50%);
                         }
                     }
 
@@ -326,7 +326,7 @@
                     color: var(--text-color-G600); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; display: flex; flex-direction: row; gap: 4px; align-items: center;
 
                     &::before {
-                        content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_member.png) center no-repeat; background-size: 100%; vertical-align: middle;
+                        content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_20_member.png) center no-repeat; background-size: 100%; vertical-align: middle;
                     }
 
                     &:hover {
@@ -357,7 +357,7 @@
                         display: inline-block;
 
                         &::before {
-                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_naver.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
+                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_20_naver.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
                         }
 
                         &:hover {
@@ -368,7 +368,7 @@
                         display: inline-block;
 
                         &::before {
-                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_google.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
+                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_20_google.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
                         }
 
                         &:hover {
@@ -379,7 +379,7 @@
                         display: inline-block;
 
                         &::before {
-                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_kakao.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
+                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_20_kakao.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
                         }
 
                         &:hover {
@@ -390,7 +390,7 @@
                         display: inline-block;
 
                         &::before {
-                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_apple.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
+                            content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_20_apple.png) center no-repeat; background-size: 100%; vertical-align: middle; margin-right: 6px;
                         }
 
                         &:hover {
@@ -435,7 +435,7 @@
             }
 
             &::after {
-                content: ''; display: inline-block; width: 80px; height: 80px; background: url(/images/common/ic_80_train.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 24px; bottom: 24px;
+                content: ''; display: inline-block; width: 80px; height: 80px; background: url(/ticket-react/images/common/ic_80_train.png) center no-repeat; background-size: 100%; vertical-align: middle; position: absolute; right: 24px; bottom: 24px;
 
                 @include media ('tablet') {
                     top: 50%; transform: translateY(-50%); right: 20px;

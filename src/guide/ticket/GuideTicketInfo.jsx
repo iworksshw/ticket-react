@@ -36,7 +36,7 @@ const sampleCancelPriceList = [
 const sampleItemBoxGoods = [
   {
     id: 'goods-1',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '5,000원 충전된 교통카드 이미지',
     name: '5,000원 충전된 교통카드',
     optionLabel: '옵션1, 옵션2',
@@ -48,7 +48,7 @@ const sampleItemBoxGoods = [
   },
   {
     id: 'goods-2',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '5,000원 충전된 교통카드 이미지',
     name: '5,000원 충전된 교통카드',
     optionLabel: '옵션1, 옵션2',

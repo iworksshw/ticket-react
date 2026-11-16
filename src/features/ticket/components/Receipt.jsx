@@ -17,7 +17,7 @@ import styles from './Receipt.module.scss';
  * @param {string[]} comments - 하단 안내 문구 목록
  */
 const Receipt = ({
-  logoSrc = '/images/common/logo_160_arex.svg',
+  logoSrc = '/ticket-react/images/common/logo_160_arex.svg',
   logoAlt = 'arex 로고',
   title = '영수증',
   subTitle = '(반환)',

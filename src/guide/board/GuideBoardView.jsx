@@ -5,7 +5,7 @@ import BoardViewBtm from '@/features/board/components/BoardViewBtm';
 // 실제 서비스에서는 에디터(CMS)에서 저장된 HTML이 이 자리에 들어온다.
 const sampleContent = `
   <div class="center">
-    <img src="/images/temp/temp_board_view.png" alt="여름철도학교" /><br /><br />
+    <img src="/ticket-react/images/temp/temp_board_view.png" alt="여름철도학교" /><br /><br />
   </div>
   [행사일정] 2025. 8. 19.(화), 09:00 ~ 18:00<br />
   [모집기간] 2025. 8. 1.(금) ~ 8. 10.(일)<br />

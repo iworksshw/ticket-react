@@ -18,8 +18,8 @@ const defaultCompanyInfo = {
 };
 
 const defaultMarks = [
-  { src: '/images/common/eprivacy.svg', alt: 'eprivacy mark' },
-  { src: '/images/common/wa_mark.svg', alt: 'wa mark' },
+  { src: '/ticket-react/images/common/eprivacy.svg', alt: 'eprivacy mark' },
+  { src: '/ticket-react/images/common/wa_mark.svg', alt: 'wa mark' },
 ];
 
 /**

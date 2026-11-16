@@ -13,7 +13,7 @@ export const navItems = [
     mainTit: '승차권',
     subTit: '승차권을 예매하고 편리하게 이용하세요.',
     children: [
-      { label: '승차권 예약', path: '/tickets/ticketSearch', altPaths: ['/tickets/ticketAuth', '/tickets/trainSelection'] },
+      { label: '승차권 예약', path: '/tickets/ticketSearch', altPaths: ['/tickets/ticketAuth', '/tickets/trainSelection', '/tickets/ticketPayment', '/tickets/ticketComplete'] },
       { label: '승차권 확인', children: [{ label: '유효승차권' }, { label: '제휴서비스' }] },
       { label: '승차권 변경/반환', children: [{ label: '승차권 반환' }, { label: '승차권 변경' }] },
       { label: '이용내역/영수증조회', children: [{ label: '구매이력' }, { label: '상품구매내역' }] },

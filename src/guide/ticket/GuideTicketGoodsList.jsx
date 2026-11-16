@@ -9,7 +9,7 @@ import TicketGoodsList from '@/features/ticket/components/TicketGoodsList';
 const sampleGoodsList = [
   {
     id: 'goods-1', // map()의 key로 사용되는 고유 식별자
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '5,000원 충전된 교통카드 이미지',
     name: '5,000원 충전된 교통카드',
     oldPrice: '13,000원', // 할인 전 가격 (취소선 스타일)
@@ -23,7 +23,7 @@ const sampleGoodsList = [
   },
   {
     id: 'goods-2',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '5,000원 충전된 교통카드 이미지',
     name: '5,000원 충전된 교통카드',
     oldPrice: '1.50 USD',
@@ -37,7 +37,7 @@ const sampleGoodsList = [
   },
   {
     id: 'goods-3',
-    image: '/images/temp/temp_01_01_001.jpg',
+    image: '/ticket-react/images/temp/temp_01_01_001.jpg',
     alt: '5,000원 충전된 교통카드 이미지',
     name: '5,000원 충전된 교통카드',
     //oldPrice: '13,000원',

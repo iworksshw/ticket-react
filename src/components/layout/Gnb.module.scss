@@ -33,7 +33,7 @@
                                     .depth1Name {
                                         display: flex; align-items: center; gap: 2px;
                                         .global {
-                                            display: inline-block; width: 16px; height: 16px; background: url('/images/common/ic_16_global.png') no-repeat center; vertical-align: middle;
+                                            display: inline-block; width: 16px; height: 16px; background: url('/ticket-react/images/common/ic_16_global.png') no-repeat center; vertical-align: middle;
                                         }
                                     }
                                 }
@@ -53,7 +53,7 @@
 
                                     &[target="_blank"] {
                                         &::after {
-                                            content: ''; display: inline-block; width: 16px; height: 16px; background: url('/images/common/ic_16_link.svg') no-repeat center / contain; margin: 0 0 2px 2px; vertical-align: middle;
+                                            content: ''; display: inline-block; width: 16px; height: 16px; background: url('/ticket-react/images/common/ic_16_link.svg') no-repeat center / contain; margin: 0 0 2px 2px; vertical-align: middle;
                                         }
                                     }
                                 }
@@ -113,14 +113,14 @@
                                             color: var(--text-color-G800); font-size: rem(18px); font-weight: 400; line-height: 160%;
 
                                             &::after {
-                                                content: ''; display: inline-block; width: 20px; height: 20px; background: url('/images/common/ic_20_arr_off.svg') no-repeat center / 100%; transition: all 0.2s ease;
+                                                content: ''; display: inline-block; width: 20px; height: 20px; background: url('/ticket-react/images/common/ic_20_arr_off.svg') no-repeat center / 100%; transition: all 0.2s ease;
                                             }
 
                                             &:hover {
                                                 background: var(--bg-color-B500); color: #fff;
 
                                                 &::after {
-                                                    content: ''; background: url('/images/common/ic_20_arr_on.svg');
+                                                    content: ''; background: url('/ticket-react/images/common/ic_20_arr_on.svg');
                                                 }
                                             }
                                         }
@@ -352,7 +352,7 @@
 
                                 .sitemapFoot {
                                     .closeBtn {
-                                        width: 32px; height: 32px; background: url('/images/common/ic_32_close.svg') no-repeat center / 100%; vertical-align: middle; position: absolute; right: 32px; top: 16px; border: 0;
+                                        width: 32px; height: 32px; background: url('/ticket-react/images/common/ic_32_close.svg') no-repeat center / 100%; vertical-align: middle; position: absolute; right: 32px; top: 16px; border: 0;
                                     }
                                 }
                             }
@@ -552,12 +552,12 @@
 
     &.express {
         .logoBox .logo a {
-            background: url('/images/common/logo_160_bi.svg') no-repeat center / 100%;
+            background: url('/ticket-react/images/common/logo_160_bi.svg') no-repeat center / 100%;
         }
     }
     &.standard {
         .logoBox .logo a {
-            background: url('/images/common/logo_160_ci.svg') no-repeat center / 100%;
+            background: url('/ticket-react/images/common/logo_160_ci.svg') no-repeat center / 100%;
         }
     }
 }
@@ -567,7 +567,7 @@
 
     .logo {
         a {
-            display: inline-block; width: 152px; height: 50px; font-size: 0; background: url('/images/common/logo_160_bi.svg') no-repeat center / 100%; vertical-align: middle;
+            display: inline-block; width: 152px; height: 50px; font-size: 0; background: url('/ticket-react/images/common/logo_160_bi.svg') no-repeat center / 100%; vertical-align: middle;
 
             @include media('mobile') {
                 width: 90px; height: 30px;
@@ -578,7 +578,7 @@
     .logoSide {
         position: relative;
         a {
-            display: inline-block; width: 125px; height: 50px; font-size: 0; background: url('/images/common/logo_lotte.svg') no-repeat left center / contain; vertical-align: middle;
+            display: inline-block; width: 125px; height: 50px; font-size: 0; background: url('/ticket-react/images/common/logo_lotte.svg') no-repeat left center / contain; vertical-align: middle;
 
             @include media('mobile') {
                 width: 97px; height: 30px;

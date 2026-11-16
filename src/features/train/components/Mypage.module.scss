@@ -92,7 +92,7 @@
                             padding-left: 50px; position: relative; display: flex; align-items: flex-end; gap: 5px;
 
                             &::before {
-                                content: ""; display: block; width: 24px; height: 24px; background: url(/common/images/common/ic_24_arrow.svg) center no-repeat; background-size: 100%; position: absolute; left: 12px; top: 6px;
+                                content: ""; display: block; width: 24px; height: 24px; background: url(/common/ticket-react/images/common/ic_24_arrow.svg) center no-repeat; background-size: 100%; position: absolute; left: 12px; top: 6px;
                             }
                             &:first-child {
                                 padding-left: 0;
@@ -284,25 +284,25 @@
 
                     span {
                         &.snsLogo01 {
-                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_google.png)50% 50% no-repeat; background-size: 100%;
+                            width:70px; height:70px; background:url(/common/ticket-react/images/common/ic_70_sns_google.png)50% 50% no-repeat; background-size: 100%;
                             @include media ('mobile') {
                                 width: 60px; height: 60px;
                             }
                         }
                         &.snsLogo02 {
-                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_naver.png)50% 50% no-repeat; background-size: 100%;
+                            width:70px; height:70px; background:url(/common/ticket-react/images/common/ic_70_sns_naver.png)50% 50% no-repeat; background-size: 100%;
                             @include media ('mobile') {
                                 width: 60px; height: 60px;
                             }
                         }
                         &.snsLogo03 {
-                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_kakao.png)50% 50% no-repeat; background-size: 100%;
+                            width:70px; height:70px; background:url(/common/ticket-react/images/common/ic_70_sns_kakao.png)50% 50% no-repeat; background-size: 100%;
                             @include media ('mobile') {
                                 width: 60px; height: 60px;
                             }
                         }
                         &.snsLogo04 {
-                            width:70px; height:70px; background:url(/common/images/common/ic_70_sns_apple.png)50% 50% no-repeat; background-size: 100%;
+                            width:70px; height:70px; background:url(/common/ticket-react/images/common/ic_70_sns_apple.png)50% 50% no-repeat; background-size: 100%;
                             @include media ('mobile') {
                                 width: 60px; height: 60px;
                             }

@@ -69,14 +69,14 @@
 
                             &::after {
 
-                                content:''; position:absolute; top:50%; right:0; width:16px; height:16px; background:url(/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
+                                content:''; position:absolute; top:50%; right:0; width:16px; height:16px; background:url(/ticket-react/images/common/ic_16_download.svg)0 0 no-repeat; transform:translateY(-50%);
                             }
                         }
                     }
                 }
 
                 &::after {
-                    content:''; position:absolute; top:54px; right:-42px; width:22px; height:20px; background:url(/images/common/ic_20_arrow.svg)0 0 no-repeat;
+                    content:''; position:absolute; top:54px; right:-42px; width:22px; height:20px; background:url(/ticket-react/images/common/ic_20_arrow.svg)0 0 no-repeat;
 
                     @include media ('pcs') {
                         top:auto; right:auto; bottom:-36px; left:50%; transform:rotate(90deg) translateX(-50%); margin-left:-10px;
@@ -91,10 +91,10 @@
                     }
 
                     &::after {
-                        width:92px; height:20px; background:url(/images/common/ic_90_arrow.svg)0 0 no-repeat; right:-112px;
+                        width:92px; height:20px; background:url(/ticket-react/images/common/ic_90_arrow.svg)0 0 no-repeat; right:-112px;
                         @include media ('pcs') {
                             top:auto; right:auto; bottom:-71px; left:50%;  transform:rotate(90deg) translateX(-50%); margin-left:-23px;
-                            background:url(/images/common/ic_90_arrow.svg)bottom left -36px no-repeat; width:57px;
+                            background:url(/ticket-react/images/common/ic_90_arrow.svg)bottom left -36px no-repeat; width:57px;
                         }
                     }
 

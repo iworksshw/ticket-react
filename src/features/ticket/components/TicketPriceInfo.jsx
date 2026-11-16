@@ -12,6 +12,7 @@ import styles from './TicketPriceInfo.module.scss';
  *   - divLine: true면 원본 html의 .info.divLine으로 그린다.
  *   - total: true면 합계 행(.info.total)으로 그리며, 바로 위 행과의 사이에 점선 구분선이 들어간다.
  *   - won: price 뒤에 작게 붙는 단위 텍스트(예: '원')를 분리해서 보여줄 때 사용.
+ * @param {boolean} showCart - 장바구니 버튼 표시 여부. 기본값 true (결제 페이지처럼 결제하기만 필요하면 false)
  * @param {string} cartLabel - 장바구니 버튼 텍스트. 기본값 '장바구니'
  * @param {string} payLabel - 결제 버튼 텍스트. 기본값 '결제하기'
  * @param {function} onCart - 장바구니 버튼 클릭 핸들러
@@ -19,6 +20,7 @@ import styles from './TicketPriceInfo.module.scss';
  */
 function TicketPriceInfo({
   priceList = [],
+  showCart = true,
   cartLabel = '장바구니',
   payLabel = '결제하기',
   onCart,
@@ -47,9 +49,11 @@ function TicketPriceInfo({
       })}
 
       <ButtonGroup isCta>
-        <Button variant="dkLine" size="lg" onClick={onCart}>
-          {cartLabel}
-        </Button>
+        {showCart && (
+          <Button variant="dkLine" size="lg" onClick={onCart}>
+            {cartLabel}
+          </Button>
+        )}
         <Button variant="blue" size="lg" onClick={onPay}>
           {payLabel}
         </Button>

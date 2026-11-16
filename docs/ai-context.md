@@ -104,7 +104,7 @@ guideListfile = /src/guide/global/GuideFormTable.jsx
 
 
 
-
+# CLAUDE.md 학습해줘
 
 # ui 컴포넌트 대칭 리엑트 컴포넌트 목록 학습
 - UIComponentList.md을 통해 해당 리엑트 컴포넌트가 어떤 경로에 있고, 또 어떤 ui퍼블리싱을 가지고 만들어졌는지를 학습해줘.
@@ -124,6 +124,8 @@ UIComponentList.md 보고 맞는 jsx를 찾아 연결 및 구현해줘
 
 2. 제작된 파일을 /src/routes.jsx에 업데이트해줘
 
+3. trainSelection페이지에서 각각 [승차권 반환(환불) 수수료 정책], [승차권 변경 수수료 정책]을 누르면 해당 파일이 팝업으로 나타나야해
+
 ## 치환 파일 (htmlFile:html 퍼블리싱, guideJsxFile:참고 jsx파일, workJsx:작업리액트파일, scssFile:module.scss, guideListfile:가이드 리스트 jsx파일)
 {htmlFile} = /docs/html-dist/html/menu01/page_01_01_01_pop01.html : 출발역/도착역 선택
 , /docs/html-dist/html/menu01/page_01_01_01_pop02.html : 열차시간 선택
@@ -134,7 +136,9 @@ UIComponentList.md 보고 맞는 jsx를 찾아 연결 및 구현해줘
 {workJsx} = /src/pages/tickets/TicketSearchPage.jsx
 
 ## 주소값
-{workJsx}의 주소값 : /tickets/ticketSearch/
+{workJsx}의 주소값 : /tickets/ticketPayment/
+
+
 
 
 
@@ -152,15 +156,17 @@ UIComponentList.md 보고 {workJsx}에 맞는 jsx를 찾아 연결해줘
 
 * jsx는 만들어놨는데 없다면 경로가 잘못되었을 수 있으니 확인해달라고 요청해줘
 
-2. trainSelection페이지에서 각각 [승차권 반환(환불) 수수료 정책], [승차권 변경 수수료 정책]을 누르면 해당 파일이 팝업으로 나타나야해
+2. ticketPayment에서 결제하기를 누르면 넘어오는 화면이야.
+
+3. 제작된 파일을 /src/routes.jsx에 업데이트해줘
 
 ## 주소값
-팝업으로 사용될 예정이라 주소값은 없음
+{workJsx}의 주소값 : /tickets/TicketComplete/
 
 
 ## 치환 파일 (htmlFile:html 퍼블리싱, guideJsxFile:참고 jsx파일, workJsx:작업리액트파일, scssFile:module.scss, guideListfile:가이드 리스트 jsx파일)
-{htmlFile} = /docs/html-dist/html/menu01/page_01_01_03_pop02.html, /docs/html-dist/html/menu01/page_01_01_03_pop01
-{workJsx} = /src/pages/tickets/TicketReturnFeePage.jsx, /src/pages/tickets/TicketChangeFeePage.jsx
+{htmlFile} = /docs/html-dist/html/menu01/page_01_01_08.html
+{workJsx} = /src/pages/tickets/TicketReserveCompletePage.jsx
 
 
 

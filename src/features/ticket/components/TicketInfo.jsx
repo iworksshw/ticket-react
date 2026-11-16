@@ -42,6 +42,7 @@ import styles from './TicketInfo.module.scss';
  */
 function TicketInfo({
   variant = 'default',
+  style,
   date,
   trainNo,
   dateSelect,
@@ -83,7 +84,7 @@ function TicketInfo({
   );
 
   return (
-    <div className={rootClassName}>
+    <div className={rootClassName} style={style}>
       <div className={styles.infoTop}>
         <div className={styles.infoL}>
           {resolvedDateSelect ? (

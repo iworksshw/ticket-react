@@ -24,7 +24,7 @@
                     
             } 
             &::after {
-                content:""; width: 24px; height: 24px; background: url(/images/common/ic_24_qna_up.svg) center no-repeat; display: block; position: absolute; right: 28px; top: calc(50% - 12px); transform: rotate(180deg); transition: all 0.3s;
+                content:""; width: 24px; height: 24px; background: url(/ticket-react/images/common/ic_24_qna_up.svg) center no-repeat; display: block; position: absolute; right: 28px; top: calc(50% - 12px); transform: rotate(180deg); transition: all 0.3s;
             }
             &.on {
                 &::after {transform: rotate(0);}

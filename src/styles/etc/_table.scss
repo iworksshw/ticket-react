@@ -118,7 +118,7 @@
                     }                     
 
                     button {
-                        width:24px; height:24px; background:url(/images/common/ic_24_trashcan.svg)50% 50% no-repeat;
+                        width:24px; height:24px; background:url(/ticket-react/images/common/ic_24_trashcan.svg)50% 50% no-repeat;
                     }
                 }
             }
@@ -140,7 +140,7 @@
         }
         .left {padding-left: 16px; text-align: left;}
         .link[target=_blank] {
-            width: max-content; padding-right: 20px; background: url(/images/common/ic_16_new_window.svg) right center no-repeat; display: inline-block;
+            width: max-content; padding-right: 20px; background: url(/ticket-react/images/common/ic_16_new_window.svg) right center no-repeat; display: inline-block;
         }
 
         img {max-width: 100%;}
@@ -297,7 +297,7 @@
                     font-size:rem(18px); font-weight:400; line-height:160%; color:var(--text-color-G800);
 
                     button {
-                        width:24px; height:24px; background:url(/images/common/ic_24_trashcan.svg)50% 50% no-repeat;
+                        width:24px; height:24px; background:url(/ticket-react/images/common/ic_24_trashcan.svg)50% 50% no-repeat;
                     }
 
                     span {
@@ -443,7 +443,7 @@
 
                     &::after {
                         content:''; position:absolute; top:50%; right:0; width:18px; height:18px; transform:translateY(-50%);
-                        background:url(/common/images/common/ic_18_outShare.svg)50% 50% no-repeat;
+                        background:url(/common/ticket-react/images/common/ic_18_outShare.svg)50% 50% no-repeat;
                     }
                 }
             }

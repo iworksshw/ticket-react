@@ -70,14 +70,14 @@
                                     .icon {
                                         width:26px; height:26px; margin-right:4px; font-size:0; border-radius:8px; display:flex; position:relative;
                                         &:last-child {margin-right:0;}
-                                        &.new{background:#ff9900 url(/images/common/ico_list_new.svg) center / 26px no-repeat;}
-                                        &.file{background:#FF5ADB url(/images/common/ico_list_file.svg) center / 26px no-repeat;}
-                                        &.secret{justify-content: center; background:#01C880 url(/images/common/ico_list_secr.svg) center / 11px no-repeat;}
+                                        &.new{background:#ff9900 url(/ticket-react/images/common/ico_list_new.svg) center / 26px no-repeat;}
+                                        &.file{background:#FF5ADB url(/ticket-react/images/common/ico_list_file.svg) center / 26px no-repeat;}
+                                        &.secret{justify-content: center; background:#01C880 url(/ticket-react/images/common/ico_list_secr.svg) center / 11px no-repeat;}
                                         @include media('mobile'){
                                             margin-right: 4px; display: inline;
-                                            &.new{padding:17px 17px 0 0; border-radius:5px; background:url(/images/common/ico_list_new.svg) center / 17px no-repeat;}
-                                            &.file{padding:17px 10px 0 0; background:url(/images/common/ico_list_file_m.svg) center / 9.7px no-repeat;}
-                                            &.secret{padding:17px 11px 0 0; background:url(/images/common/ico_list_secr_m.svg) center 6px / 11.6px no-repeat;}
+                                            &.new{padding:17px 17px 0 0; border-radius:5px; background:url(/ticket-react/images/common/ico_list_new.svg) center / 17px no-repeat;}
+                                            &.file{padding:17px 10px 0 0; background:url(/ticket-react/images/common/ico_list_file_m.svg) center / 9.7px no-repeat;}
+                                            &.secret{padding:17px 11px 0 0; background:url(/ticket-react/images/common/ico_list_secr_m.svg) center 6px / 11.6px no-repeat;}
                                         }
                                     }
                                 }

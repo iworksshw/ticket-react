@@ -17,6 +17,8 @@ const Home = lazy(() => import('@/pages/Home'));
 const TicketSearchPage = lazy(() => import('@/pages/tickets/TicketSearchPage'));
 const TicketAuthPage = lazy(() => import('@/pages/tickets/TicketAuthPage'));
 const TrainSelectionPage = lazy(() => import('@/pages/tickets/TrainSelectionPage'));
+const TicketPaymentPage = lazy(() => import('@/pages/tickets/TicketPaymentPage'));
+const TicketReserveCompletePage = lazy(() => import('@/pages/tickets/TicketReserveCompletePage'));
 const LoginPage = lazy(() => import('@/pages/auth/LoginPage'));
 const JoinTermsPage = lazy(() => import('@/pages/auth/JoinTermsPage'));
 const JoinEmailAuthPage = lazy(() => import('@/pages/auth/JoinEmailAuthPage'));
@@ -140,6 +142,14 @@ export const router = createHashRouter([
       {
         path: 'tickets/trainSelection', // 주소: /tickets/trainSelection
         element: <Suspense fallback={<Loading />}><TrainSelectionPage /></Suspense>,
+      },
+      {
+        path: 'tickets/ticketPayment', // 주소: /tickets/ticketPayment
+        element: <Suspense fallback={<Loading />}><TicketPaymentPage /></Suspense>,
+      },
+      {
+        path: 'tickets/ticketComplete', // 주소: /tickets/ticketComplete
+        element: <Suspense fallback={<Loading />}><TicketReserveCompletePage /></Suspense>,
       },
       // 💡 앞으로 추가될 대메뉴/소메뉴 페이지들은 여기에 한 줄씩 추가해 나가면 됩니다.
     ],

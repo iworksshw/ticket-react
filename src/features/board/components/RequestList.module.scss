@@ -117,7 +117,7 @@
                             position:relative;
 
                             &::after {
-                                content:''; position:absolute; top:50%;left:0; width:24px; height:24px; background:url(/images/common/ic_24_calBtn.svg) 50% 50% no-repeat; transform:translateY(-50%) rotate(90deg);
+                                content:''; position:absolute; top:50%;left:0; width:24px; height:24px; background:url(/ticket-react/images/common/ic_24_calBtn.svg) 50% 50% no-repeat; transform:translateY(-50%) rotate(90deg);
 
                                 @include media('mobile') {
                                     content: '더보기'; transform: translateY(0) rotate(0); width: 0; height: 0; text-decoration: underline; color: var(--text-color-G700); font-size: rem(15px); font-weight: 400; line-height: 160%;

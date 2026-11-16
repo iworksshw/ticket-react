@@ -63,7 +63,7 @@
             // 이 모듈 스코프 안에서도 :global()로 감싸야 실제 .btn 엘리먼트에 적용된다. .on은 토글
             // 상태를 나타내려고 직접 className으로 넘기는 모듈 클래스라서 그대로 둔다.
             :global(.btn.gLine) {
-                width: 36px; height: 36px; padding: 0; font-size: 0; border: 0; border-radius: 50%; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_12_arr_up.svg) center no-repeat; transform: rotate(180deg);
+                width: 36px; height: 36px; padding: 0; font-size: 0; border: 0; border-radius: 50%; background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_12_arr_up.svg) center no-repeat; transform: rotate(180deg);
                 &.on {transform: rotate(0deg);}
             }
         }
@@ -97,7 +97,7 @@
             .station {
                 min-width: max-content; padding-left: 124px; position: relative; display: flex; flex-wrap: wrap;
                 &::before {
-                    content: ""; width: 100px; height: 24px; background: url(/images/common/ic_100_arrow.svg) center no-repeat; display: block; position: absolute; left: 12px; top: 6px;
+                    content: ""; width: 100px; height: 24px; background: url(/ticket-react/images/common/ic_100_arrow.svg) center no-repeat; display: block; position: absolute; left: 12px; top: 6px;
                 }
                 &:first-child {
                     padding-left: 0;
@@ -118,7 +118,7 @@
                     &.print {color: #fff; background: var(--color-secondary-dark-blue-400, #4B6889);}
                     &.goods {
                         color: #fff; background: var(--bg-color-B50, #107AF2);
-                        &::before {content:""; width: 20px; height: 20px; vertical-align: sub; background: url(/images/common/ic_20_goods.svg) center no-repeat; display: inline-block;}
+                        &::before {content:""; width: 20px; height: 20px; vertical-align: sub; background: url(/ticket-react/images/common/ic_20_goods.svg) center no-repeat; display: inline-block;}
 
                         @include media('tablet') {
                             display: none;
@@ -182,7 +182,7 @@
                     .status {
                         width: 74px; height: 26px; padding: 0 10px; font-size: rem(14px); border-radius: 13px;
                         &.goods {
-                            &::before {width: 18px; height: 18px; background: url(/images/common/ic_20_goods.svg) center / 18px no-repeat;}
+                            &::before {width: 18px; height: 18px; background: url(/ticket-react/images/common/ic_20_goods.svg) center / 18px no-repeat;}
                         }
                     }
                 }
@@ -247,7 +247,7 @@
                         }
                     }
                     .btnDel {
-                        width: 24px; height: 24px; margin-left: 8px; font-size: 0; background: url(/images/common/ic_24_trash.svg) center no-repeat; display: inline-block; vertical-align: text-bottom;
+                        width: 24px; height: 24px; margin-left: 8px; font-size: 0; background: url(/ticket-react/images/common/ic_24_trash.svg) center no-repeat; display: inline-block; vertical-align: text-bottom;
                     }
                 }
                 @include media('mobile'){
@@ -271,7 +271,7 @@
                             .goodsNum {font-size: rem(17px);}
                         }
                         .btnDel {
-                            width: 20px; height: 20px; background: url(/images/common/ic_24_trash.svg) center / 20px no-repeat;
+                            width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_24_trash.svg) center / 20px no-repeat;
                         }
                     }
                 }
@@ -282,10 +282,10 @@
             .info {
                 min-width: 200px; position: relative;
                 &:nth-child(2)::before {
-                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_plus.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_24_plus.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
                 }
                 &:nth-child(3)::before {
-                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_equal.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_24_equal.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
                 }
                 .tit {
                     width: 100%; color: var(--text-color-G600, #565B64); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
@@ -299,7 +299,7 @@
             &.minus {
                 .info {
                     &:nth-child(2)::before {
-                        background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_minus.svg) center no-repeat;
+                        background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_24_minus.svg) center no-repeat;
                     }
                 }
             }
@@ -484,10 +484,10 @@
             .info {
                 min-width: 200px; position: relative;
                 &:nth-child(2)::before {
-                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_plus.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_24_plus.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
                 }
                 &:nth-child(3)::before {
-                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_equal.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
+                    content:""; width: 32px; height: 32px; border-radius: 32px; background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_24_equal.svg) center no-repeat; display: block; position: absolute; left: -44px; top: 19px;
                 }
                 .tit {
                     width: 100%; color: var(--text-color-G600, #565B64); text-align: center; font-size: rem(18px); font-style: normal; font-weight: 400; line-height: 160%;
@@ -501,7 +501,7 @@
             &.minus {
                 .info {
                     &:nth-child(2)::before {
-                        background: var(--bg-color-G300, #D6DBE1) url(/images/common/ic_24_minus.svg) center no-repeat;
+                        background: var(--bg-color-G300, #D6DBE1) url(/ticket-react/images/common/ic_24_minus.svg) center no-repeat;
                     }
                 }
             }
@@ -684,7 +684,7 @@
             color: var(--text-color-G600); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 160%; text-align: center; display: flex; flex-direction: row; justify-content: center; align-items: center; background: transparent; gap: 6px; height: 100%;
 
             &::before {
-                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/images/common/ic_20_ticket_g.png) center / 18px no-repeat; background-size: 100%; vertical-align: middle;
+                content: ''; display: inline-block; width: 20px; height: 20px; background: url(/ticket-react/images/common/ic_20_ticket_g.png) center / 18px no-repeat; background-size: 100%; vertical-align: middle;
             }
 
             &::after {
